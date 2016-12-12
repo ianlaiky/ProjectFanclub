@@ -76,14 +76,14 @@
                     <img src="../../assets/img/faces/marc.jpg" />
                 </div>
                 <div class="info">
-                    <a data-toggle="collapse" href="#collapseExample" class="collapsed">
+                    <a data-toggle="collapse" href="#collapseExample" class="collapsed" aria-expanded="true">
                         Wan Ying
                         <b class="caret"></b>
                     </a>
-                    <div class="collapse" id="collapseExample">
+                    <div class="collapse in" id="collapseExample">
                         <ul class="nav">
-                            <li>
-                                <a href="../../fooddiet/user/myprofile.jsp">My Profile</a>
+                            <li class="active">
+                                <a href="#">My Profile</a>
                             </li>
                             <li>
                                 <a href="#">Edit Profile</a>
@@ -97,7 +97,7 @@
             </div>
             <ul class="nav">
                 <li>
-                    <a href="../index.jsp">
+                    <a href="../../try/index.jsp">
                         <i class="material-icons">dashboard</i>
                         <p>Dashboard</p>
                     </a>
@@ -165,14 +165,14 @@
                         </ul>
                     </div>
                 </li>
-                <li class="active">
-                    <a data-toggle="collapse" href="#formsExamples" aria-expanded="true">
+                <li>
+                    <a data-toggle="collapse" href="#formsExamples">
                         <i class="material-icons">content_paste</i>
                         <p>Forms
                             <b class="caret"></b>
                         </p>
                     </a>
-                    <div class="collapse in" id="formsExamples">
+                    <div class="collapse" id="formsExamples">
                         <ul class="nav">
                             <li>
                                 <a href="../forms/regular.html">Regular Forms</a>
@@ -183,8 +183,8 @@
                             <li>
                                 <a href="../forms/validation.html">Validation Forms</a>
                             </li>
-                            <li class="active">
-                                <a href="profile.jsp">Wizard</a>
+                            <li>
+                                <a href="../../try/form/profile.jsp">Wizard</a>
                             </li>
                         </ul>
                     </div>
@@ -268,7 +268,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"> Wizard </a>
+                    <a class="navbar-brand" href="#"> My Profile </a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -331,8 +331,8 @@
                 <div class="col-sm-8 col-sm-offset-2">
                     <!--      Wizard container        -->
                     <div class="wizard-container">
-                        <div class="card wizard-card" data-color="green" id="wizardProfile">
-                            <form action="" method="">
+                        <div class="card wizard-card" data-color="rose" id="wizardProfile">
+                            <form action="" method="get">
                                 <!--        You can switch " data-color="purple" "  with one of the next bright colors: "green", "orange", "red", "blue"       -->
                                 <div class="wizard-header">
                                     <h3 class="wizard-title">
@@ -346,17 +346,17 @@
                                             <a href="#about" data-toggle="tab">About</a>
                                         </li>
                                         <li>
-                                            <a href="#account" data-toggle="tab">Account</a>
+                                            <a href="#account" data-toggle="tab">Fitness</a>
                                         </li>
                                         <li>
-                                            <a href="#address" data-toggle="tab">Address</a>
+                                            <a href="#address" data-toggle="tab">BMI</a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="tab-content">
                                     <div class="tab-pane" id="about">
                                         <div class="row">
-                                            <h4 class="info-text"> Let's start with the basic information (with validation)</h4>
+                                            <h4 class="info-text"> Let's start with the basic information </h4>
                                             <div class="col-sm-4 col-sm-offset-1">
                                                 <div class="picture-container">
                                                     <div class="picture">
@@ -372,25 +372,45 @@
                                                             <i class="material-icons">face</i>
                                                         </span>
                                                     <div class="form-group label-floating">
-                                                        <label class="control-label">First Name
+                                                        <label class="control-label">Name
                                                             <small>(required)</small>
                                                         </label>
-                                                        <input name="firstname" type="text" class="form-control">
+                                                        <input name="name" type="text" class="form-control">
                                                     </div>
                                                 </div>
                                                 <div class="input-group">
                                                         <span class="input-group-addon">
-                                                            <i class="material-icons">record_voice_over</i>
+                                                            <i class="material-icons">mood</i>
                                                         </span>
                                                     <div class="form-group label-floating">
-                                                        <label class="control-label">Last Name
+                                                        <label class="control-label">Age
                                                             <small>(required)</small>
                                                         </label>
-                                                        <input name="lastname" type="text" class="form-control">
+                                                        <input name="age" type="number" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="material-icons">person</i>
+                                                        </span>
+                                                    <div class="form-group label-floating">
+                                                        <label class="control-label">Gender
+                                                            <small>(required)</small>
+                                                        </label>
+                                                        <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="age"> Male
+                                                        </label>
+                                                        </div>
+                                                        <div class="radio">
+                                                            <label>
+                                                                <input type="radio" name="age"> Female
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-10 col-lg-offset-1">
+                                      <!--     <div class="col-lg-10 col-lg-offset-1">
                                                 <div class="input-group">
                                                         <span class="input-group-addon">
                                                             <i class="material-icons">email</i>
@@ -402,38 +422,38 @@
                                                         <input name="email" type="email" class="form-control">
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                     <div class="tab-pane" id="account">
-                                        <h4 class="info-text"> What are you doing? (checkboxes) </h4>
+                                        <h4 class="info-text"> What is your physical activity intensity?  </h4>
                                         <div class="row">
                                             <div class="col-lg-10 col-lg-offset-1">
                                                 <div class="col-sm-4">
-                                                    <div class="choice" data-toggle="wizard-checkbox">
-                                                        <input type="checkbox" name="jobb" value="Design">
+                                                    <div class="choice" data-toggle="wizard-radio">
+                                                        <input type="radio" name="jobb" value="Design">
                                                         <div class="icon">
-                                                            <i class="fa fa-pencil"></i>
+                                                            <i class="fa fa-meh-o fa-5x"></i>
                                                         </div>
-                                                        <h6>Design</h6>
+                                                        <h6>Sedentary</h6>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-4">
-                                                    <div class="choice" data-toggle="wizard-checkbox">
-                                                        <input type="checkbox" name="jobb" value="Code">
+                                                    <div class="choice" data-toggle="wizard-radio">
+                                                        <input type="radio" name="jobb" value="Code">
                                                         <div class="icon">
-                                                            <i class="fa fa-terminal"></i>
+                                                            <i class="fa fa-heart"></i>
                                                         </div>
-                                                        <h6>Code</h6>
+                                                        <h6>Moderately Active</h6>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-4">
-                                                    <div class="choice" data-toggle="wizard-checkbox">
-                                                        <input type="checkbox" name="jobb" value="Develop">
+                                                    <div class="choice" data-toggle="wizard-radio">
+                                                        <input type="radio" name="jobb" value="Develop">
                                                         <div class="icon">
-                                                            <i class="fa fa-laptop"></i>
+                                                            <i class="fa fa-bicycle"></i>
                                                         </div>
-                                                        <h6>Develop</h6>
+                                                        <h6>Active</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -442,7 +462,7 @@
                                     <div class="tab-pane" id="address">
                                         <div class="row">
                                             <div class="col-sm-12">
-                                                <h4 class="info-text"> Are you living in a nice area? </h4>
+                                                <h4 class="info-text"> Do you want to keep fit? </h4>
                                             </div>
                                             <div class="col-sm-7 col-sm-offset-1">
                                                 <div class="form-group label-floating">

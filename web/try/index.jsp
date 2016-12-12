@@ -83,7 +83,7 @@
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="#">My Profile</a>
+                                <a href="../fooddiet/user/myprofile.jsp">My Profile</a>
                             </li>
                             <li>
                                 <a href="#">Edit Profile</a>
@@ -96,8 +96,8 @@
                 </div>
             </div>
             <ul class="nav">
-                <li>
-                    <a href="dashboard.html">
+                <li class="active">
+                    <a href="index.jsp">
                         <i class="material-icons">dashboard</i>
                         <p>Dashboard</p>
                     </a>
@@ -165,14 +165,14 @@
                         </ul>
                     </div>
                 </li>
-                <li class="active">
-                    <a data-toggle="collapse" href="#formsExamples" aria-expanded="true">
+                <li>
+                    <a data-toggle="collapse" href="#formsExamples">
                         <i class="material-icons">content_paste</i>
                         <p>Forms
                             <b class="caret"></b>
                         </p>
                     </a>
-                    <div class="collapse in" id="formsExamples">
+                    <div class="collapse" id="formsExamples">
                         <ul class="nav">
                             <li>
                                 <a href="../forms/regular.html">Regular Forms</a>
@@ -183,7 +183,7 @@
                             <li>
                                 <a href="../forms/validation.html">Validation Forms</a>
                             </li>
-                            <li class="active">
+                            <li>
                                 <a href="form/profile.jsp">Wizard</a>
                             </li>
                         </ul>

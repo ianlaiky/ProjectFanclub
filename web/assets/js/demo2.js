@@ -413,6 +413,8 @@ demo = {
             }
         });
 
+
+
         $('.set-full-height').css('height', 'auto');
 
         //Function to show image before upload
