@@ -50,6 +50,25 @@
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
+
+    <style type="text/css">
+        div.item {
+            vertical-align: top;
+            display: inline-block;
+            text-align: center;
+            width: 180px;
+            font-family: "Fira Code Medium";
+        }
+        img {
+            width: 180px;
+            height: 140px;
+            background-color: grey;
+        }
+        .caption {
+            display: block;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -77,19 +96,22 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        Wan Ying
+                        Junkiat
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="../fooddiet/user/myprofile.jsp">My Profile</a>
+                                <a href="../foodorder/index.jsp">Order</a>
                             </li>
                             <li>
-                                <a href="#">Edit Profile</a>
+                                <a href="#">Dietary Restrictions</a>
                             </li>
                             <li>
-                                <a href="#">Settings</a>
+                                <a href="#">Diet Recommendation</a>
+                            </li>
+                            <li>
+                                <a href="#">FeedBack</a>
                             </li>
                         </ul>
                     </div>
@@ -329,13 +351,77 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="col-sm-8 col-sm-offset-2">
-              <!-- Insert all the awesome body content here
+               <%--Insert all the awesome body content here--%>
+
+                   <ul class="nav nav-pills nav-justified">
+                       <li class="active"><a data-toggle="pill" href="#food">Home</a></li>
+                       <li><a data-toggle="pill" href="#drinks">Drinks</a></li>
+                       <li><a data-toggle="pill" href="#fruits">Fruits</a></li>
+                   </ul>
+
+                   <div class="tab-content">
+                       <div id="food" class="tab-pane fade in active">
+                           <h3>Food</h3>
+
+
+
+                           <div class="item">
+                               <img src="images/fishporridge.jpg" class="img-circle" alt="fishporridge">
+                               <span class="caption">Fish porridge</span>
+                           </div>
+                           <div class="item">
+                               <img src="images/fishporridge.jpg" class="img-circle" alt="Cinque Terre" >
+                               <span class="caption">Text below the image</span>
+                           </div>
+
+                           <div class="item">
+                               <img src="images/fishporridge.jpg" class="img-circle" alt="Cinque Terre" >
+                               <span class="caption">Text below the image</span>
+                           </div>
+                           <div class="item">
+                               <img src="images/fishporridge.jpg" class="img-circle" alt="Cinque Terre" >
+                               <span class="caption">Text below the image</span>
+                           </div>
+                           <div class="item">
+                               <img src="images/fishporridge.jpg" class="img-circle" alt="Cinque Terre" >
+                               <span class="caption">Text below the image</span>
+                           </div>
+                           <div class="item">
+                               <img src="images/fishporridge.jpg" class="img-circle" alt="Cinque Terre" >
+                               <span class="caption">Text below the image</span>
+                           </div>
+                           <div class="item">
+                               <img src="images/fishporridge.jpg" class="img-circle" alt="Cinque Terre" >
+                               <span class="caption">Text below the image</span>
+                           </div>
+
+
+
+                       </div>
+                       <div id="drinks" class="tab-pane fade">
+                           <h3>Drinks</h3>
+                           <p>Some content in menu 1.</p>
+                       </div>
+                       <div id="fruits" class="tab-pane fade">
+                           <h3>Fruits</h3>
+                           <p> textholder</p>
+                       </div>
+                   </div>
 
 
 
 
 
-              -->
+
+
+
+
+
+
+
+
+
+                    <%-- end of content--%>
                 </div>
             </div>
         </div>
