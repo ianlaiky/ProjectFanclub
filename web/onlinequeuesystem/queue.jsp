@@ -1,11 +1,18 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Ying
+  Date: 11/12/2016
+  Time: 4:24 AM
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8"/>
-    <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png"/>
-    <link rel="icon" type="image/png" href="../../assets/img/favicon.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png"/>
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>Vision API</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
@@ -40,11 +47,11 @@
           content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design."/>
     <meta property="og:site_name" content="Creative Tim"/>
     <!-- Bootstrap core CSS     -->
-    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
     <!--  Material Dashboard CSS    -->
-    <link href="../../assets/css/material-dashboard2.css" rel="stylesheet"/>
+    <link href="../assets/css/material-dashboard2.css" rel="stylesheet"/>
     <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="../../assets/css/demo2.css" rel="stylesheet"/>
+    <link href="../assets/css/demo2.css" rel="stylesheet"/>
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
@@ -74,17 +81,17 @@
              data-ps-id="27535860-4b1b-c8e5-ec90-4de4d32f70a0">
             <div class="user">
                 <div class="photo">
-                    <img src="../../assets/img/faces/marc.jpg"/>
+                    <img src="../assets/img/faces/marc.jpg"/>
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        test
+                        Aravin
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="../../fooddiet/user/myprofile.jsp">My Profile</a>
+                                <a href="../fooddiet/user/queue.jsp">My Profile</a>
                             </li>
                             <li>
                                 <a href="#">Edit Profile</a>
@@ -97,8 +104,8 @@
                 </div>
             </div>
             <ul class="nav">
-                <li>
-                    <a href="../index.jsp">
+                <li class="active">
+                    <a href="queue.jsp">
                         <i class="material-icons">dashboard</i>
                         <p>Dashboard</p>
                     </a>
@@ -166,14 +173,14 @@
                         </ul>
                     </div>
                 </li>
-                <li class="active">
-                    <a data-toggle="collapse" href="#formsExamples" aria-expanded="true">
+                <li>
+                    <a data-toggle="collapse" href="#formsExamples">
                         <i class="material-icons">content_paste</i>
                         <p>Forms
                             <b class="caret"></b>
                         </p>
                     </a>
-                    <div class="collapse in" id="formsExamples">
+                    <div class="collapse" id="formsExamples">
                         <ul class="nav">
                             <li>
                                 <a href="../forms/regular.html">Regular Forms</a>
@@ -184,8 +191,8 @@
                             <li>
                                 <a href="../forms/validation.html">Validation Forms</a>
                             </li>
-                            <li class="active">
-                                <a href="profile.jsp">Wizard</a>
+                            <li>
+                                <a href="form/profile.jsp">Wizard</a>
                             </li>
                         </ul>
                     </div>
@@ -269,7 +276,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"> Wizard </a>
+                    <a class="navbar-brand" href="#"> Home </a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -330,70 +337,19 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="col-sm-8 col-sm-offset-2">
-                    <!--      Wizard container        -->
+                    -- Insert all the awesome body content here
+
+
+<ul class="nav nav-pills nav-justified">
+                       <li class="active"><a data-toggle="pill" href="#queueNo">Take Queue Number</a></li>
+                       <li><a data-toggle="pill" href="#updateNo">Edit/Update Queue Number</a></li>
+                       <li><a data-toggle="pill" href="#removeNo">Remove Queue Number</a></li>
+                   </ul>
 
 
 
 
 
-
-                    <div class="wizard-container">
-                        <div class="card wizard-card" data-color="green" id="wizardProfile">
-                            <link rel="stylesheet" href="style.css">
-                            <script src="http://cdn.peerjs.com/0.3/peer.min.js"></script>
-                            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-                            <script src="video.js"></script>
-
-                            <div class="pure-g">
-
-                                <!-- Video area -->
-                                <div class="pure-u-2-3" id="video-container">
-                                    <video id="their-video" autoplay></video>
-                                    <video id="my-video" muted="true" autoplay></video>
-                                </div>
-
-                                <!-- Steps -->
-                                <div class="pure-u-1-3">
-                                    <h2>PeerJS Video Chat</h2>
-
-                                    <!-- Get local audio/video stream -->
-                                    <div id="step1">
-                                        <p>Please click `allow` on the top of the screen so we can access your webcam and microphone for calls.</p>
-                                        <div id="step1-error">
-                                            <p>Failed to access the webcam and microphone. Make sure to run this demo on an http server and click
-                                                allow when asked for permission by the browser.</p>
-                                            <a href="#" class="pure-button pure-button-error" id="step1-retry">Try again</a>
-                                        </div>
-                                    </div>
-
-                                    <!-- Make calls to others -->
-                                    <div id="step2">
-                                        <p>Your id: <span id="my-id">...</span></p>
-                                        <p>Share this id with others so they can call you.</p>
-                                        <h3>Make a call</h3>
-                                        <div class="pure-form">
-                                            <input type="text" placeholder="Call user id..." id="callto-id">
-                                            <a href="#" class="pure-button pure-button-success" id="make-call">Call</a>
-                                        </div>
-                                    </div>
-
-                                    <!-- Call in progress -->
-                                    <div id="step3">
-                                        <p>Currently in call with <span id="their-id">...</span></p>
-                                        <p><a href="#" class="pure-button pure-button-error" id="end-call">End call</a></p>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-
-
-
-
-                        </div>
-                    </div>
-                    <!-- wizard container -->
                 </div>
             </div>
         </div>
@@ -578,6 +534,5 @@
         demo.initMaterialWizard();
     });
 </script>
-
 
 </html>
