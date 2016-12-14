@@ -64,7 +64,7 @@
                 FD
             </a>
         </div>
-        <div class="sidebar-wrapper ps-container ps-theme-default ps-active-x" data-ps-id="27535860-4b1b-c8e5-ec90-4de4d32f70a0">
+        <div class="sidebar-wrapper">
             <div class="user">
                 <div class="photo">
                     <img src="../../assets/img/faces/marc.jpg" />

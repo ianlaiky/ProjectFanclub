@@ -1,60 +1,55 @@
+
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8"/>
-    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png"/>
-    <link rel="icon" type="image/png" href="../assets/img/favicon.png"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png" />
+    <link rel="icon" type="image/png" href="../../assets/img/favicon.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Vision API</title>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
-    <meta name="viewport" content="width=device-width"/>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
     <!-- Canonical SEO -->
-    <link rel="canonical" href="http://www.creative-tim.com/product/material-dashboard-pro"/>
+    <link rel="canonical" href="http://www.creative-tim.com/product/material-dashboard-pro" />
     <!--  Social tags      -->
-    <meta name="keywords"
-          content="material dashboard, bootstrap material admin, bootstrap material dashboard, material design admin, material design, creative tim, html dashboard, html css dashboard, web dashboard, freebie, free bootstrap dashboard, css3 dashboard, bootstrap admin, bootstrap dashboard, frontend, responsive bootstrap dashboard, premiu material design admin">
-    <meta name="description"
-          content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+    <meta name="keywords" content="material dashboard, bootstrap material admin, bootstrap material dashboard, material design admin, material design, creative tim, html dashboard, html css dashboard, web dashboard, freebie, free bootstrap dashboard, css3 dashboard, bootstrap admin, bootstrap dashboard, frontend, responsive bootstrap dashboard, premiu material design admin">
+    <meta name="description" content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
     <!-- Schema.org markup for Google+ -->
     <meta itemprop="name" content="Material Dashboard PRO by Creative Tim | Premium Bootstrap Admin Template">
-    <meta itemprop="description"
-          content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+    <meta itemprop="description" content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
     <meta itemprop="image" content="http://s3.amazonaws.com/creativetim_bucket/products/51/opt_mdp_thumbnail.jpg">
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@creativetim">
     <meta name="twitter:title" content="Material Dashboard PRO by Creative Tim | Premium Bootstrap Admin Template">
-    <meta name="twitter:description"
-          content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+    <meta name="twitter:description" content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
     <meta name="twitter:creator" content="@creativetim">
     <meta name="twitter:image" content="http://s3.amazonaws.com/creativetim_bucket/products/51/opt_mdp_thumbnail.jpg">
     <!-- Open Graph data -->
     <meta property="fb:app_id" content="655968634437471">
-    <meta property="og:title" content="Material Dashboard PRO by Creative Tim | Premium Bootstrap Admin Template"/>
-    <meta property="og:type" content="article"/>
-    <meta property="og:url" content="http://www.creative-tim.com/product/material-dashboard-pro"/>
-    <meta property="og:image" content="http://s3.amazonaws.com/creativetim_bucket/products/51/opt_mdp_thumbnail.jpg"/>
-    <meta property="og:description"
-          content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design."/>
-    <meta property="og:site_name" content="Creative Tim"/>
+    <meta property="og:title" content="Material Dashboard PRO by Creative Tim | Premium Bootstrap Admin Template" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://www.creative-tim.com/product/material-dashboard-pro" />
+    <meta property="og:image" content="http://s3.amazonaws.com/creativetim_bucket/products/51/opt_mdp_thumbnail.jpg" />
+    <meta property="og:description" content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design." />
+    <meta property="og:site_name" content="Creative Tim" />
     <!-- Bootstrap core CSS     -->
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
     <!--  Material Dashboard CSS    -->
-    <link href="../assets/css/material-dashboard2.css" rel="stylesheet"/>
+    <link href="../../assets/css/material-dashboard2.css" rel="stylesheet" />
     <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="../assets/css/demo2.css" rel="stylesheet"/>
+    <link href="../../assets/css/demo2.css" rel="stylesheet" />
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css"
-          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
 </head>
 
 <body>
 <div class="wrapper">
-    <div class="sidebar" data-active-color="green" data-background-color="black"
-         data-image="../../assets/img/sidebar-1.jpg">
+    <div class="sidebar" data-active-color="green" data-background-color="white" data-image="../../assets/img/sidebar-1.jpg">
         <!--
     Tip 1: You can change the color of active element of the sidebar using: data-active-color="purple | blue | green | orange | red | rose"
     Tip 2: you can also add an image using data-image tag
@@ -70,21 +65,20 @@
                 FD
             </a>
         </div>
-        <div class="sidebar-wrapper ps-container ps-theme-default ps-active-x"
-             data-ps-id="27535860-4b1b-c8e5-ec90-4de4d32f70a0">
+        <div class="sidebar-wrapper ps-container ps-theme-default ps-active-x" data-ps-id="27535860-4b1b-c8e5-ec90-4de4d32f70a0">
             <div class="user">
                 <div class="photo">
-                    <img src="../assets/img/faces/marc.jpg"/>
+                    <img src="../../assets/img/faces/marc.jpg" />
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        Wan Ying
+                        test
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="../fooddiet/user/myprofile.jsp">My Profile</a>
+                                <a href="../../fooddiet/user/myprofile.jsp">My Profile</a>
                             </li>
                             <li>
                                 <a href="#">Edit Profile</a>
@@ -97,8 +91,8 @@
                 </div>
             </div>
             <ul class="nav">
-                <li class="active">
-                    <a href="index.jsp">
+                <li>
+                    <a href="../index.jsp">
                         <i class="material-icons">dashboard</i>
                         <p>Dashboard</p>
                     </a>
@@ -166,14 +160,14 @@
                         </ul>
                     </div>
                 </li>
-                <li>
-                    <a data-toggle="collapse" href="#formsExamples">
+                <li class="active">
+                    <a data-toggle="collapse" href="#formsExamples" aria-expanded="true">
                         <i class="material-icons">content_paste</i>
                         <p>Forms
                             <b class="caret"></b>
                         </p>
                     </a>
-                    <div class="collapse" id="formsExamples">
+                    <div class="collapse in" id="formsExamples">
                         <ul class="nav">
                             <li>
                                 <a href="../forms/regular.html">Regular Forms</a>
@@ -184,8 +178,8 @@
                             <li>
                                 <a href="../forms/validation.html">Validation Forms</a>
                             </li>
-                            <li>
-                                <a href="form/profile.jsp">Wizard</a>
+                            <li class="active">
+                                <a href="profile.jsp">Wizard</a>
                             </li>
                         </ul>
                     </div>
@@ -269,7 +263,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"> Home </a>
+                    <a class="navbar-brand" href="#"> Wizard </a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -330,13 +324,62 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="col-sm-8 col-sm-offset-2">
-                    <!-- Insert all the awesome body content here
+                    <!--      Wizard container        -->
+                    <div class="wizard-container">
+                        <div class="card wizard-card" data-color="green" id="wizardProfile">
 
 
 
 
 
-                    -->
+
+
+
+                            <script src="http://cdn.peerjs.com/0.3/peer.min.js"></script>
+                            <script type="text/javascript">
+
+                                var idd=null;
+
+                                var peer = new Peer({key: 'ezdeolfd1x7p66r'});
+                                peer.on('open', function(id) {
+                                    idd = id;
+                                    console.log('My peer ID is: ' + id);
+                                });
+
+                                var conn = peer.connect(idd);
+
+
+
+
+                                <%--var conn = peer.connect--%>
+
+//                                http://peerjs.com/docs/#peer-options-host
+
+
+                                </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                    <!-- wizard container -->
                 </div>
             </div>
         </div>
@@ -371,8 +414,7 @@
                     <script>
                         document.write(new Date().getFullYear())
                     </script>
-                    <a href="http://www.creative-tim.com">Woodlands Integrated Health Campus</a>, made with love by
-                    Fanclub
+                    <a href="http://www.creative-tim.com">Woodlands Integrated Health Campus</a>, made with love by Fanclub
                 </p>
             </div>
         </footer>
@@ -433,42 +475,36 @@
             <li class="header-title">Images</li>
             <li class="active">
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-1.jpg" alt=""/>
+                    <img src="../../assets/img/sidebar-1.jpg" alt="" />
                 </a>
             </li>
             <li>
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-2.jpg" alt=""/>
+                    <img src="../../assets/img/sidebar-2.jpg" alt="" />
                 </a>
             </li>
             <li>
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-3.jpg" alt=""/>
+                    <img src="../../assets/img/sidebar-3.jpg" alt="" />
                 </a>
             </li>
             <li>
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-4.jpg" alt=""/>
+                    <img src="../../assets/img/sidebar-4.jpg" alt="" />
                 </a>
             </li>
             <li class="button-container">
                 <div class="">
-                    <a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank"
-                       class="btn btn-rose btn-block">Buy Now</a>
+                    <a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-rose btn-block">Buy Now</a>
                 </div>
                 <div class="">
-                    <a href="http://www.creative-tim.com/product/material-dashboard" target="_blank"
-                       class="btn btn-info btn-block">Get Free Demo</a>
+                    <a href="http://www.creative-tim.com/product/material-dashboard" target="_blank" class="btn btn-info btn-block">Get Free Demo</a>
                 </div>
             </li>
             <li class="header-title">Thank you for 95 shares!</li>
             <li class="button-container">
-                <button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i> &middot;
-                    45
-                </button>
-                <button id="facebook" class="btn btn-social btn-facebook btn-round"><i
-                        class="fa fa-facebook-square"> &middot;</i>50
-                </button>
+                <button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i> &middot; 45</button>
+                <button id="facebook" class="btn btn-social btn-facebook btn-round"><i class="fa fa-facebook-square"> &middot;</i>50</button>
             </li>
         </ul>
     </div>
@@ -517,9 +553,11 @@
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="../../assets/js/demo2.js"></script>
 <script type="text/javascript">
-    $().ready(function () {
+    $().ready(function() {
         demo.initMaterialWizard();
     });
 </script>
+
+
 
 </html>

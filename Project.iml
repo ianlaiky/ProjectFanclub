@@ -7,6 +7,7 @@
         <setting name="provider-name" value="" />
         <datasource-mapping>
           <factory-entry name="Entities" />
+          <factory-entry name="foodOrder" />
           <factory-entry name="noname-a.xml@0" value="e63fc345-83ba-43ae-a6e1-dc5f3bdc2f69" />
           <factory-entry name="persistenceUnit" value="e63fc345-83ba-43ae-a6e1-dc5f3bdc2f69" />
         </datasource-mapping>
@@ -20,6 +21,16 @@
         </descriptors>
         <webroots>
           <root url="file://$MODULE_DIR$/web" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web2">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/web/assets/js/bootstrap.min.js" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/web/assets/js" relative="/WEB-INF" />
         </webroots>
       </configuration>
     </facet>
