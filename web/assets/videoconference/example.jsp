@@ -2,8 +2,9 @@
 <head>
     <title>PeerJS - Video chat example</title>
     <link rel="stylesheet" href="style.css">
+    <script src="http://cdn.peerjs.com/0.3/peer.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-    <script type="text/javascript" src="/dist/peer.js"></script>
+    <%--<script type="text/javascript" src="/dist/peer.js"></script>--%>
     <script>
         // Compatibility shim
         navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
