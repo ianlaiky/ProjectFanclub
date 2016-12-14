@@ -55,6 +55,7 @@ function step1() {
     });
 }
 function step2() {
+
     $('#step1, #step3').hide();
     $('#step2').show();
 }
