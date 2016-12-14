@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: Ying
-  Date: 14/12/2016
-  Time: 7:56 PM
+  Date: 15/12/2016
+  Time: 3:19 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -53,7 +53,7 @@
 
 <body>
 <div class="wrapper">
-    <div class="sidebar" data-active-color="green" data-background-color="black" data-image="../../assets/img/sidebar-1.jpg">
+    <div class="sidebar" data-active-color="rose" data-background-color="black" data-image="../../assets/img/sidebar-1.jpg">
         <!--
     Tip 1: You can change the color of active element of the sidebar using: data-active-color="purple | blue | green | orange | red | rose"
     Tip 2: you can also add an image using data-image tag
@@ -61,12 +61,12 @@
 -->
         <div class="logo">
             <a href="http://www.creative-tim.com" class="simple-text">
-                Food Diet
+                Creative Tim
             </a>
         </div>
         <div class="logo logo-mini">
             <a href="http://www.creative-tim.com" class="simple-text">
-                FD
+                Ct
             </a>
         </div>
         <div class="sidebar-wrapper">
@@ -75,20 +75,20 @@
                     <img src="../../assets/img/faces/marc.jpg" />
                 </div>
                 <div class="info">
-                    <a data-toggle="collapse" href="#collapseExample" class="collapsed" aria-expanded="true">
-                        Wan Ying
+                    <a data-toggle="collapse" href="#collapseExample" class="collapsed">
+                        Tania Andrew
                         <b class="caret"></b>
                     </a>
-                    <div class="collapse in" id="collapseExample">
+                    <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="myprofile.jsp">My Profile</a>
+                                <a href="#">My Profile</a>
                             </li>
-                            <li class="active">
+                            <li>
                                 <a href="#">Edit Profile</a>
                             </li>
                             <li>
-                                <a href="#">Daily Intake</a>
+                                <a href="#">Settings</a>
                             </li>
                         </ul>
                     </div>
@@ -96,7 +96,7 @@
             </div>
             <ul class="nav">
                 <li>
-                    <a href="../index.jsp">
+                    <a href="../dashboard.html">
                         <i class="material-icons">dashboard</i>
                         <p>Dashboard</p>
                     </a>
@@ -164,16 +164,16 @@
                         </ul>
                     </div>
                 </li>
-                <li>
-                    <a data-toggle="collapse" href="#formsExamples">
+                <li class="active">
+                    <a data-toggle="collapse" href="#formsExamples" aria-expanded="true">
                         <i class="material-icons">content_paste</i>
                         <p>Forms
                             <b class="caret"></b>
                         </p>
                     </a>
-                    <div class="collapse " id="formsExamples">
+                    <div class="collapse in" id="formsExamples">
                         <ul class="nav">
-                            <li>
+                            <li class="active">
                                 <a href="../forms/regular.html">Regular Forms</a>
                             </li>
                             <li>
@@ -267,7 +267,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"> Edit Profile </a>
+                    <a class="navbar-brand" href="#"> Regular Forms </a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -328,47 +328,177 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header card-header-icon" data-background-color="rose">
+                                <i class="material-icons">mail_outline</i>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="card-title">Stacked Form</h4>
+                                <form method="#" action="#">
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Email address</label>
+                                        <input type="email" class="form-control">
+                                    </div>
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Password</label>
+                                        <input type="password" class="form-control">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="optionsCheckboxes"> Subscribe to newsletter
+                                        </label>
+                                    </div>
+                                    <button type="submit" class="btn btn-fill btn-rose">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header card-header-icon" data-background-color="rose">
+                                <i class="material-icons">contacts</i>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="card-title">Horizontal Form</h4>
+                                <form class="form-horizontal">
+                                    <div class="row">
+                                        <label class="col-md-3 label-on-left">Email</label>
+                                        <div class="col-md-9">
+                                            <div class="form-group label-floating is-empty">
+                                                <label class="control-label"></label>
+                                                <input type="email" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-md-3 label-on-left">Password</label>
+                                        <div class="col-md-9">
+                                            <div class="form-group label-floating is-empty">
+                                                <label class="control-label"></label>
+                                                <input type="password" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-md-3"></label>
+                                        <div class="col-md-9">
+                                            <div class="checkbox form-horizontal-checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="optionsCheckboxes"> Remember Me
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-md-3"></label>
+                                        <div class="col-md-9">
+                                            <div class="form-group form-button">
+                                                <button type="submit" class="btn btn-fill btn-rose">Sign in</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-md-12">
                         <div class="card">
-                            <form id="TypeValidation" class="form-horizontal" action="" method="">
+                            <form method="get" action="/" class="form-horizontal">
                                 <div class="card-header card-header-text" data-background-color="rose">
-                                    <h4 class="card-title">Profile</h4>
+                                    <h4 class="card-title">Form Elements</h4>
                                 </div>
                                 <div class="card-content">
                                     <div class="row">
-                                        <label class="col-sm-2 label-on-left">Name</label>
-                                        <div class="col-sm-7">
-                                            <div class="form-group label-floating">
+                                        <label class="col-sm-2 label-on-left">With help</label>
+                                        <div class="col-sm-10">
+                                            <div class="form-group label-floating is-empty">
                                                 <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="required" required="true" />
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Age</label>
-                                        <div class="col-sm-7">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="number" number="true" />
+                                                <input type="text" class="form-control" value>
+                                                <span class="help-block">A block of help text that breaks onto a new line.</span>
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="row">
-                                        <label class="col-sm-2 label-on-left">Physical Activity Intensity</label>
-                                        <div class="col-lg-7 col-md-6 col-sm-3">
-                                            <select class="selectpicker" data-style="select-with-transition" title="Choose City" data-size="4">
-                                                <option disabled> Choose an intensity best suit you</option>
-                                                <option value="2">Sedentary </option>
-                                                <option value="3">Moderately Active</option>
-                                                <option value="4">Active</option>
-                                            </select>
+                                        <label class="col-sm-2 label-on-left">Password</label>
+                                        <div class="col-sm-10">
+                                            <div class="form-group label-floating is-empty">
+                                                <label class="control-label"></label>
+                                                <input type="password" class="form-control" value>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="card-footer text-center">
-                                    <button type="submit" class="btn btn-rose btn-fill">Update Particulars</button>
+                                    <div class="row">
+                                        <label class="col-sm-2 label-on-left">Placeholder</label>
+                                        <div class="col-sm-10">
+                                            <div class="form-group label-floating is-empty">
+                                                <label class="control-label"></label>
+                                                <input type="text" class="form-control" placeholder="placeholder">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-sm-2 label-on-left">Disabled</label>
+                                        <div class="col-sm-10">
+                                            <div class="form-group label-floating is-empty">
+                                                <label class="control-label"></label>
+                                                <input type="text" placeholder="Disabled input here..." disabled="" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-sm-2 label-on-left">Static control</label>
+                                        <div class="col-sm-10">
+                                            <div class="form-group">
+                                                <p class="form-control-static">hello@creative-tim.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-sm-2 label-on-left">Checkboxes and radios</label>
+                                        <div class="col-sm-10 checkbox-radios">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="optionsCheckboxes"> First Checkbox
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="optionsCheckboxes"> Second Checkbox
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios" checked="true"> First Radio
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios"> Second Radio
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-sm-2 label-on-left">Inline checkboxes</label>
+                                        <div class="col-sm-10">
+                                            <div class="checkbox checkbox-inline">
+                                                <label>
+                                                    <input type="checkbox" name="optionsCheckboxes">a
+                                                </label>
+                                            </div>
+                                            <div class="checkbox checkbox-inline">
+                                                <label>
+                                                    <input type="checkbox" name="optionsCheckboxes">b
+                                                </label>
+                                            </div>
+                                            <div class="checkbox checkbox-inline">
+                                                <label>
+                                                    <input type="checkbox" name="optionsCheckboxes">c
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -377,160 +507,144 @@
                         <div class="card">
                             <form method="get" action="/" class="form-horizontal">
                                 <div class="card-header card-header-text" data-background-color="rose">
-                                    <h4 class="card-title">Measurements</h4>
+                                    <h4 class="card-title">Input Variants</h4>
                                 </div>
                                 <div class="card-content">
                                     <div class="row">
-                                        <div class="col-sm-2">
-                                            <label class="col-sm-offset-2 label-on-left">Height</label>
-                                        </div>
-                                        <div class="col-sm-7">
-                                            <div class="col-xs-5">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label"></label>
-                                                    <input class="form-control" type="text" name="number" number="true" />
-                                                </div>
+                                        <label class="col-sm-2 label-on-left">Custom Checkboxes &amp; radios</label>
+                                        <div class="col-sm-4 col-sm-offset-1 checkbox-radios">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="optionsCheckboxes"> Unchecked
+                                                </label>
                                             </div>
-                                            <label class="col-xs-2 label-on-right">
-                                                Cm
-                                            </label>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="optionsCheckboxes" checked> Checked
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="optionsCheckboxes" disabled> Disabled Unchecked
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="optionsCheckboxes" checked disabled> Disabled Checked
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5 checkbox-radios">
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios"> Radio is off
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios" checked="true"> Radio is on
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadiosDisabled" disabled> Disabled Radio is off
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadiosDisabled" checked="true" disabled> Disabled Radio is on
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-sm-2">
-                                            <label class="col-sm-offset-2 label-on-left">Weight</label>
-                                        </div>
-                                        <div class="col-sm-7">
-                                            <div class="col-xs-5">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label"></label>
-                                                    <input class="form-control" type="text" name="number" number="true" />
-                                                </div>
+                                        <label class="col-sm-2 label-on-left">Input with success</label>
+                                        <div class="col-sm-10">
+                                            <div class="form-group label-floating is-empty has-success">
+                                                <label class="control-label"></label>
+                                                <input type="text" class="form-control" value="Success">
+                                                <span class="material-icons form-control-feedback">done</span>
                                             </div>
-                                            <label class="col-xs-2 label-on-right">
-                                                Kg
-                                            </label>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="card-footer text-center">
-                                    <button type="submit" class="btn btn-rose btn-fill">Save</button>
+                                    <div class="row">
+                                        <label class="col-sm-2 label-on-left">Input with error</label>
+                                        <div class="col-sm-10">
+                                            <div class="form-group label-floating is-empty has-error">
+                                                <label class="control-label"></label>
+                                                <input type="text" class="form-control" value="Error Input">
+                                                <span class="material-icons form-control-feedback">clear</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-sm-2 label-on-left">Column sizing</label>
+                                        <div class="col-sm-10">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <div class="form-group label-floating is-empty">
+                                                        <label class="control-label"></label>
+                                                        <input type="text" class="form-control" placeholder=".col-md-3">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group label-floating is-empty">
+                                                        <label class="control-label"></label>
+                                                        <input type="text" class="form-control" placeholder=".col-md-4">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <div class="form-group label-floating is-empty">
+                                                        <label class="control-label"></label>
+                                                        <input type="text" class="form-control" placeholder=".col-md-5">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </form>
                         </div>
                     </div>
-                  <!--  <div class="col-md-12">
-                        <div class="card">
-                            <form id="RangeValidation" class="form-horizontal" action="" method="">
-                                <div class="card-header card-header-text" data-background-color="rose">
-                                    <h4 class="card-title">Range Validation</h4>
-                                </div>
-                                <div class="card-content">
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Min Length</label>
-                                        <div class="col-sm-7">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="min_length" minLength="5" />
-                                            </div>
-                                        </div>
-                                        <label class="col-sm-3 label-on-right">
-                                            <code>minLength="5"</code>
-                                        </label>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Max Length</label>
-                                        <div class="col-sm-7">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="max_length" maxLength="5" />
-                                            </div>
-                                        </div>
-                                        <label class="col-sm-3 label-on-right">
-                                            <code>maxLength="5"</code>
-                                        </label>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Range</label>
-                                        <div class="col-sm-7">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="range" range="[6,10]" />
-                                            </div>
-                                        </div>
-                                        <label class="col-sm-3 label-on-right">
-                                            <code>range="[6,10]"</code>
-                                        </label>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Min Value</label>
-                                        <div class="col-sm-7">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="min" min="6" />
-                                            </div>
-                                        </div>
-                                        <label class="col-sm-3 label-on-right">
-                                            <code>min="6"</code>
-                                        </label>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Max Value</label>
-                                        <div class="col-sm-7">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="max" max="6" />
-                                            </div>
-                                        </div>
-                                        <label class="col-sm-3 label-on-right">
-                                            <code>max="6"</code>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="card-footer text-center">
-                                    <button type="submit" class="btn btn-rose btn-fill">Validate Inputs</button>
-                                </div>
-                            </form>
-                        </div> -->
-                    </div>
                 </div>
             </div>
-    <footer class="footer">
-        <div class="container-fluid">
-            <nav class="pull-left">
-                <ul>
-                    <li>
-                        <a href="#">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Company
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Portfolio
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Blog
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <p class="copyright pull-right">
-                &copy;
-                <script>
-                    document.write(new Date().getFullYear())
-                </script>
-                <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
-            </p>
         </div>
-    </footer>
-</div>
+        <footer class="footer">
+            <div class="container-fluid">
+                <nav class="pull-left">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Company
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Portfolio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Blog
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <p class="copyright pull-right">
+                    &copy;
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script>
+                    <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+                </p>
+            </div>
+        </footer>
+    </div>
 </div>
 <div class="fixed-plugin">
     <div class="dropdown show-dropdown">
@@ -664,21 +778,5 @@
 <script src="../../assets/js/material-dashboard2.js"></script>
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="../../assets/js/demo2.js"></script>
-<script type="text/javascript">
-    function setFormValidation(id) {
-        $(id).validate({
-            errorPlacement: function(error, element) {
-                $(element).parent('div').addClass('has-error');
-            }
-        });
-    }
-
-    $(document).ready(function() {
-        setFormValidation('#RegisterValidation');
-        setFormValidation('#TypeValidation');
-        setFormValidation('#LoginValidation');
-        setFormValidation('#RangeValidation');
-    });
-</script>
 
 </html>

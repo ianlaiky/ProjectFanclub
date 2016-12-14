@@ -88,7 +88,7 @@
                                 <a href="editprofile.jsp">Edit Profile</a>
                             </li>
                             <li>
-                                <a href="#">Settings</a>
+                                <a href="#">Daily Intake</a>
                             </li>
                         </ul>
                     </div>
@@ -97,7 +97,7 @@
             </div>
             <ul class="nav">
                 <li>
-                    <a href="../../template/index.jsp">
+                    <a href="../index.jsp">
                         <i class="material-icons">dashboard</i>
                         <p>Dashboard</p>
                     </a>
