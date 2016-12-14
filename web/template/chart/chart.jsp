@@ -1,20 +1,19 @@
 <%--
   Created by IntelliJ IDEA.
   User: Ying
-  Date: 11/12/2016
-  Time: 4:24 AM
+  Date: 14/12/2016
+  Time: 8:42 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png" />
-    <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png" />
+    <link rel="icon" type="image/png" href="../../assets/img/favicon.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Vision API</title>
+    <title>Material Dashboard PRO by Creative Tim | Premium Bootstrap Admin Template</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
     <!-- Canonical SEO -->
@@ -42,38 +41,19 @@
     <meta property="og:description" content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design." />
     <meta property="og:site_name" content="Creative Tim" />
     <!-- Bootstrap core CSS     -->
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
     <!--  Material Dashboard CSS    -->
-    <link href="../assets/css/material-dashboard2.css" rel="stylesheet" />
+    <link href="../../assets/css/material-dashboard2.css" rel="stylesheet" />
     <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="../assets/css/demo2.css" rel="stylesheet" />
+    <link href="../../assets/css/demo2.css" rel="stylesheet" />
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
-
-    <style type="text/css">
-        div.item {
-            vertical-align: top;
-            display: inline-block;
-            text-align: center;
-            width: 180px;
-            font-family: "Fira Code Medium";
-        }
-        img {
-            width: 180px;
-            height: 140px;
-            background-color: grey;
-        }
-        .caption {
-            display: block;
-        }
-
-    </style>
 </head>
 
 <body>
 <div class="wrapper">
-    <div class="sidebar" data-active-color="green" data-background-color="white" data-image="../../assets/img/sidebar-1.jpg">
+    <div class="sidebar" data-active-color="rose" data-background-color="black" data-image="../../assets/img/sidebar-1.jpg">
         <!--
     Tip 1: You can change the color of active element of the sidebar using: data-active-color="purple | blue | green | orange | red | rose"
     Tip 2: you can also add an image using data-image tag
@@ -81,45 +61,42 @@
 -->
         <div class="logo">
             <a href="http://www.creative-tim.com" class="simple-text">
-                Food Diet
+                Creative Tim
             </a>
         </div>
         <div class="logo logo-mini">
             <a href="http://www.creative-tim.com" class="simple-text">
-                FD
+                Ct
             </a>
         </div>
-        <div class="sidebar-wrapper ps-container ps-theme-default ps-active-x" data-ps-id="27535860-4b1b-c8e5-ec90-4de4d32f70a0">
+        <div class="sidebar-wrapper">
             <div class="user">
                 <div class="photo">
-                    <img src="../assets/img/faces/marc.jpg" />
+                    <img src="../../assets/img/faces/marc.jpg" />
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        Junkiat
+                        Wan Ying
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="../foodorder/index.jsp">Order</a>
+                                <a href="#">My Profile</a>
                             </li>
                             <li>
-                                <a href="#">Dietary Restrictions</a>
+                                <a href="#">Edit Profile</a>
                             </li>
                             <li>
-                                <a href="#">Diet Recommendation</a>
-                            </li>
-                            <li>
-                                <a href="#">FeedBack</a>
+                                <a href="#">Settings</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
             <ul class="nav">
-                <li class="active">
-                    <a href="index.jsp">
+                <li>
+                    <a href="./dashboard.html">
                         <i class="material-icons">dashboard</i>
                         <p>Dashboard</p>
                     </a>
@@ -134,22 +111,22 @@
                     <div class="collapse" id="pagesExamples">
                         <ul class="nav">
                             <li>
-                                <a href="../pages/pricing.html">Pricing</a>
+                                <a href="./pages/pricing.html">Pricing</a>
                             </li>
                             <li>
-                                <a href="../pages/timeline.html">Timeline</a>
+                                <a href="./pages/timeline.html">Timeline</a>
                             </li>
                             <li>
-                                <a href="../pages/login.html">Login Page</a>
+                                <a href="./pages/login.html">Login Page</a>
                             </li>
                             <li>
-                                <a href="../pages/register.html">Register Page</a>
+                                <a href="./pages/register.html">Register Page</a>
                             </li>
                             <li>
-                                <a href="../pages/lock.html">Lock Screen Page</a>
+                                <a href="./pages/lock.html">Lock Screen Page</a>
                             </li>
                             <li>
-                                <a href="../pages/user.html">User Profile</a>
+                                <a href="./pages/user.html">User Profile</a>
                             </li>
                         </ul>
                     </div>
@@ -164,25 +141,25 @@
                     <div class="collapse" id="componentsExamples">
                         <ul class="nav">
                             <li>
-                                <a href="../components/buttons.html">Buttons</a>
+                                <a href="./components/buttons.html">Buttons</a>
                             </li>
                             <li>
-                                <a href="../components/grid.html">Grid System</a>
+                                <a href="./components/grid.html">Grid System</a>
                             </li>
                             <li>
-                                <a href="../components/panels.html">Panels</a>
+                                <a href="./components/panels.html">Panels</a>
                             </li>
                             <li>
-                                <a href="../components/sweet-alert.html">Sweet Alert</a>
+                                <a href="./components/sweet-alert.html">Sweet Alert</a>
                             </li>
                             <li>
-                                <a href="../components/notifications.html">Notifications</a>
+                                <a href="./components/notifications.html">Notifications</a>
                             </li>
                             <li>
-                                <a href="../components/icons.html">Icons</a>
+                                <a href="./components/icons.html">Icons</a>
                             </li>
                             <li>
-                                <a href="../components/typography.html">Typography</a>
+                                <a href="./components/typography.html">Typography</a>
                             </li>
                         </ul>
                     </div>
@@ -197,16 +174,16 @@
                     <div class="collapse" id="formsExamples">
                         <ul class="nav">
                             <li>
-                                <a href="../forms/regular.html">Regular Forms</a>
+                                <a href="./forms/regular.html">Regular Forms</a>
                             </li>
                             <li>
-                                <a href="../forms/extended.html">Extended Forms</a>
+                                <a href="./forms/extended.html">Extended Forms</a>
                             </li>
                             <li>
-                                <a href="../forms/validation.html">Validation Forms</a>
+                                <a href="./forms/validation.html">Validation Forms</a>
                             </li>
                             <li>
-                                <a href="form/profile.jsp">Wizard</a>
+                                <a href="./forms/wizard.html">Wizard</a>
                             </li>
                         </ul>
                     </div>
@@ -221,13 +198,13 @@
                     <div class="collapse" id="tablesExamples">
                         <ul class="nav">
                             <li>
-                                <a href="../tables/regular.html">Regular Tables</a>
+                                <a href="./tables/regular.html">Regular Tables</a>
                             </li>
                             <li>
-                                <a href="../tables/extended.html">Extended Tables</a>
+                                <a href="./tables/extended.html">Extended Tables</a>
                             </li>
                             <li>
-                                <a href="../tables/datatables.net.html">DataTables.net</a>
+                                <a href="./tables/datatables.net.html">DataTables.net</a>
                             </li>
                         </ul>
                     </div>
@@ -242,31 +219,31 @@
                     <div class="collapse" id="mapsExamples">
                         <ul class="nav">
                             <li>
-                                <a href="../maps/google.html">Google Maps</a>
+                                <a href="./maps/google.html">Google Maps</a>
                             </li>
                             <li>
-                                <a href="../maps/fullscreen.html">Full Screen Map</a>
+                                <a href="./maps/fullscreen.html">Full Screen Map</a>
                             </li>
                             <li>
-                                <a href="../maps/vector.html">Vector Map</a>
+                                <a href="./maps/vector.html">Vector Map</a>
                             </li>
                         </ul>
                     </div>
                 </li>
                 <li>
-                    <a href="../widgets.html">
+                    <a href="./widgets.html">
                         <i class="material-icons">widgets</i>
                         <p>Widgets</p>
                     </a>
                 </li>
-                <li>
-                    <a href="../charts.html">
+                <li class="active">
+                    <a href="./charts.html">
                         <i class="material-icons">timeline</i>
                         <p>Charts</p>
                     </a>
                 </li>
                 <li>
-                    <a href="../calendar.html">
+                    <a href="./calendar.html">
                         <i class="material-icons">date_range</i>
                         <p>Calendar</p>
                     </a>
@@ -274,7 +251,7 @@
             </ul>
         </div>
     </div>
-    <div class="main-panel ps-container ps-theme-default ps-active-y" data-ps-id="65ac8db9-de08-275b-5f50-5be114b3ac44">
+    <div class="main-panel">
         <nav class="navbar navbar-transparent navbar-absolute">
             <div class="container-fluid">
                 <div class="navbar-minimize">
@@ -290,7 +267,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"> Home </a>
+                    <a class="navbar-brand" href="#"> Charts </a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -350,78 +327,107 @@
         </nav>
         <div class="content">
             <div class="container-fluid">
-                <div class="col-sm-8 col-sm-offset-2">
-               <%--Insert all the awesome body content here--%>
-
-                   <ul class="nav nav-pills nav-justified">
-                       <li class="active"><a data-toggle="pill" href="#food">Home</a></li>
-                       <li><a data-toggle="pill" href="#drinks">Drinks</a></li>
-                       <li><a data-toggle="pill" href="#fruits">Fruits</a></li>
-                   </ul>
-
-                   <div class="tab-content">
-                       <div id="food" class="tab-pane fade in active">
-                           <h3>Food</h3>
-
-
-
-                           <div class="item">
-                               <img src="images/fishporridge.jpg" class="img-circle" alt="fishporridge">
-                               <span class="caption">Fish porridge</span>
-                           </div>
-                           <div class="item">
-                               <img src="images/fishporridge.jpg" class="img-circle" alt="Cinque Terre" >
-                               <span class="caption">Text below the image</span>
-                           </div>
-
-                           <div class="item">
-                               <img src="images/fishporridge.jpg" class="img-circle" alt="Cinque Terre" >
-                               <span class="caption">Text below the image</span>
-                           </div>
-                           <div class="item">
-                               <img src="images/fishporridge.jpg" class="img-circle" alt="Cinque Terre" >
-                               <span class="caption">Text below the image</span>
-                           </div>
-                           <div class="item">
-                               <img src="images/fishporridge.jpg" class="img-circle" alt="Cinque Terre" >
-                               <span class="caption">Text below the image</span>
-                           </div>
-                           <div class="item">
-                               <img src="images/fishporridge.jpg" class="img-circle" alt="Cinque Terre" >
-                               <span class="caption">Text below the image</span>
-                           </div>
-                           <div class="item">
-                               <img src="images/fishporridge.jpg" class="img-circle" alt="Cinque Terre" >
-                               <span class="caption">Text below the image</span>
-                           </div>
-
-
-
-                       </div>
-                       <div id="drinks" class="tab-pane fade">
-                           <h3>Drinks</h3>
-                           <p>Some content in menu 1.</p>
-                       </div>
-                       <div id="fruits" class="tab-pane fade">
-                           <h3>Fruits</h3>
-                           <p> textholder</p>
-                       </div>
-                   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    <%-- end of content--%>
+                <div class="header text-center">
+                    <h3 class="title">Chartist.js</h3>
+                    <p class="category">Handcrafted by our friends from
+                        <a target="_blank" href="https://gionkunz.github.io/chartist-js/">Chartist.js</a>. Please checkout their
+                        <a href="https://gionkunz.github.io/chartist-js/getting-started.html" target="_blank">full documentation.</a>
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card card-chart">
+                            <div class="card-header" data-background-color="rose">
+                                <div id="roundedLineChart" class="ct-chart"></div>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="card-title">Rounded Line Chart</h4>
+                                <p class="category">Line Chart</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-chart">
+                            <div class="card-header" data-background-color="orange">
+                                <div id="straightLinesChart" class="ct-chart"></div>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="card-title">Straight Lines Chart</h4>
+                                <p class="category">Line Chart with Points</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-chart">
+                            <div class="card-header" data-background-color="blue">
+                                <div id="simpleBarChart" class="ct-chart"></div>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="card-title">Simple Bar Chart</h4>
+                                <p class="category">Bar Chart</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header card-header-icon" data-background-color="blue">
+                                <i class="material-icons">timeline</i>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="card-title">Coloured Line Chart
+                                    <small> - Rounded</small>
+                                </h4>
+                            </div>
+                            <div id="colouredRoundedLineChart" class="ct-chart"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header card-header-icon" data-background-color="rose">
+                                <i class="material-icons">insert_chart</i>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="card-title">Multiple Bars Chart
+                                    <small>- Bar Chart</small>
+                                </h4>
+                            </div>
+                            <div id="multipleBarsChart" class="ct-chart"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="card">
+                            <div class="card-header card-header-icon" data-background-color="blue">
+                                <i class="material-icons">timeline</i>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="card-title">Coloured Bars Chart
+                                    <small> - Rounded</small>
+                                </h4>
+                            </div>
+                            <div id="colouredBarsChart" class="ct-chart"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="card">
+                            <div class="card-header card-header-icon" data-background-color="red">
+                                <i class="material-icons">pie_chart</i>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="card-title">Pie Chart</h4>
+                            </div>
+                            <div id="chartPreferences" class="ct-chart"></div>
+                            <div class="card-footer">
+                                <h6>Legend</h6>
+                                <i class="fa fa-circle text-info"></i> Apple
+                                <i class="fa fa-circle text-warning"></i> Samsung
+                                <i class="fa fa-circle text-danger"></i> Windows Phone
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -456,7 +462,7 @@
                     <script>
                         document.write(new Date().getFullYear())
                     </script>
-                    <a href="http://www.creative-tim.com">Woodlands Integrated Health Campus</a>, made with love by Fanclub
+                    <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
                 </p>
             </div>
         </footer>
@@ -477,7 +483,7 @@
                         <span class="badge filter badge-green" data-color="green"></span>
                         <span class="badge filter badge-orange" data-color="orange"></span>
                         <span class="badge filter badge-red" data-color="red"></span>
-                        <span class="badge filter badge-rose active" data-color="green"></span>
+                        <span class="badge filter badge-rose active" data-color="rose"></span>
                     </div>
                     <div class="clearfix"></div>
                 </a>
@@ -594,9 +600,9 @@
 <script src="../../assets/js/material-dashboard2.js"></script>
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="../../assets/js/demo2.js"></script>
-<script type="text/javascript">
-    $().ready(function() {
-        demo.initMaterialWizard();
+<script>
+    $(document).ready(function() {
+        demo.initCharts();
     });
 </script>
 
