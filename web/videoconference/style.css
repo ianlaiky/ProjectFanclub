@@ -1045,9 +1045,10 @@ table {
 
 #my-video {
     margin-top: 15px;
-    width: 280px;
+    width: 180px;
     height: auto;
     background-color: #eee;
+
 }
 
 #their-video {
@@ -1055,6 +1056,7 @@ table {
     height: 75%;
     max-height: 480px;
     background-color: #eee;
+    /*content: url(images/not.jpg);*/
 }
 
 #video-container {
