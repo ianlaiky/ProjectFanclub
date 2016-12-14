@@ -39,6 +39,7 @@
         var create = {
             init: function () {
                 $("#btnFPorridge").on("click", "button", function(e){
+                    //
                     <%--<%--%>
                     <%--fod.createFoodOrder("Fish Porridge","1",null,null,null);--%>
                     <%--%>--%>
