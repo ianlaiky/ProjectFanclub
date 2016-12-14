@@ -331,62 +331,59 @@
             <div class="container-fluid">
                 <div class="col-sm-8 col-sm-offset-2">
                     <!--      Wizard container        -->
+
+
+
+
+
+
                     <div class="wizard-container">
                         <div class="card wizard-card" data-color="green" id="wizardProfile">
-
-
+                            <link rel="stylesheet" href="style.css">
                             <script src="http://cdn.peerjs.com/0.3/peer.min.js"></script>
-                            <script type="text/javascript">
+                            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+                            <script src="video.js"></script>
 
+                            <div class="pure-g">
 
-                                var conn;
-                                var idd = null;
+                                <!-- Video area -->
+                                <div class="pure-u-2-3" id="video-container">
+                                    <video id="their-video" autoplay></video>
+                                    <video id="my-video" muted="true" autoplay></video>
+                                </div>
 
-                                var peer = new Peer({key: 'ezdeolfd1x7p66r'});
-                                peer.on('open', function (id) {
-                                    idd = id;
-                                    console.log('My peer ID is: ' + id);
-                                    $("#pid").text(id);
-                                });
+                                <!-- Steps -->
+                                <div class="pure-u-1-3">
+                                    <h2>PeerJS Video Chat</h2>
 
-                                peer.on('connection',connect);
-                                function connect(c){
-                                $('#rid').val(conn.peer);
-                                $('#rid').prop('disabled',true);
-                                $('#progressBar').width('100%');
+                                    <!-- Get local audio/video stream -->
+                                    <div id="step1">
+                                        <p>Please click `allow` on the top of the screen so we can access your webcam and microphone for calls.</p>
+                                        <div id="step1-error">
+                                            <p>Failed to access the webcam and microphone. Make sure to run this demo on an http server and click
+                                                allow when asked for permission by the browser.</p>
+                                            <a href="#" class="pure-button pure-button-error" id="step1-retry">Try again</a>
+                                        </div>
+                                    </div>
 
+                                    <!-- Make calls to others -->
+                                    <div id="step2">
+                                        <p>Your id: <span id="my-id">...</span></p>
+                                        <p>Share this id with others so they can call you.</p>
+                                        <h3>Make a call</h3>
+                                        <div class="pure-form">
+                                            <input type="text" placeholder="Call user id..." id="callto-id">
+                                            <a href="#" class="pure-button pure-button-success" id="make-call">Call</a>
+                                        </div>
+                                    </div>
 
-
-                                }
-                                $(document).ready(function(){
-                                    $('#connect').click(function () {
-                                        console.log( "Handler for .click() called." );
-                                    })
-
-
-
-                                });
-
-
-//                                var conn = peer.connect(idd);
-
-
-//                                var conn = peer.connect
-
-                                //                                http://peerjs.com/docs/#peer-options-host
-
-
-                            </script>
-
-
-                            <span>Your id is </span><span id="pid"></span>
-                            <br>
-                            <input type="text" id="rid" placeholder="inpput id here">
-                            <input type="button" id="connect" value="Connect">
-                            <input type="button" id="disconnect" value="Disconnect">
-
-                            <br>
-                            <div id="progressBar" style="width: 0%"></div>
+                                    <!-- Call in progress -->
+                                    <div id="step3">
+                                        <p>Currently in call with <span id="their-id">...</span></p>
+                                        <p><a href="#" class="pure-button pure-button-error" id="end-call">End call</a></p>
+                                    </div>
+                                </div>
+                            </div>
 
 
 
