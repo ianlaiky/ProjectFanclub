@@ -6,7 +6,6 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!doctype html>
 <html lang="en">
 
 <head>
@@ -54,7 +53,7 @@
 
 <body>
 <div class="wrapper">
-    <div class="sidebar" data-active-color="green" data-background-color="white" data-image="../../assets/img/sidebar-1.jpg">
+    <div class="sidebar" data-active-color="green" data-background-color="black" data-image="../../assets/img/sidebar-1.jpg">
         <!--
     Tip 1: You can change the color of active element of the sidebar using: data-active-color="purple | blue | green | orange | red | rose"
     Tip 2: you can also add an image using data-image tag
@@ -86,13 +85,14 @@
                                 <a href="#">My Profile</a>
                             </li>
                             <li>
-                                <a href="#">Edit Profile</a>
+                                <a href="editprofile.jsp">Edit Profile</a>
                             </li>
                             <li>
                                 <a href="#">Settings</a>
                             </li>
                         </ul>
                     </div>
+
                 </div>
             </div>
             <ul class="nav">
@@ -373,7 +373,6 @@
                                                         </span>
                                                     <div class="form-group label-floating">
                                                         <label class="control-label">Name
-                                                            <small>(required)</small>
                                                         </label>
                                                         <input name="name" type="text" class="form-control">
                                                     </div>
@@ -384,18 +383,16 @@
                                                         </span>
                                                     <div class="form-group label-floating">
                                                         <label class="control-label">Age
-                                                            <small>(required)</small>
                                                         </label>
-                                                        <input name="age" type="number" class="form-control">
+                                                        <input name="age" type="text" class="form-control">
                                                     </div>
                                                 </div>
                                                 <div class="input-group">
                                                         <span class="input-group-addon">
                                                             <i class="material-icons">person</i>
                                                         </span>
-                                                    <div class="form-group label-floating">
+                                                    <div>
                                                         <label class="control-label">Gender
-                                                            <small>(required)</small>
                                                         </label>
                                                         <div class="radio">
                                                         <label>
@@ -410,19 +407,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                      <!--     <div class="col-lg-10 col-lg-offset-1">
-                                                <div class="input-group">
-                                                        <span class="input-group-addon">
-                                                            <i class="material-icons">email</i>
-                                                        </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">Email
-                                                            <small>(required)</small>
-                                                        </label>
-                                                        <input name="email" type="email" class="form-control">
-                                                    </div>
-                                                </div>
-                                            </div> -->
+
                                         </div>
                                     </div>
                                     <div class="tab-pane" id="account">
@@ -461,44 +446,23 @@
                                     </div>
                                     <div class="tab-pane" id="address">
                                         <div class="row">
-                                            <div class="col-sm-12">
+                                            <div class="col-sm-12 ">
                                                 <h4 class="info-text"> Do you want to keep fit? </h4>
                                             </div>
-                                            <div class="col-sm-7 col-sm-offset-1">
+                                            <div class="col-sm-7 col-sm-offset-2">
                                                 <div class="form-group label-floating">
-                                                    <label class="control-label">Street Name</label>
+                                                    <label class="control-label">Height</label>
                                                     <input type="text" class="form-control">
                                                 </div>
                                             </div>
-                                            <div class="col-sm-3">
+
+                                            <div class="col-sm-7 col-sm-offset-2">
                                                 <div class="form-group label-floating">
-                                                    <label class="control-label">Street No.</label>
+                                                    <label class="control-label">Weight</label>
                                                     <input type="text" class="form-control">
                                                 </div>
                                             </div>
-                                            <div class="col-sm-5 col-sm-offset-1">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">City</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-5">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Country</label>
-                                                    <select name="country" class="form-control">
-                                                        <option disabled="" selected=""></option>
-                                                        <option value="Afghanistan"> Afghanistan </option>
-                                                        <option value="Albania"> Albania </option>
-                                                        <option value="Algeria"> Algeria </option>
-                                                        <option value="American Samoa"> American Samoa </option>
-                                                        <option value="Andorra"> Andorra </option>
-                                                        <option value="Angola"> Angola </option>
-                                                        <option value="Anguilla"> Anguilla </option>
-                                                        <option value="Antarctica"> Antarctica </option>
-                                                        <option value="...">...</option>
-                                                    </select>
-                                                </div>
-                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
