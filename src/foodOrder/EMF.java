@@ -5,7 +5,7 @@ import javax.persistence.Persistence;
 
 
 public class EMF {
-    private static final EntityManagerFactory emfInstance = Persistence.createEntityManagerFactory("bookstore");
+    private static final EntityManagerFactory emfInstance = Persistence.createEntityManagerFactory("foodOrder");
     private EMF() {}
     public static EntityManagerFactory get() {
         return emfInstance;

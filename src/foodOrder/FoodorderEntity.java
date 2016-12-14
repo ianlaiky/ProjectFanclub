@@ -6,7 +6,8 @@ import javax.persistence.*;
  * Created by astaroh on 12/14/2016.
  */
 @Entity
-@Table(name = "foodorder", schema = "jedp", catalog = "")
+@Table(name = "foodorder", schema = "jedp")
+        //(name = "foodorder", schema = "jedp", catalog = "")
 public class FoodorderEntity {
     private int idfoodorder;
     private String foodName;
@@ -14,6 +15,18 @@ public class FoodorderEntity {
     private String patientId;
     private String patientName;
     private String roomId;
+    public FoodorderEntity(int idfoodorder,String foodName,String foodQuantity,String patientId,
+    String patientName,String roomId){
+        this.idfoodorder = idfoodorder;
+        this.foodName = foodName;
+        this.foodQuantity = foodQuantity;
+        this.patientId = patientId;
+        this.patientName = patientName;
+        this.roomId = roomId;
+    }
+
+    public FoodorderEntity() {
+    }
 
     @Id
     @Column(name = "idfoodorder", nullable = false)
@@ -102,4 +115,7 @@ public class FoodorderEntity {
         result = 31 * result + (roomId != null ? roomId.hashCode() : 0);
         return result;
     }
+
+
+
 }

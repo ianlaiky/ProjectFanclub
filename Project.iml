@@ -7,9 +7,8 @@
         <setting name="provider-name" value="" />
         <datasource-mapping>
           <factory-entry name="Entities" />
-          <factory-entry name="foodOrder" />
+          <factory-entry name="bookstore" value="e63fc345-83ba-43ae-a6e1-dc5f3bdc2f69" />
           <factory-entry name="noname-a.xml@0" value="e63fc345-83ba-43ae-a6e1-dc5f3bdc2f69" />
-          <factory-entry name="persistenceUnit" value="e63fc345-83ba-43ae-a6e1-dc5f3bdc2f69" />
         </datasource-mapping>
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/META-INF/persistence.xml" />
       </configuration>
@@ -47,5 +46,6 @@
     <orderEntry type="library" name="WebSocket-1.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.0.36" level="application_server_libraries" />
     <orderEntry type="library" name="mysql:mysql-connector-java:5.1.40" level="project" />
+    <orderEntry type="library" name="org.eclipse.persistence:eclipselink:2.6.2" level="project" />
   </component>
 </module>

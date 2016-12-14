@@ -12,11 +12,10 @@ public class foodOrderDAO {
     public foodOrderDAO() {
         em = EMF.get().createEntityManager();
     }
-//    public BooksEntity getBook() {
-//        List<BooksEntity> list = getAllBook();
-//        int i = random.nextInt(list.size());
-//        return list.get(i);
-//    }
+    public FoodorderEntity getFoodOrder(int index) {
+        List<FoodorderEntity> list = getAllfoodOrder();
+        return list.get(index);
+    }
     public List<FoodorderEntity> getAllfoodOrder() {
         List<FoodorderEntity> list = null;
         try {
@@ -27,4 +26,21 @@ public class foodOrderDAO {
         }
         return list;
     }
+    public FoodorderEntity createFoodOrder(String foodName,String foodQuantity,String patientId,String patientName,String roomId ){
+        List<FoodorderEntity>list =  null;
+        list = getAllfoodOrder();
+        int id = list.size()+1;
+        FoodorderEntity order = new FoodorderEntity(id,foodName,foodQuantity,patientId,patientName,roomId);
+        em.getTransaction().begin();
+        em.persist(order);
+        em.getTransaction().commit();
+        System.out.println("testlog");
+
+        //retrieve updated list
+        list = getAllfoodOrder();
+        return list.get(id);
+
+
+    }
+
 }

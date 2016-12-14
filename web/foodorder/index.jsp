@@ -11,14 +11,48 @@
 
 <head>
 
+
     <meta charset="utf-8" />
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png" />
     <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <%--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>--%>
     <%--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>--%>
     <title>Vision API</title>
+    <%@ page import="foodOrder.*"%>
+    <%
+        foodOrderDAO fod = new foodOrderDAO();
+    %>
+
+
+    <script>
+        <%--$('#btnFPorridge').on('click', function (e) {--%>
+            <%--<%--%>
+            <%--fod.createFoodOrder("Fish Porridge","1",null,null,null);--%>
+            <%--%>--%>
+
+            <%--//your awesome code here--%>
+
+        <%--})--%>
+        var create = {
+            init: function () {
+                $("#btnFPorridge").on("click", "button", function(e){
+                    <%--<%--%>
+                    <%--fod.createFoodOrder("Fish Porridge","1",null,null,null);--%>
+                    <%--%>--%>
+                });
+
+            }
+        };
+        $(document).ready(function () {
+
+            create.init();
+        });
+
+    </script>
+
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
     <!-- Canonical SEO -->
@@ -398,7 +432,7 @@
                                <span class="caption">
                                    Fish porridge
                                </span>
-                               <button type="button" class="btn btn-primary btn-circle"><i class="glyphicon glyphicon-plus"></i></button>
+                               <button type="button"if="btnFPorridge" class="btn btn-primary btn-circle"><i class="glyphicon glyphicon-plus"></i></button>
                            </div>
                            <div class="item">
                                <img src="images/chickennoodle.jpg" class="img-circle" alt="Cinque Terre" >
