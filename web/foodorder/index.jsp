@@ -34,7 +34,7 @@
             <%--%>--%>
 
             <%--//your awesome code here--%>
-
+//
         <%--})--%>
         var create = {
             init: function () {
