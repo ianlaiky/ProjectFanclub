@@ -96,7 +96,7 @@
             </div>
             <ul class="nav">
                 <li>
-                    <a href="../../try/index.jsp">
+                    <a href="../../template/index.jsp">
                         <i class="material-icons">dashboard</i>
                         <p>Dashboard</p>
                     </a>
