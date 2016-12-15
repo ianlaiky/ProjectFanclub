@@ -414,7 +414,7 @@
             <li class="adjustments-line">
                 <a href="javascript:void(0)" class="switch-trigger active-color">
                     <div class="badge-colors text-center">
-                        <span class="badge filter badge-purple" data-color="purple"></span>
+                        <span class="badge filter badge-blue" data-color="blue"></span>
                         <span class="badge filter badge-blue" data-color="blue"></span>
                         <span class="badge filter badge-green" data-color="green"></span>
                         <span class="badge filter badge-orange" data-color="orange"></span>
