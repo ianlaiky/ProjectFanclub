@@ -36,7 +36,7 @@ public class UserServlet extends HttpServlet {
         }else if(rbtn.equals("moderate")){
             intensity = "moderate";
         }else if(rbtn.equals("active")){
-            intensity = "active";
+            intensity = "activenyann";
         }
 
         getServletContext().getRequestDispatcher("/editprofile.jsp").forward(request, response);
