@@ -328,7 +328,7 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-10">
+                    <div class="col-md-10 col-md-offset-1">
                         <div class="card">
                             <div class="card-header">
                                 <h4 class="card-title" data-background-color="rose">Recommended Personalized Daily Food Intake</h4>
@@ -339,14 +339,16 @@
                                         <div class="panel-heading" role="tab" id="headingOne">
                                             <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                                 <h4 class="panel-title">
-                                                    Collapsible Group Item #1
+                                                    Calories
                                                     <i class="material-icons">keyboard_arrow_down</i>
                                                 </h4>
                                             </a>
                                         </div>
                                         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                             <div class="panel-body">
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                BMI: 3.22
+                                                BMR: 1.232
+                                                Your personalized calories intake is : 2000
                                             </div>
                                         </div>
                                     </div>
@@ -354,7 +356,7 @@
                                         <div class="panel-heading" role="tab" id="headingTwo">
                                             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                                 <h4 class="panel-title">
-                                                    Collapsible Group Item #2
+                                                   Macronutrients
                                                     <i class="material-icons">keyboard_arrow_down</i>
                                                 </h4>
                                             </a>
@@ -369,7 +371,7 @@
                                         <div class="panel-heading" role="tab" id="headingThree">
                                             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                                 <h4 class="panel-title">
-                                                    Collapsible Group Item #3
+                                                 Food to Avoid
                                                     <i class="material-icons">keyboard_arrow_down</i>
                                                 </h4>
                                             </a>
