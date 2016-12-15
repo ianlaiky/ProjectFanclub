@@ -115,7 +115,7 @@
                                             </span>
                                         <div class="form-group label-floating">
                                             <label class="control-label">First Name</label>
-                                            <input type="text" class="form-control">
+                                            <input type="text" class="form-control" class="usernameFrontCheck">
                                         </div>
                                     </div>
 
@@ -125,12 +125,12 @@
                                             </span>
                                         <div class="form-group label-floating">
                                             <label class="control-label">Password</label>
-                                            <input type="password" class="form-control">
+                                            <input type="password" class="form-control" class="passFrontCheck">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="footer text-center">
-                                    <button id="loginPage" type="submit" class="btn btn-rose btn-simple btn-wd btn-lg">Let's go</button>
+                                    <button id="loginPageBtn" type="submit" class="btn btn-rose btn-simple btn-wd btn-lg">Let's go</button>
                                 </div>
                             </div>
                         </form>
@@ -297,6 +297,11 @@
             // after 1000 ms we add the class animated to the login/register card
             $('.card').removeClass('card-hidden');
         }, 700)
+
+        $('#loginPageBtn').click(function () {
+            console.log($(".usernameFrontCheck").val());
+        })
+
     });
 </script>
 
