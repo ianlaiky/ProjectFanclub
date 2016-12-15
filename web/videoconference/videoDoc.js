@@ -1,13 +1,10 @@
 /**
- * Created by Ian on 15/12/2016.
- */
-/**
  * Created by Ian on 14/12/2016.
  */
 // Compatibility shim
 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 // PeerJS object
-var peer = new Peer({key: 'ezdeolfd1x7p66r', debug: 3});
+var peer = new Peer('projectfanclub161215',{key: 'ezdeolfd1x7p66r', debug: 3});
 peer.on('open', function () {
     $('#my-id').text(peer.id);
 });
@@ -33,7 +30,7 @@ peer.on('error', function (err) {
 $(function () {
     $('#make-call').click(function () {
         // Initiate a call!
-        var call = peer.call('projectfanclub161215', window.localStream);
+        var call = peer.call($('#callto-id').val(), window.localStream);
         step3(call);
     });
     $('#end-call').click(function () {
