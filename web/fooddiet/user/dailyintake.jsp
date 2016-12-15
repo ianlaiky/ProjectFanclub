@@ -328,10 +328,10 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-10">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Recommended Personalized Daily Food Intake</h4>
+                                <h4 class="card-title" data-background-color="rose">Recommended Personalized Daily Food Intake</h4>
                             </div>
                             <div class="card-content">
                                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
