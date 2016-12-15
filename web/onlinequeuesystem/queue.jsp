@@ -337,12 +337,25 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="col-sm-8 col-sm-offset-2">
-                    -- Insert all the awesome body content here
+                   // -- Insert all the awesome body content here
 
 
 <ul class="nav nav-pills nav-justified">
                        <li class="active"><a data-toggle="pill" href="#queueNo">Take Queue Number</a></li>
-                       <li><a data-toggle="pill" href="#updateNo">Edit/Update Queue Number</a></li>
+    <div class="queueNo">
+
+        <!--[if lte IE 8]>
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+        <![endif]-->
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+        <script>
+            hbspt.forms.create({
+                portalId: '303785',
+                formId: 'b0b6a806-32ac-4fed-9058-bee6bad8c4a2'
+            });
+        </script>
+
+        <li><a data-toggle="pill" href="#updateNo">Edit/Update Queue Number</a></li>
                        <li><a data-toggle="pill" href="#removeNo">Remove Queue Number</a></li>
                    </ul>
 
