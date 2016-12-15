@@ -27,17 +27,7 @@
     %>
 
 
-    <%--<script>--%>
 
-        <%--$(function() {--%>
-
-            <%--$("#btnFPorridge").click( function()--%>
-                <%--{--%>
-<%--//                    alert('button clicked');}--%>
-                    <%----%>
-                    <%----%>
-
-    <%--</script>--%>
 
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -116,7 +106,16 @@
 
         }
     </style>
+    <script>
 
+        jQuery(function () {
+            $("#btnFPorridge").click(function (e) {
+                e.preventDefault();
+               // $("#btnFPorridge").val("porridgeValue");
+
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -411,12 +410,16 @@
                        <div id="food" class="tab-pane fade in active">
                            <h3>Food</h3>
                            <form action="/foodservlet"action="get">
+                               <%--food values container?
+                              --%>
+                               <input type="text" name="foodFP">
                            <div class="item">
                                <img src="images/fishporridge.jpg" class="img-circle" alt="fishporridge">
                                <span class="caption">
                                    Fish porridge
                                </span>
-                               <button type="button" id="btnFPorridge" class="btn btn-primary btn-circle" name="fporridge"><i class="glyphicon glyphicon-plus"></i></button>
+                               <button type="button" id="btnFPorridge" class="btn btn-primary btn-circle" name="food" value="defaultvalue"><i class="glyphicon glyphicon-plus"></i></button>
+
                            </div>
                            <div class="item">
                                <img src="images/chickennoodle.jpg" class="img-circle" alt="Cinque Terre" >
@@ -458,6 +461,10 @@
                            </div>
 
                                <input type="submit" value="Submit"/>
+                               <button id="testBtn" value="testvalue">
+                                   clickme
+                               </button>
+                               <input type="text" id="textbox"/>
                            </form>
 
 
