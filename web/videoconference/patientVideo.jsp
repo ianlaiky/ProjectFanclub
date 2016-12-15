@@ -59,7 +59,7 @@
         .card {
             display: inline-block;
             position: relative;
-            width: 150%;
+            width: 130%;
             left:-150px;
             margin: 25px 0;
             box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
@@ -289,8 +289,22 @@
                             <br>
                             <br>
                             <br>
+                            <br> <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
                             <br>
 
+
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
 
 
 
