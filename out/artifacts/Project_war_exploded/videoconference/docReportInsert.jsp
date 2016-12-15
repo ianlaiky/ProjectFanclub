@@ -1,18 +1,11 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Ying
-  Date: 11/12/2016
-  Time: 4:24 AM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8"/>
-    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png"/>
-    <link rel="icon" type="image/png" href="../assets/img/favicon.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png"/>
+    <link rel="icon" type="image/png" href="../../assets/img/favicon.png"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>Vision API</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
@@ -47,11 +40,11 @@
           content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design."/>
     <meta property="og:site_name" content="Creative Tim"/>
     <!-- Bootstrap core CSS     -->
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet"/>
     <!--  Material Dashboard CSS    -->
-    <link href="../assets/css/material-dashboard2.css" rel="stylesheet"/>
+    <link href="../../assets/css/material-dashboard2.css" rel="stylesheet"/>
     <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="../assets/css/demo2.css" rel="stylesheet"/>
+    <link href="../../assets/css/demo2.css" rel="stylesheet"/>
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
@@ -60,7 +53,7 @@
 
 <body>
 <div class="wrapper">
-    <div class="sidebar" data-active-color="green" data-background-color="white"
+    <div class="sidebar" data-active-color="green" data-background-color="black"
          data-image="../../assets/img/sidebar-1.jpg">
         <!--
     Tip 1: You can change the color of active element of the sidebar using: data-active-color="purple | blue | green | orange | red | rose"
@@ -68,30 +61,30 @@
     Tip 3: you can change the color of the sidebar with data-background-color="white | black"
 -->
         <div class="logo">
-            <a href="http://www.creative-tim.com" class="simple-text">
-                Food Diet
+            <a class="simple-text">
+                Video Chat
             </a>
         </div>
         <div class="logo logo-mini">
-            <a href="http://www.creative-tim.com" class="simple-text">
-                FD
+            <a class="simple-text">
+                Chat
             </a>
         </div>
         <div class="sidebar-wrapper ps-container ps-theme-default ps-active-x"
              data-ps-id="27535860-4b1b-c8e5-ec90-4de4d32f70a0">
             <div class="user">
                 <div class="photo">
-                    <img src="../assets/img/faces/marc.jpg"/>
+                    <img src="../../assets/img/faces/marc.jpg"/>
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        Aravin
+                        test
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="../fooddiet/user/queue.jsp">My Profile</a>
+                                <a href="../../fooddiet/user/myprofile.jsp">My Profile</a>
                             </li>
                             <li>
                                 <a href="#">Edit Profile</a>
@@ -104,158 +97,31 @@
                 </div>
             </div>
             <ul class="nav">
-                <li class="active">
-                    <a href="queue.jsp">
+                <li>
+                    <a href="docVideo.jsp">
                         <i class="material-icons">dashboard</i>
-                        <p>Dashboard</p>
+                        <p>Live Web Calling</p>
                     </a>
                 </li>
-                <li>
+                <li class="active">
                     <a data-toggle="collapse" href="#pagesExamples">
                         <i class="material-icons">image</i>
-                        <p>Pages
+                        <p>Consultation Report
                             <b class="caret"></b>
                         </p>
                     </a>
                     <div class="collapse" id="pagesExamples">
                         <ul class="nav">
                             <li>
-                                <a href="../pages/pricing.html">Pricing</a>
+                                <a href="docReportView.jsp">View Reports</a>
                             </li>
-                            <li>
-                                <a href="../pages/timeline.html">Timeline</a>
+                            <li class="active">
+                                <a href="docReportInsert.jsp">View Reports</a>
                             </li>
-                            <li>
-                                <a href="../pages/login.html">Login Page</a>
-                            </li>
-                            <li>
-                                <a href="../pages/register.html">Register Page</a>
-                            </li>
-                            <li>
-                                <a href="../pages/lock.html">Lock Screen Page</a>
-                            </li>
-                            <li>
-                                <a href="../pages/user.html">User Profile</a>
-                            </li>
+
                         </ul>
                     </div>
                 </li>
-                <li>
-                    <a data-toggle="collapse" href="#componentsExamples">
-                        <i class="material-icons">apps</i>
-                        <p>Components
-                            <b class="caret"></b>
-                        </p>
-                    </a>
-                    <div class="collapse" id="componentsExamples">
-                        <ul class="nav">
-                            <li>
-                                <a href="../components/buttons.html">Buttons</a>
-                            </li>
-                            <li>
-                                <a href="../components/grid.html">Grid System</a>
-                            </li>
-                            <li>
-                                <a href="../components/panels.html">Panels</a>
-                            </li>
-                            <li>
-                                <a href="../components/sweet-alert.html">Sweet Alert</a>
-                            </li>
-                            <li>
-                                <a href="../components/notifications.html">Notifications</a>
-                            </li>
-                            <li>
-                                <a href="../components/icons.html">Icons</a>
-                            </li>
-                            <li>
-                                <a href="../components/typography.html">Typography</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a data-toggle="collapse" href="#formsExamples">
-                        <i class="material-icons">content_paste</i>
-                        <p>Forms
-                            <b class="caret"></b>
-                        </p>
-                    </a>
-                    <div class="collapse" id="formsExamples">
-                        <ul class="nav">
-                            <li>
-                                <a href="../forms/regular.html">Regular Forms</a>
-                            </li>
-                            <li>
-                                <a href="../forms/extended.html">Extended Forms</a>
-                            </li>
-                            <li>
-                                <a href="../forms/validation.html">Validation Forms</a>
-                            </li>
-                            <li>
-                                <a href="form/profile.jsp">Wizard</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a data-toggle="collapse" href="#tablesExamples">
-                        <i class="material-icons">grid_on</i>
-                        <p>Tables
-                            <b class="caret"></b>
-                        </p>
-                    </a>
-                    <div class="collapse" id="tablesExamples">
-                        <ul class="nav">
-                            <li>
-                                <a href="../tables/regular.html">Regular Tables</a>
-                            </li>
-                            <li>
-                                <a href="../tables/extended.html">Extended Tables</a>
-                            </li>
-                            <li>
-                                <a href="../tables/datatables.net.html">DataTables.net</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a data-toggle="collapse" href="#mapsExamples">
-                        <i class="material-icons">place</i>
-                        <p>Maps
-                            <b class="caret"></b>
-                        </p>
-                    </a>
-                    <div class="collapse" id="mapsExamples">
-                        <ul class="nav">
-                            <li>
-                                <a href="../maps/google.html">Google Maps</a>
-                            </li>
-                            <li>
-                                <a href="../maps/fullscreen.html">Full Screen Map</a>
-                            </li>
-                            <li>
-                                <a href="../maps/vector.html">Vector Map</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a href="../widgets.html">
-                        <i class="material-icons">widgets</i>
-                        <p>Widgets</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="../charts.html">
-                        <i class="material-icons">timeline</i>
-                        <p>Charts</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="../calendar.html">
-                        <i class="material-icons">date_range</i>
-                        <p>Calendar</p>
-                    </a>
                 </li>
             </ul>
         </div>
@@ -276,7 +142,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"> Home </a>
+                    <a class="navbar-brand" href="#"> Wizard </a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -336,195 +202,263 @@
         </nav>
         <div class="content">
             <div class="container-fluid">
-                <div class="col-sm-8 col-sm-offset-2">
-                    <%--// -- Insert all the awesome body content here--%>
-                    <style type="text/css">
-                        .form-style-5 {
-                            max-width: 500px;
-                            padding: 10px 20px;
-                            background: #f4f7f8;
-                            margin: 10px auto;
-                            padding: 20px;
-                            background: #f4f7f8;
-                            border-radius: 8px;
-                            font-family: Georgia, "Times New Roman", Times, serif;
-                        }
 
-                        .form-style-5 fieldset {
-                            border: none;
-                        }
+                <!--      Wizard container        -->
 
-                        .form-style-5 legend {
-                            font-size: 1.4em;
-                            margin-bottom: 10px;
-                        }
 
-                        .form-style-5 label {
-                            display: block;
-                            margin-bottom: 8px;
-                        }
 
-                        .form-style-5 input[type="text"],
-                        .form-style-5 input[type="date"],
-                        .form-style-5 input[type="datetime"],
-                        .form-style-5 input[type="email"],
-                        .form-style-5 input[type="number"],
-                        .form-style-5 input[type="search"],
-                        .form-style-5 input[type="time"],
-                        .form-style-5 input[type="url"],
-                        .form-style-5 textarea,
-                        .form-style-5 select {
-                            font-family: Georgia, "Times New Roman", Times, serif;
-                            background: rgba(255, 255, 255, .1);
-                            border: none;
-                            border-radius: 4px;
-                            font-size: 16px;
-                            margin: 0;
-                            outline: 0;
-                            padding: 7px;
-                            width: 100%;
-                            box-sizing: border-box;
-                            -webkit-box-sizing: border-box;
-                            -moz-box-sizing: border-box;
-                            background-color: #e8eeef;
-                            color: #8a97a0;
-                            -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-                            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-                            margin-bottom: 30px;
-
-                        }
-
-                        .form-style-5 input[type="text"]:focus,
-                        .form-style-5 input[type="date"]:focus,
-                        .form-style-5 input[type="datetime"]:focus,
-                        .form-style-5 input[type="email"]:focus,
-                        .form-style-5 input[type="number"]:focus,
-                        .form-style-5 input[type="search"]:focus,
-                        .form-style-5 input[type="time"]:focus,
-                        .form-style-5 input[type="url"]:focus,
-                        .form-style-5 textarea:focus,
-                        .form-style-5 select:focus {
-                            background: #d2d9dd;
-                        }
-
-                        .form-style-5 select {
-                            -webkit-appearance: menulist-button;
-                            height: 35px;
-                        }
-
-                        .form-style-5 .number {
-                            background: #1abc9c;
-                            color: #fff;
-                            height: 30px;
-                            width: 30px;
-                            display: inline-block;
-                            font-size: 0.8em;
-                            margin-right: 4px;
-                            line-height: 30px;
-                            text-align: center;
-                            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
-                            border-radius: 15px 15px 15px 0px;
-                        }
-
-                        .form-style-5 input[type="submit"],
-                        .form-style-5 input[type="button"] {
-                            position: relative;
-                            display: block;
-                            padding: 19px 39px 18px 39px;
-                            color: #FFF;
-                            margin: 0 auto;
-                            background: #1abc9c;
-                            font-size: 18px;
-                            text-align: center;
-                            font-style: normal;
-                            width: 100%;
-                            border: 1px solid #16a085;
-                            border-width: 1px 1px 3px;
-                            margin-bottom: 10px;
-                        }
-
-                        .form-style-5 input[type="submit"]:hover,
-                        .form-style-5 input[type="button"]:hover {
-                            background: #109177;
-                        }
-                    </style>
-                    <div class="form-style-5">
-                        <form action="guess.jsp">
-                            <fieldset>
-                                <legend><span class="number">1</span> Patient Info</legend>
-                                <input type="text" name="name" placeholder="Your Name *">
-                                <input type="email" name="nric" placeholder="Your Nric *">
-                                <textarea name="phoneNumber" placeholder="Your handphone number *"></textarea>
-                                <%--<label for="job">Interests:</label>--%>
-                                <%--<select id="job" name="field4">--%>
-                                <%--<optgroup label="Indoors">--%>
-                                <%--<option value="fishkeeping">Fishkeeping</option>--%>
-                                <%--<option value="reading">Reading</option>--%>
-                                <%--<option value="boxing">Boxing</option>--%>
-                                <%--<option value="debate">Debate</option>--%>
-                                <%--<option value="gaming">Gaming</option>--%>
-                                <%--<option value="snooker">Snooker</option>--%>
-                                <%--<option value="other_indoor">Other</option>--%>
-                                <%--</optgroup>--%>
-                                <%--<optgroup label="Outdoors">--%>
-                                <%--<option value="football">Football</option>--%>
-                                <%--<option value="swimming">Swimming</option>--%>
-                                <%--<option value="fishing">Fishing</option>--%>
-                                <%--<option value="climbing">Climbing</option>--%>
-                                <%--<option value="cycling">Cycling</option>--%>
-                                <%--<option value="other_outdoor">Other</option>--%>
-                                <%--</optgroup>--%>
-                                <%--</select>--%>
-                                <%--</fieldset>--%>
-                                <%--<fieldset>--%>
-                                <%--<legend><span class="number">2</span> Additional Info</legend>--%>
-                                <%--<textarea name="field3" placeholder="About Your School"></textarea>--%>
-                            </fieldset>
-                            <input type="submit" value="Get Queue Number"/>
-                        </form>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header card-header-icon" data-background-color="rose">
+                                <i class="material-icons">assignment</i>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="card-title">Simple Table</h4>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead class="text-primary">
+                                        <th>Name</th>
+                                        <th>Country</th>
+                                        <th>City</th>
+                                        <th>Salary</th>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>Dakota Rice</td>
+                                            <td>Niger</td>
+                                            <td>Oud-Turnhout</td>
+                                            <td class="text-primary">$36,738</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Minerva Hooper</td>
+                                            <td>Curaçao</td>
+                                            <td>Sinaai-Waas</td>
+                                            <td class="text-primary">$23,789</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sage Rodriguez</td>
+                                            <td>Netherlands</td>
+                                            <td>Baileux</td>
+                                            <td class="text-primary">$56,142</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Philip Chaney</td>
+                                            <td>Korea, South</td>
+                                            <td>Overland Park</td>
+                                            <td class="text-primary">$38,735</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Doris Greene</td>
+                                            <td>Malawi</td>
+                                            <td>Feldkirchen in Kärnten</td>
+                                            <td class="text-primary">$63,542</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mason Porter</td>
+                                            <td>Chile</td>
+                                            <td>Gloucester</td>
+                                            <td class="text-primary">$78,615</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="card card-plain">
+                                <div class="card-header card-header-icon" data-background-color="rose">
+                                    <i class="material-icons">assignment</i>
+                                </div>
+                                <h4 class="card-title">Table on Plain Background</h4>
+                                <p class="category">Here is a subtitle for this table</p>
+                                <div class="card-content table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Salary</th>
+                                        <th>Country</th>
+                                        <th>City</th>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Dakota Rice</td>
+                                            <td>$36,738</td>
+                                            <td>Niger</td>
+                                            <td>Oud-Turnhout</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Minerva Hooper</td>
+                                            <td>$23,789</td>
+                                            <td>Curaçao</td>
+                                            <td>Sinaai-Waas</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Sage Rodriguez</td>
+                                            <td>$56,142</td>
+                                            <td>Netherlands</td>
+                                            <td>Baileux</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Philip Chaney</td>
+                                            <td>$38,735</td>
+                                            <td>Korea, South</td>
+                                            <td>Overland Park</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Doris Greene</td>
+                                            <td>$63,542</td>
+                                            <td>Malawi</td>
+                                            <td>Feldkirchen in Kärnten</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>Mason Porter</td>
+                                            <td>$78,615</td>
+                                            <td>Chile</td>
+                                            <td>Gloucester</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header card-header-icon" data-background-color="rose">
+                                    <i class="material-icons">assignment</i>
+                                </div>
+                                <h4 class="card-title">Regular Table with Colors</h4>
+                                <div class="card-content table-responsive table-full-width">
+                                    <table class="table table-hover">
+                                        <thead>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Salary</th>
+                                        <th>Country</th>
+                                        <th>City</th>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="success">
+                                            <td>1</td>
+                                            <td>Dakota Rice (Success)</td>
+                                            <td>$36,738</td>
+                                            <td>Niger</td>
+                                            <td>Oud-Turnhout</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Minerva Hooper</td>
+                                            <td>$23,789</td>
+                                            <td>Curaçao</td>
+                                            <td>Sinaai-Waas</td>
+                                        </tr>
+                                        <tr class="info">
+                                            <td>3</td>
+                                            <td>Sage Rodriguez (Info)</td>
+                                            <td>$56,142</td>
+                                            <td>Netherlands</td>
+                                            <td>Baileux</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Philip Chaney</td>
+                                            <td>$38,735</td>
+                                            <td>Korea, South</td>
+                                            <td>Overland Park</td>
+                                        </tr>
+                                        <tr class="danger">
+                                            <td>5</td>
+                                            <td>Doris Greene (Danger)</td>
+                                            <td>$63,542</td>
+                                            <td>Malawi</td>
+                                            <td>Feldkirchen in Kärnten</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>Mason Porter</td>
+                                            <td>$78,615</td>
+                                            <td>Chile</td>
+                                            <td>Gloucester</td>
+                                        </tr>
+                                        <tr class="warning">
+                                            <td>7</td>
+                                            <td>Mike Chaney (Warning)</td>
+                                            <td>$38,735</td>
+                                            <td>Romania</td>
+                                            <td>Bucharest</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-
                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </div>
+            <!-- wizard container -->
         </div>
-        <footer class="footer">
-            <div class="container-fluid">
-                <nav class="pull-left">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                Home test
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Company
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Portfolio
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Blog
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <p class="copyright pull-right">
-                    &copy;
-                    <script>
-                        document.write(new Date().getFullYear())
-                    </script>
-                    <a href="http://www.creative-tim.com">Woodlands Integrated Health Campus</a>, made with love by
-                    Fanclub
-                </p>
-            </div>
-        </footer>
     </div>
+</div>
+<footer class="footer">
+    <div class="container-fluid">
+        <nav class="pull-left">
+            <ul>
+                <li>
+                    <a href="#">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Company
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Portfolio
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Blog
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <p class="copyright pull-right">
+            &copy;
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            <a href="http://www.creative-tim.com">Woodlands Integrated Health Campus</a>, made with love by
+            Fanclub
+        </p>
+    </div>
+</footer>
+</div>
 </div>
 <div class="fixed-plugin">
     <div class="dropdown show-dropdown">
@@ -536,7 +470,7 @@
             <li class="adjustments-line">
                 <a href="javascript:void(0)" class="switch-trigger active-color">
                     <div class="badge-colors text-center">
-                        <span class="badge filter badge-blue" data-color="blue"></span>
+                        <span class="badge filter badge-purple" data-color="purple"></span>
                         <span class="badge filter badge-blue" data-color="blue"></span>
                         <span class="badge filter badge-green" data-color="green"></span>
                         <span class="badge filter badge-orange" data-color="orange"></span>
@@ -669,5 +603,6 @@
         demo.initMaterialWizard();
     });
 </script>
+
 
 </html>

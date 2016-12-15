@@ -1,8 +1,15 @@
 <%--
   Created by IntelliJ IDEA.
-  User: Ying
-  Date: 11/12/2016
-  Time: 4:24 AM
+  User: 154404g
+  Date: 12/15/2016
+  Time: 4:12 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%--
+  Created by IntelliJ IDEA.
+  User: 154404g
+  Date: 12/15/2016
+  Time: 3:42 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -60,7 +67,7 @@
 
 <body>
 <div class="wrapper">
-    <div class="sidebar" data-active-color="green" data-background-color="white"
+    <div class="sidebar" data-active-color="green" data-background-color="black"
          data-image="../../assets/img/sidebar-1.jpg">
         <!--
     Tip 1: You can change the color of active element of the sidebar using: data-active-color="purple | blue | green | orange | red | rose"
@@ -85,13 +92,13 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        Aravin
+                        Zixiang
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="../fooddiet/user/queue.jsp">My Profile</a>
+                                <a href="#">My Profile</a>
                             </li>
                             <li>
                                 <a href="#">Edit Profile</a>
@@ -105,7 +112,7 @@
             </div>
             <ul class="nav">
                 <li class="active">
-                    <a href="queue.jsp">
+                    <a href="index.jsp">
                         <i class="material-icons">dashboard</i>
                         <p>Dashboard</p>
                     </a>
@@ -337,154 +344,103 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="col-sm-8 col-sm-offset-2">
-                    <%--// -- Insert all the awesome body content here--%>
-                    <style type="text/css">
-                        .form-style-5 {
-                            max-width: 500px;
-                            padding: 10px 20px;
-                            background: #f4f7f8;
-                            margin: 10px auto;
-                            padding: 20px;
-                            background: #f4f7f8;
-                            border-radius: 8px;
-                            font-family: Georgia, "Times New Roman", Times, serif;
-                        }
-
-                        .form-style-5 fieldset {
-                            border: none;
-                        }
-
-                        .form-style-5 legend {
-                            font-size: 1.4em;
-                            margin-bottom: 10px;
-                        }
-
-                        .form-style-5 label {
-                            display: block;
-                            margin-bottom: 8px;
-                        }
-
-                        .form-style-5 input[type="text"],
-                        .form-style-5 input[type="date"],
-                        .form-style-5 input[type="datetime"],
-                        .form-style-5 input[type="email"],
-                        .form-style-5 input[type="number"],
-                        .form-style-5 input[type="search"],
-                        .form-style-5 input[type="time"],
-                        .form-style-5 input[type="url"],
-                        .form-style-5 textarea,
-                        .form-style-5 select {
-                            font-family: Georgia, "Times New Roman", Times, serif;
-                            background: rgba(255, 255, 255, .1);
-                            border: none;
-                            border-radius: 4px;
-                            font-size: 16px;
-                            margin: 0;
-                            outline: 0;
-                            padding: 7px;
-                            width: 100%;
-                            box-sizing: border-box;
-                            -webkit-box-sizing: border-box;
-                            -moz-box-sizing: border-box;
-                            background-color: #e8eeef;
-                            color: #8a97a0;
-                            -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-                            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-                            margin-bottom: 30px;
-
-                        }
-
-                        .form-style-5 input[type="text"]:focus,
-                        .form-style-5 input[type="date"]:focus,
-                        .form-style-5 input[type="datetime"]:focus,
-                        .form-style-5 input[type="email"]:focus,
-                        .form-style-5 input[type="number"]:focus,
-                        .form-style-5 input[type="search"]:focus,
-                        .form-style-5 input[type="time"]:focus,
-                        .form-style-5 input[type="url"]:focus,
-                        .form-style-5 textarea:focus,
-                        .form-style-5 select:focus {
-                            background: #d2d9dd;
-                        }
-
-                        .form-style-5 select {
-                            -webkit-appearance: menulist-button;
-                            height: 35px;
-                        }
-
-                        .form-style-5 .number {
-                            background: #1abc9c;
-                            color: #fff;
-                            height: 30px;
-                            width: 30px;
-                            display: inline-block;
-                            font-size: 0.8em;
-                            margin-right: 4px;
-                            line-height: 30px;
-                            text-align: center;
-                            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
-                            border-radius: 15px 15px 15px 0px;
-                        }
-
-                        .form-style-5 input[type="submit"],
-                        .form-style-5 input[type="button"] {
-                            position: relative;
-                            display: block;
-                            padding: 19px 39px 18px 39px;
-                            color: #FFF;
-                            margin: 0 auto;
-                            background: #1abc9c;
-                            font-size: 18px;
-                            text-align: center;
-                            font-style: normal;
-                            width: 100%;
-                            border: 1px solid #16a085;
-                            border-width: 1px 1px 3px;
-                            margin-bottom: 10px;
-                        }
-
-                        .form-style-5 input[type="submit"]:hover,
-                        .form-style-5 input[type="button"]:hover {
-                            background: #109177;
-                        }
-                    </style>
-                    <div class="form-style-5">
-                        <form action="guess.jsp">
-                            <fieldset>
-                                <legend><span class="number">1</span> Patient Info</legend>
-                                <input type="text" name="name" placeholder="Your Name *">
-                                <input type="email" name="nric" placeholder="Your Nric *">
-                                <textarea name="phoneNumber" placeholder="Your handphone number *"></textarea>
-                                <%--<label for="job">Interests:</label>--%>
-                                <%--<select id="job" name="field4">--%>
-                                <%--<optgroup label="Indoors">--%>
-                                <%--<option value="fishkeeping">Fishkeeping</option>--%>
-                                <%--<option value="reading">Reading</option>--%>
-                                <%--<option value="boxing">Boxing</option>--%>
-                                <%--<option value="debate">Debate</option>--%>
-                                <%--<option value="gaming">Gaming</option>--%>
-                                <%--<option value="snooker">Snooker</option>--%>
-                                <%--<option value="other_indoor">Other</option>--%>
-                                <%--</optgroup>--%>
-                                <%--<optgroup label="Outdoors">--%>
-                                <%--<option value="football">Football</option>--%>
-                                <%--<option value="swimming">Swimming</option>--%>
-                                <%--<option value="fishing">Fishing</option>--%>
-                                <%--<option value="climbing">Climbing</option>--%>
-                                <%--<option value="cycling">Cycling</option>--%>
-                                <%--<option value="other_outdoor">Other</option>--%>
-                                <%--</optgroup>--%>
-                                <%--</select>--%>
-                                <%--</fieldset>--%>
-                                <%--<fieldset>--%>
-                                <%--<legend><span class="number">2</span> Additional Info</legend>--%>
-                                <%--<textarea name="field3" placeholder="About Your School"></textarea>--%>
-                            </fieldset>
-                            <input type="submit" value="Get Queue Number"/>
-                        </form>
-                    </div>
+                    <!-- Insert all the awesome body content here->
 
 
+
+
+
+
+                        -->
+                    <div class="col-sm-6">
+                        <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="material-icons">face</i>
+                                                        </span>
+                            <div class="form-group label-floating">
+                                <label class="control-label">Name
+                                </label>
+                                <input name="name" type="text" class="form-control" required="true">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="material-icons">mood</i>
+                                                        </span>
+                            <div class="form-group label-floating">
+                                <label class="control-label">Age
+                                </label>
+                                <input name="age" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="material-icons">info_outline</i>
+                            </span>
+                            <div class="form-group label-floating">
+                                <label class="control-label">NRIC
+                                </label>
+                                <input name="nric" type="text" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="material-icons">person</i>
+                                                        </span>
+                            <div>
+                                <label class="control-label">Gender
+                                </label>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="age" required> Male
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="age" required> Female
+                                    </label>
+                                </div>
+                            </div>
+                </div>
+                        <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="material-icons">av_timer</i>
+                                                        </span>
+                            <div class="form-group label-floating">
+                                <label class="control-label">Select Time
+                                </label>
+                                <select>
+                                    <option value="1">13:00</option>
+                                    <option value="2">14:00</option>
+                                    <option value="3">15:00</option>
+                                    <option value="4">16:00</option>
+                                    <option value="5">17:00</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="material-icons">contact_phone</i>
+                                                        </span>
+                            <div class="form-group label-floating">
+                                <label class="control-label">phone
+                                </label>
+                                <input name="phone" type="tel" class="form-control" validate="tel" pattern="[0-9]{8}" required="true">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="material-icons">email</i>
+                            </span>
+                            <div class="form-group label-floating">
+                                <label class="control-label">E-mail Address
+                                </label>
+                                <input name="nric" type="email" class="form-control" required>
+                            </div>
+                        </div>
+
+            </div>
                 </div>
             </div>
         </div>
@@ -494,7 +450,7 @@
                     <ul>
                         <li>
                             <a href="#">
-                                Home test
+                                Home
                             </a>
                         </li>
                         <li>
@@ -536,7 +492,7 @@
             <li class="adjustments-line">
                 <a href="javascript:void(0)" class="switch-trigger active-color">
                     <div class="badge-colors text-center">
-                        <span class="badge filter badge-blue" data-color="blue"></span>
+                        <span class="badge filter badge-purple" data-color="purple"></span>
                         <span class="badge filter badge-blue" data-color="blue"></span>
                         <span class="badge filter badge-green" data-color="green"></span>
                         <span class="badge filter badge-orange" data-color="orange"></span>
