@@ -98,12 +98,12 @@
             </div>
             <ul class="nav">
                 <li>
-                    <a href="../index.jsp">
+                    <a href="docVideo.jsp">
                         <i class="material-icons">dashboard</i>
                         <p>Live Web Calling</p>
                     </a>
                 </li>
-                <li class="active">
+                <li>
                     <a data-toggle="collapse" href="#pagesExamples">
                         <i class="material-icons">image</i>
                         <p>Consultation Report
@@ -112,8 +112,11 @@
                     </a>
                     <div class="collapse" id="pagesExamples">
                         <ul class="nav">
-                            <li class="active">
-                                <a href="patientReportView.jsp">View Reports</a>
+                            <li>
+                                <a href="docReportView.jsp">View Reports</a>
+                            </li>
+                            <li>
+                                <a href="docReportInsert.jsp">View Reports</a>
                             </li>
 
                         </ul>
