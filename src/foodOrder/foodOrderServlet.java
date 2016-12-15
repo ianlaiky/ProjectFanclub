@@ -56,6 +56,9 @@ public class foodOrderServlet extends HttpServlet {
         //storing into session
        // session.setAttribute("food",foodName);
         Collections.sort(orderList);
+        for(int i =0; i<orderList.size();i++){
+            System.out.println("SortedOrderList:"+orderList.get(i));
+        }
         System.out.println("orderList size = " + orderList.size());
         session.setAttribute("orderList",orderList);
         getServletContext().getRequestDispatcher("/foodorder/success.jsp").forward(request, response);

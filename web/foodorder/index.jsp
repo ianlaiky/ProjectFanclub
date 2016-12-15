@@ -117,7 +117,7 @@
         jQuery(function () {
             $("#btnFPorridge").click(function (e) {
                 e.preventDefault();
-                $("#foodFP").val("Fish Porridge Value");
+                $("#foodFP").val("Fish Porridge");
 
             });
         });
