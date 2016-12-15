@@ -3,6 +3,8 @@
 <html lang="en">
 
 <head>
+
+
     <meta charset="utf-8"/>
     <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png"/>
     <link rel="icon" type="image/png" href="../../assets/img/favicon.png"/>
@@ -49,6 +51,30 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
+
+    <style>
+
+
+
+        .card {
+            display: inline-block;
+            position: relative;
+            width: 130%;
+            left:-150px;
+            margin: 25px 0;
+            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+            border-radius: 6px;
+            color: rgba(0, 0, 0, 0.87);
+            background: #fff;
+        }
+
+
+
+        .wizard-card {
+            min-height: 410px;
+            box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 
 <body>
@@ -263,8 +289,22 @@
                             <br>
                             <br>
                             <br>
+                            <br> <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
                             <br>
 
+
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
 
 
 

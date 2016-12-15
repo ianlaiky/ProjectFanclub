@@ -337,12 +337,59 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="col-sm-8 col-sm-offset-2">
-                    -- Insert all the awesome body content here
 
+
+                    .button {
+                    position: relative;
+                    background-color: #4CAF50;
+                    border: none;
+                    font-size: 28px;
+                    color: #FFFFFF;
+                    padding: 20px;
+                    width: 200px;
+                    text-align: center;
+                    -webkit-transition-duration: 0.4s; /* Safari */
+                    transition-duration: 0.4s;
+                    text-decoration: none;
+                    overflow: hidden;
+                    cursor: pointer;
+                    }
+
+                    .button:after {
+                    content: "";
+                    background: #f1f1f1;
+                    display: block;
+                    position: absolute;
+                    padding-top: 300%;
+                    padding-left: 350%;
+                    margin-left: -20px !important;
+                    margin-top: -120%;
+                    opacity: 0;
+                    transition: all 0.8s
+                    }
+                   <%--// -- Insert all the awesome body content here--%>
+
+
+
+
+                    <button class ="b">Take queue number here</button>
 
 <ul class="nav nav-pills nav-justified">
                        <li class="active"><a data-toggle="pill" href="#queueNo">Take Queue Number</a></li>
-                       <li><a data-toggle="pill" href="#updateNo">Edit/Update Queue Number</a></li>
+    <div class="queueNo">
+
+        <!--[if lte IE 8]>
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+        <![endif]-->
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+        <script>
+            hbspt.forms.create({
+                portalId: '303785',
+                formId: 'b0b6a806-32ac-4fed-9058-bee6bad8c4a2'
+            });
+        </script>
+
+        <li><a data-toggle="pill" href="#updateNo">Edit/Update Queue Number</a></li>
                        <li><a data-toggle="pill" href="#removeNo">Remove Queue Number</a></li>
                    </ul>
 
@@ -401,7 +448,7 @@
             <li class="adjustments-line">
                 <a href="javascript:void(0)" class="switch-trigger active-color">
                     <div class="badge-colors text-center">
-                        <span class="badge filter badge-purple" data-color="purple"></span>
+                        <span class="badge filter badge-blue" data-color="blue"></span>
                         <span class="badge filter badge-blue" data-color="blue"></span>
                         <span class="badge filter badge-green" data-color="green"></span>
                         <span class="badge filter badge-orange" data-color="orange"></span>

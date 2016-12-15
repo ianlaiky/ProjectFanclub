@@ -98,7 +98,7 @@
             </div>
             <ul class="nav">
                 <li>
-                    <a href="../index.jsp">
+                    <a href="docVideo.jsp">
                         <i class="material-icons">dashboard</i>
                         <p>Live Web Calling</p>
                     </a>
@@ -113,7 +113,10 @@
                     <div class="collapse" id="pagesExamples">
                         <ul class="nav">
                             <li class="active">
-                                <a href="patientReportView.jsp">View Reports</a>
+                                <a href="docReportView.jsp">View Reports</a>
+                            </li>
+                            <li>
+                                <a href="docReportInsert.jsp">View Reports</a>
                             </li>
 
                         </ul>
