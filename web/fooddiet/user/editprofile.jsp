@@ -53,7 +53,7 @@
 
 <body>
 <div class="wrapper">
-    <div class="sidebar" data-active-color="rose" data-background-color="black" data-image="../../assets/img/sidebar-1.jpg">
+    <div class="sidebar" data-active-color="green" data-background-color="black" data-image="../../assets/img/sidebar-1.jpg">
         <!--
     Tip 1: You can change the color of active element of the sidebar using: data-active-color="purple | blue | green | orange | red | rose"
     Tip 2: you can also add an image using data-image tag
@@ -88,7 +88,7 @@
                                 <a href="#">Edit Profile</a>
                             </li>
                             <li>
-                                <a href="#">Settings</a>
+                                <a href="dailyintake.jsp">Daily Intake</a>
                             </li>
                         </ul>
                     </div>
@@ -96,7 +96,7 @@
             </div>
             <ul class="nav">
                 <li>
-                    <a href="../../template/index.jsp">
+                    <a href="../index.jsp">
                         <i class="material-icons">dashboard</i>
                         <p>Dashboard</p>
                     </a>
@@ -164,14 +164,14 @@
                         </ul>
                     </div>
                 </li>
-                <li class="active">
-                    <a data-toggle="collapse" href="#formsExamples" aria-expanded="true">
+                <li>
+                    <a data-toggle="collapse" href="#formsExamples">
                         <i class="material-icons">content_paste</i>
                         <p>Forms
                             <b class="caret"></b>
                         </p>
                     </a>
-                    <div class="collapse in" id="formsExamples">
+                    <div class="collapse " id="formsExamples">
                         <ul class="nav">
                             <li>
                                 <a href="../forms/regular.html">Regular Forms</a>
@@ -179,7 +179,7 @@
                             <li>
                                 <a href="../forms/extended.html">Extended Forms</a>
                             </li>
-                            <li class="active">
+                            <li>
                                 <a href="../forms/validation.html">Validation Forms</a>
                             </li>
                             <li>
@@ -267,7 +267,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"> Validation Forms </a>
+                    <a class="navbar-brand" href="#"> Edit Profile </a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -328,159 +328,98 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <form id="RegisterValidation" action="" method="">
-                                <div class="card-header card-header-icon" data-background-color="rose">
-                                    <i class="material-icons">mail_outline</i>
-                                </div>
-                                <div class="card-content">
-                                    <h4 class="card-title">Register Forms</h4>
-                                    <div class="form-group label-floating">
-                                        <label class="control-label">
-                                            Email Address
-                                            <small>*</small>
-                                        </label>
-                                        <input class="form-control" name="email" type="email" required="true" />
-                                    </div>
-                                    <div class="form-group label-floating">
-                                        <label class="control-label">
-                                            Password
-                                            <small>*</small>
-                                        </label>
-                                        <input class="form-control" name="password" id="registerPassword" type="password" required="true" />
-                                    </div>
-                                    <div class="form-group label-floating">
-                                        <label class="control-label">
-                                            Confirm Password
-                                            <small>*</small>
-                                        </label>
-                                        <input class="form-control" name="password_confirmation" id="registerPasswordConfirmation" type="password" required="true" equalTo="#registerPassword" />
-                                    </div>
-                                    <div class="category form-category">
-                                        <small>*</small> Required fields</div>
-                                    <div class="form-footer text-right">
-                                        <div class="checkbox pull-left">
-                                            <label>
-                                                <input type="checkbox" name="optionsCheckboxes"> Subscribe to newsletter
-                                            </label>
-                                        </div>
-                                        <button type="submit" class="btn btn-rose btn-fill">Register</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card">
-                            <form id="LoginValidation" action="" method="">
-                                <div class="card-header card-header-icon" data-background-color="rose">
-                                    <i class="material-icons">contacts</i>
-                                </div>
-                                <div class="card-content">
-                                    <h4 class="card-title">Login Form</h4>
-                                    <div class="form-group label-floating">
-                                        <label class="control-label">Email Address
-                                            <star>*</star>
-                                        </label>
-                                        <input class="form-control" name="email" type="text" email="true" required="true" />
-                                    </div>
-                                    <div class="form-group label-floating">
-                                        <label class="control-label">Password
-                                            <star>*</star>
-                                        </label>
-                                        <input class="form-control" name="password" type="password" required="true" />
-                                    </div>
-                                    <div class="category form-category">
-                                        <star>*</star> Required fields</div>
-                                    <div class="text-center">
-                                        <button type="submit" class="btn btn-rose btn-fill btn-wd">Register</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
                     <div class="col-md-12">
                         <div class="card">
                             <form id="TypeValidation" class="form-horizontal" action="" method="">
                                 <div class="card-header card-header-text" data-background-color="rose">
-                                    <h4 class="card-title">Type Validation</h4>
+                                    <h4 class="card-title">Profile</h4>
                                 </div>
                                 <div class="card-content">
                                     <div class="row">
-                                        <label class="col-sm-2 label-on-left">Required Text</label>
+                                        <label class="col-sm-2 label-on-left">Name</label>
                                         <div class="col-sm-7">
                                             <div class="form-group label-floating">
                                                 <label class="control-label"></label>
                                                 <input class="form-control" type="text" name="required" required="true" />
                                             </div>
                                         </div>
-                                        <label class="col-sm-3 label-on-right">
-                                            <code>required</code>
-                                        </label>
+
                                     </div>
                                     <div class="row">
-                                        <label class="col-sm-2 label-on-left">Email</label>
-                                        <div class="col-sm-7">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="email" email="true" />
-                                            </div>
-                                        </div>
-                                        <label class="col-sm-3 label-on-right">
-                                            <code>email="true"</code>
-                                        </label>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Number</label>
+                                        <label class="col-sm-2 label-on-left">Age</label>
                                         <div class="col-sm-7">
                                             <div class="form-group label-floating">
                                                 <label class="control-label"></label>
                                                 <input class="form-control" type="text" name="number" number="true" />
                                             </div>
                                         </div>
-                                        <label class="col-sm-3 label-on-right">
-                                            <code>number="true"</code>
-                                        </label>
                                     </div>
+
                                     <div class="row">
-                                        <label class="col-sm-2 label-on-left">Url</label>
-                                        <div class="col-sm-7">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="url" url="true" />
-                                            </div>
+                                        <label class="col-sm-2 label-on-left">Physical Activity Intensity</label>
+                                        <div class="col-lg-7 col-md-6 col-sm-3">
+                                            <select class="selectpicker" data-style="select-with-transition" title="Choose City" data-size="4">
+                                                <option disabled> Choose an intensity best suit you</option>
+                                                <option value="2">Sedentary </option>
+                                                <option value="3">Moderately Active</option>
+                                                <option value="4">Active</option>
+                                            </select>
                                         </div>
-                                        <label class="col-sm-3 label-on-right">
-                                            <code>url="true"</code>
-                                        </label>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Equal to</label>
-                                        <div class="col-sm-3">
-                                            <div class="form-group label-floating column-sizing">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" id="idSource" type="text" placeholder="#idSource" />
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="form-group label-floating column-sizing">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" id="idDestination" type="text" placeholder="#idDestination" equalTo="#idSource" />
-                                            </div>
-                                        </div>
-                                        <label class="col-sm-4 label-on-right">
-                                            <code>equalTo="#idSource"</code>
-                                        </label>
                                     </div>
                                 </div>
                                 <div class="card-footer text-center">
-                                    <button type="submit" class="btn btn-rose btn-fill">Validate Inputs</button>
+                                    <button type="submit" class="btn btn-rose btn-fill">Update Particulars</button>
                                 </div>
                             </form>
                         </div>
                     </div>
                     <div class="col-md-12">
+                        <div class="card">
+                            <form method="get" action="/" class="form-horizontal">
+                                <div class="card-header card-header-text" data-background-color="orange">
+                                    <h4 class="card-title">Measurements</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <label class="col-sm-offset-2 label-on-left">Height</label>
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <div class="col-xs-5">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label"></label>
+                                                    <input class="form-control" type="text" name="number" number="true" />
+                                                </div>
+                                            </div>
+                                            <label class="col-xs-2 label-on-right">
+                                                Cm
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <label class="col-sm-offset-2 label-on-left">Weight</label>
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <div class="col-xs-5">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label"></label>
+                                                    <input class="form-control" type="text" name="number" number="true" />
+                                                </div>
+                                            </div>
+                                            <label class="col-xs-2 label-on-right">
+                                                Kg
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <button type="submit" class="btn btn-rose btn-fill">Save</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                  <!--  <div class="col-md-12">
                         <div class="card">
                             <form id="RangeValidation" class="form-horizontal" action="" method="">
                                 <div class="card-header card-header-text" data-background-color="rose">
@@ -552,47 +491,46 @@
                                     <button type="submit" class="btn btn-rose btn-fill">Validate Inputs</button>
                                 </div>
                             </form>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
+    <footer class="footer">
+        <div class="container-fluid">
+            <nav class="pull-left">
+                <ul>
+                    <li>
+                        <a href="#">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Company
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Portfolio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Blog
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <p class="copyright pull-right">
+                &copy;
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>
+                <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+            </p>
         </div>
-        <footer class="footer">
-            <div class="container-fluid">
-                <nav class="pull-left">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Company
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Portfolio
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Blog
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <p class="copyright pull-right">
-                    &copy;
-                    <script>
-                        document.write(new Date().getFullYear())
-                    </script>
-                    <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
-                </p>
-            </div>
-        </footer>
-    </div>
+    </footer>
+</div>
 </div>
 <div class="fixed-plugin">
     <div class="dropdown show-dropdown">

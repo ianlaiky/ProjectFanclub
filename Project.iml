@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="jpa" name="JPA">
+      <configuration>
+        <setting name="validation-enabled" value="true" />
+        <setting name="provider-name" value="" />
+        <datasource-mapping>
+          <factory-entry name="Entities" />
+          <factory-entry name="bookstore" value="e63fc345-83ba-43ae-a6e1-dc5f3bdc2f69" />
+          <factory-entry name="foodOrder" value="a6b683ea-b5d0-47cc-907d-e0bda99838f4" />
+          <factory-entry name="noname-a.xml@0" value="e63fc345-83ba-43ae-a6e1-dc5f3bdc2f69" />
+        </datasource-mapping>
+        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/META-INF/persistence.xml" />
+      </configuration>
+    </facet>
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/web/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/web" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web2">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/web/assets/js/bootstrap.min.js" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/web/assets/js" relative="/WEB-INF" />
+        </webroots>
+      </configuration>
+    </facet>
+  </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">

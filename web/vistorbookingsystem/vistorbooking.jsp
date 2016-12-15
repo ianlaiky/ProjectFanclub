@@ -1,59 +1,74 @@
 <%--
   Created by IntelliJ IDEA.
-  User: Ying
-  Date: 11/12/2016
-  Time: 4:24 AM
+  User: 154404g
+  Date: 12/15/2016
+  Time: 4:12 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%--
+  Created by IntelliJ IDEA.
+  User: 154404g
+  Date: 12/15/2016
+  Time: 3:42 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png" />
-    <link rel="icon" type="image/png" href="../../assets/img/favicon.png" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png"/>
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>Vision API</title>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+    <meta name="viewport" content="width=device-width"/>
     <!-- Canonical SEO -->
-    <link rel="canonical" href="http://www.creative-tim.com/product/material-dashboard-pro" />
+    <link rel="canonical" href="http://www.creative-tim.com/product/material-dashboard-pro"/>
     <!--  Social tags      -->
-    <meta name="keywords" content="material dashboard, bootstrap material admin, bootstrap material dashboard, material design admin, material design, creative tim, html dashboard, html css dashboard, web dashboard, freebie, free bootstrap dashboard, css3 dashboard, bootstrap admin, bootstrap dashboard, frontend, responsive bootstrap dashboard, premiu material design admin">
-    <meta name="description" content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+    <meta name="keywords"
+          content="material dashboard, bootstrap material admin, bootstrap material dashboard, material design admin, material design, creative tim, html dashboard, html css dashboard, web dashboard, freebie, free bootstrap dashboard, css3 dashboard, bootstrap admin, bootstrap dashboard, frontend, responsive bootstrap dashboard, premiu material design admin">
+    <meta name="description"
+          content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
     <!-- Schema.org markup for Google+ -->
     <meta itemprop="name" content="Material Dashboard PRO by Creative Tim | Premium Bootstrap Admin Template">
-    <meta itemprop="description" content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+    <meta itemprop="description"
+          content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
     <meta itemprop="image" content="http://s3.amazonaws.com/creativetim_bucket/products/51/opt_mdp_thumbnail.jpg">
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@creativetim">
     <meta name="twitter:title" content="Material Dashboard PRO by Creative Tim | Premium Bootstrap Admin Template">
-    <meta name="twitter:description" content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+    <meta name="twitter:description"
+          content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
     <meta name="twitter:creator" content="@creativetim">
     <meta name="twitter:image" content="http://s3.amazonaws.com/creativetim_bucket/products/51/opt_mdp_thumbnail.jpg">
     <!-- Open Graph data -->
     <meta property="fb:app_id" content="655968634437471">
-    <meta property="og:title" content="Material Dashboard PRO by Creative Tim | Premium Bootstrap Admin Template" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="http://www.creative-tim.com/product/material-dashboard-pro" />
-    <meta property="og:image" content="http://s3.amazonaws.com/creativetim_bucket/products/51/opt_mdp_thumbnail.jpg" />
-    <meta property="og:description" content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design." />
-    <meta property="og:site_name" content="Creative Tim" />
+    <meta property="og:title" content="Material Dashboard PRO by Creative Tim | Premium Bootstrap Admin Template"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content="http://www.creative-tim.com/product/material-dashboard-pro"/>
+    <meta property="og:image" content="http://s3.amazonaws.com/creativetim_bucket/products/51/opt_mdp_thumbnail.jpg"/>
+    <meta property="og:description"
+          content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design."/>
+    <meta property="og:site_name" content="Creative Tim"/>
     <!-- Bootstrap core CSS     -->
-    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
     <!--  Material Dashboard CSS    -->
-    <link href="../../assets/css/material-dashboard2.css" rel="stylesheet" />
+    <link href="../assets/css/material-dashboard2.css" rel="stylesheet"/>
     <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="../../assets/css/demo2.css" rel="stylesheet" />
+    <link href="../assets/css/demo2.css" rel="stylesheet"/>
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
 </head>
 
 <body>
 <div class="wrapper">
-    <div class="sidebar" data-active-color="green" data-background-color="black" data-image="../../assets/img/sidebar-1.jpg">
+    <div class="sidebar" data-active-color="green" data-background-color="black"
+         data-image="../../assets/img/sidebar-1.jpg">
         <!--
     Tip 1: You can change the color of active element of the sidebar using: data-active-color="purple | blue | green | orange | red | rose"
     Tip 2: you can also add an image using data-image tag
@@ -69,35 +84,35 @@
                 FD
             </a>
         </div>
-        <div class="sidebar-wrapper ps-container ps-theme-default ps-active-x" data-ps-id="27535860-4b1b-c8e5-ec90-4de4d32f70a0">
+        <div class="sidebar-wrapper ps-container ps-theme-default ps-active-x"
+             data-ps-id="27535860-4b1b-c8e5-ec90-4de4d32f70a0">
             <div class="user">
                 <div class="photo">
-                    <img src="../../assets/img/faces/marc.jpg" />
+                    <img src="../assets/img/faces/marc.jpg"/>
                 </div>
                 <div class="info">
-                    <a data-toggle="collapse" href="#collapseExample" class="collapsed" aria-expanded="true">
-                        Wan Ying
+                    <a data-toggle="collapse" href="#collapseExample" class="collapsed">
+                        Zixiang
                         <b class="caret"></b>
                     </a>
-                    <div class="collapse in" id="collapseExample">
+                    <div class="collapse" id="collapseExample">
                         <ul class="nav">
-                            <li class="active">
+                            <li>
                                 <a href="#">My Profile</a>
                             </li>
                             <li>
-                                <a href="editprofile.jsp">Edit Profile</a>
+                                <a href="#">Edit Profile</a>
                             </li>
                             <li>
-                                <a href="dailyintake.jsp">Daily Intake</a>
+                                <a href="#">Settings</a>
                             </li>
                         </ul>
                     </div>
-
                 </div>
             </div>
             <ul class="nav">
-                <li>
-                    <a href="../index.jsp">
+                <li class="active">
+                    <a href="index.jsp">
                         <i class="material-icons">dashboard</i>
                         <p>Dashboard</p>
                     </a>
@@ -184,7 +199,7 @@
                                 <a href="../forms/validation.html">Validation Forms</a>
                             </li>
                             <li>
-                                <a href="../../try/form/profile.jsp">Wizard</a>
+                                <a href="form/profile.jsp">Wizard</a>
                             </li>
                         </ul>
                     </div>
@@ -268,7 +283,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"> My Profile </a>
+                    <a class="navbar-brand" href="#"> Home </a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -329,157 +344,13 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="col-sm-8 col-sm-offset-2">
-                    <!--      Wizard container        -->
-                    <div class="wizard-container">
-                        <div class="card wizard-card" data-color="rose" id="wizardProfile">
-                            <form action="" method="get">
-                                <!--        You can switch " data-color="purple" "  with one of the next bright colors: "green", "orange", "red", "blue"       -->
-                                <div class="wizard-header">
-                                    <h3 class="wizard-title">
-                                        Build Your Profile
-                                    </h3>
-                                    <h5>This information will let us know more about you.</h5>
-                                </div>
-                                <div class="wizard-navigation">
-                                    <ul>
-                                        <li>
-                                            <a href="#about" data-toggle="tab">About</a>
-                                        </li>
-                                        <li>
-                                            <a href="#account" data-toggle="tab">Fitness</a>
-                                        </li>
-                                        <li>
-                                            <a href="#address" data-toggle="tab">BMI</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="tab-content">
-                                    <div class="tab-pane" id="about">
-                                        <div class="row">
-                                            <h4 class="info-text"> Let's start with the basic information </h4>
-                                            <div class="col-sm-4 col-sm-offset-1">
-                                                <div class="picture-container">
-                                                    <div class="picture">
-                                                        <img src="../../assets/img/default-avatar.png" class="picture-src" id="wizardPicturePreview" title="" />
-                                                        <input type="file" id="wizard-picture">
-                                                    </div>
-                                                    <h6>Choose Picture</h6>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                        <span class="input-group-addon">
-                                                            <i class="material-icons">face</i>
-                                                        </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">Name
-                                                        </label>
-                                                        <input name="name" type="text" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="input-group">
-                                                        <span class="input-group-addon">
-                                                            <i class="material-icons">mood</i>
-                                                        </span>
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">Age
-                                                        </label>
-                                                        <input name="age" type="text" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="input-group">
-                                                        <span class="input-group-addon">
-                                                            <i class="material-icons">person</i>
-                                                        </span>
-                                                    <div>
-                                                        <label class="control-label">Gender
-                                                        </label>
-                                                        <div class="radio">
-                                                        <label>
-                                                            <input type="radio" name="age"> Male
-                                                        </label>
-                                                        </div>
-                                                        <div class="radio">
-                                                            <label>
-                                                                <input type="radio" name="age"> Female
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                    <!-- Insert all the awesome body content here
 
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane" id="account">
-                                        <h4 class="info-text"> What is your physical activity intensity?  </h4>
-                                        <div class="row">
-                                            <div class="col-lg-10 col-lg-offset-1">
-                                                <div class="col-sm-4">
-                                                    <div class="choice" data-toggle="wizard-radio">
-                                                        <input type="radio" name="jobb" value="Design">
-                                                        <div class="icon">
-                                                            <i class="fa fa-meh-o fa-5x"></i>
-                                                        </div>
-                                                        <h6>Sedentary</h6>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <div class="choice" data-toggle="wizard-radio">
-                                                        <input type="radio" name="jobb" value="Code">
-                                                        <div class="icon">
-                                                            <i class="fa fa-heart"></i>
-                                                        </div>
-                                                        <h6>Moderately Active</h6>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <div class="choice" data-toggle="wizard-radio">
-                                                        <input type="radio" name="jobb" value="Develop">
-                                                        <div class="icon">
-                                                            <i class="fa fa-bicycle"></i>
-                                                        </div>
-                                                        <h6>Active</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane" id="address">
-                                        <div class="row">
-                                            <div class="col-sm-12 ">
-                                                <h4 class="info-text"> Do you want to keep fit? </h4>
-                                            </div>
-                                            <div class="col-sm-7 col-sm-offset-2">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Height</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div>
 
-                                            <div class="col-sm-7 col-sm-offset-2">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Weight</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div>
 
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="wizard-footer">
-                                    <div class="pull-right">
-                                        <input type='button' class='btn btn-next btn-fill btn-rose btn-wd' name='next' value='Next' />
-                                        <input type='button' class='btn btn-finish btn-fill btn-rose btn-wd' name='finish' value='Finish' />
-                                    </div>
-                                    <div class="pull-left">
-                                        <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <!-- wizard container -->
+
+
+                    -->
                 </div>
             </div>
         </div>
@@ -514,7 +385,8 @@
                     <script>
                         document.write(new Date().getFullYear())
                     </script>
-                    <a href="http://www.creative-tim.com">Woodlands Integrated Health Campus</a>, made with love by Fanclub
+                    <a href="http://www.creative-tim.com">Woodlands Integrated Health Campus</a>, made with love by
+                    Fanclub
                 </p>
             </div>
         </footer>
@@ -575,36 +447,42 @@
             <li class="header-title">Images</li>
             <li class="active">
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-1.jpg" alt="" />
+                    <img src="../../assets/img/sidebar-1.jpg" alt=""/>
                 </a>
             </li>
             <li>
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-2.jpg" alt="" />
+                    <img src="../../assets/img/sidebar-2.jpg" alt=""/>
                 </a>
             </li>
             <li>
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-3.jpg" alt="" />
+                    <img src="../../assets/img/sidebar-3.jpg" alt=""/>
                 </a>
             </li>
             <li>
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-4.jpg" alt="" />
+                    <img src="../../assets/img/sidebar-4.jpg" alt=""/>
                 </a>
             </li>
             <li class="button-container">
                 <div class="">
-                    <a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-rose btn-block">Buy Now</a>
+                    <a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank"
+                       class="btn btn-rose btn-block">Buy Now</a>
                 </div>
                 <div class="">
-                    <a href="http://www.creative-tim.com/product/material-dashboard" target="_blank" class="btn btn-info btn-block">Get Free Demo</a>
+                    <a href="http://www.creative-tim.com/product/material-dashboard" target="_blank"
+                       class="btn btn-info btn-block">Get Free Demo</a>
                 </div>
             </li>
             <li class="header-title">Thank you for 95 shares!</li>
             <li class="button-container">
-                <button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i> &middot; 45</button>
-                <button id="facebook" class="btn btn-social btn-facebook btn-round"><i class="fa fa-facebook-square"> &middot;</i>50</button>
+                <button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i> &middot;
+                    45
+                </button>
+                <button id="facebook" class="btn btn-social btn-facebook btn-round"><i
+                        class="fa fa-facebook-square"> &middot;</i>50
+                </button>
             </li>
         </ul>
     </div>
@@ -653,7 +531,7 @@
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="../../assets/js/demo2.js"></script>
 <script type="text/javascript">
-    $().ready(function() {
+    $().ready(function () {
         demo.initMaterialWizard();
     });
 </script>
