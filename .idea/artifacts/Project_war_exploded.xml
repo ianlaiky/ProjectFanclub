@@ -13,6 +13,7 @@
           <element id="library" level="project" name="JPA 2.0-2.0" />
           <element id="library" level="project" name="org.eclipse.persistence:eclipselink:2.6.2" />
           <element id="library" level="project" name="mysql:mysql-connector-java:5.1.40" />
+          <element id="library" level="project" name="Java EE 6-Java EE 6" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="Project/web/Web2" />
