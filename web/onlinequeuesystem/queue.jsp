@@ -337,8 +337,42 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="col-sm-8 col-sm-offset-2">
-                   // -- Insert all the awesome body content here
 
+
+                    .button {
+                    position: relative;
+                    background-color: #4CAF50;
+                    border: none;
+                    font-size: 28px;
+                    color: #FFFFFF;
+                    padding: 20px;
+                    width: 200px;
+                    text-align: center;
+                    -webkit-transition-duration: 0.4s; /* Safari */
+                    transition-duration: 0.4s;
+                    text-decoration: none;
+                    overflow: hidden;
+                    cursor: pointer;
+                    }
+
+                    .button:after {
+                    content: "";
+                    background: #f1f1f1;
+                    display: block;
+                    position: absolute;
+                    padding-top: 300%;
+                    padding-left: 350%;
+                    margin-left: -20px !important;
+                    margin-top: -120%;
+                    opacity: 0;
+                    transition: all 0.8s
+                    }
+                   <%--// -- Insert all the awesome body content here--%>
+
+
+
+
+                    <button class ="b">Take queue number here</button>
 
 <ul class="nav nav-pills nav-justified">
                        <li class="active"><a data-toggle="pill" href="#queueNo">Take Queue Number</a></li>
