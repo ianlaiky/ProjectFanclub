@@ -1045,18 +1045,19 @@ table {
 
 #my-video {
     position: relative;
-    left:100px;
+    left:450px;
     /*margin-top: 15px;*/
-    width: 180px;
+    width: 100px;
     height: auto;
+    top:200px;
     background-color: #eee;
 
 }
 
 #their-video {
-    position: absolute;
-    width: 70%;
-    height: 75%;
+    position: relative;
+    width: 100%;
+    height: auto%;
     max-height: 480px;
     background-color: #eee;
     /*content: url(images/not.jpg);*/
