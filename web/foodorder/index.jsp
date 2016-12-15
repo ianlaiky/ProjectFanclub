@@ -539,7 +539,7 @@
                                        <div class="row">
                                            <div class="col-sm-12">
                                                <div class="text-center">
-                                   <input type="submit" id="btnSubmitFood" class="btn btn-success" value="Submit"/>
+                                   <input type="submit" onclick="return confirm('Are you sure?')" id="btnSubmitFood" class="btn btn-success" value="Submit"/>
                                                </div>
                                            </div>
                                        </div>
