@@ -115,6 +115,14 @@
 
             });
         });
+
+        jQuery(function () {
+            $("#btnCNoodles ").click(function (e) {
+                e.preventDefault();
+                $("#foodCN").val("Chicken Noodles");
+
+            });
+        });
     </script>
 </head>
 
@@ -410,10 +418,12 @@
                        <div id="food" class="tab-pane fade in active">
                            <h3>Food</h3>
                            <form action="/foodservlet"action="get">
-                               <%--food values container?
-                              --%>
-                               <input type="text" id="foodFP" name="food"/>
-                                   <input type="text" name="foodCN"/>
+                               <%--food values container --%>
+                                   <input type="text" id="foodFP" name="food"/>
+                                   <input type="text" id="foodCN" name="food"/>
+
+
+                                   <%-- end of food values container--%>
 
                            <div class="item">
                                <img src="images/fishporridge.jpg" class="img-circle" alt="fishporridge">
@@ -427,7 +437,7 @@
                                <img src="images/chickennoodle.jpg" class="img-circle" alt="Cinque Terre" >
                                <span class="caption">Chicken Noodles
                                </span>
-                               <button type="button" class="btn btn-primary btn-circle"><i class="glyphicon glyphicon-plus"></i></button>
+                               <button type="button" id="btnCNoodles" class="btn btn-primary btn-circle"><i class="glyphicon glyphicon-plus"></i></button>
                            </div>
 
                            <div class="item">
