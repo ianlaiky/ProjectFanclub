@@ -98,7 +98,7 @@
             </div>
             <ul class="nav">
                 <li>
-                    <a href="../index.jsp">
+                    <a href="patientVideo.jsp">
                         <i class="material-icons">dashboard</i>
                         <p>Live Web Calling</p>
                     </a>

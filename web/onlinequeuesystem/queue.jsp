@@ -337,64 +337,60 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="col-sm-8 col-sm-offset-2">
+                    <%--// -- Insert all the awesome body content here--%>
 
+                    <style>
+                        .button {
+                            position: relative;
+                            background-color: #4CAF50;
+                            border: none;
+                            font-size: 28px;
+                            color: #FFFFFF;
+                            padding: 20px;
+                            width: 200px;
+                            text-align: center;
+                            -webkit-transition-duration: 0.4s; /* Safari */
+                            transition-duration: 0.4s;
+                            text-decoration: none;
+                            overflow: hidden;
+                            cursor: pointer;
+                        }
 
-                    .button {
-                    position: relative;
-                    background-color: #4CAF50;
-                    border: none;
-                    font-size: 28px;
-                    color: #FFFFFF;
-                    padding: 20px;
-                    width: 200px;
-                    text-align: center;
-                    -webkit-transition-duration: 0.4s; /* Safari */
-                    transition-duration: 0.4s;
-                    text-decoration: none;
-                    overflow: hidden;
-                    cursor: pointer;
-                    }
+                        .button:after {
+                            content: "";
+                            background: #f1f1f1;
+                            display: block;
+                            position: absolute;
+                            padding-top: 300%;
+                            padding-left: 350%;
+                            margin-left: -20px !important;
+                            margin-top: -120%;
+                            opacity: 0;
+                            transition: all 0.8s
+                        }
+                    </style>
+                    <button class="b">Take queue number here href="queueformdisplay.jsp"</button>
 
-                    .button:after {
-                    content: "";
-                    background: #f1f1f1;
-                    display: block;
-                    position: absolute;
-                    padding-top: 300%;
-                    padding-left: 350%;
-                    margin-left: -20px !important;
-                    margin-top: -120%;
-                    opacity: 0;
-                    transition: all 0.8s
-                    }
-                   <%--// -- Insert all the awesome body content here--%>
+                    <ul class="nav nav-pills nav-justified">
+                        <li class="active"><a data-toggle="pill" href="#queueNo">Take Queue Number</a></li>
+                        <div class="queueNo">
 
+                            <!--[if lte IE 8]>
+                            <script charset="utf-8" type="text/javascript"
+                                    src="//js.hsforms.net/forms/v2-legacy.js"></script>
+                            <![endif]-->
+                            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+                            <script>
+                                hbspt.forms.create({
+                                    portalId: '303785',
+                                    formId: 'b0b6a806-32ac-4fed-9058-bee6bad8c4a2'
+                                });
+                            </script>
 
-
-
-                    <button class ="b">Take queue number here</button>
-
-<ul class="nav nav-pills nav-justified">
-                       <li class="active"><a data-toggle="pill" href="#queueNo">Take Queue Number</a></li>
-    <div class="queueNo">
-
-        <!--[if lte IE 8]>
-        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-        <![endif]-->
-        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-        <script>
-            hbspt.forms.create({
-                portalId: '303785',
-                formId: 'b0b6a806-32ac-4fed-9058-bee6bad8c4a2'
-            });
-        </script>
-
-        <li><a data-toggle="pill" href="#updateNo">Edit/Update Queue Number</a></li>
-                       <li><a data-toggle="pill" href="#removeNo">Remove Queue Number</a></li>
-                   </ul>
-
-
-
+                            <li><a data-toggle="pill" href="#updateNo">Edit/Update Queue Number</a></li>
+                            <li><a data-toggle="pill" href="#removeNo">Remove Queue Number</a></li>
+                        </div>
+                    </ul>
 
 
                 </div>
@@ -406,7 +402,7 @@
                     <ul>
                         <li>
                             <a href="#">
-                                Home
+                                Home    test
                             </a>
                         </li>
                         <li>
