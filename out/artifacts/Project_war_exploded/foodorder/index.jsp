@@ -27,17 +27,7 @@
     %>
 
 
-    <%--<script>--%>
 
-        <%--$(function() {--%>
-
-            <%--$("#btnFPorridge").click( function()--%>
-                <%--{--%>
-<%--//                    alert('button clicked');}--%>
-                    <%----%>
-                    <%----%>
-
-    <%--</script>--%>
 
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -76,6 +66,9 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
 
     <style type="text/css">
+        div.foodOrderContainer{
+            display:none;
+        }
         div.item {
             vertical-align: top;
             display: inline-block;
@@ -116,7 +109,24 @@
 
         }
     </style>
+    <script>
 
+        jQuery(function () {
+            $("#btnFPorridge").click(function (e) {
+                e.preventDefault();
+                $("#foodFP").val("Fish Porridge Value");
+
+            });
+        });
+
+        jQuery(function () {
+            $("#btnCNoodles ").click(function (e) {
+                e.preventDefault();
+                $("#foodCN").val("Chicken Noodles");
+
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -411,18 +421,26 @@
                        <div id="food" class="tab-pane fade in active">
                            <h3>Food</h3>
                            <form action="/foodservlet"action="get">
+                               <%--food values container --%>
+                               <div class="foodOrderContainer">
+                                   <input type="text" id="foodFP" name="food"/>
+                                   <input type="text" id="foodCN" name="food"/>
+                           </div>
+                                   <%-- end of food values container--%>
+
                            <div class="item">
                                <img src="images/fishporridge.jpg" class="img-circle" alt="fishporridge">
                                <span class="caption">
                                    Fish porridge
                                </span>
-                               <button type="button" id="btnFPorridge" class="btn btn-primary btn-circle" name="fporridge"><i class="glyphicon glyphicon-plus"></i></button>
+                               <button type="button" id="btnFPorridge" class="btn btn-primary btn-circle"  value="defaultvalue"><i class="glyphicon glyphicon-plus"></i></button>
+
                            </div>
                            <div class="item">
                                <img src="images/chickennoodle.jpg" class="img-circle" alt="Cinque Terre" >
                                <span class="caption">Chicken Noodles
                                </span>
-                               <button type="button" class="btn btn-primary btn-circle"><i class="glyphicon glyphicon-plus"></i></button>
+                               <button type="button" id="btnCNoodles" class="btn btn-primary btn-circle"><i class="glyphicon glyphicon-plus"></i></button>
                            </div>
 
                            <div class="item">
@@ -458,6 +476,8 @@
                            </div>
 
                                <input type="submit" value="Submit"/>
+
+
                            </form>
 
 
