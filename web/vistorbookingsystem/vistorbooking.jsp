@@ -436,7 +436,7 @@
                             <div class="form-group label-floating">
                                 <label class="control-label">E-mail Address
                                 </label>
-                                <input name="nric" type="email" class="form-control" required>
+                                <input name="email" type="email" class="form-control" required>
                             </div>
                         </div>
 
