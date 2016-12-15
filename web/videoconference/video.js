@@ -14,10 +14,12 @@ peer.on('call', function (call) {
 
     var r = confirm("Answer Call?");
     if (r == true) {
+        console.log("Confrimed")
         call.answer(window.localStream);
+        step3(call);
     }
 
-    step3(call);
+
 });
 peer.on('error', function (err) {
     alert(err.message);

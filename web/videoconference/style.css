@@ -1044,27 +1044,34 @@ table {
 }
 
 #my-video {
-    position: relative;
-    left:100px;
+    position: absolute;
+    /*left:450px;*/
     /*margin-top: 15px;*/
-    width: 180px;
+    width: 150px;
     height: auto;
+    left:0;
+    top: 0;
     background-color: #eee;
 
 }
 
 #their-video {
     position: absolute;
-    width: 70%;
-    height: 75%;
+    /*width: 100%;*/
+    height: auto;
     max-height: 480px;
+    width: 100%;
+    top:0;
+    left:0;
     background-color: #eee;
     /*content: url(images/not.jpg);*/
 }
 
 #video-container {
-    /*padding: 25px;*/
+    padding: 25px;
     /*text-align: center;*/
+    position: relative;
+
 }
 
 #step1-error, #step2, #step3 {
