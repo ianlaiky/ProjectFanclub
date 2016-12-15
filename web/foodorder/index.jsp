@@ -66,6 +66,9 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
 
     <style type="text/css">
+        div.foodOrderContainer{
+            display:none;
+        }
         div.item {
             vertical-align: top;
             display: inline-block;
@@ -419,10 +422,10 @@
                            <h3>Food</h3>
                            <form action="/foodservlet"action="get">
                                <%--food values container --%>
+                               <div class="foodOrderContainer">
                                    <input type="text" id="foodFP" name="food"/>
                                    <input type="text" id="foodCN" name="food"/>
-
-
+                           </div>
                                    <%-- end of food values container--%>
 
                            <div class="item">
@@ -473,10 +476,8 @@
                            </div>
 
                                <input type="submit" value="Submit"/>
-                               <button id="testBtn" value="testvalue">
-                                   clickme
-                               </button>
-                               <input type="text" id="textbox"/>
+
+
                            </form>
 
 
