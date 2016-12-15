@@ -360,7 +360,7 @@
                             <div class="form-group label-floating">
                                 <label class="control-label">Name
                                 </label>
-                                <input name="name" type="text" class="form-control">
+                                <input name="name" type="text" class="form-control" required="true">
                             </div>
                         </div>
                         <div class="input-group">
@@ -380,7 +380,7 @@
                             <div class="form-group label-floating">
                                 <label class="control-label">NRIC
                                 </label>
-                                <input name="nric" type="text" class="form-control">
+                                <input name="nric" type="text" class="form-control" required>
                             </div>
                         </div>
 
@@ -393,12 +393,12 @@
                                 </label>
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="age"> Male
+                                        <input type="radio" name="age" required> Male
                                     </label>
                                 </div>
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="age"> Female
+                                        <input type="radio" name="age" required> Female
                                     </label>
                                 </div>
                             </div>
@@ -419,6 +419,27 @@
                                 </select>
                             </div>
                         </div>
+                        <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="material-icons">contact_phone</i>
+                                                        </span>
+                            <div class="form-group label-floating">
+                                <label class="control-label">phone
+                                </label>
+                                <input name="phone" type="tel" class="form-control" validate="tel" pattern="[0-9]{8}" required="true">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="material-icons">email</i>
+                            </span>
+                            <div class="form-group label-floating">
+                                <label class="control-label">E-mail Address
+                                </label>
+                                <input name="email" type="email" class="form-control" required>
+                            </div>
+                        </div>
+
             </div>
                 </div>
             </div>
