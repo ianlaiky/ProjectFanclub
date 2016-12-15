@@ -344,13 +344,82 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="col-sm-8 col-sm-offset-2">
-                    <!-- Insert all the awesome body content here
+                    <!-- Insert all the awesome body content here->
 
 
 
 
 
-                    -->
+
+                        -->
+                    <div class="col-sm-6">
+                        <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="material-icons">face</i>
+                                                        </span>
+                            <div class="form-group label-floating">
+                                <label class="control-label">Name
+                                </label>
+                                <input name="name" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="material-icons">mood</i>
+                                                        </span>
+                            <div class="form-group label-floating">
+                                <label class="control-label">Age
+                                </label>
+                                <input name="age" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="material-icons">info_outline</i>
+                            </span>
+                            <div class="form-group label-floating">
+                                <label class="control-label">NRIC
+                                </label>
+                                <input name="nric" type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="material-icons">person</i>
+                                                        </span>
+                            <div>
+                                <label class="control-label">Gender
+                                </label>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="age"> Male
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="age"> Female
+                                    </label>
+                                </div>
+                            </div>
+                </div>
+                        <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="material-icons">av_timer</i>
+                                                        </span>
+                            <div class="form-group label-floating">
+                                <label class="control-label">Select Time
+                                </label>
+                                <select>
+                                    <option value="1">13:00</option>
+                                    <option value="2">14:00</option>
+                                    <option value="3">15:00</option>
+                                    <option value="4">16:00</option>
+                                    <option value="5">17:00</option>
+                                </select>
+                            </div>
+                        </div>
+            </div>
                 </div>
             </div>
         </div>
