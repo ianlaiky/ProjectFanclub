@@ -393,16 +393,39 @@
                                 </label>
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="age" required> Male
+                                        <input type="radio" name="gender" required> Male
                                     </label>
                                 </div>
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="age" required> Female
+                                        <input type="radio" name="gender" required> Female
                                     </label>
                                 </div>
                             </div>
-                </div>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="material-icons">perm_contact_calendar</i>
+                            </span>
+                            <div class="form-group label-floating">
+                                <label class="control-label">Date
+                                </label>
+                                <input  type="text" class="form-control" id="datepicker" required>
+                            </div>
+                            <div class="input-group">
+                                <meta charset="utf-8">
+                                <meta name="viewport" content="width=device-width, initial-scale=1">
+                                <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+                                <link rel="stylesheet" href="/resources/demos/style.css">
+                                <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+                                <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+                                <script>
+                                    $( function() {
+                                        $( "#datepicker" ).datepicker();
+                                    } );
+                                </script>
+                            </div>
+                        </div>
                         <div class="input-group">
                                                         <span class="input-group-addon">
                                                             <i class="material-icons">av_timer</i>
@@ -440,7 +463,7 @@
                             </div>
                         </div>
 
-            </div>
+                    </div>
                 </div>
             </div>
         </div>
