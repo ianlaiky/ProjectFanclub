@@ -21,6 +21,28 @@ public class User {
     private double curCarbo;
 
 
+    public User(int userId) {
+        this.userId = userId;
+    }
+
+    public User(int userId, String uname, int age, String gender, String intensity, double height, double weight, double dailyCalories, double dailyProtein, double dailyCarbo, double dailyFat, double curCalories, double curProtein, double curFat, double curCarbo) {
+        this.userId = userId;
+        this.uname = uname;
+        this.age = age;
+        this.gender = gender;
+        this.intensity = intensity;
+        this.height = height;
+        this.weight = weight;
+        this.dailyCalories = dailyCalories;
+        this.dailyProtein = dailyProtein;
+        this.dailyCarbo = dailyCarbo;
+        this.dailyFat = dailyFat;
+        this.curCalories = curCalories;
+        this.curProtein = curProtein;
+        this.curFat = curFat;
+        this.curCarbo = curCarbo;
+    }
+
     public int getUserId() {
         return userId;
     }
