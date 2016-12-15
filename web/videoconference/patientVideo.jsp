@@ -79,7 +79,7 @@
 
 <body>
 <div class="wrapper">
-    <div class="sidebar" data-active-codlor="green" data-background-color="black"
+    <div class="sidebar" data-active-color="green" data-background-color="black"
          data-image="../../assets/img/sidebar-1.jpg">
         <!--
     Tip 1: You can change the color of active element of the sidebar using: data-active-color="purple | blue | green | orange | red | rose"
