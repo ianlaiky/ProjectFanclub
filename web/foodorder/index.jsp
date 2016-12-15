@@ -66,6 +66,19 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
 
     <style type="text/css">
+
+        div.galleryContainer{
+            /*width:900px;*/
+            /*height:700px;*/
+            /*width:auto;*/
+            /*height:auto;*/
+        }
+        div.submitContainer{
+            /*text-align: center;*/
+            /*width: 500px;*/
+            /*height: 200px;*/
+
+        }
         div.foodOrderContainer{
             display:none;
         }
@@ -108,7 +121,8 @@
             border-radius: 15px;
         }
         #btnSubmitFood{
-            text-align:right;
+            /*width:300px;*/
+            /*float:right;*/
 
         }
     </style>
@@ -470,6 +484,7 @@
                                    <input type="text" id="foodOatmeal" name="food"/>
                            </div>
                                    <%-- end of food values container--%>
+                                   <div class="galleryContainer">
 
                            <div class="item">
                                <img src="images/fishporridge.jpg" class="img-circle" alt="fishporridge">
@@ -518,7 +533,18 @@
                                <button type="button" id="btnOatmeal" class="btn btn-primary btn-circle"><i class="glyphicon glyphicon-plus"></i></button>
                            </div>
 
+
+                                   </div>
+                                   <div class="submitContainer">
+                                       <div class="row">
+                                           <div class="col-sm-12">
+                                               <div class="text-center">
                                    <input type="submit" id="btnSubmitFood" class="btn btn-success" value="Submit"/>
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </div>
+
                            </form>
 
 
