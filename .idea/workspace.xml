@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8e022087-1ecc-4ac6-86ec-c26632758be4" name="Default" comment="back to normal">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="8e022087-1ecc-4ac6-86ec-c26632758be4" name="Default" comment="" />
     <ignored path=".idea/dataSources.local.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -638,7 +636,7 @@
       <option name="presentableId" value="Default" />
       <updated>1481788893966</updated>
       <workItem from="1481788895211" duration="132000" />
-      <workItem from="1481793864974" duration="203000" />
+      <workItem from="1481793864974" duration="221000" />
     </task>
     <task id="LOCAL-00001" summary="back to normal">
       <created>1481793994811</created>
@@ -647,11 +645,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481793994811</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="back to normal">
+      <created>1481794070603</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1481794070603</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="335000" />
+    <option name="totallyTimeSpent" value="353000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
