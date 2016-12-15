@@ -20,6 +20,7 @@ public class UserServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         HttpSession session = request.getSession();
+        UserDAO db = new UserDAO();
         String name = request.getParameter("name");
         String age = request.getParameter("age");
         String rbtn = request.getParameter("gender");
