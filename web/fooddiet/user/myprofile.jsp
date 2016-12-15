@@ -332,7 +332,7 @@
                     <!--      Wizard container        -->
                     <div class="wizard-container">
                         <div class="card wizard-card" data-color="rose" id="wizardProfile">
-                            <form action="" method="get">
+                            <form action="/user" method="get">
                                 <!--        You can switch " data-color="purple" "  with one of the next bright colors: "green", "orange", "red", "blue"       -->
                                 <div class="wizard-header">
                                     <h3 class="wizard-title">
@@ -396,12 +396,12 @@
                                                         </label>
                                                         <div class="radio">
                                                         <label>
-                                                            <input type="radio" name="age"> Male
+                                                            <input type="radio" name="gender" value="male"> Male
                                                         </label>
                                                         </div>
                                                         <div class="radio">
                                                             <label>
-                                                                <input type="radio" name="age"> Female
+                                                                <input type="radio" name="gender" value="female"> Female
                                                             </label>
                                                         </div>
                                                     </div>
@@ -416,7 +416,7 @@
                                             <div class="col-lg-10 col-lg-offset-1">
                                                 <div class="col-sm-4">
                                                     <div class="choice" data-toggle="wizard-radio">
-                                                        <input type="radio" name="jobb" value="Design">
+                                                        <input type="radio" name="intensity" value="sedentary">
                                                         <div class="icon">
                                                             <i class="fa fa-meh-o fa-5x"></i>
                                                         </div>
@@ -425,7 +425,7 @@
                                                 </div>
                                                 <div class="col-sm-4">
                                                     <div class="choice" data-toggle="wizard-radio">
-                                                        <input type="radio" name="jobb" value="Code">
+                                                        <input type="radio" name="intensity" value="moderate">
                                                         <div class="icon">
                                                             <i class="fa fa-heart"></i>
                                                         </div>
@@ -434,7 +434,7 @@
                                                 </div>
                                                 <div class="col-sm-4">
                                                     <div class="choice" data-toggle="wizard-radio">
-                                                        <input type="radio" name="jobb" value="Develop">
+                                                        <input type="radio" name="intensity" value="active">
                                                         <div class="icon">
                                                             <i class="fa fa-bicycle"></i>
                                                         </div>
