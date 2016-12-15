@@ -3,6 +3,8 @@
 <html lang="en">
 
 <head>
+
+
     <meta charset="utf-8"/>
     <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png"/>
     <link rel="icon" type="image/png" href="../../assets/img/favicon.png"/>
@@ -49,6 +51,27 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
+
+    <style>
+
+
+        .card {
+            display: inline-block;
+            position: relative;
+            width: 130%;
+            left: -150px;
+            margin: 25px 0;
+            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+            border-radius: 6px;
+            color: rgba(0, 0, 0, 0.87);
+            background: #fff;
+        }
+
+        .wizard-card {
+            min-height: 410px;
+            box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 
 <body>
@@ -98,7 +121,7 @@
             </div>
             <ul class="nav">
                 <li class="active">
-                    <a href="docVideo.jsp">
+                    <a href="../index.jsp">
                         <i class="material-icons">dashboard</i>
                         <p>Live Web Calling</p>
                     </a>
@@ -113,17 +136,13 @@
                     <div class="collapse" id="pagesExamples">
                         <ul class="nav">
                             <li>
-                                <a href="docReportView.jsp">View Reports</a>
+                                <a href="patientReportView.jsp">View Reports</a>
                             </li>
-                            <li>
-                                <a href="docReportInsert.jsp">View Reports</a>
-                            </li>
-
 
                         </ul>
                     </div>
                 </li>
-               </li>
+                </li>
             </ul>
         </div>
     </div>
@@ -145,7 +164,6 @@
                     </button>
                     <a class="navbar-brand" href="#"> Wizard </a>
                 </div>
-
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
@@ -208,16 +226,13 @@
                     <!--      Wizard container        -->
 
 
-
-
-
-
                     <div class="wizard-container">
                         <div class="card wizard-card" data-color="green" id="wizardProfile">
                             <link rel="stylesheet" href="style.css">
                             <script src="http://cdn.peerjs.com/0.3/peer.min.js"></script>
-                            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-                            <script src="video.js"></script>
+                            <script type="text/javascript"
+                                    src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+                            <script src="videoDoc.js"></script>
 
                             <div class="pure-g">
 
@@ -234,11 +249,14 @@
 
                                     <!-- Get local audio/video stream -->
                                     <div id="step1">
-                                        <p>Please click `allow` on the top of the screen so we can access your webcam and microphone for calls.</p>
+                                        <p>Please click `allow` on the top of the screen so we can access your webcam
+                                            and microphone for calls.</p>
                                         <div id="step1-error">
-                                            <p>Failed to access the webcam and microphone. Make sure to run this demo on an http server and click
+                                            <p>Failed to access the webcam and microphone. Make sure to run this demo on
+                                                an http server and click
                                                 allow when asked for permission by the browser.</p>
-                                            <a href="#" class="pure-button pure-button-error" id="step1-retry">Try again</a>
+                                            <a href="#" class="pure-button pure-button-error" id="step1-retry">Try
+                                                again</a>
                                         </div>
                                     </div>
 
@@ -256,7 +274,8 @@
                                     <!-- Call in progress -->
                                     <div id="step3">
                                         <p>Currently in call with <span id="their-id">...</span></p>
-                                        <p><a href="#" class="pure-button pure-button-error" id="end-call">End call</a></p>
+                                        <p><a href="#" class="pure-button pure-button-error" id="end-call">End call</a>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -268,9 +287,22 @@
                             <br>
                             <br>
                             <br>
+                            <br> <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
                             <br>
 
 
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
 
 
                         </div>
