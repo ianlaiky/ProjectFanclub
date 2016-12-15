@@ -37,5 +37,21 @@ public class Utility {
 
     }
 
+    public static double calProtein(double weight, double height, int age, String gender, String intensity){
+        double protein =0;
+        protein = calBMR(weight,height,age,gender) * 0.25;
+        return protein;
+    }
+    public static double calCarbo(double weight, double height, int age, String gender, String intensity){
+        double carbo =0;
+        carbo = calBMR(weight,height,age,gender) * 0.55;
+        return carbo;
+    }
+    public static double calFat(double weight, double height, int age, String gender, String intensity){
+        double fat =0;
+        fat = calBMR(weight,height,age,gender) * 0.2;
+        return fat;
+    }
+
 
 }
