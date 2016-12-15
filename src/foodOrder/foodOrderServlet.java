@@ -26,13 +26,18 @@ public class foodOrderServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        String foodName = request.getParameter("food");
+        String foodName = request.getParameter("testName");
+        System.out.println("Check food name="+foodName);
+//        String foodName = "foodNameTest";
+
         foodOrderDAO fod = new foodOrderDAO();
         fod.createFoodOrder(foodName,"1",null,null,null);
 
         //storing into session
         session.setAttribute("food",foodName);
-        request.getRequestDispatcher("");
+
+
+        getServletContext().getRequestDispatcher("/foodorder/success.jsp").forward(request, response);
 
     }
 }

@@ -34,11 +34,13 @@ public class foodOrderDAO {
         em.getTransaction().begin();
         em.persist(order);
         em.getTransaction().commit();
-        System.out.println("testlog");
+        System.out.println("creating food order method");
 
         //retrieve updated list
         list = getAllfoodOrder();
-        return list.get(id);
+
+        //RETURN STATEMENT DEBUGGING
+        return null;
 
 
     }
