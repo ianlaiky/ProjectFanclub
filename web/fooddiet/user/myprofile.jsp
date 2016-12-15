@@ -452,14 +452,14 @@
                                             <div class="col-sm-7 col-sm-offset-2">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label">Height</label>
-                                                    <input type="text" class="form-control">
+                                                    <input type="text" name="height" class="form-control">
                                                 </div>
                                             </div>
 
                                             <div class="col-sm-7 col-sm-offset-2">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label">Weight</label>
-                                                    <input type="text" class="form-control">
+                                                    <input type="text" name="weight" class="form-control">
                                                 </div>
                                             </div>
 

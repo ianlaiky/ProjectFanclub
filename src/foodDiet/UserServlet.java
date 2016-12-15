@@ -40,6 +40,7 @@ public class UserServlet extends HttpServlet {
             intensity = "active";
         }
 
+
         getServletContext().getRequestDispatcher("/editprofile.jsp").forward(request, response);
     }
 }
