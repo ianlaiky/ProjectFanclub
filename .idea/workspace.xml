@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8e022087-1ecc-4ac6-86ec-c26632758be4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/onlinequeuesystem/queue.jsp" afterPath="$PROJECT_DIR$/web/onlinequeuesystem/queue.jsp" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -693,7 +692,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1481788893966</updated>
-      <workItem from="1481788895211" duration="731000" />
+      <workItem from="1481788895211" duration="887000" />
     </task>
     <task id="LOCAL-00001" summary="form">
       <created>1481789038963</created>
@@ -702,11 +701,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481789038963</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="form">
+      <created>1481789631331</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1481789631331</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="731000" />
+    <option name="totallyTimeSpent" value="887000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
