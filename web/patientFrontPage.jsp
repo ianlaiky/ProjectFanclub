@@ -49,11 +49,24 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
+
+    <style>
+        .frontPageRounded {
+            border-radius: 25px;
+            background: #73AD21;
+            padding: 20px;
+            width: 150px;
+            height: auto;
+
+            margin: 10px;
+        }
+
+    </style>
 </head>
 
 <body>
 <div class="wrapper">
-    <div class="sidebar" data-active-color="green" data-background-color="white"
+    <div class="sidebar" data-active-color="green" data-background-color="black"
          data-image="../../assets/img/sidebar-1.jpg">
         <!--
     Tip 1: You can change the color of active element of the sidebar using: data-active-color="purple | blue | green | orange | red | rose"
@@ -330,13 +343,29 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="col-sm-8 col-sm-offset-2">
-                    <!-- Insert all the awesome body content here
+                    <%--<!-- Insert all the awesome body content here--%>
+
+                <a href="fooddiet/index.jsp"><img src="assets/img/foodDietF.png"class="frontPageRounded"></a>
+                        <a href="foodorder/index.jsp"><img src="assets/img/orderFoodF.png" class="frontPageRounded"> </a>
+                <a href="onlinequeuesystem/queue.jsp"><img src="assets/img/queueF.png" class="frontPageRounded"></a>
+                <a href="videoconference/patientVideo.jsp"><img src="assets/img/videoConferenceF.png" class="frontPageRounded"></a>
+                <a href="vistorbookingsystem/vistorbooking.jsp"><img src="assets/img/visitorbookingF.png" class="frontPageRounded"></a>
 
 
 
 
 
-                    -->
+
+
+
+
+
+
+
+
+
+
+                    <%---->--%>
                 </div>
             </div>
         </div>

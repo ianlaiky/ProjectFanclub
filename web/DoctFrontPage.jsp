@@ -1,189 +1,73 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Ying
-  Date: 11/12/2016
-  Time: 4:24 AM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
 
 <head>
-
-
-    <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png" />
-    <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <%--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>--%>
-    <%--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>--%>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png"/>
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>Vision API</title>
-    <%@ page import="foodOrder.*"%>
-    <%--<%--%>
-        <%--foodOrderDAO fod = new foodOrderDAO();--%>
-    <%--%>--%>
-
-
-
-
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+    <meta name="viewport" content="width=device-width"/>
     <!-- Canonical SEO -->
-    <link rel="canonical" href="http://www.creative-tim.com/product/material-dashboard-pro" />
+    <link rel="canonical" href="http://www.creative-tim.com/product/material-dashboard-pro"/>
     <!--  Social tags      -->
-    <meta name="keywords" content="material dashboard, bootstrap material admin, bootstrap material dashboard, material design admin, material design, creative tim, html dashboard, html css dashboard, web dashboard, freebie, free bootstrap dashboard, css3 dashboard, bootstrap admin, bootstrap dashboard, frontend, responsive bootstrap dashboard, premiu material design admin">
-    <meta name="description" content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+    <meta name="keywords"
+          content="material dashboard, bootstrap material admin, bootstrap material dashboard, material design admin, material design, creative tim, html dashboard, html css dashboard, web dashboard, freebie, free bootstrap dashboard, css3 dashboard, bootstrap admin, bootstrap dashboard, frontend, responsive bootstrap dashboard, premiu material design admin">
+    <meta name="description"
+          content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
     <!-- Schema.org markup for Google+ -->
     <meta itemprop="name" content="Material Dashboard PRO by Creative Tim | Premium Bootstrap Admin Template">
-    <meta itemprop="description" content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+    <meta itemprop="description"
+          content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
     <meta itemprop="image" content="http://s3.amazonaws.com/creativetim_bucket/products/51/opt_mdp_thumbnail.jpg">
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@creativetim">
     <meta name="twitter:title" content="Material Dashboard PRO by Creative Tim | Premium Bootstrap Admin Template">
-    <meta name="twitter:description" content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+    <meta name="twitter:description"
+          content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
     <meta name="twitter:creator" content="@creativetim">
     <meta name="twitter:image" content="http://s3.amazonaws.com/creativetim_bucket/products/51/opt_mdp_thumbnail.jpg">
     <!-- Open Graph data -->
     <meta property="fb:app_id" content="655968634437471">
-    <meta property="og:title" content="Material Dashboard PRO by Creative Tim | Premium Bootstrap Admin Template" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="http://www.creative-tim.com/product/material-dashboard-pro" />
-    <meta property="og:image" content="http://s3.amazonaws.com/creativetim_bucket/products/51/opt_mdp_thumbnail.jpg" />
-    <meta property="og:description" content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design." />
-    <meta property="og:site_name" content="Creative Tim" />
+    <meta property="og:title" content="Material Dashboard PRO by Creative Tim | Premium Bootstrap Admin Template"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content="http://www.creative-tim.com/product/material-dashboard-pro"/>
+    <meta property="og:image" content="http://s3.amazonaws.com/creativetim_bucket/products/51/opt_mdp_thumbnail.jpg"/>
+    <meta property="og:description"
+          content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design."/>
+    <meta property="og:site_name" content="Creative Tim"/>
     <!-- Bootstrap core CSS     -->
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
     <!--  Material Dashboard CSS    -->
-    <link href="../assets/css/material-dashboard2.css" rel="stylesheet" />
+    <link href="../assets/css/material-dashboard2.css" rel="stylesheet"/>
     <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="../assets/css/demo2.css" rel="stylesheet" />
+    <link href="../assets/css/demo2.css" rel="stylesheet"/>
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
 
-    <style type="text/css">
+    <style>
+        .frontPageRounded {
+            border-radius: 25px;
+            background: #73AD21;
+            padding: 20px;
+            width: 150px;
+            height: auto;
 
-        div.galleryContainer{
-            /*width:900px;*/
-            /*height:700px;*/
-            /*width:auto;*/
-            /*height:auto;*/
-        }
-        div.submitContainer{
-            /*text-align: center;*/
-            /*width: 500px;*/
-            /*height: 200px;*/
-
-        }
-        div.foodOrderContainer{
-            display:none;
-        }
-        div.item {
-            vertical-align: top;
-            display: inline-block;
-            text-align: left;
-            /* The width of the container also implies margin around the images. */
-            width: 240px;
-            font-family: "Fira Code Medium";
-            font-size: 16px;
-            font-weight: bold;
-
-        }
-        button{
-
-
-        }
-        img {
-
-            width: 200px;
-            height: 140px;
-            background-color: grey;
-
-        }
-        .caption {
-
-            display: inline-block;
-            width:170px;
-
+            margin: 10px;
         }
 
-        .btn-circle {
-            width: 30px;
-            height: 30px;
-            text-align: center;
-            padding: 6px 0;
-            font-size: 12px;
-            line-height: 1.428571429;
-            border-radius: 15px;
-        }
-        #btnSubmitFood{
-            /*width:300px;*/
-            /*float:right;*/
-
-        }
     </style>
-    <script>
-
-        jQuery(function () {
-            $("#btnFPorridge").click(function (e) {
-                e.preventDefault();
-                $("#foodFP").val("Fish Porridge");
-
-            });
-        });
-
-        jQuery(function () {
-            $("#btnCNoodles").click(function (e) {
-                e.preventDefault();
-                $("#foodCN").val("Chicken Noodles");
-
-            });
-        });
-        jQuery(function () {
-            $("#btnCornflakes").click(function (e) {
-                e.preventDefault();
-                $("#foodCornflake").val("Cornflakes");
-
-            });
-        });
-        jQuery(function () {
-            $("#btnETSandwich").click(function (e) {
-                e.preventDefault();
-                $("#foodEggTomatoSw").val("Egg&Tomato Sandwich");
-
-            });
-        });
-        jQuery(function () {
-            $("#btnKayaBread").click(function (e) {
-                e.preventDefault();
-                $("#foodKayaBread").val("Kaya Bread");
-
-            });
-        });
-        jQuery(function () {
-            $("#btnSausagesEgg").click(function (e) {
-                e.preventDefault();
-                $("#foodEggSausage").val("Fried Egg&Sausages");
-
-            });
-        });
-        jQuery(function () {
-            $("#btnOatmeal").click(function (e) {
-                e.preventDefault();
-                $("#foodOatmeal").val("Oatmeal");
-
-            });
-        });
-    </script>
 </head>
 
 <body>
 <div class="wrapper">
-    <div class="sidebar" data-active-color="green" data-background-color="white" data-image="../../assets/img/sidebar-1.jpg">
+    <div class="sidebar" data-active-color="green" data-background-color="black"
+         data-image="../../assets/img/sidebar-1.jpg">
         <!--
     Tip 1: You can change the color of active element of the sidebar using: data-active-color="purple | blue | green | orange | red | rose"
     Tip 2: you can also add an image using data-image tag
@@ -191,7 +75,7 @@
 -->
         <div class="logo">
             <a href="http://www.creative-tim.com" class="simple-text">
-                Food Ordering
+                Food Diet
             </a>
         </div>
         <div class="logo logo-mini">
@@ -199,29 +83,27 @@
                 FD
             </a>
         </div>
-        <div class="sidebar-wrapper ps-container ps-theme-default ps-active-x" data-ps-id="27535860-4b1b-c8e5-ec90-4de4d32f70a0">
+        <div class="sidebar-wrapper ps-container ps-theme-default ps-active-x"
+             data-ps-id="27535860-4b1b-c8e5-ec90-4de4d32f70a0">
             <div class="user">
                 <div class="photo">
-                    <img src="../assets/img/faces/marc.jpg" />
+                    <img src="../assets/img/faces/marc.jpg"/>
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        Junkiat
+                        Wan Ying
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="#">Order</a>
+                                <a href="../fooddiet/user/myprofile.jsp">My Profile</a>
                             </li>
                             <li>
-                                <a href="../foodorder/dietaryrestrictions.jsp">Dietary Restrictions</a>
+                                <a href="#">Edit Profile</a>
                             </li>
                             <li>
-                                <a href="#">Diet Recommendation</a>
-                            </li>
-                            <li>
-                                <a href="#">FeedBack</a>
+                                <a href="#">Settings</a>
                             </li>
                         </ul>
                     </div>
@@ -461,105 +343,10 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="col-sm-8 col-sm-offset-2">
-               <%--Insert all the awesome body content here--%>
-
-                   <ul class="nav nav-pills nav-justified">
-                       <li class="active"><a data-toggle="pill" href="#food">Home</a></li>
-                       <li><a data-toggle="pill" href="#drinks">Drinks</a></li>
-                       <li><a data-toggle="pill" href="#fruits">Fruits</a></li>
-                   </ul>
-
-                   <div class="tab-content">
-                       <div id="food" class="tab-pane fade in active">
-                           <h3>Food</h3>
-                           <form action="/foodservlet"action="get">
-                               <%--food values container --%>
-                               <div class="foodOrderContainer">
-                                   <input type="text" id="foodFP" name="food"/>
-                                   <input type="text" id="foodCN" name="food"/>
-                                   <input type="text" id="foodEggTomatoSw" name="food"/>
-                                   <input type="text" id="foodCornflake" name="food"/>
-                                   <input type="text" id="foodEggSausage" name="food"/>
-                                   <input type="text" id="foodKayaBread" name="food"/>
-                                   <input type="text" id="foodOatmeal" name="food"/>
-                           </div>
-                                   <%-- end of food values container--%>
-                                   <div class="galleryContainer">
-
-                           <div class="item">
-                               <img src="images/fishporridge.jpg" class="img-circle" alt="fishporridge">
-                               <span class="caption">
-                                   Fish porridge
-                               </span>
-                               <button type="button" id="btnFPorridge" class="btn btn-primary btn-circle"  value="defaultvalue"><i class="glyphicon glyphicon-plus"></i></button>
-
-                           </div>
-                           <div class="item">
-                               <img src="images/chickennoodle.jpg" class="img-circle" alt="Cinque Terre" >
-                               <span class="caption">Chicken Noodles
-                               </span>
-                               <button type="button" id="btnCNoodles" class="btn btn-primary btn-circle"><i class="glyphicon glyphicon-plus"></i></button>
-                           </div>
-
-                           <div class="item">
-                               <img src="images/eggtomatosandwich.JPG" class="img-circle" alt="Cinque Terre" >
-                               <span class="caption">Egg&Tomato Sandwich
-                               </span>
-                               <button type="button" id="btnETSandwich" class="btn btn-primary btn-circle"><i class="glyphicon glyphicon-plus"></i></button>
-                           </div>
-
-                           <div class="item">
-                               <img src="images/cornflake.jpg" class="img-circle" alt="Cinque Terre" >
-                               <span class="caption">Cornflakes
-                               </span>
-                               <button type="button" id="btnCornflakes" class="btn btn-primary btn-circle"><i class="glyphicon glyphicon-plus"></i></button>
-                           </div>
-                           <div class="item">
-                               <img src="images/friedeggsausage.jpg" class="img-circle" alt="Cinque Terre" >
-                               <span class="caption">Sausages&Egg
-                              </span>
-                               <button type="button" id="btnSausagesEgg" class="btn btn-primary btn-circle"><i class="glyphicon glyphicon-plus"></i></button>
-                           </div>
-                           <div class="item">
-                               <img src="images/kayabread.jpg" class="img-circle" alt="Cinque Terre" >
-                               <span class="caption">Kaya Bread
-                               </span>
-                               <button type="button" id="btnKayaBread" class="btn btn-primary btn-circle"><i class="glyphicon glyphicon-plus"></i></button>
-                           </div>
-                           <div class="item">
-                               <img src="images/oatmeal.jpg" class="img-circle" alt="Cinque Terre" >
-                               <span class="caption">Oatmeal
-                               </span>
-                               <button type="button" id="btnOatmeal" class="btn btn-primary btn-circle"><i class="glyphicon glyphicon-plus"></i></button>
-                           </div>
+                    <%--<!-- Insert all the awesome body content here--%>
 
 
-                                   </div>
-                                   <div class="submitContainer">
-                                       <div class="row">
-                                           <div class="col-sm-12">
-                                               <div class="text-center">
-                                   <input type="submit" onclick="return confirm('Are you sure?')" id="btnSubmitFood" class="btn btn-success" value="Submit"/>
-                                               </div>
-                                           </div>
-                                       </div>
-                                   </div>
-
-                           </form>
-
-
-
-                       </div>
-
-                       <div id="drinks" class="tab-pane fade">
-                           <h3>Drinks</h3>
-                           <p>Some content in menu 1.</p>
-                       </div>
-                       <div id="fruits" class="tab-pane fade">
-                           <h3>Fruits</h3>
-                           <p> textholder</p>
-                       </div>
-                   </div>
+                <a href="videoconference/docVideo.jsp"><img src="assets/img/videoConferenceF.png" class="frontPageRounded"></a>
 
 
 
@@ -574,7 +361,8 @@
 
 
 
-                    <%-- end of content--%>
+
+                    <%---->--%>
                 </div>
             </div>
         </div>
@@ -609,7 +397,8 @@
                     <script>
                         document.write(new Date().getFullYear())
                     </script>
-                    <a href="http://www.creative-tim.com">Woodlands Integrated Health Campus</a>, made with love by Fanclub
+                    <a href="http://www.creative-tim.com">Woodlands Integrated Health Campus</a>, made with love by
+                    Fanclub
                 </p>
             </div>
         </footer>
@@ -670,36 +459,42 @@
             <li class="header-title">Images</li>
             <li class="active">
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-1.jpg" alt="" />
+                    <img src="../../assets/img/sidebar-1.jpg" alt=""/>
                 </a>
             </li>
             <li>
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-2.jpg" alt="" />
+                    <img src="../../assets/img/sidebar-2.jpg" alt=""/>
                 </a>
             </li>
             <li>
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-3.jpg" alt="" />
+                    <img src="../../assets/img/sidebar-3.jpg" alt=""/>
                 </a>
             </li>
             <li>
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-4.jpg" alt="" />
+                    <img src="../../assets/img/sidebar-4.jpg" alt=""/>
                 </a>
             </li>
             <li class="button-container">
                 <div class="">
-                    <a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-rose btn-block">Buy Now</a>
+                    <a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank"
+                       class="btn btn-rose btn-block">Buy Now</a>
                 </div>
                 <div class="">
-                    <a href="http://www.creative-tim.com/product/material-dashboard" target="_blank" class="btn btn-info btn-block">Get Free Demo</a>
+                    <a href="http://www.creative-tim.com/product/material-dashboard" target="_blank"
+                       class="btn btn-info btn-block">Get Free Demo</a>
                 </div>
             </li>
             <li class="header-title">Thank you for 95 shares!</li>
             <li class="button-container">
-                <button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i> &middot; 45</button>
-                <button id="facebook" class="btn btn-social btn-facebook btn-round"><i class="fa fa-facebook-square"> &middot;</i>50</button>
+                <button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i> &middot;
+                    45
+                </button>
+                <button id="facebook" class="btn btn-social btn-facebook btn-round"><i
+                        class="fa fa-facebook-square"> &middot;</i>50
+                </button>
             </li>
         </ul>
     </div>
@@ -748,7 +543,7 @@
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="../../assets/js/demo2.js"></script>
 <script type="text/javascript">
-    $().ready(function() {
+    $().ready(function () {
         demo.initMaterialWizard();
     });
 </script>

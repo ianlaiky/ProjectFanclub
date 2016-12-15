@@ -75,12 +75,12 @@
     Tip 3: you can change the color of the sidebar with data-background-color="white | black"
 -->
         <div class="logo">
-            <a href="http://www.creative-tim.com" class="simple-text">
-                Food Diet
+            <a href="#" class="simple-text">
+                Vistor Booking
             </a>
         </div>
         <div class="logo logo-mini">
-            <a href="http://www.creative-tim.com" class="simple-text">
+            <a href="#" class="simple-text">
                 FD
             </a>
         </div>
@@ -364,16 +364,6 @@
                             </div>
                         </div>
                         <div class="input-group">
-                                                        <span class="input-group-addon">
-                                                            <i class="material-icons">mood</i>
-                                                        </span>
-                            <div class="form-group label-floating">
-                                <label class="control-label">Age
-                                </label>
-                                <input name="age" type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="input-group">
                             <span class="input-group-addon">
                                 <i class="material-icons">info_outline</i>
                             </span>
@@ -385,24 +375,28 @@
                         </div>
 
                         <div class="input-group">
-                                                        <span class="input-group-addon">
-                                                            <i class="material-icons">person</i>
-                                                        </span>
-                            <div>
-                                <label class="control-label">Gender
+                            <span class="input-group-addon">
+                                <i class="material-icons">perm_contact_calendar</i>
+                            </span>
+                            <div class="form-group label-floating">
+                                <label class="control-label">Date
                                 </label>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="age" required> Male
-                                    </label>
-                                </div>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="age" required> Female
-                                    </label>
-                                </div>
+                                <input  type="text" class="form-control" id="datepicker" required>
                             </div>
-                </div>
+                            <div class="input-group">
+                                <meta charset="utf-8">
+                                <meta name="viewport" content="width=device-width, initial-scale=1">
+                                <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+                                <link rel="stylesheet" href="/resources/demos/style.css">
+                                <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+                                <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+                                <script>
+                                    $( function() {
+                                        $( "#datepicker" ).datepicker();
+                                    } );
+                                </script>
+                            </div>
+                        </div>
                         <div class="input-group">
                                                         <span class="input-group-addon">
                                                             <i class="material-icons">av_timer</i>
@@ -439,10 +433,34 @@
                                 <input name="email" type="email" class="form-control" required>
                             </div>
                         </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="material-icons">perm_identity</i>
+                            </span>
+                            <div class="form-group label-floating">
+                                <label class="control-label">Relative's NRIC
+                                </label>
+                                <input name="pNRIC" type="text" class="form-control" required>
+                                <button type="button">Get information</button>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="picture-container">
+                                <div class="picture">
+                                    <img src="../../assets/img/default-avatar.png" class="picture-src" id="wizardPicturePreview" title="" /><br>
+                                    <input type="text" id="patientName">
+                                    <input type="text" id="roomnum">
+                                </div>
+                            </div>
+                        </div>
 
-            </div>
+                    </div>
                 </div>
             </div>
+            <button type="button" style=  "position: fixed;
+                    bottom: 120px;
+                    margin-right: 300px;
+                    margin-left: 800px;">submit</button>
         </div>
         <footer class="footer">
             <div class="container-fluid">
