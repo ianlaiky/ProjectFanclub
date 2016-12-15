@@ -66,6 +66,53 @@ public class UserDAO {
         return user;
     }
 
+    public static boolean createUser(int userId, String uname, int age, String gender, String intensity, double height, double weight, double dailyCalories, double dailyProtein, double dailyCarbo, double dailyFat, double curCalories, double curProtein, double curFat, double curCarbo) {
+        // declare local variables
+        boolean success = false;
+        DBController db = new DBController();
+        String dbQuery;
+        PreparedStatement pstmt;
+
+        // step 1 - establish connection to database
+        db.getConnection();
+
+        // step 2 - declare the SQL statement
+        dbQuery = "INSERT INTO user(userId, uname, age, gender,  intensity,  height, weight, dailyCalories,  dailyProtein, dailyCarbo, dailyFat, curCalories, curProtein, curFat, curCarbo) VALUES(?, ?, ?, ?, ?,?, ?,?,?,?,?,?,?,?,?)";
+        pstmt = db.getPreparedStatement(dbQuery);
+
+        // step 3 - to insert record using executeUpdate method
+        try {
+            pstmt.setInt(1, userId);
+            pstmt.setString(2, uname);
+            pstmt.setInt(3, age);
+            pstmt.setString(4, gender);
+            pstmt.setString(5, intensity);
+            pstmt.setDouble(6, height);
+            pstmt.setDouble(7, weight);
+            pstmt.setDouble(8, dailyCalories);
+            pstmt.setDouble(9, dailyProtein);
+            pstmt.setDouble(10, dailyCarbo);
+            pstmt.setDouble(11, dailyFat);
+            pstmt.setDouble(12, curCalories);
+            pstmt.setDouble(13, curProtein);
+            pstmt.setDouble(14, curFat);
+            pstmt.setDouble(15, curCarbo);
+
+
+
+            if (pstmt.executeUpdate() == 1)
+                success = true;
+            pstmt.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        // step 4 - close connection
+        db.terminate();
+
+        return success;
+    }
+
     public static ArrayList<User> retrieveAllUser() {
         // declare local variables
         ArrayList<User> list = new ArrayList<User>();
