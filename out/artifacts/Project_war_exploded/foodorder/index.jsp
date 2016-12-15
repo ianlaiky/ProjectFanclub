@@ -22,9 +22,9 @@
     <%--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>--%>
     <title>Vision API</title>
     <%@ page import="foodOrder.*"%>
-    <%
-        foodOrderDAO fod = new foodOrderDAO();
-    %>
+    <%--<%--%>
+        <%--foodOrderDAO fod = new foodOrderDAO();--%>
+    <%--%>--%>
 
 
 
@@ -191,7 +191,7 @@
 -->
         <div class="logo">
             <a href="http://www.creative-tim.com" class="simple-text">
-                Food Diet
+                Food Ordering
             </a>
         </div>
         <div class="logo logo-mini">
@@ -212,10 +212,10 @@
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="../foodorder/index.jsp">Order</a>
+                                <a href="#">Order</a>
                             </li>
                             <li>
-                                <a href="#">Dietary Restrictions</a>
+                                <a href="../foodorder/dietaryrestrictions.jsp">Dietary Restrictions</a>
                             </li>
                             <li>
                                 <a href="#">Diet Recommendation</a>
@@ -539,7 +539,7 @@
                                        <div class="row">
                                            <div class="col-sm-12">
                                                <div class="text-center">
-                                   <input type="submit" id="btnSubmitFood" class="btn btn-success" value="Submit"/>
+                                   <input type="submit" onclick="return confirm('Are you sure?')" id="btnSubmitFood" class="btn btn-success" value="Submit"/>
                                                </div>
                                            </div>
                                        </div>
