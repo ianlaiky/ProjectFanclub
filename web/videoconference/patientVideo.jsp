@@ -79,7 +79,7 @@
 
 <body>
 <div class="wrapper">
-    <div class="sidebar" data-active-codlor="green" data-background-color="black"
+    <div class="sidebar" data-active-color="green" data-background-color="black"
          data-image="../../assets/img/sidebar-1.jpg">
         <!--
     Tip 1: You can change the color of active element of the sidebar using: data-active-color="purple | blue | green | orange | red | rose"
@@ -265,11 +265,11 @@
 
                                     <!-- Make calls to others -->
                                     <div id="step2">
-                                        <p>Your id: <span id="my-id">...</span></p>
+                                        <%--<p>Your id: <span id="my-id">...</span></p>--%>
                                         <%--<p>Share this id with others so they can call you.</p>--%>
-                                        <h3>Make a call</h3>
+                                        <%--<h3>Make a call</h3>--%>
                                         <div class="pure-form">
-                                            <input type="text" placeholder="Call user id..." id="callto-id">
+                                            <%--<input type="text" placeholder="Call user id..." id="callto-id">--%>
                                             <a href="#" class="pure-button pure-button-success" id="make-call">Call</a>
                                         </div>
                                     </div>

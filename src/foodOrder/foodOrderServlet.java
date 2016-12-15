@@ -28,6 +28,11 @@ public class foodOrderServlet extends HttpServlet {
         HttpSession session = request.getSession();
         String foodName = request.getParameter("food");
         foodOrderDAO fod = new foodOrderDAO();
+        fod.createFoodOrder(foodName,"1",null,null,null);
+
+        //storing into session
+        session.setAttribute("food",foodName);
+        request.getRequestDispatcher("");
 
     }
 }
