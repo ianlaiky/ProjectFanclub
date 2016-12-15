@@ -12,12 +12,19 @@
     <%
     ArrayList<String> orderList = new ArrayList<String>();
     orderList = (ArrayList<String>)session.getAttribute("orderList");
-    String itemTest = orderList.get(0);
+   // String itemTest = orderList.get(0);
+
 
     %>
 </head>
 <body>
 <%--TEMP DEMO EDIT PARAMETER!!!--%>
-<%=itemTest%>
+<%--<%=itemTest%>--%>
+<h3><b>Food Order List</b></h3>
+<%
+    for(int i = 0 ; i<orderList.size();i++){
+%>
+<%=orderList.get(i)%><br>
+<% } %>
 </body>
 </html>

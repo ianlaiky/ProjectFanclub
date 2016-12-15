@@ -62,7 +62,7 @@
 -->
         <div class="logo">
             <a href="http://www.creative-tim.com" class="simple-text">
-                Food Diet
+                Diet restrictions
             </a>
         </div>
         <div class="logo logo-mini">
@@ -78,19 +78,22 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        Wan Ying
+                        Junkiat
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="../fooddiet/user/myprofile.jsp">My Profile</a>
+                                <a href="../foodorder/index.jsp">Order</a>
                             </li>
                             <li>
-                                <a href="#">Edit Profile</a>
+                                <a href="#">Dietary Restrictions</a>
                             </li>
                             <li>
-                                <a href="#">Settings</a>
+                                <a href="#">Diet Recommendation</a>
+                            </li>
+                            <li>
+                                <a href="#">FeedBack</a>
                             </li>
                         </ul>
                     </div>
