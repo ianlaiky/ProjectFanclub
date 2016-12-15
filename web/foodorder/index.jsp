@@ -111,7 +111,7 @@
         jQuery(function () {
             $("#btnFPorridge").click(function (e) {
                 e.preventDefault();
-               // $("#btnFPorridge").val("porridgeValue");
+                $("#foodFP").val("Fish Porridge Value");
 
             });
         });
@@ -412,13 +412,15 @@
                            <form action="/foodservlet"action="get">
                                <%--food values container?
                               --%>
-                               <input type="text" name="foodFP">
+                               <input type="text" id="foodFP" name="food"/>
+                                   <input type="text" name="foodCN"/>
+
                            <div class="item">
                                <img src="images/fishporridge.jpg" class="img-circle" alt="fishporridge">
                                <span class="caption">
                                    Fish porridge
                                </span>
-                               <button type="button" id="btnFPorridge" class="btn btn-primary btn-circle" name="food" value="defaultvalue"><i class="glyphicon glyphicon-plus"></i></button>
+                               <button type="button" id="btnFPorridge" class="btn btn-primary btn-circle"  value="defaultvalue"><i class="glyphicon glyphicon-plus"></i></button>
 
                            </div>
                            <div class="item">

@@ -26,7 +26,7 @@ public class foodOrderServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        String foodName = request.getParameter("testName");
+        String foodName = request.getParameter("food");
         System.out.println("Check food name="+foodName);
 //        String foodName = "foodNameTest";
 
