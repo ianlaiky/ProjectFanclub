@@ -88,7 +88,7 @@
                                 <a href="#">Edit Profile</a>
                             </li>
                             <li>
-                                <a href="#">Daily Intake</a>
+                                <a href="dailyintake.jsp">Daily Intake</a>
                             </li>
                         </ul>
                     </div>
@@ -376,7 +376,7 @@
                     <div class="col-md-12">
                         <div class="card">
                             <form method="get" action="/" class="form-horizontal">
-                                <div class="card-header card-header-text" data-background-color="rose">
+                                <div class="card-header card-header-text" data-background-color="orange">
                                     <h4 class="card-title">Measurements</h4>
                                 </div>
                                 <div class="card-content">
