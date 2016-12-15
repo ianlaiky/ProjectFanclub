@@ -106,6 +106,9 @@
             font-size: 12px;
             line-height: 1.428571429;
             border-radius: 15px;
+        }
+        #btnSubmitFood{
+            text-align:right;
 
         }
     </style>
@@ -120,9 +123,44 @@
         });
 
         jQuery(function () {
-            $("#btnCNoodles ").click(function (e) {
+            $("#btnCNoodles").click(function (e) {
                 e.preventDefault();
                 $("#foodCN").val("Chicken Noodles");
+
+            });
+        });
+        jQuery(function () {
+            $("#btnCornflakes").click(function (e) {
+                e.preventDefault();
+                $("#foodCornflake").val("Cornflakes");
+
+            });
+        });
+        jQuery(function () {
+            $("#btnETSandwich").click(function (e) {
+                e.preventDefault();
+                $("#foodEggTomatoSw").val("Egg&Tomato Sandwich");
+
+            });
+        });
+        jQuery(function () {
+            $("#btnKayaBread").click(function (e) {
+                e.preventDefault();
+                $("#foodKayaBread").val("Kaya Bread");
+
+            });
+        });
+        jQuery(function () {
+            $("#btnSausagesEgg").click(function (e) {
+                e.preventDefault();
+                $("#foodEggSausage").val("Fried Egg&Sausages");
+
+            });
+        });
+        jQuery(function () {
+            $("#btnOatmeal").click(function (e) {
+                e.preventDefault();
+                $("#foodOatmeal").val("Oatmeal");
 
             });
         });
@@ -425,6 +463,11 @@
                                <div class="foodOrderContainer">
                                    <input type="text" id="foodFP" name="food"/>
                                    <input type="text" id="foodCN" name="food"/>
+                                   <input type="text" id="foodEggTomatoSw" name="food"/>
+                                   <input type="text" id="foodCornflake" name="food"/>
+                                   <input type="text" id="foodEggSausage" name="food"/>
+                                   <input type="text" id="foodKayaBread" name="food"/>
+                                   <input type="text" id="foodOatmeal" name="food"/>
                            </div>
                                    <%-- end of food values container--%>
 
@@ -447,42 +490,41 @@
                                <img src="images/eggtomatosandwich.JPG" class="img-circle" alt="Cinque Terre" >
                                <span class="caption">Egg&Tomato Sandwich
                                </span>
-                               <button type="button" class="btn btn-primary btn-circle"><i class="glyphicon glyphicon-plus"></i></button>
+                               <button type="button" id="btnETSandwich" class="btn btn-primary btn-circle"><i class="glyphicon glyphicon-plus"></i></button>
                            </div>
 
                            <div class="item">
                                <img src="images/cornflake.jpg" class="img-circle" alt="Cinque Terre" >
                                <span class="caption">Cornflakes
                                </span>
-                               <button type="button" class="btn btn-primary btn-circle"><i class="glyphicon glyphicon-plus"></i></button>
+                               <button type="button" id="btnCornflakes" class="btn btn-primary btn-circle"><i class="glyphicon glyphicon-plus"></i></button>
                            </div>
                            <div class="item">
                                <img src="images/friedeggsausage.jpg" class="img-circle" alt="Cinque Terre" >
                                <span class="caption">Sausages&Egg
                               </span>
-                               <button type="button" class="btn btn-primary btn-circle"><i class="glyphicon glyphicon-plus"></i></button>
+                               <button type="button" id="btnSausagesEgg" class="btn btn-primary btn-circle"><i class="glyphicon glyphicon-plus"></i></button>
                            </div>
                            <div class="item">
                                <img src="images/kayabread.jpg" class="img-circle" alt="Cinque Terre" >
                                <span class="caption">Kaya Bread
                                </span>
-                               <button type="button" class="btn btn-primary btn-circle"><i class="glyphicon glyphicon-plus"></i></button>
+                               <button type="button" id="btnKayaBread" class="btn btn-primary btn-circle"><i class="glyphicon glyphicon-plus"></i></button>
                            </div>
                            <div class="item">
                                <img src="images/oatmeal.jpg" class="img-circle" alt="Cinque Terre" >
                                <span class="caption">Oatmeal
                                </span>
-                               <button type="button" class="btn btn-primary btn-circle"><i class="glyphicon glyphicon-plus"></i></button>
+                               <button type="button" id="btnOatmeal" class="btn btn-primary btn-circle"><i class="glyphicon glyphicon-plus"></i></button>
                            </div>
 
-                               <input type="submit" value="Submit"/>
-
-
+                                   <input type="submit" id="btnSubmitFood" class="btn btn-success" value="Submit"/>
                            </form>
 
 
 
                        </div>
+
                        <div id="drinks" class="tab-pane fade">
                            <h3>Drinks</h3>
                            <p>Some content in menu 1.</p>
