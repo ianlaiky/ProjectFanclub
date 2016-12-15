@@ -1044,7 +1044,9 @@ table {
 }
 
 #my-video {
-    margin-top: 15px;
+    position: relative;
+    left:100px;
+    /*margin-top: 15px;*/
     width: 180px;
     height: auto;
     background-color: #eee;
@@ -1052,7 +1054,8 @@ table {
 }
 
 #their-video {
-    width: 100%;
+    position: absolute;
+    width: 70%;
     height: 75%;
     max-height: 480px;
     background-color: #eee;
@@ -1060,8 +1063,8 @@ table {
 }
 
 #video-container {
-    padding: 25px;
-    text-align: center;
+    /*padding: 25px;*/
+    /*text-align: center;*/
 }
 
 #step1-error, #step2, #step3 {
