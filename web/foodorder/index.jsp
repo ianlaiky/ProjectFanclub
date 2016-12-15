@@ -416,7 +416,7 @@
                                <span class="caption">
                                    Fish porridge
                                </span>
-                               <button type="button" id="btnFPorridge" class="btn btn-primary btn-circle" name="porridge"><i class="glyphicon glyphicon-plus"></i></button>
+                               <button type="button" id="btnFPorridge" class="btn btn-primary btn-circle" name="fporridge"><i class="glyphicon glyphicon-plus"></i></button>
                            </div>
                            <div class="item">
                                <img src="images/chickennoodle.jpg" class="img-circle" alt="Cinque Terre" >
