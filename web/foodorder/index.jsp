@@ -28,6 +28,15 @@
 
 
     <script>
+
+        $(function() {
+
+            $("#btnFPorridge").click( function()
+                {
+                    alert('button clicked');
+                }
+            );
+        });
         <%--$('#btnFPorridge').on('click', function (e) {--%>
             <%--<%--%>
             <%--fod.createFoodOrder("Fish Porridge","1",null,null,null);--%>
@@ -36,21 +45,27 @@
             <%--//your awesome code here--%>
 //
         <%--})--%>
-        var create = {
-            init: function () {
-                $("#btnFPorridge").on("click", "button", function(e){
-                    //
+//        $(document).ready(function () {
+//
+//            create.init();
+//        });
+//        var create = {
+//            init: function () {
+//                $("#btnFPorridge").click(function(){
+//                   System.out.println("testsss");
+//
+//                });
+
+                <%--$("#btnFPorridge").on("click", "button", function(e){--%>
+                    <%--//--%>
                     <%--<%--%>
                     <%--fod.createFoodOrder("Fish Porridge","1",null,null,null);--%>
                     <%--%>--%>
-                });
+                <%--});--%>
 
-            }
-        };
-        $(document).ready(function () {
+//            }
+//        };
 
-            create.init();
-        });
 
     </script>
 
@@ -433,7 +448,7 @@
                                <span class="caption">
                                    Fish porridge
                                </span>
-                               <button type="button"if="btnFPorridge" class="btn btn-primary btn-circle"><i class="glyphicon glyphicon-plus"></i></button>
+                               <button type="button" id="btnFPorridge" class="btn btn-primary btn-circle"><i class="glyphicon glyphicon-plus"></i></button>
                            </div>
                            <div class="item">
                                <img src="images/chickennoodle.jpg" class="img-circle" alt="Cinque Terre" >
