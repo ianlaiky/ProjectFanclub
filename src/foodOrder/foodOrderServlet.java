@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 /**
  * Created by astaroh on 12/15/2016.
@@ -26,13 +27,35 @@ public class foodOrderServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        String foodName = request.getParameter("food");
         foodOrderDAO fod = new foodOrderDAO();
-        fod.createFoodOrder(foodName,"1",null,null,null);
+        ArrayList<String> orderList = new ArrayList<String>();
+        String[] foodName = request.getParameterValues("food");
+        for (int i = 0; i<foodName.length ; i++){
+            System.out.println("Check food name="+foodName[i]);
+        }
 
+//        String foodName = "foodNameTest";
+
+
+        for (int i = 0; i<foodName.length ; i++) {
+       //check if array is null
+                if(foodName[i]==""){
+                    System.out.println("empty food string detected,record not created for: " + i);
+                }
+                else{
+                    //action to do on items whcih isnt null
+
+                    fod.createFoodOrder(foodName[i], "1", null, null, null);
+
+                    orderList.add(foodName[i]);
+                }
+
+        }
         //storing into session
-        session.setAttribute("food",foodName);
-        request.getRequestDispatcher("");
+       // session.setAttribute("food",foodName);
+        System.out.println("orderList size = " + orderList.size());
+        session.setAttribute("orderList",orderList);
+        getServletContext().getRequestDispatcher("/foodorder/success.jsp").forward(request, response);
 
     }
 }

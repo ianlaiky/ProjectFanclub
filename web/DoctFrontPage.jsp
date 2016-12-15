@@ -1,17 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 154404g
-  Date: 12/15/2016
-  Time: 4:12 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%--
-  Created by IntelliJ IDEA.
-  User: 154404g
-  Date: 12/15/2016
-  Time: 3:42 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
@@ -63,6 +49,19 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
+
+    <style>
+        .frontPageRounded {
+            border-radius: 25px;
+            background: #73AD21;
+            padding: 20px;
+            width: 150px;
+            height: auto;
+
+            margin: 10px;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -92,13 +91,13 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        Zixiang
+                        Wan Ying
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="#">My Profile</a>
+                                <a href="../fooddiet/user/myprofile.jsp">My Profile</a>
                             </li>
                             <li>
                                 <a href="#">Edit Profile</a>
@@ -344,103 +343,26 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="col-sm-8 col-sm-offset-2">
-                    <!-- Insert all the awesome body content here->
+                    <%--<!-- Insert all the awesome body content here--%>
+
+
+                <a href="videoconference/docVideo.jsp"><img src="assets/img/videoConferenceF.png" class="frontPageRounded"></a>
 
 
 
 
 
 
-                        -->
-                    <div class="col-sm-6">
-                        <div class="input-group">
-                                                        <span class="input-group-addon">
-                                                            <i class="material-icons">face</i>
-                                                        </span>
-                            <div class="form-group label-floating">
-                                <label class="control-label">Name
-                                </label>
-                                <input name="name" type="text" class="form-control" required="true">
-                            </div>
-                        </div>
-                        <div class="input-group">
-                                                        <span class="input-group-addon">
-                                                            <i class="material-icons">mood</i>
-                                                        </span>
-                            <div class="form-group label-floating">
-                                <label class="control-label">Age
-                                </label>
-                                <input name="age" type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                <i class="material-icons">info_outline</i>
-                            </span>
-                            <div class="form-group label-floating">
-                                <label class="control-label">NRIC
-                                </label>
-                                <input name="nric" type="text" class="form-control" required>
-                            </div>
-                        </div>
 
-                        <div class="input-group">
-                                                        <span class="input-group-addon">
-                                                            <i class="material-icons">person</i>
-                                                        </span>
-                            <div>
-                                <label class="control-label">Gender
-                                </label>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="age" required> Male
-                                    </label>
-                                </div>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="age" required> Female
-                                    </label>
-                                </div>
-                            </div>
-                </div>
-                        <div class="input-group">
-                                                        <span class="input-group-addon">
-                                                            <i class="material-icons">av_timer</i>
-                                                        </span>
-                            <div class="form-group label-floating">
-                                <label class="control-label">Select Time
-                                </label>
-                                <select>
-                                    <option value="1">13:00</option>
-                                    <option value="2">14:00</option>
-                                    <option value="3">15:00</option>
-                                    <option value="4">16:00</option>
-                                    <option value="5">17:00</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="input-group">
-                                                        <span class="input-group-addon">
-                                                            <i class="material-icons">contact_phone</i>
-                                                        </span>
-                            <div class="form-group label-floating">
-                                <label class="control-label">phone
-                                </label>
-                                <input name="phone" type="tel" class="form-control" validate="tel" pattern="[0-9]{8}" required="true">
-                            </div>
-                        </div>
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                <i class="material-icons">email</i>
-                            </span>
-                            <div class="form-group label-floating">
-                                <label class="control-label">E-mail Address
-                                </label>
-                                <input name="email" type="email" class="form-control" required>
-                            </div>
-                        </div>
 
-            </div>
+
+
+
+
+
+
+
+                    <%---->--%>
                 </div>
             </div>
         </div>
