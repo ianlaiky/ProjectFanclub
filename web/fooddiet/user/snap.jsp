@@ -55,6 +55,9 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script type="text/javascript" src="key.js"></script>
+    <script type="text/javascript" src="main.js"></script>
 
     <style type="text/css">
 
@@ -533,7 +536,7 @@
                         </div>
 
                         <nav>
-                            <h6> Or take a picture </h6>
+                            <h2> Or take a picture! </h2>
                             <form id="fileform" action="">
 
                                 <input type="file" accept="image/*" id="capture" name="fileField" onchange="readURL(this)" capture><br /><br />
