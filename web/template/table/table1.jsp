@@ -76,13 +76,13 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        Tania Andrew
+                        Aravin
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="#">My Profile</a>
+                                <a href="#graph.jsp">Graph on the current situation</a>
                             </li>
                             <li>
                                 <a href="#">Edit Profile</a>

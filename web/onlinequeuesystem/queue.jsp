@@ -70,7 +70,7 @@ s
 -->
         <div class="logo">
             <a href="http://www.creative-tim.com" class="simple-text">
-                Food Diet
+                Online Queue System
             </a>
         </div>
         <div class="logo logo-mini">
@@ -92,7 +92,7 @@ s
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="../onlinequeuesystem/view.html">View Estimated Waiting Time</a>
+                                <a href="../onlinequeuesystem/view2.jsp">View Estimated Waiting Time</a>
                             </li>
                             <li>
                                 <a href="#">Edit Profile</a>

@@ -1,3 +1,10 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: User
+  Date: 12/16/2016
+  Time: 12:13
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
@@ -49,19 +56,6 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
-
-    <style>
-        .frontPageRounded {
-            border-radius: 25px;
-            background: #73AD21;
-            padding: 20px;
-            width: 150px;
-            height: auto;
-
-            margin: 10px;
-        }
-
-    </style>
 </head>
 
 <body>
@@ -74,12 +68,12 @@
     Tip 3: you can change the color of the sidebar with data-background-color="white | black"
 -->
         <div class="logo">
-            <a href="http://www.creative-tim.com" class="simple-text">
-                Food Diet
+            <a href="#" class="simple-text">
+                Vistor Booking
             </a>
         </div>
         <div class="logo logo-mini">
-            <a href="http://www.creative-tim.com" class="simple-text">
+            <a href="#" class="simple-text">
                 FD
             </a>
         </div>
@@ -91,13 +85,13 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        Wan Ying
+                        Zixiang
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="../fooddiet/user/myprofile.jsp">My Profile</a>
+                                <a href="#">My Profile</a>
                             </li>
                             <li>
                                 <a href="#">Edit Profile</a>
@@ -343,20 +337,87 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="col-sm-8 col-sm-offset-2">
-                    <%--<!-- Insert all the awesome body content here--%>
-
-                    <a href="fooddiet/index.jsp"><img src="assets/img/foodDietF.png" class="frontPageRounded"></a>
-                    <a href="foodorder/index.jsp"><img src="assets/img/orderFoodF.png" class="frontPageRounded"> </a>
-                    <a href="onlinequeuesystem/queue.jsp"><img src="assets/img/queue-512.png" class="frontPageRounded"></a>
-                    <a href="videoconference/patientVideo.jsp"><img src="assets/img/videoConferenceF.png"
-                                                                    class="frontPageRounded"></a>
-                    <a href="vistorbookingsystem/vistorbooking.jsp"><img src="assets/img/visitorbookingF.png"
-                                                                         class="frontPageRounded"></a>
+                    <!-- Insert all the awesome body content here->
 
 
-                    <%---->--%>
+
+
+
+
+                        -->
+                    <div class="col-sm-6">
+                        <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="material-icons">face</i>
+                                                        </span>
+                            <div class="form-group label-floating">
+                                <label class="control-label">Name
+                                </label>
+                                <input name="name" type="text" class="form-control" required="true">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="material-icons">info_outline</i>
+                            </span>
+                            <div class="form-group label-floating">
+                                <label class="control-label">NRIC
+                                </label>
+                                <input name="nric" type="text" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="material-icons">perm_contact_calendar</i>
+                            </span>
+                            <div class="form-group label-floating">
+                                <label class="control-label">Date
+                                </label>
+                                <input  type="text" class="form-control" id="datepicker" required>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="material-icons">av_timer</i>
+                                                        </span>
+                            <div class="form-group label-floating">
+                                <label class="control-label">Selected Time
+                                </label>
+                                <input  type="text" class="form-control" id="time" required>
+
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="material-icons">contact_phone</i>
+                                                        </span>
+                            <div class="form-group label-floating">
+                                <label class="control-label">phone
+                                </label>
+                                <input name="phone" type="tel" class="form-control" validate="tel" pattern="[0-9]{8}" required="true">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="material-icons">email</i>
+                            </span>
+                            <div class="form-group label-floating">
+                                <label class="control-label">E-mail Address
+                                </label>
+                                <input name="email" type="email" class="form-control" required>
+                            </div>
+                        </div>
+
+
+                    </div>
                 </div>
             </div>
+            <button type="button" style=  "position: fixed;
+                    bottom: 110px;
+                    margin-right: 300px;
+                    margin-left: 800px;">download</button>
         </div>
         <footer class="footer">
             <div class="container-fluid">
@@ -541,3 +602,4 @@
 </script>
 
 </html>
+
