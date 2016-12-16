@@ -20,24 +20,33 @@ public class UserServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         HttpSession session = request.getSession();
+        UserDAO db = new UserDAO();
         String name = request.getParameter("name");
-        String age = request.getParameter("age");
+        int age = Integer.parseInt(request.getParameter("age"));
         String rbtn = request.getParameter("gender");
-        String gender;
+        String gender = "";
         if(rbtn.equals("male")){
             gender = "male";
         }else if(rbtn.equals("female")){
             gender = "female";
         }
         String rbtn2 = request.getParameter("intensity");
-        String intensity;
+        String intensity = "";
         if(rbtn.equals("sedentary")){
             intensity = "sedentary";
         }else if(rbtn.equals("moderate")){
             intensity = "moderate";
         }else if(rbtn.equals("active")){
-            intensity = "activenyann";
+            intensity = "active";
         }
+
+        double height = Double.parseDouble(request.getParameter("height"));
+        double weight= Double.parseDouble(request.getParameter("weight"));
+
+        db.createUser(UserDAO.getNextUserId(),name,age,gender,intensity,height,weight,
+                Utility.calCalories(weight,height,age,gender,intensity),Utility.calProtein(weight,height,age
+                        ,gender),Utility.calCarbo(weight,height,age,gender
+                       ),Utility.calFat(weight,height,age,gender),0,0,0, 0);
 
         getServletContext().getRequestDispatcher("/editprofile.jsp").forward(request, response);
     }
