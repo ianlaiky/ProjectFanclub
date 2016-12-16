@@ -519,7 +519,7 @@
                                <span class="caption">
                                    Fish porridge
                                </span>
-                               <button type="button" id="btnFPorridge" class="btn btn-primary btn-circle"  value="defaultvalue"><i class="glyphicon glyphicon-plus"></i></button>
+                               <button type="button" id="btnFPorridge" class="btn btn-primary btn-circle hoverable"  value="defaultvalue"><i class="glyphicon glyphicon-plus"></i></button>
 
                            </div>
                            <div class="item">
@@ -576,7 +576,30 @@
                        <div id="drinks" class="tab-pane fade">
                            <h3>Drinks</h3>
                            <p>Some content in menu 1.</p>
-                       </div>
+                           <%--<div class="fixed-plugin">--%>
+                           <%--<li class="header-title">Images</li>--%>
+                           <%--<li class="active">--%>
+                               <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
+                                   <%--<img src="../../assets/img/sidebar-1.jpg" alt="" />--%>
+                               <%--</a>--%>
+                           <%--</li>--%>
+                           <%--<li>--%>
+                               <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
+                                   <%--<img src="../../assets/img/sidebar-2.jpg" alt="" />--%>
+                               <%--</a>--%>
+                           <%--</li>--%>
+                           <%--<li>--%>
+                               <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
+                                   <%--<img src="../../assets/img/sidebar-3.jpg" alt="" />--%>
+                               <%--</a>--%>
+                           <%--</li>--%>
+                           <%--<li>--%>
+                               <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
+                                   <%--<img src="../../assets/img/sidebar-4.jpg" alt="" />--%>
+                               <%--</a>--%>
+                           <%--</li>--%>
+                       <%--</div>--%>
+                       <%--</div>--%>
                        <div id="fruits" class="tab-pane fade">
                            <h3>Fruits</h3>
                            <p> textholder</p>
