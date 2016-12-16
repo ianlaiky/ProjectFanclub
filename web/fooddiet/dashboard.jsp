@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: Ying
   Date: 14/12/2016
-  Time: 8:29 PM
+  Time: 8:42 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -10,8 +10,8 @@
 
 <head>
     <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png" />
-    <link rel="icon" type="image/png" href="../../assets/img/favicon.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png" />
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Material Dashboard PRO by Creative Tim | Premium Bootstrap Admin Template</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -41,11 +41,11 @@
     <meta property="og:description" content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design." />
     <meta property="og:site_name" content="Creative Tim" />
     <!-- Bootstrap core CSS     -->
-    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
     <!--  Material Dashboard CSS    -->
-    <link href="../../assets/css/material-dashboard2.css" rel="stylesheet" />
+    <link href="../assets/css/material-dashboard2.css" rel="stylesheet" />
     <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="../../assets/css/demo2.css" rel="stylesheet" />
+    <link href="../assets/css/demo2.css" rel="stylesheet" />
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
@@ -61,49 +61,49 @@
 -->
         <div class="logo">
             <a href="http://www.creative-tim.com" class="simple-text">
-                Creative Tim
+                Food Diet
             </a>
         </div>
         <div class="logo logo-mini">
             <a href="http://www.creative-tim.com" class="simple-text">
-                Ct
+                FD
             </a>
         </div>
         <div class="sidebar-wrapper">
             <div class="user">
                 <div class="photo">
-                    <img src="../../assets/img/faces/marc.jpg" />
+                    <img src="../assets/img/faces/marc.jpg" />
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        Aravin
+                        <%=session.getAttribute("username")%>
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="#graph.jsp">Graph on the current situation</a>
+                                <a href="user/myprofile.jsp">My Profile</a>
                             </li>
                             <li>
-                                <a href="#">Edit Profile</a>
+                                <a href="user/editprofile.jsp">Edit Profile</a>
                             </li>
                             <li>
-                                <a href="#">Settings</a>
+                                <a href="user/dailyintake.jsp">Daily Intake</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
             <ul class="nav">
-                <li>
-                    <a href="../dashboard.html">
+                <li class="active">
+                    <a href="#">
                         <i class="material-icons">dashboard</i>
                         <p>Dashboard</p>
                     </a>
                 </li>
                 <li>
                     <a data-toggle="collapse" href="#pagesExamples">
-                        <i class="material-icons">image</i>
+                        <i class="material-icons">content_paste</i>
                         <p>Pages
                             <b class="caret"></b>
                         </p>
@@ -111,22 +111,10 @@
                     <div class="collapse" id="pagesExamples">
                         <ul class="nav">
                             <li>
-                                <a href="../pages/pricing.html">Pricing</a>
+                                <a href="../pages/pricing.html">Snap</a>
                             </li>
                             <li>
-                                <a href="../pages/timeline.html">Timeline</a>
-                            </li>
-                            <li>
-                                <a href="../pages/login.html">Login Page</a>
-                            </li>
-                            <li>
-                                <a href="../pages/register.html">Register Page</a>
-                            </li>
-                            <li>
-                                <a href="../pages/lock.html">Lock Screen Page</a>
-                            </li>
-                            <li>
-                                <a href="../pages/user.html">User Profile</a>
+                                <a href="../pages/timeline.html">Food Content</a>
                             </li>
                         </ul>
                     </div>
@@ -141,113 +129,30 @@
                     <div class="collapse" id="componentsExamples">
                         <ul class="nav">
                             <li>
-                                <a href="../components/buttons.html">Buttons</a>
+                                <a href="./components/buttons.html">Buttons</a>
                             </li>
                             <li>
-                                <a href="../components/grid.html">Grid System</a>
+                                <a href="./components/grid.html">Grid System</a>
                             </li>
                             <li>
-                                <a href="../components/panels.html">Panels</a>
+                                <a href="./components/panels.html">Panels</a>
                             </li>
                             <li>
-                                <a href="../components/sweet-alert.html">Sweet Alert</a>
+                                <a href="./components/sweet-alert.html">Sweet Alert</a>
                             </li>
                             <li>
-                                <a href="../components/notifications.html">Notifications</a>
+                                <a href="./components/notifications.html">Notifications</a>
                             </li>
                             <li>
-                                <a href="../components/icons.html">Icons</a>
+                                <a href="./components/icons.html">Icons</a>
                             </li>
                             <li>
-                                <a href="../components/typography.html">Typography</a>
+                                <a href="./components/typography.html">Typography</a>
                             </li>
                         </ul>
                     </div>
                 </li>
-                <li>
-                    <a data-toggle="collapse" href="#formsExamples">
-                        <i class="material-icons">content_paste</i>
-                        <p>Forms
-                            <b class="caret"></b>
-                        </p>
-                    </a>
-                    <div class="collapse" id="formsExamples">
-                        <ul class="nav">
-                            <li>
-                                <a href="../forms/regular.html">Regular Forms</a>
-                            </li>
-                            <li>
-                                <a href="../forms/extended.html">Extended Forms</a>
-                            </li>
-                            <li>
-                                <a href="../forms/validation.html">Validation Forms</a>
-                            </li>
-                            <li>
-                                <a href="../forms/wizard.html">Wizard</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="active">
-                    <a data-toggle="collapse" href="#tablesExamples" aria-expanded="true">
-                        <i class="material-icons">grid_on</i>
-                        <p>Tables
-                            <b class="caret"></b>
-                        </p>
-                    </a>
-                    <div class="collapse in" id="tablesExamples">
-                        <ul class="nav">
-                            <li class="active">
-                                <a href="../tables/regular.html">Regular Tables</a>
-                            </li>
-                            <li>
-                                <a href="../tables/extended.html">Extended Tables</a>
-                            </li>
-                            <li>
-                                <a href="../tables/datatables.net.html">DataTables.net</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a data-toggle="collapse" href="#mapsExamples">
-                        <i class="material-icons">place</i>
-                        <p>Maps
-                            <b class="caret"></b>
-                        </p>
-                    </a>
-                    <div class="collapse" id="mapsExamples">
-                        <ul class="nav">
-                            <li>
-                                <a href="../maps/google.html">Google Maps</a>
-                            </li>
-                            <li>
-                                <a href="../maps/fullscreen.html">Full Screen Map</a>
-                            </li>
-                            <li>
-                                <a href="../maps/vector.html">Vector Map</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a href="../widgets.html">
-                        <i class="material-icons">widgets</i>
-                        <p>Widgets</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="../charts.html">
-                        <i class="material-icons">timeline</i>
-                        <p>Charts</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="../calendar.html">
-                        <i class="material-icons">date_range</i>
-                        <p>Calendar</p>
-                    </a>
-                </li>
+
             </ul>
         </div>
     </div>
@@ -267,7 +172,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"> Regular Tables </a>
+                    <a class="navbar-brand" href="#"> Dashbaord </a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -327,196 +232,104 @@
         </nav>
         <div class="content">
             <div class="container-fluid">
+                <div class="header text-center">
+                    <h3 class="title">Chartist.js</h3>
+                    <p class="category">Handcrafted by our friends from
+                        <a target="_blank" href="https://gionkunz.github.io/chartist-js/">Chartist.js</a>. Please checkout their
+                        <a href="https://gionkunz.github.io/chartist-js/getting-started.html" target="_blank">full documentation.</a>
+                    </p>
+                </div>
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="card-header card-header-icon" data-background-color="rose">
-                                <i class="material-icons">assignment</i>
+                    <div class="col-md-4">
+                        <div class="card card-chart">
+                            <div class="card-header" data-background-color="rose">
+                                <div id="roundedLineChart" class="ct-chart"></div>
                             </div>
                             <div class="card-content">
-                                <h4 class="card-title">Simple Table</h4>
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead class="text-primary">
-                                        <th>Name</th>
-                                        <th>Country</th>
-                                        <th>City</th>
-                                        <th>Salary</th>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>Dakota Rice</td>
-                                            <td>Niger</td>
-                                            <td>Oud-Turnhout</td>
-                                            <td class="text-primary">$36,738</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Minerva Hooper</td>
-                                            <td>Curaçao</td>
-                                            <td>Sinaai-Waas</td>
-                                            <td class="text-primary">$23,789</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sage Rodriguez</td>
-                                            <td>Netherlands</td>
-                                            <td>Baileux</td>
-                                            <td class="text-primary">$56,142</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Philip Chaney</td>
-                                            <td>Korea, South</td>
-                                            <td>Overland Park</td>
-                                            <td class="text-primary">$38,735</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Doris Greene</td>
-                                            <td>Malawi</td>
-                                            <td>Feldkirchen in Kärnten</td>
-                                            <td class="text-primary">$63,542</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Mason Porter</td>
-                                            <td>Chile</td>
-                                            <td>Gloucester</td>
-                                            <td class="text-primary">$78,615</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                <h4 class="card-title">Rounded Line Chart</h4>
+                                <p class="category">Line Chart</p>
                             </div>
                         </div>
-                        <div class="col-md-12">
-                            <div class="card card-plain">
-                                <div class="card-header card-header-icon" data-background-color="rose">
-                                    <i class="material-icons">assignment</i>
-                                </div>
-                                <h4 class="card-title">Table on Plain Background</h4>
-                                <p class="category">Here is a subtitle for this table</p>
-                                <div class="card-content table-responsive">
-                                    <table class="table table-hover">
-                                        <thead>
-                                        <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Salary</th>
-                                        <th>Country</th>
-                                        <th>City</th>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Dakota Rice</td>
-                                            <td>$36,738</td>
-                                            <td>Niger</td>
-                                            <td>Oud-Turnhout</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Minerva Hooper</td>
-                                            <td>$23,789</td>
-                                            <td>Curaçao</td>
-                                            <td>Sinaai-Waas</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Sage Rodriguez</td>
-                                            <td>$56,142</td>
-                                            <td>Netherlands</td>
-                                            <td>Baileux</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>Philip Chaney</td>
-                                            <td>$38,735</td>
-                                            <td>Korea, South</td>
-                                            <td>Overland Park</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>Doris Greene</td>
-                                            <td>$63,542</td>
-                                            <td>Malawi</td>
-                                            <td>Feldkirchen in Kärnten</td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>Mason Porter</td>
-                                            <td>$78,615</td>
-                                            <td>Chile</td>
-                                            <td>Gloucester</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-chart">
+                            <div class="card-header" data-background-color="orange">
+                                <div id="straightLinesChart" class="ct-chart"></div>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="card-title">Straight Lines Chart</h4>
+                                <p class="category">Line Chart with Points</p>
                             </div>
                         </div>
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header card-header-icon" data-background-color="rose">
-                                    <i class="material-icons">assignment</i>
-                                </div>
-                                <h4 class="card-title">Regular Table with Colors</h4>
-                                <div class="card-content table-responsive table-full-width">
-                                    <table class="table table-hover">
-                                        <thead>
-                                        <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Salary</th>
-                                        <th>Country</th>
-                                        <th>City</th>
-                                        </thead>
-                                        <tbody>
-                                        <tr class="success">
-                                            <td>1</td>
-                                            <td>Dakota Rice (Success)</td>
-                                            <td>$36,738</td>
-                                            <td>Niger</td>
-                                            <td>Oud-Turnhout</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Minerva Hooper</td>
-                                            <td>$23,789</td>
-                                            <td>Curaçao</td>
-                                            <td>Sinaai-Waas</td>
-                                        </tr>
-                                        <tr class="info">
-                                            <td>3</td>
-                                            <td>Sage Rodriguez (Info)</td>
-                                            <td>$56,142</td>
-                                            <td>Netherlands</td>
-                                            <td>Baileux</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>Philip Chaney</td>
-                                            <td>$38,735</td>
-                                            <td>Korea, South</td>
-                                            <td>Overland Park</td>
-                                        </tr>
-                                        <tr class="danger">
-                                            <td>5</td>
-                                            <td>Doris Greene (Danger)</td>
-                                            <td>$63,542</td>
-                                            <td>Malawi</td>
-                                            <td>Feldkirchen in Kärnten</td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>Mason Porter</td>
-                                            <td>$78,615</td>
-                                            <td>Chile</td>
-                                            <td>Gloucester</td>
-                                        </tr>
-                                        <tr class="warning">
-                                            <td>7</td>
-                                            <td>Mike Chaney (Warning)</td>
-                                            <td>$38,735</td>
-                                            <td>Romania</td>
-                                            <td>Bucharest</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-chart">
+                            <div class="card-header" data-background-color="blue">
+                                <div id="simpleBarChart" class="ct-chart"></div>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="card-title">Simple Bar Chart</h4>
+                                <p class="category">Bar Chart</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header card-header-icon" data-background-color="blue">
+                                <i class="material-icons">timeline</i>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="card-title">Coloured Line Chart
+                                    <small> - Rounded</small>
+                                </h4>
+                            </div>
+                            <div id="colouredRoundedLineChart" class="ct-chart"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header card-header-icon" data-background-color="rose">
+                                <i class="material-icons">insert_chart</i>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="card-title">Multiple Bars Chart
+                                    <small>- Bar Chart</small>
+                                </h4>
+                            </div>
+                            <div id="multipleBarsChart" class="ct-chart"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="card">
+                            <div class="card-header card-header-icon" data-background-color="blue">
+                                <i class="material-icons">timeline</i>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="card-title">Coloured Bars Chart
+                                    <small> - Rounded</small>
+                                </h4>
+                            </div>
+                            <div id="colouredBarsChart" class="ct-chart"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="card">
+                            <div class="card-header card-header-icon" data-background-color="red">
+                                <i class="material-icons">pie_chart</i>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="card-title">Pie Chart</h4>
+                            </div>
+                            <div id="chartPreferences" class="ct-chart"></div>
+                            <div class="card-footer">
+                                <h6>Legend</h6>
+                                <i class="fa fa-circle text-info"></i> Apple
+                                <i class="fa fa-circle text-warning"></i> Samsung
+                                <i class="fa fa-circle text-danger"></i> Windows Phone
                             </div>
                         </div>
                     </div>
@@ -615,22 +428,22 @@
             <li class="header-title">Images</li>
             <li class="active">
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-1.jpg" alt="" />
+                    <img src="../assets/img/sidebar-1.jpg" alt="" />
                 </a>
             </li>
             <li>
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-2.jpg" alt="" />
+                    <img src="../assets/img/sidebar-2.jpg" alt="" />
                 </a>
             </li>
             <li>
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-3.jpg" alt="" />
+                    <img src="../assets/img/sidebar-3.jpg" alt="" />
                 </a>
             </li>
             <li>
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-4.jpg" alt="" />
+                    <img src="../assets/img/sidebar-4.jpg" alt="" />
                 </a>
             </li>
             <li class="button-container">
@@ -692,5 +505,10 @@
 <script src="../../assets/js/material-dashboard2.js"></script>
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="../../assets/js/demo2.js"></script>
+<script>
+    $(document).ready(function() {
+        demo.initCharts();
+    });
+</script>
 
 </html>
