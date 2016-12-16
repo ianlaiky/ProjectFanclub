@@ -374,7 +374,7 @@
                                                     <div class="form-group label-floating">
                                                         <label class="control-label">Name
                                                         </label>
-                                                        <input name="name" type="text" class="form-control">
+                                                        <input name="name" type="text" class="form-control" value="<%=session.getAttribute("username")%>">
                                                     </div>
                                                 </div>
                                                 <div class="input-group">
