@@ -32,22 +32,26 @@ public class Utility {
         }
         if(intensity.equals("sedentary")){
             cal = bmr * 1.2;
+        }else if (intensity.equals("moderate")){
+            cal = bmr * 1.55;
+        } else if (intensity.equals("active")){
+            cal = bmr * 1.725;
         }
         return cal;
 
     }
 
-    public static double calProtein(double weight, double height, int age, String gender, String intensity){
+    public static double calProtein(double weight, double height, int age, String gender){
         double protein =0;
         protein = calBMR(weight,height,age,gender) * 0.25;
         return protein;
     }
-    public static double calCarbo(double weight, double height, int age, String gender, String intensity){
+    public static double calCarbo(double weight, double height, int age, String gender){
         double carbo =0;
         carbo = calBMR(weight,height,age,gender) * 0.55;
         return carbo;
     }
-    public static double calFat(double weight, double height, int age, String gender, String intensity){
+    public static double calFat(double weight, double height, int age, String gender){
         double fat =0;
         fat = calBMR(weight,height,age,gender) * 0.2;
         return fat;

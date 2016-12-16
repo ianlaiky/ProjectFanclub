@@ -45,8 +45,8 @@ public class UserServlet extends HttpServlet {
 
         db.createUser(UserDAO.getNextUserId(),name,age,gender,intensity,height,weight,
                 Utility.calCalories(weight,height,age,gender,intensity),Utility.calProtein(weight,height,age
-                        ,gender,intensity),Utility.calCarbo(weight,height,age,gender
-                        ,intensity),Utility.calFat(weight,height,age,gender,intensity),0,0,0, 0);
+                        ,gender),Utility.calCarbo(weight,height,age,gender
+                       ),Utility.calFat(weight,height,age,gender),0,0,0, 0);
 
         getServletContext().getRequestDispatcher("/editprofile.jsp").forward(request, response);
     }
