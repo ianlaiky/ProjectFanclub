@@ -554,7 +554,6 @@
                         </div>
                         <div id="#labeldetect">
 
-                            Asdsd
                         </div>
                     </div>
                 </div>
