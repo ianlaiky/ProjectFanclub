@@ -83,6 +83,12 @@ s
             <div class="user">
                 <div class="photo">
                     <img src="../assets/img/faces/marc.jpg"/>
+                </div>
+                <div class="info">
+                    <a data-toggle="collapse" href="#collapseExample" class="collapsed">
+                        Aravin
+                        <b class="caret"></b>
+                    </a>
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
