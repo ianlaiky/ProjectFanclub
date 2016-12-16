@@ -76,19 +76,19 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        Wan Ying
+                        <%=session.getAttribute("username")%>
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="#">My Profile</a>
+                                <a href="user/myprofile.jsp">My Profile</a>
                             </li>
                             <li>
-                                <a href="#">Edit Profile</a>
+                                <a href="user/editprofile.jsp">Edit Profile</a>
                             </li>
                             <li>
-                                <a href="#">Daily Intake</a>
+                                <a href="user/dailyintake.jsp">Daily Intake</a>
                             </li>
                         </ul>
                     </div>
