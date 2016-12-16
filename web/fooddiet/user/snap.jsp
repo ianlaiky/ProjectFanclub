@@ -449,7 +449,7 @@
                                     <li class="col-sm-3">
                                         <div class="fff">
                                             <div class="thumbnail">
-                                                <a href="#"><img src="http://placehold.it/360x240"
+                                                <a href="#"><img src="../../assets/img/chicky.jpg"
                                                                  alt=""></a>
                                             </div>
                                             <div class="caption">
@@ -462,7 +462,20 @@
                                     <li class="col-sm-3">
                                         <div class="fff">
                                             <div class="thumbnail">
-                                                <a href="#"><img src="http://placehold.it/360x240"
+                                                <a href="#"><img src="../../assets/img/apple.jpg"
+                                                                 alt=""></a>
+                                            </div>
+                                            <div class="caption">
+                                                <h4>Chicken Rice</h4>
+                                                <p>Nullam Condimentum Nibh Etiam Sem</p>
+                                                <a class="btn btn-mini" href="#">» Read More</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <div class="fff">
+                                            <div class="thumbnail">
+                                                <a href="#"><img src="../../assets/img/pasta.jpg"
                                                                  alt=""></a>
                                             </div>
                                             <div class="caption">
@@ -475,20 +488,7 @@
                                     <li class="col-sm-3">
                                         <div class="fff">
                                             <div class="thumbnail">
-                                                <a href="#"><img src="http://placehold.it/360x240"
-                                                                 alt=""></a>
-                                            </div>
-                                            <div class="caption">
-                                                <h4>Praesent commodo</h4>
-                                                <p>Nullam Condimentum Nibh Etiam Sem</p>
-                                                <a class="btn btn-mini" href="#">» Read More</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="col-sm-3">
-                                        <div class="fff">
-                                            <div class="thumbnail">
-                                                <a href="#"><img src="http://placehold.it/360x240"
+                                                <a href="#"><img src="../../assets/img/cheesecake.jpg"
                                                                  alt=""></a>
                                             </div>
                                             <div class="caption">
