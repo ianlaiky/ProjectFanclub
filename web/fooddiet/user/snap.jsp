@@ -75,17 +75,17 @@
                     <img src="../../assets/img/faces/marc.jpg" />
                 </div>
                 <div class="info">
-                    <a data-toggle="collapse" href="#collapseExample" class="collapsed" aria-expanded="true">
+                    <a data-toggle="collapse" href="#collapseExample" class="collapsed">
                         Wan Ying
                         <b class="caret"></b>
                     </a>
-                    <div class="collapse in" id="collapseExample">
+                    <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
                                 <a href="myprofile.jsp">My Profile</a>
                             </li>
-                            <li class="active">
-                                <a href="#">Edit Profile</a>
+                            <li>
+                                <a href="editprofile.jsp">Edit Profile</a>
                             </li>
                             <li>
                                 <a href="dailyintake.jsp">Daily Intake</a>
@@ -101,33 +101,22 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li>
-                    <a data-toggle="collapse" href="#pagesExamples">
-                        <i class="material-icons">image</i>
-                        <p>Pages
+                <li class="active">
+                    <a data-toggle="collapse" href="#pagesExamples" aria-expanded="true">
+                        <i class="material-icons">content_paste</i>
+                        <p>Diet Planner
                             <b class="caret"></b>
                         </p>
                     </a>
-                    <div class="collapse" id="pagesExamples">
+                    <div class="collapse in" id="pagesExamples">
                         <ul class="nav">
-                            <li>
-                                <a href="../pages/pricing.html">Pricing</a>
+                            <li class="active">
+                                <a href="../pages/pricing.html">Snap</a>
                             </li>
                             <li>
-                                <a href="../pages/timeline.html">Timeline</a>
+                                <a href="../pages/timeline.html">Food Content</a>
                             </li>
-                            <li>
-                                <a href="../pages/login.html">Login Page</a>
-                            </li>
-                            <li>
-                                <a href="../pages/register.html">Register Page</a>
-                            </li>
-                            <li>
-                                <a href="../pages/lock.html">Lock Screen Page</a>
-                            </li>
-                            <li>
-                                <a href="../pages/user.html">User Profile</a>
-                            </li>
+
                         </ul>
                     </div>
                 </li>
@@ -267,7 +256,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"> Edit Profile </a>
+                    <a class="navbar-brand" href="#"> Snap </a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -329,48 +318,17 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="card">
-                            <form id="TypeValidation" class="form-horizontal" action="" method="">
-                                <div class="card-header card-header-text" data-background-color="rose">
-                                    <h4 class="card-title">Profile</h4>
-                                </div>
-                                <div class="card-content">
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Name</label>
-                                        <div class="col-sm-7">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="required" required="true" />
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Age</label>
-                                        <div class="col-sm-7">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="number" number="true" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Physical Activity Intensity</label>
-                                        <div class="col-lg-7 col-md-6 col-sm-3">
-                                            <select class="selectpicker" data-style="select-with-transition" title="Choose City" data-size="4">
-                                                <option disabled> Choose an intensity best suit you</option>
-                                                <option value="2">Sedentary </option>
-                                                <option value="3">Moderately Active</option>
-                                                <option value="4">Active</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-footer text-center">
-                                    <button type="submit" class="btn btn-rose btn-fill">Update Particulars</button>
-                                </div>
-                            </form>
+                        <div class="col-md-3">
+                            <div class="panel panel-primary">...</div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-primary">...</div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-primary">...</div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-primary">...</div>
                         </div>
                     </div>
                     <div class="col-md-12">
@@ -419,79 +377,7 @@
                             </form>
                         </div>
                     </div>
-                  <!--  <div class="col-md-12">
-                        <div class="card">
-                            <form id="RangeValidation" class="form-horizontal" action="" method="">
-                                <div class="card-header card-header-text" data-background-color="rose">
-                                    <h4 class="card-title">Range Validation</h4>
-                                </div>
-                                <div class="card-content">
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Min Length</label>
-                                        <div class="col-sm-7">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="min_length" minLength="5" />
-                                            </div>
-                                        </div>
-                                        <label class="col-sm-3 label-on-right">
-                                            <code>minLength="5"</code>
-                                        </label>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Max Length</label>
-                                        <div class="col-sm-7">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="max_length" maxLength="5" />
-                                            </div>
-                                        </div>
-                                        <label class="col-sm-3 label-on-right">
-                                            <code>maxLength="5"</code>
-                                        </label>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Range</label>
-                                        <div class="col-sm-7">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="range" range="[6,10]" />
-                                            </div>
-                                        </div>
-                                        <label class="col-sm-3 label-on-right">
-                                            <code>range="[6,10]"</code>
-                                        </label>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Min Value</label>
-                                        <div class="col-sm-7">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="min" min="6" />
-                                            </div>
-                                        </div>
-                                        <label class="col-sm-3 label-on-right">
-                                            <code>min="6"</code>
-                                        </label>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Max Value</label>
-                                        <div class="col-sm-7">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="max" max="6" />
-                                            </div>
-                                        </div>
-                                        <label class="col-sm-3 label-on-right">
-                                            <code>max="6"</code>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="card-footer text-center">
-                                    <button type="submit" class="btn btn-rose btn-fill">Validate Inputs</button>
-                                </div>
-                            </form>
-                        </div> -->
+
                     </div>
                 </div>
             </div>

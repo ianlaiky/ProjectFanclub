@@ -105,7 +105,7 @@
                 </li>
                 <li>
                     <a data-toggle="collapse" href="#pagesExamples">
-                        <i class="material-icons">image</i>
+                        <i class="material-icons">content_paste</i>
                         <p>Pages
                             <b class="caret"></b>
                         </p>
@@ -113,22 +113,10 @@
                     <div class="collapse" id="pagesExamples">
                         <ul class="nav">
                             <li>
-                                <a href="../pages/pricing.html">Pricing</a>
+                                <a href="user/snap.jsp">Snap</a>
                             </li>
                             <li>
-                                <a href="../pages/timeline.html">Timeline</a>
-                            </li>
-                            <li>
-                                <a href="../pages/login.html">Login Page</a>
-                            </li>
-                            <li>
-                                <a href="../pages/register.html">Register Page</a>
-                            </li>
-                            <li>
-                                <a href="../pages/lock.html">Lock Screen Page</a>
-                            </li>
-                            <li>
-                                <a href="../pages/user.html">User Profile</a>
+                                <a href="../pages/timeline.html">Food Content</a>
                             </li>
                         </ul>
                     </div>
