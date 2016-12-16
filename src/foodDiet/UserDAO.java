@@ -47,7 +47,7 @@ public class UserDAO {
         int age = rs.getInt("age");
         String gender= rs.getString("gender");
         String intensity = rs.getString("intensity");
-        double height = rs.getDouble("height");
+        double uheight = rs.getDouble("uheight");
         double weight = rs.getDouble("weight");
         double dailyCalories = rs.getDouble("dailyCalories");
         double dailyProtein = rs.getDouble("dailyProtein");
@@ -61,12 +61,12 @@ public class UserDAO {
 
 
 
-        user = new User(userId, uname, age, gender,  intensity,  height, weight, dailyCalories,  dailyProtein, dailyCarbo, dailyFat, curCalories, curProtein, curFat, curCarbo);
+        user = new User(userId, uname, age, gender,  intensity,  uheight, weight, dailyCalories,  dailyProtein, dailyCarbo, dailyFat, curCalories, curProtein, curFat, curCarbo);
 
         return user;
     }
 
-    public static boolean createUser(int userId, String uname, int age, String gender, String intensity, double height, double weight, double dailyCalories, double dailyProtein, double dailyCarbo, double dailyFat, double curCalories, double curProtein, double curFat, double curCarbo) {
+    public static boolean createUser(int userId, String uname, int age, String gender, String intensity, double uheight, double weight, double dailyCalories, double dailyProtein, double dailyCarbo, double dailyFat, double curCalories, double curProtein, double curFat, double curCarbo) {
         // declare local variables
         boolean success = false;
         DBController db = new DBController();
@@ -77,7 +77,7 @@ public class UserDAO {
         db.getConnection();
 
         // step 2 - declare the SQL statement
-        dbQuery = "INSERT INTO user(userId, uname, age, gender,  intensity,  height, weight, dailyCalories,  dailyProtein, dailyCarbo, dailyFat, curCalories, curProtein, curFat, curCarbo) VALUES(?, ?, ?, ?, ?,?, ?,?,?,?,?,?,?,?,?)";
+        dbQuery = "INSERT INTO user(userId, uname, age, gender,  intensity,  uheight, weight, dailyCalories,  dailyProtein, dailyCarbo, dailyFat, curCalories, curProtein, curFat, curCarbo) VALUES(?, ?, ?, ?, ?,?, ?,?,?,?,?,?,?,?,?)";
         pstmt = db.getPreparedStatement(dbQuery);
 
         // step 3 - to insert record using executeUpdate method
@@ -87,7 +87,7 @@ public class UserDAO {
             pstmt.setInt(3, age);
             pstmt.setString(4, gender);
             pstmt.setString(5, intensity);
-            pstmt.setDouble(6, height);
+            pstmt.setDouble(6, uheight);
             pstmt.setDouble(7, weight);
             pstmt.setDouble(8, dailyCalories);
             pstmt.setDouble(9, dailyProtein);
@@ -142,4 +142,41 @@ public class UserDAO {
 
         return list;
     }
+
+    public static User retrieveUserByUsername(String uname) {
+        // declare local variables
+       User user = null;
+        ResultSet rs = null;
+        DBController db = new DBController();
+        String dbQuery;
+        PreparedStatement pstmt;
+
+        // step 1 -connect to database
+        db.getConnection();
+
+        // step 2 - declare the SQL statement
+        dbQuery = "SELECT userId, uname, age, gender,  intensity,  uheight, weight FROM user WHERE uname = ? ";
+
+        //SELECT loanId,l.itemName,count(*)quantity, loanDate, dueDate,i.id, username FROM loanrecord l inner join inventory i on l.itemName = i.itemName WHERE username = ? group by loanId,itemName,loanDate,dueDate,i.id, username";
+
+        pstmt = db.getPreparedStatement(dbQuery);
+
+        // step 3 - execute query
+        try {
+            pstmt.setString(1, uname);
+            rs = pstmt.executeQuery();
+            while (rs.next()) {
+                 user = convertToUser(rs);
+             //   list.add(user);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        // step 4 - close connection
+        db.terminate();
+
+        return user;
+    }
+
 }
