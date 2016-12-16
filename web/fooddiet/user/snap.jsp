@@ -533,6 +533,12 @@
                         </div>
 
                         <nav>
+                            <h6> Or take a picture </h6>
+                            <form id="fileform" action="">
+
+                                <input type="file" accept="image/*" id="capture" name="fileField" onchange="readURL(this)" capture><br /><br />
+                                <input type="submit" name="submit" value="Submit">
+                            </form>
                             <ul class="control-box pager">
                                 <li><a data-slide="prev" href="#myCarousel" class=""><i class="material-icons">chevron_left</i></a></li>
                                 <li><a data-slide="next" href="#myCarousel" class=""><i class="material-icons">chevron_right</i></a></li>
