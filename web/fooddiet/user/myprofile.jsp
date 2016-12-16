@@ -104,15 +104,15 @@
                 </li>
                 <li>
                     <a data-toggle="collapse" href="#pagesExamples">
-                        <i class="material-icons">image</i>
-                        <p>Pages
+                        <i class="material-icons">content_paste</i>
+                        <p>Diet Planner
                             <b class="caret"></b>
                         </p>
                     </a>
                     <div class="collapse" id="pagesExamples">
                         <ul class="nav">
                             <li>
-                                <a href="../pages/pricing.html">Snap</a>
+                                <a href="snap.jsp">Snap</a>
                             </li>
                             <li>
                                 <a href="../pages/timeline.html">Food Content</a>
