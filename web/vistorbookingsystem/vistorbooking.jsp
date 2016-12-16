@@ -448,8 +448,16 @@
                             <div class="picture-container">
                                 <div class="picture">
                                     <img src="../../assets/img/default-avatar.png" class="picture-src" id="wizardPicturePreview" title="" /><br>
-                                    <input type="text" id="patientName">
-                                    <input type="text" id="roomnum">
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Patient Name
+                                        </label>
+                                        <input type="text"  class="form-control" id="patientName">
+                                    </div>
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Room number
+                                        </label>
+                                        <input type="text" class="form-control" id="roomnum">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -457,10 +465,10 @@
                     </div>
                 </div>
             </div>
-            <button type="button" style=  "position: fixed;
-                    bottom: 120px;
+            <a href="../vistorbookingsystem/certification.jsp" type="button" style=  "position: fixed;
+                    bottom: 50px;
                     margin-right: 300px;
-                    margin-left: 800px;">submit</button>
+                    margin-left: 800px;">submit</a>
         </div>
         <footer class="footer">
             <div class="container-fluid">

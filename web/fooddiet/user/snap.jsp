@@ -9,51 +9,167 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png" />
-    <link rel="icon" type="image/png" href="../../assets/img/favicon.png" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png"/>
+    <link rel="icon" type="image/png" href="../../assets/img/favicon.png"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>Material Dashboard PRO by Creative Tim | Premium Bootstrap Admin Template</title>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+    <meta name="viewport" content="width=device-width"/>
     <!-- Canonical SEO -->
-    <link rel="canonical" href="http://www.creative-tim.com/product/material-dashboard-pro" />
+    <link rel="canonical" href="http://www.creative-tim.com/product/material-dashboard-pro"/>
     <!--  Social tags      -->
-    <meta name="keywords" content="material dashboard, bootstrap material admin, bootstrap material dashboard, material design admin, material design, creative tim, html dashboard, html css dashboard, web dashboard, freebie, free bootstrap dashboard, css3 dashboard, bootstrap admin, bootstrap dashboard, frontend, responsive bootstrap dashboard, premiu material design admin">
-    <meta name="description" content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+    <meta name="keywords"
+          content="material dashboard, bootstrap material admin, bootstrap material dashboard, material design admin, material design, creative tim, html dashboard, html css dashboard, web dashboard, freebie, free bootstrap dashboard, css3 dashboard, bootstrap admin, bootstrap dashboard, frontend, responsive bootstrap dashboard, premiu material design admin">
+    <meta name="description"
+          content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
     <!-- Schema.org markup for Google+ -->
     <meta itemprop="name" content="Material Dashboard PRO by Creative Tim | Premium Bootstrap Admin Template">
-    <meta itemprop="description" content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+    <meta itemprop="description"
+          content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
     <meta itemprop="image" content="http://s3.amazonaws.com/creativetim_bucket/products/51/opt_mdp_thumbnail.jpg">
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@creativetim">
     <meta name="twitter:title" content="Material Dashboard PRO by Creative Tim | Premium Bootstrap Admin Template">
-    <meta name="twitter:description" content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+    <meta name="twitter:description"
+          content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
     <meta name="twitter:creator" content="@creativetim">
     <meta name="twitter:image" content="http://s3.amazonaws.com/creativetim_bucket/products/51/opt_mdp_thumbnail.jpg">
     <!-- Open Graph data -->
     <meta property="fb:app_id" content="655968634437471">
-    <meta property="og:title" content="Material Dashboard PRO by Creative Tim | Premium Bootstrap Admin Template" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="http://www.creative-tim.com/product/material-dashboard-pro" />
-    <meta property="og:image" content="http://s3.amazonaws.com/creativetim_bucket/products/51/opt_mdp_thumbnail.jpg" />
-    <meta property="og:description" content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design." />
-    <meta property="og:site_name" content="Creative Tim" />
+    <meta property="og:title" content="Material Dashboard PRO by Creative Tim | Premium Bootstrap Admin Template"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content="http://www.creative-tim.com/product/material-dashboard-pro"/>
+    <meta property="og:image" content="http://s3.amazonaws.com/creativetim_bucket/products/51/opt_mdp_thumbnail.jpg"/>
+    <meta property="og:description"
+          content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design."/>
+    <meta property="og:site_name" content="Creative Tim"/>
     <!-- Bootstrap core CSS     -->
-    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet"/>
     <!--  Material Dashboard CSS    -->
-    <link href="../../assets/css/material-dashboard2.css" rel="stylesheet" />
+    <link href="../../assets/css/material-dashboard2.css" rel="stylesheet"/>
     <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="../../assets/css/demo2.css" rel="stylesheet" />
+    <link href="../../assets/css/demo2.css" rel="stylesheet"/>
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
+
+    <style type="text/css">
+
+
+
+        img { max-width:100%; }
+
+        a {
+            -webkit-transition: all 150ms ease;
+            -moz-transition: all 150ms ease;
+            -ms-transition: all 150ms ease;
+            -o-transition: all 150ms ease;
+            transition: all 150ms ease;
+        }
+
+        a:hover {
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE 8 */
+            filter: alpha(opacity=50); /* IE7 */
+            opacity: 0.6;
+            text-decoration: none;
+        }
+
+
+
+        body{
+            border-top:0;
+            background:#c4e17f;
+            background-image:-webkit-linear-gradient(left,#c4e17f,#c4e17f 12.5%,#f7fdca 12.5%,#f7fdca 25%,#fecf71 25%,#fecf71 37.5%,#f0776c 37.5%,#f0776c 50%,#db9dbe 50%,#db9dbe 62.5%,#c49cde 62.5%,#c49cde 75%,#669ae1 75%,#669ae1 87.5%,#62c2e4 87.5%,#62c2e4);background-image:-moz-linear-gradient(left,#c4e17f,#c4e17f 12.5%,#f7fdca 12.5%,#f7fdca 25%,#fecf71 25%,#fecf71 37.5%,#f0776c 37.5%,#f0776c 50%,#db9dbe 50%,#db9dbe 62.5%,#c49cde 62.5%,#c49cde 75%,#669ae1 75%,#669ae1 87.5%,#62c2e4 87.5%,#62c2e4);background-image:-o-linear-gradient(left,#c4e17f,#c4e17f 12.5%,#f7fdca 12.5%,#f7fdca 25%,#fecf71 25%,#fecf71 37.5%,#f0776c 37.5%,#f0776c 50%,#db9dbe 50%,#db9dbe 62.5%,#c49cde 62.5%,#c49cde 75%,#669ae1 75%,#669ae1 87.5%,#62c2e4 87.5%,#62c2e4);background-image:linear-gradient(to right,#c4e17f,#c4e17f 12.5%,#f7fdca 12.5%,#f7fdca 25%,#fecf71 25%,#fecf71 37.5%,#f0776c 37.5%,#f0776c 50%,#db9dbe 50%,#db9dbe 62.5%,#c49cde 62.5%,#c49cde 75%,#669ae1 75%,#669ae1 87.5%,#62c2e4 87.5%,#62c2e4)
+        }
+
+        .thumbnails li> .fff .caption {
+            background:#fff !important;
+            padding:10px
+        }
+
+        /* Page Header */
+        .page-header {
+            background: #f9f9f9;
+            margin: -30px -40px 40px;
+            padding: 20px 40px;
+            border-top: 4px solid #ccc;
+            color: #999;
+            text-transform: uppercase;
+        }
+
+        .page-header h3 {
+            line-height: 0.88rem;
+            color: #000;
+        }
+
+        ul.thumbnails {
+            margin-bottom: 0px;
+        }
+
+
+
+        /* Thumbnail Box */
+        .caption h4 {
+            color: #444;
+        }
+
+        .caption p {
+            color: #999;
+        }
+
+
+
+        /* Carousel Control */
+        .control-box {
+            text-align: right;
+            width: 100%;
+        }
+        .carousel-control{
+            background: #666;
+            border: 0px;
+            border-radius: 0px;
+            display: inline-block;
+            font-size: 34px;
+            font-weight: 200;
+            line-height: 18px;
+            opacity: 0.5;
+            padding: 4px 10px 0px;
+            position: static;
+            height: 30px;
+            width: 15px;
+        }
+
+
+
+        /* Mobile Only */
+        @media (max-width: 767px) {
+            .page-header, .control-box {
+                text-align: center;
+            }
+        }
+        @media (max-width: 479px) {
+            .caption {
+                word-break: break-all;
+            }
+        }
+
+
+        li { list-style-type:none;}
+
+        ::selection { background: #ff5e99; color: #FFFFFF; text-shadow: 0; }
+        ::-moz-selection { background: #ff5e99; color: #FFFFFF; }
+
+
+    </style>
 </head>
 
 <body>
 <div class="wrapper">
-    <div class="sidebar" data-active-color="green" data-background-color="black" data-image="../../assets/img/sidebar-1.jpg">
+    <div class="sidebar" data-active-color="green" data-background-color="black"
+         data-image="../../assets/img/sidebar-1.jpg">
         <!--
     Tip 1: You can change the color of active element of the sidebar using: data-active-color="purple | blue | green | orange | red | rose"
     Tip 2: you can also add an image using data-image tag
@@ -72,7 +188,7 @@
         <div class="sidebar-wrapper">
             <div class="user">
                 <div class="photo">
-                    <img src="../../assets/img/faces/marc.jpg" />
+                    <img src="../../assets/img/faces/marc.jpg"/>
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
@@ -96,7 +212,7 @@
             </div>
             <ul class="nav">
                 <li>
-                    <a href="../index.jsp">
+                    <a href="../dashboard.jsp">
                         <i class="material-icons">dashboard</i>
                         <p>Dashboard</p>
                     </a>
@@ -153,90 +269,7 @@
                         </ul>
                     </div>
                 </li>
-                <li>
-                    <a data-toggle="collapse" href="#formsExamples">
-                        <i class="material-icons">content_paste</i>
-                        <p>Forms
-                            <b class="caret"></b>
-                        </p>
-                    </a>
-                    <div class="collapse " id="formsExamples">
-                        <ul class="nav">
-                            <li>
-                                <a href="../forms/regular.html">Regular Forms</a>
-                            </li>
-                            <li>
-                                <a href="../forms/extended.html">Extended Forms</a>
-                            </li>
-                            <li>
-                                <a href="../forms/validation.html">Validation Forms</a>
-                            </li>
-                            <li>
-                                <a href="../forms/wizard.html">Wizard</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a data-toggle="collapse" href="#tablesExamples">
-                        <i class="material-icons">grid_on</i>
-                        <p>Tables
-                            <b class="caret"></b>
-                        </p>
-                    </a>
-                    <div class="collapse" id="tablesExamples">
-                        <ul class="nav">
-                            <li>
-                                <a href="../tables/regular.html">Regular Tables</a>
-                            </li>
-                            <li>
-                                <a href="../tables/extended.html">Extended Tables</a>
-                            </li>
-                            <li>
-                                <a href="../tables/datatables.net.html">DataTables.net</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a data-toggle="collapse" href="#mapsExamples">
-                        <i class="material-icons">place</i>
-                        <p>Maps
-                            <b class="caret"></b>
-                        </p>
-                    </a>
-                    <div class="collapse" id="mapsExamples">
-                        <ul class="nav">
-                            <li>
-                                <a href="../maps/google.html">Google Maps</a>
-                            </li>
-                            <li>
-                                <a href="../maps/fullscreen.html">Full Screen Map</a>
-                            </li>
-                            <li>
-                                <a href="../maps/vector.html">Vector Map</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a href="../widgets.html">
-                        <i class="material-icons">widgets</i>
-                        <p>Widgets</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="../charts.html">
-                        <i class="material-icons">timeline</i>
-                        <p>Charts</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="../calendar.html">
-                        <i class="material-icons">date_range</i>
-                        <p>Calendar</p>
-                    </a>
-                </li>
+
             </ul>
         </div>
     </div>
@@ -313,200 +346,347 @@
                     </form>
                 </div>
             </div>
+
         </nav>
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="col-md-3">
-                            <div class="panel panel-primary">...</div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="panel panel-primary">...</div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="panel panel-primary">...</div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="panel panel-primary">...</div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="card">
-                            <form method="get" action="/" class="form-horizontal">
-                                <div class="card-header card-header-text" data-background-color="orange">
-                                    <h4 class="card-title">Measurements</h4>
-                                </div>
-                                <div class="card-content">
-                                    <div class="row">
-                                        <div class="col-sm-2">
-                                            <label class="col-sm-offset-2 label-on-left">Height</label>
-                                        </div>
-                                        <div class="col-sm-7">
-                                            <div class="col-xs-5">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label"></label>
-                                                    <input class="form-control" type="text" name="number" number="true" />
-                                                </div>
-                                            </div>
-                                            <label class="col-xs-2 label-on-right">
-                                                Cm
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-2">
-                                            <label class="col-sm-offset-2 label-on-left">Weight</label>
-                                        </div>
-                                        <div class="col-sm-7">
-                                            <div class="col-xs-5">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label"></label>
-                                                    <input class="form-control" type="text" name="number" number="true" />
-                                                </div>
-                                            </div>
-                                            <label class="col-xs-2 label-on-right">
-                                                Kg
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-footer text-center">
-                                    <button type="submit" class="btn btn-rose btn-fill">Save</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header card-header-text" data-background-color="orange">
+                    <h4 class="card-title">Food Suggestion:</h4>
+                </div>
+                <div class="card-content">
+                    <div class="row">
 
+                    <div class="carousel slide" id="myCarousel">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <ul class="thumbnails">
+                                    <li class="col-sm-3">
+                                        <div class="fff">
+                                            <div class="thumbnail">
+                                                <a href="#"><img src="../../assets/img/chicky.jpg"
+                                                                 alt=""></a>
+                                            </div>
+                                            <div class="caption">
+                                                <h4>Praesent commodo</h4>
+                                                <p>Nullam Condimentum Nibh Etiam Sem</p>
+                                                <a class="btn btn-mini" href="#">» Read More</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <div class="fff">
+                                            <div class="thumbnail">
+                                                <a href="#"><img src="../../assets/img/apple.jpg"
+                                                                 alt=""></a>
+                                            </div>
+                                            <div class="caption">
+                                                <h4>Chicken Rice</h4>
+                                                <p>Nullam Condimentum Nibh Etiam Sem</p>
+                                                <a class="btn btn-mini" href="#">» Read More</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <div class="fff">
+                                            <div class="thumbnail">
+                                                <a href="#"><img src="../../assets/img/pasta.jpg"
+                                                                 alt=""></a>
+                                            </div>
+                                            <div class="caption">
+                                                <h4>Praesent commodo</h4>
+                                                <p>Nullam Condimentum Nibh Etiam Sem</p>
+                                                <a class="btn btn-mini" href="#">» Read More</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <div class="fff">
+                                            <div class="thumbnail">
+                                                <a href="#"><img src="../../assets/img/cheesecake.jpg"
+                                                                 alt=""></a>
+                                            </div>
+                                            <div class="caption">
+                                                <h4>Praesent commodo</h4>
+                                                <p>Nullam Condimentum Nibh Etiam Sem</p>
+                                                <a class="btn btn-mini" href="#">» Read More</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div><!-- /Slide1 -->
+                            <div class="item">
+                                <ul class="thumbnails">
+                                    <li class="col-sm-3">
+                                        <div class="fff">
+                                            <div class="thumbnail">
+                                                <a href="#"><img src="http://placehold.it/360x240"
+                                                                 alt=""></a>
+                                            </div>
+                                            <div class="caption">
+                                                <h4>Praesent commodo</h4>
+                                                <p>Nullam Condimentum Nibh Etiam Sem</p>
+                                                <a class="btn btn-mini" href="#">» Read More</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <div class="fff">
+                                            <div class="thumbnail">
+                                                <a href="#"><img src="http://placehold.it/360x240"
+                                                                 alt=""></a>
+                                            </div>
+                                            <div class="caption">
+                                                <h4>Praesent commodo</h4>
+                                                <p>Nullam Condimentum Nibh Etiam Sem</p>
+                                                <a class="btn btn-mini" href="#">» Read More</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <div class="fff">
+                                            <div class="thumbnail">
+                                                <a href="#"><img src="http://placehold.it/360x240"
+                                                                 alt=""></a>
+                                            </div>
+                                            <div class="caption">
+                                                <h4>Praesent commodo</h4>
+                                                <p>Nullam Condimentum Nibh Etiam Sem</p>
+                                                <a class="btn btn-mini" href="#">» Read More</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <div class="fff">
+                                            <div class="thumbnail">
+                                                <a href="#"><img src="http://placehold.it/360x240"
+                                                                 alt=""></a>
+                                            </div>
+                                            <div class="caption">
+                                                <h4>Praesent commodo</h4>
+                                                <p>Nullam Condimentum Nibh Etiam Sem</p>
+                                                <a class="btn btn-mini" href="#">» Read More</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div><!-- /Slide2 -->
+                            <div class="item">
+                                <ul class="thumbnails">
+                                    <li class="col-sm-3">
+                                        <div class="fff">
+                                            <div class="thumbnail">
+                                                <a href="#"><img src="http://placehold.it/360x240"
+                                                                 alt=""></a>
+                                            </div>
+                                            <div class="caption">
+                                                <h4>Praesent commodo</h4>
+                                                <p>Nullam Condimentum Nibh Etiam Sem</p>
+                                                <a class="btn btn-mini" href="#">» Read More</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <div class="fff">
+                                            <div class="thumbnail">
+                                                <a href="#"><img src="http://placehold.it/360x240"
+                                                                 alt=""></a>
+                                            </div>
+                                            <div class="caption">
+                                                <h4>Praesent commodo</h4>
+                                                <p>Nullam Condimentum Nibh Etiam Sem</p>
+                                                <a class="btn btn-mini" href="#">» Read More</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <div class="fff">
+                                            <div class="thumbnail">
+                                                <a href="#"><img src="http://placehold.it/360x240"
+                                                                 alt=""></a>
+                                            </div>
+                                            <div class="caption">
+                                                <h4>Praesent commodo</h4>
+                                                <p>Nullam Condimentum Nibh Etiam Sem</p>
+                                                <a class="btn btn-mini" href="#">» Read More</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <div class="fff">
+                                            <div class="thumbnail">
+                                                <a href="#"><img src="http://placehold.it/360x240"
+                                                                 alt=""></a>
+                                            </div>
+                                            <div class="caption">
+                                                <h4>Praesent commodo</h4>
+                                                <p>Nullam Condimentum Nibh Etiam Sem</p>
+                                                <a class="btn btn-mini" href="#">» Read More</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div><!-- /Slide3 -->
+
+                        </div>
+
+                        <nav>
+                            <ul class="control-box pager">
+                                <li><a data-slide="prev" href="#myCarousel" class=""><i class="material-icons">chevron_left</i></a></li>
+                                <li><a data-slide="next" href="#myCarousel" class=""><i class="material-icons">chevron_right</i></a></li>
+                            </ul>
+                        </nav>
+                        </div>
                     </div>
                 </div>
             </div>
-    <footer class="footer">
-        <div class="container-fluid">
-            <nav class="pull-left">
-                <ul>
-                    <li>
-                        <a href="#">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Company
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Portfolio
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Blog
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <p class="copyright pull-right">
-                &copy;
-                <script>
-                    document.write(new Date().getFullYear())
-                </script>
-                <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
-            </p>
         </div>
-    </footer>
-</div>
-</div>
-<div class="fixed-plugin">
-    <div class="dropdown show-dropdown">
-        <a href="#" data-toggle="dropdown">
-            <i class="fa fa-cog fa-2x"> </i>
-        </a>
-        <ul class="dropdown-menu">
-            <li class="header-title"> Sidebar Filters</li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger active-color">
-                    <div class="badge-colors text-center">
-                        <span class="badge filter badge-purple" data-color="purple"></span>
-                        <span class="badge filter badge-blue" data-color="blue"></span>
-                        <span class="badge filter badge-green" data-color="green"></span>
-                        <span class="badge filter badge-orange" data-color="orange"></span>
-                        <span class="badge filter badge-red" data-color="red"></span>
-                        <span class="badge filter badge-rose active" data-color="rose"></span>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="header-title">Sidebar Background</li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger background-color">
-                    <div class="text-center">
-                        <span class="badge filter badge-white" data-color="white"></span>
-                        <span class="badge filter badge-black active" data-color="black"></span>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger">
-                    <p>Sidebar Mini</p>
-                    <div class="togglebutton switch-sidebar-mini">
-                        <label>
-                            <input type="checkbox" unchecked="">
-                        </label>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger">
-                    <p>Sidebar Image</p>
-                    <div class="togglebutton switch-sidebar-image">
-                        <label>
-                            <input type="checkbox" checked="">
-                        </label>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="header-title">Images</li>
-            <li class="active">
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-1.jpg" alt="" />
-                </a>
-            </li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-2.jpg" alt="" />
-                </a>
-            </li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-3.jpg" alt="" />
-                </a>
-            </li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-4.jpg" alt="" />
-                </a>
-            </li>
-            <li class="button-container">
-                <div class="">
-                    <a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-rose btn-block">Buy Now</a>
                 </div>
-                <div class="">
-                    <a href="http://www.creative-tim.com/product/material-dashboard" target="_blank" class="btn btn-info btn-block">Get Free Demo</a>
+            </div>
+
+                        <footer class="footer">
+                            <div class="container-fluid">
+                                <nav class="pull-left">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                Home
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Company
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Portfolio
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Blog
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <p class="copyright pull-right">
+                                    &copy;
+                                    <script>
+                                        document.write(new Date().getFullYear())
+                                    </script>
+                                    <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better
+                                    web
+                                </p>
+                            </div>
+                        </footer>
+                    </div>
                 </div>
-            </li>
-            <li class="header-title">Thank you for 95 shares!</li>
-            <li class="button-container">
-                <button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i> &middot; 45</button>
-                <button id="facebook" class="btn btn-social btn-facebook btn-round"><i class="fa fa-facebook-square"> &middot;</i>50</button>
-            </li>
-        </ul>
-    </div>
-</div>
+                <div class="fixed-plugin">
+                    <div class="dropdown show-dropdown">
+                        <a href="#" data-toggle="dropdown">
+                            <i class="fa fa-cog fa-2x"> </i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header-title"> Sidebar Filters</li>
+                            <li class="adjustments-line">
+                                <a href="javascript:void(0)" class="switch-trigger active-color">
+                                    <div class="badge-colors text-center">
+                                        <span class="badge filter badge-purple" data-color="purple"></span>
+                                        <span class="badge filter badge-blue" data-color="blue"></span>
+                                        <span class="badge filter badge-green" data-color="green"></span>
+                                        <span class="badge filter badge-orange" data-color="orange"></span>
+                                        <span class="badge filter badge-red" data-color="red"></span>
+                                        <span class="badge filter badge-rose active" data-color="rose"></span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </a>
+                            </li>
+                            <li class="header-title">Sidebar Background</li>
+                            <li class="adjustments-line">
+                                <a href="javascript:void(0)" class="switch-trigger background-color">
+                                    <div class="text-center">
+                                        <span class="badge filter badge-white" data-color="white"></span>
+                                        <span class="badge filter badge-black active" data-color="black"></span>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </a>
+                            </li>
+                            <li class="adjustments-line">
+                                <a href="javascript:void(0)" class="switch-trigger">
+                                    <p>Sidebar Mini</p>
+                                    <div class="togglebutton switch-sidebar-mini">
+                                        <label>
+                                            <input type="checkbox" unchecked="">
+                                        </label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </a>
+                            </li>
+                            <li class="adjustments-line">
+                                <a href="javascript:void(0)" class="switch-trigger">
+                                    <p>Sidebar Image</p>
+                                    <div class="togglebutton switch-sidebar-image">
+                                        <label>
+                                            <input type="checkbox" checked="">
+                                        </label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </a>
+                            </li>
+                            <li class="header-title">Images</li>
+                            <li class="active">
+                                <a class="img-holder switch-trigger" href="javascript:void(0)">
+                                    <img src="../../assets/img/sidebar-1.jpg" alt=""/>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="img-holder switch-trigger" href="javascript:void(0)">
+                                    <img src="../../assets/img/sidebar-2.jpg" alt=""/>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="img-holder switch-trigger" href="javascript:void(0)">
+                                    <img src="../../assets/img/sidebar-3.jpg" alt=""/>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="img-holder switch-trigger" href="javascript:void(0)">
+                                    <img src="../../assets/img/sidebar-4.jpg" alt=""/>
+                                </a>
+                            </li>
+                            <li class="button-container">
+                                <div class="">
+                                    <a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank"
+                                       class="btn btn-rose btn-block">Buy Now</a>
+                                </div>
+                                <div class="">
+                                    <a href="http://www.creative-tim.com/product/material-dashboard" target="_blank"
+                                       class="btn btn-info btn-block">Get Free Demo</a>
+                                </div>
+                            </li>
+                            <li class="header-title">Thank you for 95 shares!</li>
+                            <li class="button-container">
+                                <button id="twitter" class="btn btn-social btn-twitter btn-round"><i
+                                        class="fa fa-twitter"></i> &middot; 45
+                                </button>
+                                <button id="facebook" class="btn btn-social btn-facebook btn-round"><i
+                                        class="fa fa-facebook-square"> &middot;</i>50
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+<script>
+    $(document).ready(function() {
+        $('.carousel').carousel({
+            interval: 6000
+        })
+    });
+</script>
 </body>
 <!--   Core JS Files   -->
 <script src="../../assets/js/jquery-3.1.1.min.js" type="text/javascript"></script>
@@ -553,13 +733,13 @@
 <script type="text/javascript">
     function setFormValidation(id) {
         $(id).validate({
-            errorPlacement: function(error, element) {
+            errorPlacement: function (error, element) {
                 $(element).parent('div').addClass('has-error');
             }
         });
     }
 
-    $(document).ready(function() {
+    $(document).ready(function () {
         setFormValidation('#RegisterValidation');
         setFormValidation('#TypeValidation');
         setFormValidation('#LoginValidation');
