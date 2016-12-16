@@ -78,7 +78,7 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        Wan Ying
+                        <%=session.getAttribute("username")%>
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
