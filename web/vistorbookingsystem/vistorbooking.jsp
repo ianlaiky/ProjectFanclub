@@ -458,7 +458,7 @@
                 </div>
             </div>
             <button type="button" style=  "position: fixed;
-                    bottom: 120px;
+                    bottom: 110px;
                     margin-right: 300px;
                     margin-left: 800px;">submit</button>
         </div>

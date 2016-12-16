@@ -62,7 +62,7 @@
 -->
         <div class="logo">
             <a href="http://www.creative-tim.com" class="simple-text">
-                Food Diet
+                Online Queue System
             </a>
         </div>
         <div class="logo logo-mini">
@@ -329,43 +329,43 @@
         </nav>
         <div class="content">
             <div class="container-fluid">
-                <div class="col-sm-8 col-sm-offset-2">
-                    <!-- Insert all the awesome body content here
+                <%--<div class="col-sm-8 col-sm-offset-2">--%>
+                    <%--<!-- Insert all the awesome body content here--%>
 
 
 
 
 
-                    -->
-                </div>
-            </div>
-        </div>
-        <footer class="footer">
-            <div class="container-fluid">
-                <nav class="pull-left">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Company
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Portfolio
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Blog
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                    <%---->--%>
+                <%--</div>--%>
+            <%--</div>--%>
+        <%--</div>--%>
+        <%--<footer class="footer">--%>
+            <%--<div class="container-fluid">--%>
+                <%--<nav class="pull-left">--%>
+                    <%--<ul>--%>
+                        <%--<li>--%>
+                            <%--<a href="#">--%>
+                                <%--Home--%>
+                            <%--</a>--%>
+                        <%--</li>--%>
+                        <%--<li>--%>
+                            <%--<a href="#">--%>
+                                <%--Company--%>
+                            <%--</a>--%>
+                        <%--</li>--%>
+                        <%--<li>--%>
+                            <%--<a href="#">--%>
+                                <%--Portfolio--%>
+                            <%--</a>--%>
+                        <%--</li>--%>
+                        <%--<li>--%>
+                            <%--<a href="#">--%>
+                                <%--Blog--%>
+                            <%--</a>--%>
+                        <%--</li>--%>
+                    <%--</ul>--%>
+                <%--</nav>--%>
                 <p class="copyright pull-right">
                     &copy;
                     <script>

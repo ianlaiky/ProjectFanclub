@@ -450,37 +450,7 @@
                     </style>
                     <div class="form-style-5">
                         <form action="guess.jsp">
-                            <fieldset>
-                                <legend><span class="number">1</span> Patient Info</legend>
-                                <input type="text" name="name" placeholder="Your Name *">
-                                <input type="email" name="nric" placeholder="Your Nric *">
-                                <textarea name="phoneNumber" placeholder="Your handphone number *"></textarea>
-                                <%--<label for="job">Interests:</label>--%>
-                                <%--<select id="job" name="field4">--%>
-                                <%--<optgroup label="Indoors">--%>
-                                <%--<option value="fishkeeping">Fishkeeping</option>--%>
-                                <%--<option value="reading">Reading</option>--%>
-                                <%--<option value="boxing">Boxing</option>--%>
-                                <%--<option value="debate">Debate</option>--%>
-                                <%--<option value="gaming">Gaming</option>--%>
-                                <%--<option value="snooker">Snooker</option>--%>
-                                <%--<option value="other_indoor">Other</option>--%>
-                                <%--</optgroup>--%>
-                                <%--<optgroup label="Outdoors">--%>
-                                <%--<option value="football">Football</option>--%>
-                                <%--<option value="swimming">Swimming</option>--%>
-                                <%--<option value="fishing">Fishing</option>--%>
-                                <%--<option value="climbing">Climbing</option>--%>
-                                <%--<option value="cycling">Cycling</option>--%>
-                                <%--<option value="other_outdoor">Other</option>--%>
-                                <%--</optgroup>--%>
-                                <%--</select>--%>
-                                <%--</fieldset>--%>
-                                <%--<fieldset>--%>
-                                <%--<legend><span class="number">2</span> Additional Info</legend>--%>
-                                <%--<textarea name="field3" placeholder="About Your School"></textarea>--%>
-                            </fieldset>
-                            <input type="submit" value="Get Queue Number"/>
+
                         </form>
                     </div>
 
