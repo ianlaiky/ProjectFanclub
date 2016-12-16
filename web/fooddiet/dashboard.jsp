@@ -152,90 +152,7 @@
                         </ul>
                     </div>
                 </li>
-                <li>
-                    <a data-toggle="collapse" href="#formsExamples">
-                        <i class="material-icons">content_paste</i>
-                        <p>Forms
-                            <b class="caret"></b>
-                        </p>
-                    </a>
-                    <div class="collapse" id="formsExamples">
-                        <ul class="nav">
-                            <li>
-                                <a href="./forms/regular.html">Regular Forms</a>
-                            </li>
-                            <li>
-                                <a href="./forms/extended.html">Extended Forms</a>
-                            </li>
-                            <li>
-                                <a href="./forms/validation.html">Validation Forms</a>
-                            </li>
-                            <li>
-                                <a href="./forms/wizard.html">Wizard</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a data-toggle="collapse" href="#tablesExamples">
-                        <i class="material-icons">grid_on</i>
-                        <p>Tables
-                            <b class="caret"></b>
-                        </p>
-                    </a>
-                    <div class="collapse" id="tablesExamples">
-                        <ul class="nav">
-                            <li>
-                                <a href="./tables/regular.html">Regular Tables</a>
-                            </li>
-                            <li>
-                                <a href="./tables/extended.html">Extended Tables</a>
-                            </li>
-                            <li>
-                                <a href="./tables/datatables.net.html">DataTables.net</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a data-toggle="collapse" href="#mapsExamples">
-                        <i class="material-icons">place</i>
-                        <p>Maps
-                            <b class="caret"></b>
-                        </p>
-                    </a>
-                    <div class="collapse" id="mapsExamples">
-                        <ul class="nav">
-                            <li>
-                                <a href="./maps/google.html">Google Maps</a>
-                            </li>
-                            <li>
-                                <a href="./maps/fullscreen.html">Full Screen Map</a>
-                            </li>
-                            <li>
-                                <a href="./maps/vector.html">Vector Map</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a href="./widgets.html">
-                        <i class="material-icons">widgets</i>
-                        <p>Widgets</p>
-                    </a>
-                </li>
-                <li class="active">
-                    <a href="./charts.html">
-                        <i class="material-icons">timeline</i>
-                        <p>Charts</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="./calendar.html">
-                        <i class="material-icons">date_range</i>
-                        <p>Calendar</p>
-                    </a>
-                </li>
+
             </ul>
         </div>
     </div>
@@ -255,7 +172,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"> Charts </a>
+                    <a class="navbar-brand" href="#"> Dashbaord </a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
