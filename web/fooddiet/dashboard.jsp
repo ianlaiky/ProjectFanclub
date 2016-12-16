@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: Ying
-  Date: 15/12/2016
-  Time: 6:35 AM
+  Date: 14/12/2016
+  Time: 8:42 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -10,8 +10,8 @@
 
 <head>
     <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png" />
-    <link rel="icon" type="image/png" href="../../assets/img/favicon.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png" />
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Material Dashboard PRO by Creative Tim | Premium Bootstrap Admin Template</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -41,11 +41,11 @@
     <meta property="og:description" content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design." />
     <meta property="og:site_name" content="Creative Tim" />
     <!-- Bootstrap core CSS     -->
-    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
     <!--  Material Dashboard CSS    -->
-    <link href="../../assets/css/material-dashboard2.css" rel="stylesheet" />
+    <link href="../assets/css/material-dashboard2.css" rel="stylesheet" />
     <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="../../assets/css/demo2.css" rel="stylesheet" />
+    <link href="../assets/css/demo2.css" rel="stylesheet" />
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
@@ -53,7 +53,7 @@
 
 <body>
 <div class="wrapper">
-    <div class="sidebar" data-active-color="green" data-background-color="black" data-image="../../assets/img/sidebar-1.jpg">
+    <div class="sidebar" data-active-color="rose" data-background-color="black" data-image="../../assets/img/sidebar-1.jpg">
         <!--
     Tip 1: You can change the color of active element of the sidebar using: data-active-color="purple | blue | green | orange | red | rose"
     Tip 2: you can also add an image using data-image tag
@@ -72,38 +72,38 @@
         <div class="sidebar-wrapper">
             <div class="user">
                 <div class="photo">
-                    <img src="../../assets/img/faces/marc.jpg" />
+                    <img src="../assets/img/faces/marc.jpg" />
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        Wan Ying
+                        <%=session.getAttribute("username")%>
                         <b class="caret"></b>
                     </a>
-                    <div class="collapse in" id="collapseExample">
+                    <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="myprofile.jsp">My Profile</a>
+                                <a href="user/myprofile.jsp">My Profile</a>
                             </li>
                             <li>
-                                <a href="editprofile.jsp">Edit Profile</a>
+                                <a href="user/editprofile.jsp">Edit Profile</a>
                             </li>
-                            <li class="active">
-                                <a href="#">Daily Intake</a>
+                            <li>
+                                <a href="user/dailyintake.jsp">Daily Intake</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
             <ul class="nav">
-                <li>
-                    <a href="../dashboard.jsp">
+                <li class="active">
+                    <a href="#">
                         <i class="material-icons">dashboard</i>
                         <p>Dashboard</p>
                     </a>
                 </li>
                 <li>
                     <a data-toggle="collapse" href="#pagesExamples">
-                        <i class="material-icons">image</i>
+                        <i class="material-icons">content_paste</i>
                         <p>Pages
                             <b class="caret"></b>
                         </p>
@@ -120,7 +120,7 @@
                     </div>
                 </li>
                 <li>
-                    <a data-toggle="collapse" href="#componentsExamples" aria-expanded="true">
+                    <a data-toggle="collapse" href="#componentsExamples">
                         <i class="material-icons">apps</i>
                         <p>Components
                             <b class="caret"></b>
@@ -129,113 +129,30 @@
                     <div class="collapse" id="componentsExamples">
                         <ul class="nav">
                             <li>
-                                <a href="../components/buttons.html">Buttons</a>
+                                <a href="./components/buttons.html">Buttons</a>
                             </li>
                             <li>
-                                <a href="../components/grid.html">Grid System</a>
+                                <a href="./components/grid.html">Grid System</a>
                             </li>
                             <li>
-                                <a href="../components/panels.html">Panels</a>
+                                <a href="./components/panels.html">Panels</a>
                             </li>
                             <li>
-                                <a href="../components/sweet-alert.html">Sweet Alert</a>
+                                <a href="./components/sweet-alert.html">Sweet Alert</a>
                             </li>
                             <li>
-                                <a href="../components/notifications.html">Notifications</a>
+                                <a href="./components/notifications.html">Notifications</a>
                             </li>
                             <li>
-                                <a href="../components/icons.html">Icons</a>
+                                <a href="./components/icons.html">Icons</a>
                             </li>
                             <li>
-                                <a href="../components/typography.html">Typography</a>
+                                <a href="./components/typography.html">Typography</a>
                             </li>
                         </ul>
                     </div>
                 </li>
-                <li>
-                    <a data-toggle="collapse" href="#formsExamples">
-                        <i class="material-icons">content_paste</i>
-                        <p>Forms
-                            <b class="caret"></b>
-                        </p>
-                    </a>
-                    <div class="collapse" id="formsExamples">
-                        <ul class="nav">
-                            <li>
-                                <a href="../forms/regular.html">Regular Forms</a>
-                            </li>
-                            <li>
-                                <a href="../forms/extended.html">Extended Forms</a>
-                            </li>
-                            <li>
-                                <a href="../forms/validation.html">Validation Forms</a>
-                            </li>
-                            <li>
-                                <a href="../forms/wizard.html">Wizard</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a data-toggle="collapse" href="#tablesExamples">
-                        <i class="material-icons">grid_on</i>
-                        <p>Tables
-                            <b class="caret"></b>
-                        </p>
-                    </a>
-                    <div class="collapse" id="tablesExamples">
-                        <ul class="nav">
-                            <li>
-                                <a href="../tables/regular.html">Regular Tables</a>
-                            </li>
-                            <li>
-                                <a href="../tables/extended.html">Extended Tables</a>
-                            </li>
-                            <li>
-                                <a href="../tables/datatables.net.html">DataTables.net</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a data-toggle="collapse" href="#mapsExamples">
-                        <i class="material-icons">place</i>
-                        <p>Maps
-                            <b class="caret"></b>
-                        </p>
-                    </a>
-                    <div class="collapse" id="mapsExamples">
-                        <ul class="nav">
-                            <li>
-                                <a href="../maps/google.html">Google Maps</a>
-                            </li>
-                            <li>
-                                <a href="../maps/fullscreen.html">Full Screen Map</a>
-                            </li>
-                            <li>
-                                <a href="../maps/vector.html">Vector Map</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a href="../widgets.html">
-                        <i class="material-icons">widgets</i>
-                        <p>Widgets</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="../charts.html">
-                        <i class="material-icons">timeline</i>
-                        <p>Charts</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="../calendar.html">
-                        <i class="material-icons">date_range</i>
-                        <p>Calendar</p>
-                    </a>
-                </li>
+
             </ul>
         </div>
     </div>
@@ -255,7 +172,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"> Daily Intake </a>
+                    <a class="navbar-brand" href="#"> Dashbaord </a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -315,62 +232,104 @@
         </nav>
         <div class="content">
             <div class="container-fluid">
+                <div class="header text-center">
+                    <h3 class="title">Chartist.js</h3>
+                    <p class="category">Handcrafted by our friends from
+                        <a target="_blank" href="https://gionkunz.github.io/chartist-js/">Chartist.js</a>. Please checkout their
+                        <a href="https://gionkunz.github.io/chartist-js/getting-started.html" target="_blank">full documentation.</a>
+                    </p>
+                </div>
                 <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title" data-background-color="rose">Recommended Personalized Daily Food Intake</h4>
+                    <div class="col-md-4">
+                        <div class="card card-chart">
+                            <div class="card-header" data-background-color="rose">
+                                <div id="roundedLineChart" class="ct-chart"></div>
                             </div>
                             <div class="card-content">
-                                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingOne">
-                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                <h4 class="panel-title">
-                                                    Calories
-                                                    <i class="material-icons">keyboard_arrow_down</i>
-                                                </h4>
-                                            </a>
-                                        </div>
-                                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                            <div class="panel-body">
-                                                BMI: 3.22
-                                                BMR: 1.232
-                                                Your personalized calories intake is : 2000
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingTwo">
-                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                <h4 class="panel-title">
-                                                   Macronutrients
-                                                    <i class="material-icons">keyboard_arrow_down</i>
-                                                </h4>
-                                            </a>
-                                        </div>
-                                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                            <div class="panel-body">
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingThree">
-                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                <h4 class="panel-title">
-                                                 Food to Avoid
-                                                    <i class="material-icons">keyboard_arrow_down</i>
-                                                </h4>
-                                            </a>
-                                        </div>
-                                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                            <div class="panel-body">
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <h4 class="card-title">Rounded Line Chart</h4>
+                                <p class="category">Line Chart</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-chart">
+                            <div class="card-header" data-background-color="orange">
+                                <div id="straightLinesChart" class="ct-chart"></div>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="card-title">Straight Lines Chart</h4>
+                                <p class="category">Line Chart with Points</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-chart">
+                            <div class="card-header" data-background-color="blue">
+                                <div id="simpleBarChart" class="ct-chart"></div>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="card-title">Simple Bar Chart</h4>
+                                <p class="category">Bar Chart</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header card-header-icon" data-background-color="blue">
+                                <i class="material-icons">timeline</i>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="card-title">Coloured Line Chart
+                                    <small> - Rounded</small>
+                                </h4>
+                            </div>
+                            <div id="colouredRoundedLineChart" class="ct-chart"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header card-header-icon" data-background-color="rose">
+                                <i class="material-icons">insert_chart</i>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="card-title">Multiple Bars Chart
+                                    <small>- Bar Chart</small>
+                                </h4>
+                            </div>
+                            <div id="multipleBarsChart" class="ct-chart"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="card">
+                            <div class="card-header card-header-icon" data-background-color="blue">
+                                <i class="material-icons">timeline</i>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="card-title">Coloured Bars Chart
+                                    <small> - Rounded</small>
+                                </h4>
+                            </div>
+                            <div id="colouredBarsChart" class="ct-chart"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="card">
+                            <div class="card-header card-header-icon" data-background-color="red">
+                                <i class="material-icons">pie_chart</i>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="card-title">Pie Chart</h4>
+                            </div>
+                            <div id="chartPreferences" class="ct-chart"></div>
+                            <div class="card-footer">
+                                <h6>Legend</h6>
+                                <i class="fa fa-circle text-info"></i> Apple
+                                <i class="fa fa-circle text-warning"></i> Samsung
+                                <i class="fa fa-circle text-danger"></i> Windows Phone
                             </div>
                         </div>
                     </div>
@@ -469,22 +428,22 @@
             <li class="header-title">Images</li>
             <li class="active">
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-1.jpg" alt="" />
+                    <img src="../assets/img/sidebar-1.jpg" alt="" />
                 </a>
             </li>
             <li>
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-2.jpg" alt="" />
+                    <img src="../assets/img/sidebar-2.jpg" alt="" />
                 </a>
             </li>
             <li>
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-3.jpg" alt="" />
+                    <img src="../assets/img/sidebar-3.jpg" alt="" />
                 </a>
             </li>
             <li>
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-4.jpg" alt="" />
+                    <img src="../assets/img/sidebar-4.jpg" alt="" />
                 </a>
             </li>
             <li class="button-container">
@@ -546,5 +505,10 @@
 <script src="../../assets/js/material-dashboard2.js"></script>
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="../../assets/js/demo2.js"></script>
+<script>
+    $(document).ready(function() {
+        demo.initCharts();
+    });
+</script>
 
 </html>
