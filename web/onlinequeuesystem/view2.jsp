@@ -98,7 +98,8 @@
                                 <a href="../onlinequeuesystem/graph.jsp">View Graph on current situation</a>
                             </li>
                             <li>
-                                <a href="#">Edit Profile</a>
+                                <a href="../onlinequeuesystem/exceeded.jsp">List of patients who have exceeded the
+                                    amount of queues</a>
                             </li>
                             <li>
                                 <a href="#">Settings</a>
@@ -353,7 +354,7 @@
                                         <thead class="text-primary">
                                         <th>Name</th>
                                         <th>Number of Queues Taken</th>
-                                        <th>Number of Paitents ahead of you</th>
+                                        <th>Number of Patients ahead of you</th>
                                         <th>Estimated Waiting Time</th>
                                         </thead>
                                         <tbody>

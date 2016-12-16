@@ -49,19 +49,6 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
-
-    <style>
-        .frontPageRounded {
-            border-radius: 25px;
-            background: #73AD21;
-            padding: 20px;
-            width: 150px;
-            height: auto;
-
-            margin: 10px;
-        }
-
-    </style>
 </head>
 
 <body>
@@ -75,7 +62,7 @@
 -->
         <div class="logo">
             <a href="http://www.creative-tim.com" class="simple-text">
-                Food Diet
+                Online Queue System
             </a>
         </div>
         <div class="logo logo-mini">
@@ -91,7 +78,7 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        Wan Ying
+                        Aravin
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
@@ -342,48 +329,8 @@
         </nav>
         <div class="content">
             <div class="container-fluid">
-                <div class="col-sm-8 col-sm-offset-2">
-                    <%--<!-- Insert all the awesome body content here--%>
-
-                    <a href="fooddiet/index.jsp"><img src="assets/img/foodDietF.png" class="frontPageRounded"></a>
-                    <a href="foodorder/index.jsp"><img src="assets/img/orderFoodF.png" class="frontPageRounded"> </a>
-                    <a href="onlinequeuesystem/queue.jsp"><img src="assets/img/queue-512.png" class="frontPageRounded"></a>
-                    <a href="videoconference/patientVideo.jsp"><img src="assets/img/videoConferenceF.png"
-                                                                    class="frontPageRounded"></a>
-                    <a href="vistorbookingsystem/vistorbooking.jsp"><img src="assets/img/visitorbookingF.png"
-                                                                         class="frontPageRounded"></a>
-
-
-                    <%---->--%>
-                </div>
-            </div>
-        </div>
-        <footer class="footer">
-            <div class="container-fluid">
-                <nav class="pull-left">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Company
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Portfolio
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Blog
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                <%--<div class="col-sm-8 col-sm-offset-2">--%>
+                <h1>Under Construction...</h1>
                 <p class="copyright pull-right">
                     &copy;
                     <script>
@@ -393,104 +340,105 @@
                     Fanclub
                 </p>
             </div>
-        </footer>
+            </footer>
+        </div>
     </div>
-</div>
-<div class="fixed-plugin">
-    <div class="dropdown show-dropdown">
-        <a href="#" data-toggle="dropdown">
-            <i class="fa fa-cog fa-2x"> </i>
-        </a>
-        <ul class="dropdown-menu">
-            <li class="header-title"> Sidebar Filters</li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger active-color">
-                    <div class="badge-colors text-center">
-                        <span class="badge filter badge-purple" data-color="purple"></span>
-                        <span class="badge filter badge-blue" data-color="blue"></span>
-                        <span class="badge filter badge-green" data-color="green"></span>
-                        <span class="badge filter badge-orange" data-color="orange"></span>
-                        <span class="badge filter badge-red" data-color="red"></span>
-                        <span class="badge filter badge-rose active" data-color="green"></span>
+    <div class="fixed-plugin">
+        <div class="dropdown show-dropdown">
+            <a href="#" data-toggle="dropdown">
+                <i class="fa fa-cog fa-2x"> </i>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="header-title"> Sidebar Filters</li>
+                <li class="adjustments-line">
+                    <a href="javascript:void(0)" class="switch-trigger active-color">
+                        <div class="badge-colors text-center">
+                            <span class="badge filter badge-purple" data-color="purple"></span>
+                            <span class="badge filter badge-blue" data-color="blue"></span>
+                            <span class="badge filter badge-green" data-color="green"></span>
+                            <span class="badge filter badge-orange" data-color="orange"></span>
+                            <span class="badge filter badge-red" data-color="red"></span>
+                            <span class="badge filter badge-rose active" data-color="green"></span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </a>
+                </li>
+                <li class="header-title">Sidebar Background</li>
+                <li class="adjustments-line">
+                    <a href="javascript:void(0)" class="switch-trigger background-color">
+                        <div class="text-center">
+                            <span class="badge filter badge-white" data-color="white"></span>
+                            <span class="badge filter badge-black active" data-color="black"></span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </a>
+                </li>
+                <li class="adjustments-line">
+                    <a href="javascript:void(0)" class="switch-trigger">
+                        <p>Sidebar Mini</p>
+                        <div class="togglebutton switch-sidebar-mini">
+                            <label>
+                                <input type="checkbox" unchecked="">
+                            </label>
+                        </div>
+                        <div class="clearfix"></div>
+                    </a>
+                </li>
+                <li class="adjustments-line">
+                    <a href="javascript:void(0)" class="switch-trigger">
+                        <p>Sidebar Image</p>
+                        <div class="togglebutton switch-sidebar-image">
+                            <label>
+                                <input type="checkbox" checked="">
+                            </label>
+                        </div>
+                        <div class="clearfix"></div>
+                    </a>
+                </li>
+                <li class="header-title">Images</li>
+                <li class="active">
+                    <a class="img-holder switch-trigger" href="javascript:void(0)">
+                        <img src="../../assets/img/sidebar-1.jpg" alt=""/>
+                    </a>
+                </li>
+                <li>
+                    <a class="img-holder switch-trigger" href="javascript:void(0)">
+                        <img src="../../assets/img/sidebar-2.jpg" alt=""/>
+                    </a>
+                </li>
+                <li>
+                    <a class="img-holder switch-trigger" href="javascript:void(0)">
+                        <img src="../../assets/img/sidebar-3.jpg" alt=""/>
+                    </a>
+                </li>
+                <li>
+                    <a class="img-holder switch-trigger" href="javascript:void(0)">
+                        <img src="../../assets/img/sidebar-4.jpg" alt=""/>
+                    </a>
+                </li>
+                <li class="button-container">
+                    <div class="">
+                        <a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank"
+                           class="btn btn-rose btn-block">Buy Now</a>
                     </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="header-title">Sidebar Background</li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger background-color">
-                    <div class="text-center">
-                        <span class="badge filter badge-white" data-color="white"></span>
-                        <span class="badge filter badge-black active" data-color="black"></span>
+                    <div class="">
+                        <a href="http://www.creative-tim.com/product/material-dashboard" target="_blank"
+                           class="btn btn-info btn-block">Get Free Demo</a>
                     </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger">
-                    <p>Sidebar Mini</p>
-                    <div class="togglebutton switch-sidebar-mini">
-                        <label>
-                            <input type="checkbox" unchecked="">
-                        </label>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger">
-                    <p>Sidebar Image</p>
-                    <div class="togglebutton switch-sidebar-image">
-                        <label>
-                            <input type="checkbox" checked="">
-                        </label>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="header-title">Images</li>
-            <li class="active">
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-1.jpg" alt=""/>
-                </a>
-            </li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-2.jpg" alt=""/>
-                </a>
-            </li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-3.jpg" alt=""/>
-                </a>
-            </li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-4.jpg" alt=""/>
-                </a>
-            </li>
-            <li class="button-container">
-                <div class="">
-                    <a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank"
-                       class="btn btn-rose btn-block">Buy Now</a>
-                </div>
-                <div class="">
-                    <a href="http://www.creative-tim.com/product/material-dashboard" target="_blank"
-                       class="btn btn-info btn-block">Get Free Demo</a>
-                </div>
-            </li>
-            <li class="header-title">Thank you for 95 shares!</li>
-            <li class="button-container">
-                <button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i> &middot;
-                    45
-                </button>
-                <button id="facebook" class="btn btn-social btn-facebook btn-round"><i
-                        class="fa fa-facebook-square"> &middot;</i>50
-                </button>
-            </li>
-        </ul>
+                </li>
+                <li class="header-title">Thank you for 95 shares!</li>
+                <li class="button-container">
+                    <button id="twitter" class="btn btn-social btn-twitter btn-round"><i
+                            class="fa fa-twitter"></i> &middot;
+                        45
+                    </button>
+                    <button id="facebook" class="btn btn-social btn-facebook btn-round"><i
+                            class="fa fa-facebook-square"> &middot;</i>50
+                    </button>
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
 </body>
 <!--   Core JS Files   -->
 <script src="../../assets/js/jquery-3.1.1.min.js" type="text/javascript"></script>
