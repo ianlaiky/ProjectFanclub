@@ -62,6 +62,10 @@
     <style type="text/css">
 
 
+        #labeldetect {
+            padding:2em;
+            border: 1px solid blue;
+        }
 
         img { max-width:100%; }
 
@@ -547,6 +551,10 @@
                                 <li><a data-slide="next" href="#myCarousel" class=""><i class="material-icons">chevron_right</i></a></li>
                             </ul>
                         </nav>
+                        </div>
+                        <div id="#labeldetect">
+
+                            Asdsd
                         </div>
                     </div>
                 </div>

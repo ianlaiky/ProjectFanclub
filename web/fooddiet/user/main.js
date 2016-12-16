@@ -89,6 +89,10 @@ $.post({
 
     // show the raw json
     $('#results').text(JSON.stringify(response));
+    var text = '<b>Is this </b> ' + response.list[3].labelAnnotations.description + '? <br/>';
+    text += '<b>Confidence level for this prediction: </b>' + response.list[3].labelAnnotations.score + '<br/>';
+    $('#labeldetect').append(text);
+
 
 }).done(displayJSON);
 }
