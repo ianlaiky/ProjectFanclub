@@ -330,49 +330,6 @@
                         <div class="col-md-3">
                             <div class="panel panel-primary">...</div>
                         </div>
-                        <div class="card">
-                            <form id="TypeValidation" class="form-horizontal" action="" method="">
-                                <div class="card-header card-header-text" data-background-color="rose">
-                                    <h4 class="card-title">Profile</h4>
-                                </div>
-                                <div class="card-content">
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Name</label>
-                                        <div class="col-sm-7">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="required" required="true" />
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Age</label>
-                                        <div class="col-sm-7">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="number" number="true" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Physical Activity Intensity</label>
-                                        <div class="col-lg-7 col-md-6 col-sm-3">
-                                            <select class="selectpicker" data-style="select-with-transition" title="Choose City" data-size="4">
-                                                <option disabled> Choose an intensity best suit you</option>
-                                                <option value="2">Sedentary </option>
-                                                <option value="3">Moderately Active</option>
-                                                <option value="4">Active</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-footer text-center">
-                                    <button type="submit" class="btn btn-rose btn-fill">Update Particulars</button>
-                                </div>
-                            </form>
-                        </div>
                     </div>
                     <div class="col-md-12">
                         <div class="card">
@@ -420,79 +377,7 @@
                             </form>
                         </div>
                     </div>
-                  <!--  <div class="col-md-12">
-                        <div class="card">
-                            <form id="RangeValidation" class="form-horizontal" action="" method="">
-                                <div class="card-header card-header-text" data-background-color="rose">
-                                    <h4 class="card-title">Range Validation</h4>
-                                </div>
-                                <div class="card-content">
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Min Length</label>
-                                        <div class="col-sm-7">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="min_length" minLength="5" />
-                                            </div>
-                                        </div>
-                                        <label class="col-sm-3 label-on-right">
-                                            <code>minLength="5"</code>
-                                        </label>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Max Length</label>
-                                        <div class="col-sm-7">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="max_length" maxLength="5" />
-                                            </div>
-                                        </div>
-                                        <label class="col-sm-3 label-on-right">
-                                            <code>maxLength="5"</code>
-                                        </label>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Range</label>
-                                        <div class="col-sm-7">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="range" range="[6,10]" />
-                                            </div>
-                                        </div>
-                                        <label class="col-sm-3 label-on-right">
-                                            <code>range="[6,10]"</code>
-                                        </label>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Min Value</label>
-                                        <div class="col-sm-7">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="min" min="6" />
-                                            </div>
-                                        </div>
-                                        <label class="col-sm-3 label-on-right">
-                                            <code>min="6"</code>
-                                        </label>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Max Value</label>
-                                        <div class="col-sm-7">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="max" max="6" />
-                                            </div>
-                                        </div>
-                                        <label class="col-sm-3 label-on-right">
-                                            <code>max="6"</code>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="card-footer text-center">
-                                    <button type="submit" class="btn btn-rose btn-fill">Validate Inputs</button>
-                                </div>
-                            </form>
-                        </div> -->
+
                     </div>
                 </div>
             </div>
