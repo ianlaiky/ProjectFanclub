@@ -66,7 +66,30 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
 
     <style type="text/css">
-
+        div.box{
+            /*background: #EEE;*/
+            /*height:auto;*/
+            /*width:900px;*/
+        }
+        div.divleftbox{
+            /*background:#999;*/
+            /*float:left;*/
+            /*height:100%;*/
+            /*width:600px;*/
+        }
+        div.divrightbox{
+            /*background: #666;*/
+            /*height:100%;*/
+            /*width:300px;*/
+            /*float:right;*/
+        }
+        div.clear{
+            /*clear: both;*/
+            /*height: 1px;*/
+            /*overflow: hidden;*/
+            /*font-size: 0pt;*/
+            /*margin-top: -1px;*/
+        }
         div.galleryContainer{
             /*width:900px;*/
             /*height:700px;*/
@@ -99,7 +122,7 @@
         }
         img {
 
-            width: 200px;
+            width: 240px;
             height: 140px;
             background-color: grey;
 
@@ -121,6 +144,7 @@
             border-radius: 15px;
         }
         #btnSubmitFood{
+
             /*width:300px;*/
             /*float:right;*/
 
@@ -462,12 +486,16 @@
             <div class="container-fluid">
                 <div class="col-sm-8 col-sm-offset-2">
                <%--Insert all the awesome body content here--%>
+                    <div class="box">
+                    <div class="divleftbox">
 
                    <ul class="nav nav-pills nav-justified">
                        <li class="active"><a data-toggle="pill" href="#food">Home</a></li>
                        <li><a data-toggle="pill" href="#drinks">Drinks</a></li>
                        <li><a data-toggle="pill" href="#fruits">Fruits</a></li>
+
                    </ul>
+
 
                    <div class="tab-content">
                        <div id="food" class="tab-pane fade in active">
@@ -535,17 +563,11 @@
 
 
                                    </div>
-                                   <div class="submitContainer">
-                                       <div class="row">
-                                           <div class="col-sm-12">
-                                               <div class="text-center">
-                                   <input type="submit" onclick="return confirm('Are you sure?')" id="btnSubmitFood" class="btn btn-success" value="Submit"/>
-                                               </div>
-                                           </div>
-                                       </div>
-                                   </div>
 
-                           </form>
+
+
+
+
 
 
 
@@ -560,12 +582,32 @@
                            <p> textholder</p>
                        </div>
                    </div>
+                    </div>
+
+                   <div class="divrightbox">
+
+                       <%--clear class not closed--%>
+                       <%--<div class="clear">--%>
+                   <div class="form-group">
+                       <textarea class="form-control" placeholder="FoodOrder"></textarea>
+                   </div>
+                   </div>
+                    </div>
 
 
 
 
 
-
+                   <div class="submitContainer">
+                       <div class="row">
+                           <div class="col-sm-12">
+                               <div class="text-center">
+                                   <input type="submit" onclick="return confirm('Are you sure?')" id="btnSubmitFood" class="btn btn-success" value="Order"/>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                </form>
 
 
 
