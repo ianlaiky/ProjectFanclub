@@ -1,15 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
-  User: 154404g
-  Date: 12/15/2016
-  Time: 4:12 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%--
-  Created by IntelliJ IDEA.
-  User: 154404g
-  Date: 12/15/2016
-  Time: 3:42 PM
+  User: User
+  Date: 12/16/2016
+  Time: 12:13
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -383,36 +376,19 @@
                                 </label>
                                 <input  type="text" class="form-control" id="datepicker" required>
                             </div>
-                            <div class="input-group">
-                                <meta charset="utf-8">
-                                <meta name="viewport" content="width=device-width, initial-scale=1">
-                                <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-                                <link rel="stylesheet" href="/resources/demos/style.css">
-                                <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-                                <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-                                <script>
-                                    $( function() {
-                                        $( "#datepicker" ).datepicker();
-                                    } );
-                                </script>
-                            </div>
                         </div>
                         <div class="input-group">
                                                         <span class="input-group-addon">
                                                             <i class="material-icons">av_timer</i>
                                                         </span>
                             <div class="form-group label-floating">
-                                <label class="control-label">Select Time
+                                <label class="control-label">Selected Time
                                 </label>
-                                <select>
-                                    <option value="1">13:00</option>
-                                    <option value="2">14:00</option>
-                                    <option value="3">15:00</option>
-                                    <option value="4">16:00</option>
-                                    <option value="5">17:00</option>
-                                </select>
+                                <input  type="text" class="form-control" id="time" required>
+
                             </div>
                         </div>
+
                         <div class="input-group">
                                                         <span class="input-group-addon">
                                                             <i class="material-icons">contact_phone</i>
@@ -433,42 +409,15 @@
                                 <input name="email" type="email" class="form-control" required>
                             </div>
                         </div>
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                <i class="material-icons">perm_identity</i>
-                            </span>
-                            <div class="form-group label-floating">
-                                <label class="control-label">Relative's NRIC
-                                </label>
-                                <input name="pNRIC" type="text" class="form-control" required>
-                                <button type="button">Get information</button>
-                            </div>
-                        </div>
-                        <div class="input-group">
-                            <div class="picture-container">
-                                <div class="picture">
-                                    <img src="../../assets/img/default-avatar.png" class="picture-src" id="wizardPicturePreview" title="" /><br>
-                                    <div class="form-group label-floating">
-                                        <label class="control-label">Patient Name
-                                        </label>
-                                        <input type="text"  class="form-control" id="patientName">
-                                    </div>
-                                    <div class="form-group label-floating">
-                                        <label class="control-label">Room number
-                                        </label>
-                                        <input type="text" class="form-control" id="roomnum">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
 
                     </div>
                 </div>
             </div>
-            <a href="../vistorbookingsystem/certification.jsp" type="button" style=  "position: fixed;
-                    bottom: 50px;
+            <button type="button" style=  "position: fixed;
+                    bottom: 110px;
                     margin-right: 300px;
-                    margin-left: 800px;">submit</a>
+                    margin-left: 800px;">download</button>
         </div>
         <footer class="footer">
             <div class="container-fluid">
@@ -653,3 +602,4 @@
 </script>
 
 </html>
+
