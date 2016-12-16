@@ -84,13 +84,13 @@
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="fooddiet/user/myprofile.jsp">My Profile</a>
+                                <a href="user/myprofile.jsp">My Profile</a>
                             </li>
                             <li>
-                                <a href="fooddiet/user/editprofile.jsp">Edit Profile</a>
+                                <a href="user/editprofile.jsp">Edit Profile</a>
                             </li>
                             <li>
-                                <a href="fooddiet/user/dailyintake.jsp">Daily Intake</a>
+                                <a href="user/dailyintake.jsp">Daily Intake</a>
                             </li>
                         </ul>
                     </div>
