@@ -75,17 +75,17 @@
                     <img src="../../assets/img/faces/marc.jpg" />
                 </div>
                 <div class="info">
-                    <a data-toggle="collapse" href="#collapseExample" class="collapsed" aria-expanded="true">
+                    <a data-toggle="collapse" href="#collapseExample" class="collapsed">
                         Wan Ying
                         <b class="caret"></b>
                     </a>
-                    <div class="collapse in" id="collapseExample">
+                    <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
                                 <a href="myprofile.jsp">My Profile</a>
                             </li>
-                            <li class="active">
-                                <a href="#">Edit Profile</a>
+                            <li>
+                                <a href="editprofile.jsp">Edit Profile</a>
                             </li>
                             <li>
                                 <a href="dailyintake.jsp">Daily Intake</a>
@@ -101,33 +101,22 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li>
-                    <a data-toggle="collapse" href="#pagesExamples">
-                        <i class="material-icons">image</i>
-                        <p>Pages
+                <li class="active">
+                    <a data-toggle="collapse" href="#pagesExamples" aria-expanded="true">
+                        <i class="material-icons">content_paste</i>
+                        <p>Diet Planner
                             <b class="caret"></b>
                         </p>
                     </a>
-                    <div class="collapse" id="pagesExamples">
+                    <div class="collapse in" id="pagesExamples">
                         <ul class="nav">
-                            <li>
-                                <a href="../pages/pricing.html">Pricing</a>
+                            <li class="active">
+                                <a href="../pages/pricing.html">Snap</a>
                             </li>
                             <li>
-                                <a href="../pages/timeline.html">Timeline</a>
+                                <a href="../pages/timeline.html">Food Content</a>
                             </li>
-                            <li>
-                                <a href="../pages/login.html">Login Page</a>
-                            </li>
-                            <li>
-                                <a href="../pages/register.html">Register Page</a>
-                            </li>
-                            <li>
-                                <a href="../pages/lock.html">Lock Screen Page</a>
-                            </li>
-                            <li>
-                                <a href="../pages/user.html">User Profile</a>
-                            </li>
+
                         </ul>
                     </div>
                 </li>
@@ -267,7 +256,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"> Edit Profile </a>
+                    <a class="navbar-brand" href="#"> Snap </a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -329,6 +318,18 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
+                        <div class="col-md-3">
+                            <div class="panel panel-primary">...</div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-primary">...</div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-primary">...</div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-primary">...</div>
+                        </div>
                         <div class="card">
                             <form id="TypeValidation" class="form-horizontal" action="" method="">
                                 <div class="card-header card-header-text" data-background-color="rose">
