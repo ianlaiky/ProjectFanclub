@@ -9,7 +9,7 @@ public class User {
     private int age;
     private String gender;
     private String intensity;
-    private double height;
+    private double uheight;
     private double weight;
     private double dailyCalories;
     private double dailyProtein;
@@ -25,13 +25,13 @@ public class User {
         this.userId = userId;
     }
 
-    public User(int userId, String uname, int age, String gender, String intensity, double height, double weight, double dailyCalories, double dailyProtein, double dailyCarbo, double dailyFat, double curCalories, double curProtein, double curFat, double curCarbo) {
+    public User(int userId, String uname, int age, String gender, String intensity, double uheight, double weight, double dailyCalories, double dailyProtein, double dailyCarbo, double dailyFat, double curCalories, double curProtein, double curFat, double curCarbo) {
         this.userId = userId;
         this.uname = uname;
         this.age = age;
         this.gender = gender;
         this.intensity = intensity;
-        this.height = height;
+        this.uheight = uheight;
         this.weight = weight;
         this.dailyCalories = dailyCalories;
         this.dailyProtein = dailyProtein;
@@ -84,11 +84,11 @@ public class User {
     }
 
     public double getHeight() {
-        return height;
+        return uheight;
     }
 
-    public void setHeight(double height) {
-        this.height = height;
+    public void setHeight(double uheight) {
+        this.uheight = uheight;
     }
 
     public double getWeight() {
