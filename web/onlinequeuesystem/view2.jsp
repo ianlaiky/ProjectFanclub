@@ -1,5 +1,12 @@
 <%--
   Created by IntelliJ IDEA.
+  User: aravin
+  Date: 16-Dec-16
+  Time: 11:52 AM
+  To change this template use File | Settings | File Templates.
+--%>
+<%--
+  Created by IntelliJ IDEA.
   User: Ying
   Date: 14/12/2016
   Time: 8:29 PM
@@ -9,51 +16,58 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png" />
-    <link rel="icon" type="image/png" href="../../assets/img/favicon.png" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png"/>
+    <link rel="icon" type="image/png" href="../../assets/img/favicon.png"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>Material Dashboard PRO by Creative Tim | Premium Bootstrap Admin Template</title>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+    <meta name="viewport" content="width=device-width"/>
     <!-- Canonical SEO -->
-    <link rel="canonical" href="http://www.creative-tim.com/product/material-dashboard-pro" />
+    <link rel="canonical" href="http://www.creative-tim.com/product/material-dashboard-pro"/>
     <!--  Social tags      -->
-    <meta name="keywords" content="material dashboard, bootstrap material admin, bootstrap material dashboard, material design admin, material design, creative tim, html dashboard, html css dashboard, web dashboard, freebie, free bootstrap dashboard, css3 dashboard, bootstrap admin, bootstrap dashboard, frontend, responsive bootstrap dashboard, premiu material design admin">
-    <meta name="description" content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+    <meta name="keywords"
+          content="material dashboard, bootstrap material admin, bootstrap material dashboard, material design admin, material design, creative tim, html dashboard, html css dashboard, web dashboard, freebie, free bootstrap dashboard, css3 dashboard, bootstrap admin, bootstrap dashboard, frontend, responsive bootstrap dashboard, premiu material design admin">
+    <meta name="description"
+          content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
     <!-- Schema.org markup for Google+ -->
     <meta itemprop="name" content="Material Dashboard PRO by Creative Tim | Premium Bootstrap Admin Template">
-    <meta itemprop="description" content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+    <meta itemprop="description"
+          content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
     <meta itemprop="image" content="http://s3.amazonaws.com/creativetim_bucket/products/51/opt_mdp_thumbnail.jpg">
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@creativetim">
     <meta name="twitter:title" content="Material Dashboard PRO by Creative Tim | Premium Bootstrap Admin Template">
-    <meta name="twitter:description" content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
+    <meta name="twitter:description"
+          content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design.">
     <meta name="twitter:creator" content="@creativetim">
     <meta name="twitter:image" content="http://s3.amazonaws.com/creativetim_bucket/products/51/opt_mdp_thumbnail.jpg">
     <!-- Open Graph data -->
     <meta property="fb:app_id" content="655968634437471">
-    <meta property="og:title" content="Material Dashboard PRO by Creative Tim | Premium Bootstrap Admin Template" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="http://www.creative-tim.com/product/material-dashboard-pro" />
-    <meta property="og:image" content="http://s3.amazonaws.com/creativetim_bucket/products/51/opt_mdp_thumbnail.jpg" />
-    <meta property="og:description" content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design." />
-    <meta property="og:site_name" content="Creative Tim" />
+    <meta property="og:title" content="Material Dashboard PRO by Creative Tim | Premium Bootstrap Admin Template"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content="http://www.creative-tim.com/product/material-dashboard-pro"/>
+    <meta property="og:image" content="http://s3.amazonaws.com/creativetim_bucket/products/51/opt_mdp_thumbnail.jpg"/>
+    <meta property="og:description"
+          content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design."/>
+    <meta property="og:site_name" content="Creative Tim"/>
     <!-- Bootstrap core CSS     -->
-    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet"/>
     <!--  Material Dashboard CSS    -->
-    <link href="../../assets/css/material-dashboard2.css" rel="stylesheet" />
+    <link href="../../assets/css/material-dashboard2.css" rel="stylesheet"/>
     <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="../../assets/css/demo2.css" rel="stylesheet" />
+    <link href="../../assets/css/demo2.css" rel="stylesheet"/>
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
 </head>
 
 <body>
 <div class="wrapper">
-    <div class="sidebar" data-active-color="rose" data-background-color="black" data-image="../../assets/img/sidebar-1.jpg">
+    <div class="sidebar" data-active-color="rose" data-background-color="black"
+         data-image="../../assets/img/sidebar-1.jpg">
         <!--
     Tip 1: You can change the color of active element of the sidebar using: data-active-color="purple | blue | green | orange | red | rose"
     Tip 2: you can also add an image using data-image tag
@@ -72,7 +86,6 @@
         <div class="sidebar-wrapper">
             <div class="user">
                 <div class="photo">
-                    <img src="../../assets/img/faces/marc.jpg" />
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
@@ -82,7 +95,7 @@
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="#graph.jsp">Graph on the current situation</a>
+                                <a href="../onlinequeuesystem/graph.jsp">View Graph on current situation</a>
                             </li>
                             <li>
                                 <a href="#">Edit Profile</a>
@@ -334,51 +347,51 @@
                                 <i class="material-icons">assignment</i>
                             </div>
                             <div class="card-content">
-                                <h4 class="card-title">Simple Table</h4>
+                                <h4 class="card-title">View queue details</h4>
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead class="text-primary">
                                         <th>Name</th>
-                                        <th>Country</th>
-                                        <th>City</th>
-                                        <th>Salary</th>
+                                        <th>Number of Queues Taken</th>
+                                        <th>Number of Paitents ahead of you</th>
+                                        <th>Estimated Waiting Time</th>
                                         </thead>
                                         <tbody>
                                         <tr>
-                                            <td>Dakota Rice</td>
-                                            <td>Niger</td>
-                                            <td>Oud-Turnhout</td>
-                                            <td class="text-primary">$36,738</td>
+                                            <td>John Lim</td>
+                                            <td>3</td>
+                                            <td>5</td>
+                                            <td class="text-primary">20mins</td>
                                         </tr>
                                         <tr>
-                                            <td>Minerva Hooper</td>
-                                            <td>Curaçao</td>
-                                            <td>Sinaai-Waas</td>
-                                            <td class="text-primary">$23,789</td>
+                                            <td>Harper Riquelm</td>
+                                            <td>10</td>
+                                            <td>89</td>
+                                            <td class="text-primary">70 mins</td>
                                         </tr>
                                         <tr>
                                             <td>Sage Rodriguez</td>
-                                            <td>Netherlands</td>
-                                            <td>Baileux</td>
-                                            <td class="text-primary">$56,142</td>
+                                            <td>12</td>
+                                            <td>6</td>
+                                            <td class="text-primary">50 mins</td>
                                         </tr>
                                         <tr>
                                             <td>Philip Chaney</td>
-                                            <td>Korea, South</td>
-                                            <td>Overland Park</td>
-                                            <td class="text-primary">$38,735</td>
+                                            <td>12</td>
+                                            <td>8</td>
+                                            <td class="text-primary">10 mins</td>
                                         </tr>
                                         <tr>
                                             <td>Doris Greene</td>
-                                            <td>Malawi</td>
-                                            <td>Feldkirchen in Kärnten</td>
-                                            <td class="text-primary">$63,542</td>
+                                            <td>12</td>
+                                            <td>7</td>
+                                            <td class="text-primary">15 mins</td>
                                         </tr>
                                         <tr>
                                             <td>Mason Porter</td>
-                                            <td>Chile</td>
-                                            <td>Gloucester</td>
-                                            <td class="text-primary">$78,615</td>
+                                            <td>5</td>
+                                            <td>21</td>
+                                            <td class="text-primary">15 mins</td>
                                         </tr>
                                         </tbody>
                                     </table>
@@ -615,36 +628,42 @@
             <li class="header-title">Images</li>
             <li class="active">
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-1.jpg" alt="" />
+                    <img src="../../assets/img/sidebar-1.jpg" alt=""/>
                 </a>
             </li>
             <li>
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-2.jpg" alt="" />
+                    <img src="../../assets/img/sidebar-2.jpg" alt=""/>
                 </a>
             </li>
             <li>
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-3.jpg" alt="" />
+                    <img src="../../assets/img/sidebar-3.jpg" alt=""/>
                 </a>
             </li>
             <li>
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-4.jpg" alt="" />
+                    <img src="../../assets/img/sidebar-4.jpg" alt=""/>
                 </a>
             </li>
             <li class="button-container">
                 <div class="">
-                    <a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-rose btn-block">Buy Now</a>
+                    <a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank"
+                       class="btn btn-rose btn-block">Buy Now</a>
                 </div>
                 <div class="">
-                    <a href="http://www.creative-tim.com/product/material-dashboard" target="_blank" class="btn btn-info btn-block">Get Free Demo</a>
+                    <a href="http://www.creative-tim.com/product/material-dashboard" target="_blank"
+                       class="btn btn-info btn-block">Get Free Demo</a>
                 </div>
             </li>
             <li class="header-title">Thank you for 95 shares!</li>
             <li class="button-container">
-                <button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i> &middot; 45</button>
-                <button id="facebook" class="btn btn-social btn-facebook btn-round"><i class="fa fa-facebook-square"> &middot;</i>50</button>
+                <button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i> &middot;
+                    45
+                </button>
+                <button id="facebook" class="btn btn-social btn-facebook btn-round"><i
+                        class="fa fa-facebook-square"> &middot;</i>50
+                </button>
             </li>
         </ul>
     </div>

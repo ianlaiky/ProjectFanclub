@@ -70,7 +70,7 @@ s
 -->
         <div class="logo">
             <a href="http://www.creative-tim.com" class="simple-text">
-                Food Diet
+                Online Queue System
             </a>
         </div>
         <div class="logo logo-mini">
@@ -83,16 +83,10 @@ s
             <div class="user">
                 <div class="photo">
                     <img src="../assets/img/faces/marc.jpg"/>
-                </div>
-                <div class="info">
-                    <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        Aravin
-                        <b class="caret"></b>
-                    </a>
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="../onlinequeuesystem/view.html">View Estimated Waiting Time</a>
+                                <a href="../onlinequeuesystem/view2.jsp">View Estimated Waiting Time</a>
                             </li>
                             <li>
                                 <a href="#">Edit Profile</a>
