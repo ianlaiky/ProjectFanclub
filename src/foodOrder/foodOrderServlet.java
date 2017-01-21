@@ -40,12 +40,12 @@ public class foodOrderServlet extends HttpServlet {
 
 
         for (int i = 0; i<foodName.length ; i++) {
-       //check if array is null
+       //check if array is empty
                 if(foodName[i]==""){
                     System.out.println("empty food string detected,record not created for: " + i);
                 }
                 else{
-                    //action to do on items whcih isnt null
+                    //action to do on items whcih isnt empty
 
                     fod.createFoodOrder(foodName[i], "1", null, null, null);
 
