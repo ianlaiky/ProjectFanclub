@@ -3,10 +3,10 @@ package docRecord;
 import javax.persistence.*;
 
 /**
- * Created by Ian on 15/12/2016.
+ * Created by Ian on 21/1/2017.
  */
 @Entity
-@Table(name = "doctorrecord", schema = "jedp")
+@Table(name = "doctorrecord", schema = "jedp", catalog = "")
 public class DoctorrecordEntity {
     private String dusername;
     private String dPassword;
