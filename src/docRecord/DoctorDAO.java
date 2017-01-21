@@ -61,7 +61,7 @@ public class DoctorDAO {
 
             if (input.equalsIgnoreCase(list.get(i).getDusername())) {
                 userAvailable = true;
-                if (pass.equalsIgnoreCase(list.get(i).getDusername())) {
+                if (pass.equalsIgnoreCase(list.get(i).getdPassword())) {
                     passCorrect = true;
                     allowUser = true;
                 }

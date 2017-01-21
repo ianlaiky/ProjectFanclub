@@ -26,48 +26,49 @@ public class LoginServlet extends HttpServlet {
         DoctorDAO doctor = new DoctorDAO();
 
 
-        boolean userVerification=false;
+        boolean userVerification = false;
 
-
-        if(username.isEmpty()){
+        System.out.println("running");
+        if (username.isEmpty()) {
 
             response.sendRedirect("errorPage.jsp");
 
-        }else if(username.substring(0,1).equalsIgnoreCase("p")){
+        } else if (username.substring(0, 1).equalsIgnoreCase("p")) {
 
 
-            userVerification = patient.checkPatientUser(username,password);
+            userVerification = patient.checkPatientUser(username, password);
 
 
+        } else if (username.substring(0, 1).equalsIgnoreCase("d")) {
+            System.out.println("pass");
+            userVerification = doctor.checkDoctorUser(username, password);
+            System.out.println(userVerification);
 
-        }else if(username.substring(0,1).equalsIgnoreCase("d")){
-            userVerification = doctor.checkDoctorUser(username,password);
 
-
-        }else{
+        } else {
             response.sendRedirect("errorPage.jsp");
 
         }
 
-if(userVerification){
+        if (userVerification) {
 
-            if(username.substring(0,1).equalsIgnoreCase("p")){
+            if (username.substring(0, 1).equalsIgnoreCase("p")) {
+                session.setAttribute("username",username);
+                session.setAttribute("signIn","true");
                 response.sendRedirect("patientFrontPage.jsp");
 
-            }else if(username.substring(0,1).equalsIgnoreCase("d")){
+            } else if (username.substring(0, 1).equalsIgnoreCase("d")) {
+                session.setAttribute("username",username);
+                session.setAttribute("signIn","true");
                 response.sendRedirect("docFrontPage.jsp");
 
-            }else{
+            } else {
                 response.sendRedirect("errorPage.jsp");
             }
 
-}else{
-    response.sendRedirect("errorPage.jsp");
-}
-
-
-
-
+        } else {
+            response.sendRedirect("errorPage.jsp");
+        }
 
 
 //        session.setAttribute("username",username);
