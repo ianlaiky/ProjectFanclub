@@ -3,32 +3,32 @@ package patientRecord;
 import javax.persistence.*;
 
 /**
- * Created by Ian on 15/12/2016.
+ * Created by Ian on 21/1/2017.
  */
 @Entity
-@Table(name = "patientrecord", schema = "oopdb")
+@Table(name = "patientrecord", schema = "jedp", catalog = "")
 public class PatientrecordEntity {
-    private String password;
-    private String username;
-
-    @Basic
-    @Column(name = "password", nullable = false, length = 45)
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
+    private String pUsername;
+    private String pPassword;
 
     @Id
-    @Column(name = "username", nullable = false, length = 45)
-    public String getUsername() {
-        return username;
+    @Column(name = "pUsername", nullable = false, length = 45)
+    public String getpUsername() {
+        return pUsername;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setpUsername(String pUsername) {
+        this.pUsername = pUsername;
+    }
+
+    @Basic
+    @Column(name = "pPassword", nullable = false, length = 45)
+    public String getpPassword() {
+        return pPassword;
+    }
+
+    public void setpPassword(String pPassword) {
+        this.pPassword = pPassword;
     }
 
     @Override
@@ -38,16 +38,16 @@ public class PatientrecordEntity {
 
         PatientrecordEntity that = (PatientrecordEntity) o;
 
-        if (password != null ? !password.equals(that.password) : that.password != null) return false;
-        if (username != null ? !username.equals(that.username) : that.username != null) return false;
+        if (pUsername != null ? !pUsername.equals(that.pUsername) : that.pUsername != null) return false;
+        if (pPassword != null ? !pPassword.equals(that.pPassword) : that.pPassword != null) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        int result = password != null ? password.hashCode() : 0;
-        result = 31 * result + (username != null ? username.hashCode() : 0);
+        int result = pUsername != null ? pUsername.hashCode() : 0;
+        result = 31 * result + (pPassword != null ? pPassword.hashCode() : 0);
         return result;
     }
 }
