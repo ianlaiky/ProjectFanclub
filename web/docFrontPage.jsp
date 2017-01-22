@@ -123,7 +123,15 @@
                     </div>
                 </div>
             </div>
-            <%--<ul class="nav">--%>
+
+            <ul class="nav">
+            <li>
+                <a href="/logout">
+                    <i class="material-icons">L</i>
+                    <p>Logout</p>
+                </a>
+
+            </li>
                 <%--<li class="active">--%>
                     <%--<a href="index.jsp">--%>
                         <%--<i class="material-icons">dashboard</i>--%>
@@ -277,7 +285,7 @@
                         <%--<p>Calendar</p>--%>
                     <%--</a>--%>
                 <%--</li>--%>
-            <%--</ul>--%>
+            </ul>
         </div>
     </div>
     <div class="main-panel ps-container ps-theme-default ps-active-y" data-ps-id="65ac8db9-de08-275b-5f50-5be114b3ac44">
