@@ -17,6 +17,8 @@ public class DoctorPIDSaveServlet extends HttpServlet {
 
         HttpSession session = request.getSession();
         String a = request.getParameter("hiddenFieldForPID");
+
+        session.setAttribute("doctorPID",a);
         System.out.println(a);
 
 
