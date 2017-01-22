@@ -45,9 +45,6 @@ public class LoginServlet extends HttpServlet {
             System.out.println(userVerification);
 
 
-        } else {
-            response.sendRedirect("errorPage.jsp");
-
         }
 
         if (userVerification) {
