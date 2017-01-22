@@ -65,19 +65,6 @@
 </head>
 
 <body>
-
-<%
-    if(session.getAttribute("signInPatient")==null){
-        response.sendRedirect("errorPage.jsp");
-    }else{
-        if(session.getAttribute("signInPatient").equals("false")){
-            response.sendRedirect("errorPage.jsp");
-        }
-
-    }
-
-%>
-
 <div class="wrapper">
     <div class="sidebar" data-active-color="green" data-background-color="black"
          data-image="../../assets/img/sidebar-1.jpg">
@@ -88,47 +75,47 @@
 -->
         <div class="logo">
             <a href="http://www.creative-tim.com" class="simple-text">
-                Food Diet
+              !Error!
             </a>
         </div>
         <div class="logo logo-mini">
             <a href="http://www.creative-tim.com" class="simple-text">
-                FD
+                Err
             </a>
         </div>
         <div class="sidebar-wrapper ps-container ps-theme-default ps-active-x"
              data-ps-id="27535860-4b1b-c8e5-ec90-4de4d32f70a0">
-            <div class="user">
-                <div class="photo">
-                    <img src="../assets/img/faces/marc.jpg"/>
-                </div>
-                <div class="info">
-                    <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        <%= session.getAttribute("username")%>
-                        <b class="caret"></b>
-                    </a>
-                    <div class="collapse" id="collapseExample">
-                        <ul class="nav">
-                            <li>
-                                <a href="../fooddiet/user/myprofile.jsp">My Profile</a>
-                            </li>
-                            <li>
-                                <a href="#">Edit Profile</a>
-                            </li>
-                            <li>
-                                <a href="#">Settings</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <ul class="nav">
-                <li>
-                    <a href="/logout">
-                        <i class="material-icons">L</i>
-                        <p>Logout</p>
-                    </a>
-                </li>
+            <%--<div class="user">--%>
+                <%--<div class="photo">--%>
+                    <%--<img src="../assets/img/faces/marc.jpg"/>--%>
+                <%--</div>--%>
+                <%--<div class="info">--%>
+                    <%--<a data-toggle="collapse" href="#collapseExample" class="collapsed">--%>
+
+                        <%--<b class="caret"></b>--%>
+                    <%--</a>--%>
+                    <%--<div class="collapse" id="collapseExample">--%>
+                        <%--<ul class="nav">--%>
+                            <%--<li>--%>
+                                <%--<a href="../fooddiet/user/myprofile.jsp">My Profile</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="#">Edit Profile</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="#">Settings</a>--%>
+                            <%--</li>--%>
+                        <%--</ul>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
+            <%--</div>--%>
+            <%--<ul class="nav">--%>
+                <%--<li class="active">--%>
+                    <%--<a href="index.jsp">--%>
+                        <%--<i class="material-icons">dashboard</i>--%>
+                        <%--<p>Dashboard</p>--%>
+                    <%--</a>--%>
+                <%--</li>--%>
                 <%--<li>--%>
                     <%--<a data-toggle="collapse" href="#pagesExamples">--%>
                         <%--<i class="material-icons">image</i>--%>
@@ -276,7 +263,7 @@
                         <%--<p>Calendar</p>--%>
                     <%--</a>--%>
                 <%--</li>--%>
-            </ul>
+            <%--</ul>--%>
         </div>
     </div>
     <div class="main-panel ps-container ps-theme-default ps-active-y" data-ps-id="65ac8db9-de08-275b-5f50-5be114b3ac44">
@@ -299,57 +286,58 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <%--<li>--%>
-                            <%--<a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">--%>
-                                <%--<i class="material-icons">dashboard</i>--%>
-                                <%--<p class="hidden-lg hidden-md">Dashboard</p>--%>
-                            <%--</a>--%>
-                        <%--</li>--%>
-                        <%--<li class="dropdown">--%>
-                            <%--<a href="#" class="dropdown-toggle" data-toggle="dropdown">--%>
-                                <%--<i class="material-icons">notifications</i>--%>
-                                <%--<span class="notification">5</span>--%>
-                                <%--<p class="hidden-lg hidden-md">--%>
-                                    <%--Notifications--%>
-                                    <%--<b class="caret"></b>--%>
-                                <%--</p>--%>
-                            <%--</a>--%>
-                            <%--<ul class="dropdown-menu">--%>
-                                <%--<li>--%>
-                                    <%--<a href="#">Mike John responded to your email</a>--%>
-                                <%--</li>--%>
-                                <%--<li>--%>
-                                    <%--<a href="#">You have 5 new tasks</a>--%>
-                                <%--</li>--%>
-                                <%--<li>--%>
-                                    <%--<a href="#">You're now friend with Andrew</a>--%>
-                                <%--</li>--%>
-                                <%--<li>--%>
-                                    <%--<a href="#">Another Notification</a>--%>
-                                <%--</li>--%>
-                                <%--<li>--%>
-                                    <%--<a href="#">Another One</a>--%>
-                                <%--</li>--%>
-                            <%--</ul>--%>
-                        <%--</li>--%>
-                        <%--<li>--%>
-                            <%--<a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">--%>
-                                <%--<i class="material-icons">person</i>--%>
-                                <%--<p class="hidden-lg hidden-md">Profile</p>--%>
-                            <%--</a>--%>
-                        <%--</li>--%>
-                        <%--<li class="separator hidden-lg hidden-md"></li>--%>
+                        <li>
+                            <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="material-icons">dashboard</i>
+                                <p class="hidden-lg hidden-md">Dashboard</p>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="material-icons">notifications</i>
+                                <span class="notification">5</span>
+                                <p class="hidden-lg hidden-md">
+                                    Notifications
+                                    <b class="caret"></b>
+                                </p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">Mike John responded to your email</a>
+                                </li>
+                                <li>
+                                    <a href="#">You have 5 new tasks</a>
+                                    <a href="#">You have 5 new tasks</a>
+                                </li>
+                                <li>
+                                    <a href="#">You're now friend with Andrew</a>
+                                </li>
+                                <li>
+                                    <a href="#">Another Notification</a>
+                                </li>
+                                <li>
+                                    <a href="#">Another One</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="material-icons">person</i>
+                                <p class="hidden-lg hidden-md">Profile</p>
+                            </a>
+                        </li>
+                        <li class="separator hidden-lg hidden-md"></li>
                     </ul>
-                    <%--<form class="navbar-form navbar-right" role="search">--%>
-                        <%--<div class="form-group form-search is-empty">--%>
-                            <%--<input type="text" class="form-control" placeholder="Search">--%>
-                            <%--<span class="material-input"></span>--%>
-                        <%--</div>--%>
-                        <%--<button type="submit" class="btn btn-white btn-round btn-just-icon">--%>
-                            <%--<i class="material-icons">search</i>--%>
-                            <%--<div class="ripple-container"></div>--%>
-                        <%--</button>--%>
-                    <%--</form>--%>
+                    <form class="navbar-form navbar-right" role="search">
+                        <div class="form-group form-search is-empty">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <span class="material-input"></span>
+                        </div>
+                        <button type="submit" class="btn btn-white btn-round btn-just-icon">
+                            <i class="material-icons">search</i>
+                            <div class="ripple-container"></div>
+                        </button>
+                    </form>
                 </div>
             </div>
         </nav>
@@ -358,13 +346,12 @@
                 <div class="col-sm-8 col-sm-offset-2">
                     <%--<!-- Insert all the awesome body content here--%>
 
-                    <a href="fooddiet/index.jsp"><img src="assets/img/foodDietF.png" class="frontPageRounded"></a>
-                    <a href="foodorder/index.jsp"><img src="assets/img/orderFoodF.png" class="frontPageRounded"> </a>
-                    <a href="onlinequeuesystem/queue.jsp"><img src="assets/img/queue-512.png" class="frontPageRounded"></a>
-                    <a href="videoconference/patientVideo.jsp"><img src="assets/img/videoConferenceF.png"
-                                                                    class="frontPageRounded"></a>
-                    <a href="vistorbookingsystem/vistorbooking.jsp"><img src="assets/img/visitorbookingF.png"
-                                                                         class="frontPageRounded"></a>
+                   <h1>You have been logged out</h1> <br>
+
+                       <h1><a href="index.html">Login</a></h1>
+
+
+
 
 
                     <%---->--%>
