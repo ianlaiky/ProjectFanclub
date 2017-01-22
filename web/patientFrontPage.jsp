@@ -358,7 +358,7 @@
                 <div class="col-sm-8 col-sm-offset-2">
                     <%--<!-- Insert all the awesome body content here--%>
 
-                    <a href="fooddiet/index.jsp"><img src="assets/img/foodDietF.png" class="frontPageRounded"></a>
+                    <a href="fooddiet/user/myprofile.jsp"><img src="assets/img/foodDietF.png" class="frontPageRounded"></a>
                     <a href="foodorder/index.jsp"><img src="assets/img/orderFoodF.png" class="frontPageRounded"> </a>
                     <a href="onlinequeuesystem/queue.jsp"><img src="assets/img/queue-512.png" class="frontPageRounded"></a>
                     <a href="videoconference/pidNewFrontPatient.jsp"><img src="assets/img/videoConferenceF.png" class="frontPageRounded"></a>
