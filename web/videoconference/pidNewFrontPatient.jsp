@@ -279,7 +279,7 @@
                                     <!-- Make calls to others -->
                                     <%--<div id="step2">--%>
                                         <p>Your id: <span id="my-id">...</span></p>
-                                        <form  method="post" action="/patientpid">
+                                        <form  method="post" action="/patientPIDSav">
                                             <input id="hiddenFieldForPID" name="hiddenFieldForPID"/>
                                             <input type="submit">
                                         </form>

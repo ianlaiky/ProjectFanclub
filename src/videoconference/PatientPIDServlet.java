@@ -11,16 +11,16 @@ import java.io.IOException;
 /**
  * Created by Ian on 22/1/2017.
  */
-@WebServlet(name = "PatientPIDSaveServlet", urlPatterns = "/patientpid")
-public class PatientPIDSaveServlet extends HttpServlet {
+@WebServlet(name = "PatientPIDServlet", urlPatterns = "/patientPIDSav")
+public class PatientPIDServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        HttpSession session = request.getSession();
-        String a = request.getParameter("hiddenFieldForPID");
-
-        session.setAttribute("patientPID",a);
-        response.sendRedirect("patientVideo.jsp");
-        System.out.println(a);
+        System.out.println("test");
+//        HttpSession session = request.getSession();
+//        String a = request.getParameter("hiddenFieldForPID");
+//
+//        session.setAttribute("patientPID",a);
+//        response.sendRedirect("patientVideo.jsp");
+//        System.out.println(a);
         return;
 
 
