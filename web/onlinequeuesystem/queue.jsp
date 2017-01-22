@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-s
+
 <!doctype html>
 <html lang="en">
 
@@ -86,7 +86,7 @@ s
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        Aravin
+                        <%= session.getAttribute("username") %>
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
