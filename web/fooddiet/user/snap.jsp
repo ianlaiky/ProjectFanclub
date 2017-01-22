@@ -174,6 +174,17 @@
 </head>
 
 <body>
+<%
+    if(session.getAttribute("signInPatient")==null){
+        response.sendRedirect("errorPage.jsp");
+    }else{
+        if(session.getAttribute("signInPatient").equals("false")){
+            response.sendRedirect("errorPage.jsp");
+        }
+
+    }
+
+%>
 <div class="wrapper">
     <div class="sidebar" data-active-color="green" data-background-color="black"
          data-image="../../assets/img/sidebar-1.jpg">
@@ -234,7 +245,7 @@
                     <div class="collapse in" id="pagesExamples">
                         <ul class="nav">
                             <li class="active">
-                                <a href="../pages/pricing.html">Snap</a>
+                                <a href="#">Snap</a>
                             </li>
                             <li>
                                 <a href="../pages/timeline.html">Food Content</a>
@@ -244,39 +255,18 @@
                     </div>
                 </li>
                 <li>
-                    <a data-toggle="collapse" href="#componentsExamples">
+                    <a href="../../logout.jsp">
                         <i class="material-icons">apps</i>
-                        <p>Components
-                            <b class="caret"></b>
-                        </p>
+                        <p>About</p>
                     </a>
-                    <div class="collapse" id="componentsExamples">
-                        <ul class="nav">
-                            <li>
-                                <a href="../components/buttons.html">Buttons</a>
-                            </li>
-                            <li>
-                                <a href="../components/grid.html">Grid System</a>
-                            </li>
-                            <li>
-                                <a href="../components/panels.html">Panels</a>
-                            </li>
-                            <li>
-                                <a href="../components/sweet-alert.html">Sweet Alert</a>
-                            </li>
-                            <li>
-                                <a href="../components/notifications.html">Notifications</a>
-                            </li>
-                            <li>
-                                <a href="../components/icons.html">Icons</a>
-                            </li>
-                            <li>
-                                <a href="../components/typography.html">Typography</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
 
+                </li>
+                <li>
+                    <a href="../../logout.jsp">
+                        <i class="material-icons">exit_to_app</i>
+                        <p>Logout</p>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
