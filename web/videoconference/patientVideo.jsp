@@ -55,20 +55,17 @@
     <style>
 
 
-
         .card {
             display: inline-block;
             position: relative;
             width: 130%;
-            left:-150px;
+            left: -150px;
             margin: 25px 0;
             box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
             border-radius: 6px;
             color: rgba(0, 0, 0, 0.87);
             background: #fff;
         }
-
-
 
         .wizard-card {
             min-height: 410px;
@@ -145,7 +142,7 @@
                         </ul>
                     </div>
                 </li>
-               </li>
+                </li>
             </ul>
         </div>
     </div>
@@ -229,22 +226,95 @@
                     <!--      Wizard container        -->
 
 
-
-
-
-
                     <div class="wizard-container">
                         <div class="card wizard-card" data-color="green" id="wizardProfile">
                             <link rel="stylesheet" href="style.css">
                             <script src="http://cdn.peerjs.com/0.3/peer.min.js"></script>
-                            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-                            <script src="video.js"></script>
+                            <script type="text/javascript"
+                                    src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+                            <script>
+                                // Compatibility shim
+                                navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+                                // PeerJS object
+                                var peer = new Peer('<%=session.getAttribute("patientPID")%>',{key: 'ezdeolfd1x7p66r', debug: 3});
+                                peer.on('open', function () {
+                                    $('#my-id').text(peer.id);
+
+                                    $('#hiddenFieldForPID').text(peer.id);
+                                });
+                                // Receiving a call
+                                peer.on('call', function (call) {
+                                    // Answer the call automatically (instead of prompting user) for demo purposes
+
+                                    var r = confirm("Answer Call?");
+                                    if (r == true) {
+                                        console.log("Confrimed")
+                                        call.answer(window.localStream);
+                                        step3(call);
+                                    }
+
+
+                                });
+                                peer.on('error', function (err) {
+                                    alert(err.message);
+                                    // Return to step 2 if error occurs
+                                    step2();
+                                });
+                                // Click handlers setup
+                                $(function () {
+                                    $('#make-call').click(function () {
+                                        // Initiate a call!
+                                        var call = peer.call('projectfanclub161215', window.localStream);
+                                        step3(call);
+                                    });
+                                    $('#end-call').click(function () {
+                                        window.existingCall.close();
+                                        step2();
+                                    });
+                                    // Retry if getUserMedia fails
+                                    $('#step1-retry').click(function () {
+                                        $('#step1-error').hide();
+                                        step1();
+                                    });
+                                    // Get things started
+                                    step1();
+                                });
+                                function step1() {
+                                    // Get audio/video stream
+                                    navigator.getUserMedia({audio: true, video: true}, function (stream) {
+                                        // Set your video displays
+                                        $('#my-video').prop('src', URL.createObjectURL(stream));
+                                        window.localStream = stream;
+                                        step2();
+                                    }, function () {
+                                        $('#step1-error').show();
+                                    });
+                                }
+                                function step2() {
+
+                                    $('#step1, #step3').hide();
+                                    $('#step2').show();
+                                }
+                                function step3(call) {
+                                    // Hang up on an existing call if present
+                                    if (window.existingCall) {
+                                        window.existingCall.close();
+                                    }
+                                    // Wait for stream on the call, then set peer video display
+                                    call.on('stream', function (stream) {
+                                        $('#their-video').prop('src', URL.createObjectURL(stream));
+                                    });
+                                    // UI stuff
+                                    window.existingCall = call;
+                                    $('#their-id').text(call.peer);
+                                    call.on('close', step2);
+                                    $('#step1, #step2').hide();
+                                    $('#step3').show();
+                                }</script>
 
                             <%--pid js to jsp--%>
                             <input type="hidden" id="hiddenFieldForPID"/>
 
-                            <% String test = request.getParameter("hiddenFieldForPID");%>
-                            tr<%= test%>
 
                             <div class="pure-g">
 
@@ -261,11 +331,14 @@
 
                                     <!-- Get local audio/video stream -->
                                     <div id="step1">
-                                        <p>Please click `allow` on the top of the screen so we can access your webcam and microphone for calls.</p>
+                                        <p>Please click `allow` on the top of the screen so we can access your webcam
+                                            and microphone for calls.</p>
                                         <div id="step1-error">
-                                            <p>Failed to access the webcam and microphone. Make sure to run this demo on an http server and click
+                                            <p>Failed to access the webcam and microphone. Make sure to run this demo on
+                                                an http server and click
                                                 allow when asked for permission by the browser.</p>
-                                            <a href="#" class="pure-button pure-button-error" id="step1-retry">Try again</a>
+                                            <a href="#" class="pure-button pure-button-error" id="step1-retry">Try
+                                                again</a>
                                         </div>
                                     </div>
 
@@ -283,7 +356,8 @@
                                     <!-- Call in progress -->
                                     <div id="step3">
                                         <p>Currently in call with <span id="their-id">...</span></p>
-                                        <p><a href="#" class="pure-button pure-button-error" id="end-call">End call</a></p>
+                                        <p><a href="#" class="pure-button pure-button-error" id="end-call">End call</a>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -311,7 +385,6 @@
                             <br>
                             <br>
                             <br>
-
 
 
                         </div>

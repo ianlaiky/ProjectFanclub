@@ -1,4 +1,4 @@
-package videoConference;
+package videoconference;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import java.util.List;

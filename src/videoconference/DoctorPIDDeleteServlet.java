@@ -1,4 +1,4 @@
-package videoConference;
+package videoconference;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,15 +11,12 @@ import java.io.IOException;
 /**
  * Created by Ian on 22/1/2017.
  */
-@WebServlet(name = "PatientPIDSaveServlet", urlPatterns = "/doctorPIDSave")
-public class DoctorPIDSaveServlet extends HttpServlet {
+@WebServlet(name = "PatientPIDSaveServlet", urlPatterns = "/doctorPIDDelete")
+public class DoctorPIDDeleteServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         HttpSession session = request.getSession();
-        String a = request.getParameter("hiddenFieldForPID");
 
-        session.setAttribute("doctorPID",a);
-        System.out.println(a);
 
 
     }
