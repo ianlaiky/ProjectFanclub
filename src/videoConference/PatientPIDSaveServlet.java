@@ -1,4 +1,4 @@
-package login;
+package videoConference;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,18 +11,18 @@ import java.io.IOException;
 /**
  * Created by Ian on 22/1/2017.
  */
-@WebServlet(name = "LogoutServlet", urlPatterns = "/logout")
-public class LogoutServlet extends HttpServlet {
+@WebServlet(name = "PatientPIDSaveServlet", urlPatterns = "/patientPIDSave")
+public class PatientPIDSaveServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        HttpSession session = request.getSession();
+        String a = request.getParameter("hiddenFieldForPID");
+        System.out.println(a);
+
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        HttpSession session = request.getSession();
-        session.invalidate();
-        response.sendRedirect("logout.jsp");
-        return;
 
     }
 }

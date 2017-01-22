@@ -10,6 +10,8 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
 var peer = new Peer({key: 'ezdeolfd1x7p66r', debug: 3});
 peer.on('open', function () {
     $('#my-id').text(peer.id);
+
+    $('#hiddenFieldForPID').text(peer.id);
 });
 // Receiving a call
 peer.on('call', function (call) {

@@ -71,6 +71,7 @@
         response.sendRedirect("errorPage.jsp");
     }else{
         if(session.getAttribute("signInDoctor").equals("false")){
+            System.out.println("false ran");
             response.sendRedirect("errorPage.jsp");
         }
 
@@ -368,7 +369,7 @@
                     <%--<!-- Insert all the awesome body content here--%>
 
 
-                <a href="videoconference/docVideo.jsp"><img src="assets/img/videoConferenceF.png" class="frontPageRounded"></a>
+                <a href="videoconference/pidNewFrontDoctor.jsp"><img src="assets/img/videoConferenceF.png" class="frontPageRounded"></a>
 
 
 

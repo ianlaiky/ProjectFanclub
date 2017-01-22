@@ -30,8 +30,10 @@ public class LoginServlet extends HttpServlet {
 
         System.out.println("running");
         if (username.isEmpty()) {
+            System.out.println("alr ran");
 
             response.sendRedirect("errorPage.jsp");
+            return;
 
         } else if (username.substring(0, 1).equalsIgnoreCase("p")) {
 
@@ -54,19 +56,24 @@ public class LoginServlet extends HttpServlet {
                 session.setAttribute("signInPatient","true");
 //                session.setAttribute("signInGlobal","true");
                 response.sendRedirect("patientFrontPage.jsp");
+                return;
 
             } else if (username.substring(0, 1).equalsIgnoreCase("d")) {
                 session.setAttribute("username",username);
                 session.setAttribute("signInDoctor","true");
 //                session.setAttribute("signInGlobal","true");
                 response.sendRedirect("docFrontPage.jsp");
+                return;
 
             } else {
                 response.sendRedirect("errorPage.jsp");
+                return;
             }
 
         } else {
+            System.out.println("ran agn");
             response.sendRedirect("errorPage.jsp");
+            return;
         }
 
 

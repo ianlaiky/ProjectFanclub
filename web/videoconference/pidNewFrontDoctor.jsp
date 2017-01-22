@@ -238,53 +238,65 @@
                             <link rel="stylesheet" href="style.css">
                             <script src="http://cdn.peerjs.com/0.3/peer.min.js"></script>
                             <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-                            <script src="video.js"></script>
+                            <script>
+                                navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+                            // PeerJS object
+                            var peer = new Peer({key: 'ezdeolfd1x7p66r', debug: 3});
+                            peer.on('open', function () {
+                                $('#my-id').text(peer.id);
+
+                                $('#hiddenFieldForPID').val(peer.id);
+                            });</script>
 
                             <%--pid js to jsp--%>
-                            <input type="hidden" id="hiddenFieldForPID"/>
 
-                            <% String test = request.getParameter("hiddenFieldForPID");%>
-                            tr<%= test%>
+
+
 
                             <div class="pure-g">
 
                                 <!-- Video area -->
-                                <div class="pure-u-2-3" id="video-container">
+                                <%--<div class="pure-u-2-3" id="video-container">--%>
 
-                                    <video id="their-video" autoplay></video>
-                                    <video id="my-video" muted="true" autoplay></video>
-                                </div>
+                                    <%--<video id="their-video" autoplay></video>--%>
+                                    <%--<video id="my-video" muted="true" autoplay></video>--%>
+                                <%--</div>--%>
 
                                 <!-- Steps -->
                                 <div class="pure-u-1-3">
-                                    <h2>Web Calling</h2>
+                                    <%--<h2>Web Calling</h2>--%>
 
                                     <!-- Get local audio/video stream -->
-                                    <div id="step1">
-                                        <p>Please click `allow` on the top of the screen so we can access your webcam and microphone for calls.</p>
-                                        <div id="step1-error">
-                                            <p>Failed to access the webcam and microphone. Make sure to run this demo on an http server and click
-                                                allow when asked for permission by the browser.</p>
-                                            <a href="#" class="pure-button pure-button-error" id="step1-retry">Try again</a>
-                                        </div>
-                                    </div>
+                                    <%--<div id="step1">--%>
+                                        <%--<p>Please click `allow` on the top of the screen so we can access your webcam and microphone for calls.</p>--%>
+                                        <%--<div id="step1-error">--%>
+                                            <%--<p>Failed to access the webcam and microphone. Make sure to run this demo on an http server and click--%>
+                                                <%--allow when asked for permission by the browser.</p>--%>
+                                            <%--<a href="#" class="pure-button pure-button-error" id="step1-retry">Try again</a>--%>
+                                        <%--</div>--%>
+                                    <%--</div>--%>
 
                                     <!-- Make calls to others -->
-                                    <div id="step2">
+                                    <%--<div id="step2">--%>
                                         <p>Your id: <span id="my-id">...</span></p>
-                                        <%--<p>Share this id with others so they can call you.</p>--%>
-                                        <%--<h3>Make a call</h3>--%>
-                                        <div class="pure-form">
-                                            <%--<input type="text" placeholder="Call user id..." id="callto-id">--%>
-                                            <a href="#" class="pure-button pure-button-success" id="make-call">Call</a>
-                                        </div>
-                                    </div>
+                                        <form  method="post" action="/doctorPIDSave">
+                                            <input id="hiddenFieldForPID" name="hiddenFieldForPID"/>
+                                            <input type="submit">
+                                        </form>
+
+                                        <%--&lt;%&ndash;<p>Share this id with others so they can call you.</p>&ndash;%&gt;--%>
+                                        <%--&lt;%&ndash;<h3>Make a call</h3>&ndash;%&gt;--%>
+                                        <%--<div class="pure-form">--%>
+                                            <%--&lt;%&ndash;<input type="text" placeholder="Call user id..." id="callto-id">&ndash;%&gt;--%>
+                                            <%--<a href="#" class="pure-button pure-button-success" id="make-call">Call</a>--%>
+                                        <%--</div>--%>
+                                    <%--</div>--%>
 
                                     <!-- Call in progress -->
-                                    <div id="step3">
-                                        <p>Currently in call with <span id="their-id">...</span></p>
-                                        <p><a href="#" class="pure-button pure-button-error" id="end-call">End call</a></p>
-                                    </div>
+                                    <%--<div id="step3">--%>
+                                        <%--<p>Currently in call with <span id="their-id">...</span></p>--%>
+                                        <%--<p><a href="#" class="pure-button pure-button-error" id="end-call">End call</a></p>--%>
+                                    <%--</div>--%>
                                 </div>
                             </div>
 
