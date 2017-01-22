@@ -51,12 +51,14 @@ public class LoginServlet extends HttpServlet {
 
             if (username.substring(0, 1).equalsIgnoreCase("p")) {
                 session.setAttribute("username",username);
-                session.setAttribute("signIn","true");
+                session.setAttribute("signInPatient","true");
+//                session.setAttribute("signInGlobal","true");
                 response.sendRedirect("patientFrontPage.jsp");
 
             } else if (username.substring(0, 1).equalsIgnoreCase("d")) {
                 session.setAttribute("username",username);
-                session.setAttribute("signIn","true");
+                session.setAttribute("signInDoctor","true");
+//                session.setAttribute("signInGlobal","true");
                 response.sendRedirect("docFrontPage.jsp");
 
             } else {

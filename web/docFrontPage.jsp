@@ -65,6 +65,19 @@
 </head>
 
 <body>
+
+<%
+    if(session.getAttribute("signInDoctor")==null){
+        response.sendRedirect("errorPage.jsp");
+    }else{
+        if(session.getAttribute("signInDoctor").equals("false")){
+            response.sendRedirect("errorPage.jsp");
+        }
+
+    }
+
+%>
+
 <div class="wrapper">
     <div class="sidebar" data-active-color="green" data-background-color="black"
          data-image="../../assets/img/sidebar-1.jpg">
