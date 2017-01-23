@@ -253,7 +253,7 @@
                                     <div class="row">
                                         <label class="col-sm-2 label-on-left">Physical Activity Intensity</label>
                                         <div class="col-lg-7 col-md-6 col-sm-3">
-                                            <select class="selectpicker" data-style="select-with-transition" title="Choose City" data-size="4">
+                                            <select class="selectpicker" data-style="select-with-transition" title="Choose Physical Activity Intensity" data-size="4">
                                                 <option disabled> Choose an intensity best suit you</option>
                                                 <option value="2">Sedentary </option>
                                                 <option value="3">Moderately Active</option>

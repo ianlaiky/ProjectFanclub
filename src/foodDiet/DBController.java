@@ -30,7 +30,7 @@ public class DBController {
     public void getConnection() {
         String url = "";
         try {
-            url = "jdbc:mysql://localhost/oopdb";
+            url = "jdbc:mysql://localhost/jedp";
             con = DriverManager.getConnection(url, "root", "IT1639");
             System.out.println("Successfully connected to " + url + ".");
         } catch (java.sql.SQLException e) {

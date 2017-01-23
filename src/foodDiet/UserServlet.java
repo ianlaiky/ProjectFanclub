@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.text.DecimalFormat;
 
 /**
  * Created by Ying on 15/12/2016.
@@ -32,22 +33,22 @@ public class UserServlet extends HttpServlet {
         }
         String rbtn2 = request.getParameter("intensity");
         String intensity = "";
-        if(rbtn.equals("sedentary")){
+        if(rbtn2.equals("sedentary")){
             intensity = "sedentary";
-        }else if(rbtn.equals("moderate")){
+        }else if(rbtn2.equals("moderate")){
             intensity = "moderate";
-        }else if(rbtn.equals("active")){
+        }else if(rbtn2.equals("active")){
             intensity = "active";
         }
 
         double height = Double.parseDouble(request.getParameter("height"));
         double weight= Double.parseDouble(request.getParameter("weight"));
-
+        DecimalFormat df = new DecimalFormat("##.#");
         db.createUser(UserDAO.getNextUserId(),name,age,gender,intensity,height,weight,
                 Utility.calCalories(weight,height,age,gender,intensity),Utility.calProtein(weight,height,age
-                        ,gender),Utility.calCarbo(weight,height,age,gender
-                       ),Utility.calFat(weight,height,age,gender),0,0,0, 0);
+                        ,gender,intensity),Utility.calCarbo(weight,height,age,gender,intensity
+                       ),Utility.calFat(weight,height,age,gender,intensity),0,0,0, 0);
 
-        getServletContext().getRequestDispatcher("/editprofile.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/fooddiet/user/editprofile.jsp").forward(request, response);
     }
 }
