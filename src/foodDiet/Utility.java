@@ -23,7 +23,7 @@ public class Utility {
 
     } */
 
-    public static double calCalories(double weight, double height, int age, String gender, String intensity){
+    public static double calCalories(double weight, int height, int age, String gender, String intensity){
 
         double bmr=0;
         double cal=0;
@@ -44,21 +44,21 @@ public class Utility {
 
     }
 
-    public static double calProtein(double weight, double height, int age, String gender, String intensity){
+    public static double calProtein(double weight, int height, int age, String gender, String intensity){
         double protein =0;
         protein = calCalories(weight,height,age,gender,intensity) * 0.25;
         protein = convertProteinCalToGrams(protein);
         protein  = Double.parseDouble(dfNutrient.format(protein));
         return protein;
     }
-    public static double calCarbo(double weight, double height, int age, String gender, String intensity){
+    public static double calCarbo(double weight, int height, int age, String gender, String intensity){
         double carbo =0;
         carbo = calCalories(weight,height,age,gender,intensity) * 0.55;
         carbo = convertCarboCalToGrams(carbo);
         carbo  = Double.parseDouble(dfNutrient.format(carbo));
         return carbo;
     }
-    public static double calFat(double weight, double height, int age, String gender ,String intensity){
+    public static double calFat(double weight,int height, int age, String gender ,String intensity){
         double fat =0;
         fat = calCalories(weight,height,age,gender,intensity) * 0.2;
         fat = convertFatCalToGrams(fat);

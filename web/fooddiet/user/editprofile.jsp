@@ -1,4 +1,5 @@
-<%--
+<%@ page import="foodDiet.UserDAO" %>
+<%@ page import="foodDiet.User" %><%--
   Created by IntelliJ IDEA.
   User: Ying
   Date: 14/12/2016
@@ -62,6 +63,10 @@
 
     }
 
+%>
+<%
+    UserDAO db = new UserDAO();
+    User user = db.retrieveUserByUsername(session.getAttribute("username").toString());
 %>
 <div class="wrapper">
     <div class="sidebar" data-active-color="green" data-background-color="black" data-image="../../assets/img/sidebar-1.jpg">
@@ -235,7 +240,7 @@
                                         <div class="col-sm-7">
                                             <div class="form-group label-floating">
                                                 <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="required" required="true" />
+                                                <input class="form-control" type="text" name="required" value="<%=user.getUname()%>" required="true" />
                                             </div>
                                         </div>
 
@@ -245,7 +250,7 @@
                                         <div class="col-sm-7">
                                             <div class="form-group label-floating">
                                                 <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="number" number="true" />
+                                                <input class="form-control" type="text" name="number" value="<%=user.getAge()%>" number="true" />
                                             </div>
                                         </div>
                                     </div>
@@ -283,7 +288,7 @@
                                             <div class="col-xs-5">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label"></label>
-                                                    <input class="form-control" type="text" name="number" number="true" />
+                                                    <input class="form-control" type="text" name="number" value="<%=user.getHeight()%>" number="true" />
                                                 </div>
                                             </div>
                                             <label class="col-xs-2 label-on-right">
@@ -299,7 +304,7 @@
                                             <div class="col-xs-5">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label"></label>
-                                                    <input class="form-control" type="text" name="number" number="true" />
+                                                    <input class="form-control" type="text" name="number" value="<%=user.getWeight()%>" number="true" />
                                                 </div>
                                             </div>
                                             <label class="col-xs-2 label-on-right">

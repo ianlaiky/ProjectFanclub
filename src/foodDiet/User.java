@@ -9,7 +9,7 @@ public class User {
     private int age;
     private String gender;
     private String intensity;
-    private double uheight;
+    private int uheight;
     private double weight;
     private double dailyCalories;
     private double dailyProtein;
@@ -25,7 +25,7 @@ public class User {
         this.userId = userId;
     }
 
-    public User(int userId, String uname, int age, String gender, String intensity, double uheight, double weight, double dailyCalories, double dailyProtein, double dailyCarbo, double dailyFat, double curCalories, double curProtein, double curFat, double curCarbo) {
+    public User(int userId, String uname, int age, String gender, String intensity, int uheight, double weight, double dailyCalories, double dailyProtein, double dailyCarbo, double dailyFat, double curCalories, double curProtein, double curFat, double curCarbo) {
         this.userId = userId;
         this.uname = uname;
         this.age = age;
@@ -41,6 +41,15 @@ public class User {
         this.curProtein = curProtein;
         this.curFat = curFat;
         this.curCarbo = curCarbo;
+    }
+    public User(int userId, String uname, int age, String gender, String intensity, int uheight, double weight) {
+        this.userId = userId;
+        this.uname = uname;
+        this.age = age;
+        this.gender = gender;
+        this.intensity = intensity;
+        this.uheight = uheight;
+        this.weight = weight;
     }
 
     public int getUserId() {
@@ -83,11 +92,11 @@ public class User {
         this.intensity = intensity;
     }
 
-    public double getHeight() {
+    public int getHeight() {
         return uheight;
     }
 
-    public void setHeight(double uheight) {
+    public void setHeight(int uheight) {
         this.uheight = uheight;
     }
 
