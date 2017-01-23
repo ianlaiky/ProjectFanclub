@@ -15,12 +15,12 @@ import java.io.IOException;
 public class PatientPIDServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("test");
-//        HttpSession session = request.getSession();
-//        String a = request.getParameter("hiddenFieldForPID");
-//
-//        session.setAttribute("patientPID",a);
-//        response.sendRedirect("patientVideo.jsp");
-//        System.out.println(a);
+        HttpSession session = request.getSession();
+        String a = request.getParameter("hiddenFieldForPID");
+
+        session.setAttribute("patientPID",a);
+        response.sendRedirect("videoconference/patientVideo.jsp");
+        System.out.println(a);
         return;
 
 
