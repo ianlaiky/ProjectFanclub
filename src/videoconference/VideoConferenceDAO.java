@@ -1,8 +1,11 @@
 package videoconference;
+
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
 /**
  * Created by Ian on 22/1/2017.
  */
@@ -15,27 +18,28 @@ public class VideoConferenceDAO {
     }
 
 
-
     public List<VideoconferenceEntity> getSpecificPatrientPID(String user) {
-        List<VideoconferenceEntity> list = null;
+        List<VideoconferenceEntity> list = new ArrayList<>();
 
-        try {
+//        try {
             Query query = em.createQuery("select a from VideoconferenceEntity a where a.username = :p ");
-            query.setParameter("p",user).getSingleResult();
+            query.setParameter("p", user).getSingleResult();
             list = query.getResultList();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
         return list;
 
     }
 
-    public boolean deleteViaPatientUsername(String username){
+    public boolean deleteViaPatientUsername(String username) {
 //        boolean suc = false;
 
 
-        Query query = em.createQuery("delete from VideoconferenceEntity c where c.username = :u");
-        query.setParameter("u",username).executeUpdate();
+        VideoconferenceEntity vid = em.find(VideoconferenceEntity.class, username);
+        em.getTransaction().begin();
+        em.remove(vid);
+        em.getTransaction().commit();
 
         return true;
 
@@ -81,9 +85,9 @@ public class VideoConferenceDAO {
 
     }
 
-    public VideoconferenceEntity createPIDPatient(String user,String pid, String typeOfUser){
+    public VideoconferenceEntity createPIDPatient(String user, String pid, String typeOfUser) {
 
-        VideoconferenceEntity vid = new VideoconferenceEntity(user,pid,typeOfUser);
+        VideoconferenceEntity vid = new VideoconferenceEntity(user, pid, typeOfUser);
 
         em.getTransaction().begin();
         em.persist(vid);
@@ -93,14 +97,7 @@ public class VideoConferenceDAO {
         return null;
 
 
-
-
     }
-
-
-
-
-
 
 
 }
