@@ -86,7 +86,7 @@
                     <img src="../../assets/img/faces/marc.jpg" />
                 </div>
                 <div class="info">
-                    <a data-toggle="collapse" href="#collapseExample" class="collapsed">
+                    <a data-toggle="collapse" href="#collapseExample" class="collapsed" aria-expanded="true">
                         <%=session.getAttribute("username")%>
                         <b class="caret"></b>
                     </a>
@@ -138,7 +138,7 @@
 
                 </li>
                 <li>
-                    <a href="../../logout.jsp">
+                    <a href="/logout">
                         <i class="material-icons">exit_to_app</i>
                         <p>Logout</p>
                     </a>

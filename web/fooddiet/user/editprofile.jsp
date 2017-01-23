@@ -138,7 +138,7 @@
 
                 </li>
                 <li>
-                    <a href="../../logout.jsp">
+                    <a href="/logout">
                         <i class="material-icons">exit_to_app</i>
                         <p>Logout</p>
                     </a>
