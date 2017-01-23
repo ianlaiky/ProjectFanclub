@@ -21,13 +21,13 @@ public class VideoConferenceDAO {
     public List<VideoconferenceEntity> getSpecificPatrientPID(String user) {
         List<VideoconferenceEntity> list = new ArrayList<>();
 
-//        try {
+        try {
             Query query = em.createQuery("select a from VideoconferenceEntity a where a.username = :p ");
             query.setParameter("p", user).getSingleResult();
             list = query.getResultList();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return list;
 
     }
