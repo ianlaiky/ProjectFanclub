@@ -331,8 +331,8 @@
 
                                     <!-- Get local audio/video stream -->
                                     <div id="step1">
-                                        <p>Please click `allow` on the top of the screen so we can access your webcam
-                                            and microphone for calls.</p>
+                                        <%--<p>Please click `allow` on the top of the screen so we can access your webcam--%>
+                                            <%--and microphone for calls.</p>--%>
                                         <div id="step1-error">
                                             <p>Failed to access the webcam and microphone. Make sure to run this demo on
                                                 an http server and click
@@ -347,10 +347,10 @@
                                         <p>Your id: <span id="my-id">...</span></p>
                                         <%--<p>Share this id with others so they can call you.</p>--%>
                                         <%--<h3>Make a call</h3>--%>
-                                        <div class="pure-form">
-                                            <%--<input type="text" placeholder="Call user id..." id="callto-id">--%>
-                                            <a href="#" class="pure-button pure-button-success" id="make-call">Call</a>
-                                        </div>
+                                        <%--<div class="pure-form">--%>
+                                            <%--&lt;%&ndash;<input type="text" placeholder="Call user id..." id="callto-id">&ndash;%&gt;--%>
+                                            <%--<a href="#" class="pure-button pure-button-success" id="make-call">Call</a>--%>
+                                        <%--</div>--%>
                                     </div>
 
                                     <!-- Call in progress -->

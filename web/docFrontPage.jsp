@@ -126,13 +126,12 @@
             </div>
 
             <ul class="nav">
-            <li>
-                <a href="/logout">
-                    <i class="material-icons">L</i>
-                    <p>Logout</p>
-                </a>
-
-            </li>
+                <li>
+                    <a href="/logout">
+                        <i class="material-icons">exit_to_app</i>
+                        <p>Logout</p>
+                    </a>
+                </li>
                 <%--<li class="active">--%>
                     <%--<a href="index.jsp">--%>
                         <%--<i class="material-icons">dashboard</i>--%>

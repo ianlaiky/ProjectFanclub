@@ -12,6 +12,15 @@ public class VideoconferenceEntity {
     private String pid;
     private String typeOfUser;
 
+    public VideoconferenceEntity() {
+    }
+
+    public VideoconferenceEntity(String username, String pid, String typeOfUser) {
+        this.username = username;
+        this.pid = pid;
+        this.typeOfUser = typeOfUser;
+    }
+
     @Id
     @Column(name = "username", nullable = false, length = 45)
     public String getUsername() {
