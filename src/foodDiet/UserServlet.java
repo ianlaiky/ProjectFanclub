@@ -41,7 +41,7 @@ public class UserServlet extends HttpServlet {
             intensity = "active";
         }
 
-        double height = Double.parseDouble(request.getParameter("height"));
+        int height = Integer.parseInt(request.getParameter("height"));
         double weight= Double.parseDouble(request.getParameter("weight"));
         DecimalFormat df = new DecimalFormat("##.#");
         db.createUser(UserDAO.getNextUserId(),name,age,gender,intensity,height,weight,

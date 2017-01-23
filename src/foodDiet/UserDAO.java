@@ -39,6 +39,22 @@ public class UserDAO {
         return userId;
     }
 
+    private static User convertToUserParticular(ResultSet rs) throws SQLException {
+        User user;
+
+        int userId = rs.getInt("userId");
+        String uname= rs.getString("uname");
+        int age = rs.getInt("age");
+        String gender= rs.getString("gender");
+        String intensity = rs.getString("intensity");
+        int uheight = rs.getInt("uheight");
+        double weight = rs.getDouble("weight");
+
+
+        user = new User(userId, uname, age, gender,  intensity,  uheight, weight);
+
+        return user;
+    }
     private static User convertToUser(ResultSet rs) throws SQLException {
         User user;
 
@@ -47,7 +63,7 @@ public class UserDAO {
         int age = rs.getInt("age");
         String gender= rs.getString("gender");
         String intensity = rs.getString("intensity");
-        double uheight = rs.getDouble("uheight");
+        int uheight = rs.getInt("uheight");
         double weight = rs.getDouble("weight");
         double dailyCalories = rs.getDouble("dailyCalories");
         double dailyProtein = rs.getDouble("dailyProtein");
@@ -66,7 +82,7 @@ public class UserDAO {
         return user;
     }
 
-    public static boolean createUser(int userId, String uname, int age, String gender, String intensity, double uheight, double weight, double dailyCalories, double dailyProtein, double dailyCarbo, double dailyFat, double curCalories, double curProtein, double curFat, double curCarbo) {
+    public static boolean createUser(int userId, String uname, int age, String gender, String intensity, int uheight, double weight, double dailyCalories, double dailyProtein, double dailyCarbo, double dailyFat, double curCalories, double curProtein, double curFat, double curCarbo) {
         // declare local variables
         boolean success = false;
         DBController db = new DBController();
@@ -87,7 +103,7 @@ public class UserDAO {
             pstmt.setInt(3, age);
             pstmt.setString(4, gender);
             pstmt.setString(5, intensity);
-            pstmt.setDouble(6, uheight);
+            pstmt.setInt(6, uheight);
             pstmt.setDouble(7, weight);
             pstmt.setDouble(8, dailyCalories);
             pstmt.setDouble(9, dailyProtein);
@@ -165,8 +181,8 @@ public class UserDAO {
         try {
             pstmt.setString(1, uname);
             rs = pstmt.executeQuery();
-            while (rs.next()) {
-                 user = convertToUser(rs);
+           if (rs.next()) {
+                 user = convertToUserParticular(rs);
              //   list.add(user);
             }
         } catch (Exception e) {
