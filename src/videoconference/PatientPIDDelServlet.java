@@ -9,20 +9,15 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
- * Created by Ian on 22/1/2017.
+ * Created by Ian on 24/1/2017.
  */
-@WebServlet(name = "PatientPIDSaveServlet", urlPatterns = "/patientPIDDelete")
-public class PatientPIDDeleteServlet extends HttpServlet {
+@WebServlet(name = "PatientPIDDelServlet", urlPatterns = "/patientPIDDel")
+public class PatientPIDDelServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-
-
-
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         HttpSession session = request.getSession();
 
         System.out.println("delete run");
@@ -34,6 +29,8 @@ public class PatientPIDDeleteServlet extends HttpServlet {
 
         System.out.println("delete end");
 
+        response.sendRedirect("videoconference/pidNewFrontPatient.jsp");
 
+        return;
     }
 }
