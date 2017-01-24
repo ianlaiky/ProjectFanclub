@@ -15,13 +15,25 @@ import java.io.IOException;
 public class PatientPIDDeleteServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        HttpSession session = request.getSession();
+
 
 
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        HttpSession session = request.getSession();
+
+        System.out.println("delete run");
+        String user = (String) session.getAttribute("username");
+        System.out.println("delete user");
+
+        VideoConferenceDAO vid = new VideoConferenceDAO();
+        vid.deleteViaPatientUsername(user);
+
+        System.out.println("delete end");
+
 
     }
 }

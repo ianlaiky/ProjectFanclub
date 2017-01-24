@@ -1,3 +1,7 @@
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %>
+<%@ page import="videoconference.VideoconferenceEntity" %>
+<%@ page import="videoconference.VideoConferenceDAO" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
@@ -9,7 +13,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png"/>
     <link rel="icon" type="image/png" href="../../assets/img/favicon.png"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>Vision API</title>
+    <title>Video calling</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
     <meta name="viewport" content="width=device-width"/>
     <!-- Canonical SEO -->
@@ -53,6 +57,28 @@
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
 
     <style>
+        .myButton {
+            background-color:#44c767;
+            -moz-border-radius:11px;
+            -webkit-border-radius:11px;
+            border-radius:11px;
+            display:inline-block;
+            cursor:pointer;
+            color:#ffffff;
+            font-family:Arial;
+            font-size:16px;
+            padding:8px 17px;
+            text-decoration:none;
+            text-shadow:0px 0px 0px #2f6627;
+        }
+        .myButton:hover {
+            background-color:#5cbf2a;
+        }
+        .myButton:active {
+            position:relative;
+            top:1px;
+        }
+
 
 
         .card {
@@ -327,7 +353,7 @@
 
                                 <!-- Steps -->
                                 <div class="pure-u-1-3">
-                                    <h2>Web Calling</h2>
+                                    <%--<h2>Web Calling</h2>--%>
 
                                     <!-- Get local audio/video stream -->
                                     <div id="step1">
@@ -345,6 +371,41 @@
                                     <!-- Make calls to others -->
                                     <div id="step2">
                                         <p>Your id: <span id="my-id">...</span></p>
+                                        <p>Please wait for the doctor to call you</p>
+                                        <a href="/patientPIDDelete" class="myButton">Leave call</a>
+
+
+                                        <br>
+                                        <p>Others in the Queue:</p>
+
+                                        <p>
+                                            <%
+                                                List<VideoconferenceEntity> po = new ArrayList<>();
+
+                                                VideoConferenceDAO vi = new VideoConferenceDAO();
+
+                                                po = vi.getAllPID();
+
+                                                ArrayList<String> currentUser = new ArrayList<String>();
+
+                                                for(int i=0;i<po.size();i++){
+                                                    if(po.get(i).getTypeOfUser().equalsIgnoreCase("p")){
+                                                        currentUser.add(po.get(i).getUsername());
+                                                    }
+
+
+                                                }
+
+                                            %>
+
+                                            <% for(int i=0;i<currentUser.size();i++){ %>
+<li>
+                                                <%=currentUser.get(i)%>
+
+                                    </li>
+                                            <%}%>
+
+                                        </p>
                                         <%--<p>Share this id with others so they can call you.</p>--%>
                                         <%--<h3>Make a call</h3>--%>
                                         <%--<div class="pure-form">--%>
@@ -356,7 +417,7 @@
                                     <!-- Call in progress -->
                                     <div id="step3">
                                         <p>Currently in call with <span id="their-id">...</span></p>
-                                        <p><a href="#" class="pure-button pure-button-error" id="end-call">End call</a>
+                                        <p><a href="#" class="pure-button pure-button-error" id="end-call">End call</a></p>
                                         </p>
                                     </div>
                                 </div>

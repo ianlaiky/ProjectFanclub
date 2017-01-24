@@ -29,25 +29,53 @@ public class PatientPIDServlet extends HttpServlet {
         VideoConferenceDAO nat = new VideoConferenceDAO();
 
 
-        List<VideoconferenceEntity> userFromdb = nat.getSpecificPatrientPID(user);
+        List<VideoconferenceEntity> userFromdb = nat.getAllPID();
+        System.out.println("Test: "+userFromdb.size());
 
-        System.out.println("Size of nat"+userFromdb.size());
+        boolean waterTest=false;
 
         for(int i=0;i<userFromdb.size();i++){
-            System.out.println("Userfromdb: "+userFromdb.get(i).getUsername());
-            System.out.println("current user: "+user);
+
+            if(userFromdb.get(i).getUsername().equalsIgnoreCase(user)){
+                waterTest=true;
+            }
 
 
+        }
+
+        if(waterTest){
             nat.deleteViaPatientUsername(user);
+            nat.createPIDPatient(user,a,"p");
+        }else if(!waterTest){
+
+            nat.createPIDPatient(user,a,"p");
 
 
 
+        }
+
+
+
+//        System.out.println("Size of nat"+userFromdb.size());
+
+
+
+
+//        for(int i=0;i<userFromdb.size();i++){
+//            System.out.println("Userfromdb: "+userFromdb.get(i).getUsername());
+//            System.out.println("current user: "+user);
+//
+//
+////            nat.deleteViaPatientUsername(user);
+//
+//
+//
 //            if((userFromdb.get(i).getUsername().equalsIgnoreCase(user))){
 //                System.out.println("delete try");
-//                nat.deleteViaPatientPID(user);
+//                nat.deleteViaPatientUsername(user);
 //                        nat.createPIDPatient(user,a,"p");
 //            }
-        }
+//        }
 
 
 
