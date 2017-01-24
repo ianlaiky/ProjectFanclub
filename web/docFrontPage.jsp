@@ -368,7 +368,7 @@
                     <%--<!-- Insert all the awesome body content here--%>
 
 
-                <a href="videoconference/pidNewFrontDoctor.jsp"><img src="assets/img/videoConferenceF.png" class="frontPageRounded"></a>
+                <a href="videoconference/patientPIDSelect.jsp"><img src="assets/img/videoConferenceF.png" class="frontPageRounded"></a>
 
 
 
