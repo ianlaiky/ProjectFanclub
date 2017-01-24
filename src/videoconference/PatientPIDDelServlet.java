@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Ian on 24/1/2017.
@@ -24,8 +26,30 @@ public class PatientPIDDelServlet extends HttpServlet {
         String user = (String) session.getAttribute("username");
         System.out.println("delete user");
 
+
+
+
+
+
         VideoConferenceDAO vid = new VideoConferenceDAO();
-        vid.deleteViaPatientUsername(user);
+
+
+        List<VideoconferenceEntity> allList = new ArrayList<>();
+
+        allList=vid.getAllPID();
+
+        for(int i=0;i<allList.size();i++){
+
+            if(allList.get(i).getUsername().equalsIgnoreCase(user)){
+                vid.deleteViaPatientUsername(user);
+
+            }
+
+        }
+
+
+
+
 
         System.out.println("delete end");
 
