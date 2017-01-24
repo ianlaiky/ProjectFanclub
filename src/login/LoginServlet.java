@@ -1,7 +1,9 @@
 package login;
 
 import docRecord.DoctorDAO;
+import docRecord.DoctorrecordEntity;
 import patientRecord.PatientDAO;
+import patientRecord.PatientrecordEntity;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Ying on 16/12/2016.
@@ -24,6 +28,27 @@ public class LoginServlet extends HttpServlet {
 
         PatientDAO patient = new PatientDAO();
         DoctorDAO doctor = new DoctorDAO();
+
+
+
+
+
+       List<PatientrecordEntity> allPatientuser = new ArrayList<>();
+        List<DoctorrecordEntity> allDocUser = new ArrayList<>();
+
+
+        allPatientuser=patient.getAllPatientUserAndPass();
+        allDocUser=doctor.getAllDocUserAndPass();
+
+
+
+        for(int i=0;i<allPatientuser.size();i++){
+
+            System.out.println(allPatientuser.get(i).getpName());
+            System.out.println(allPatientuser.get(i).getpUsername());
+
+
+        }
 
 
         boolean userVerification = false;
@@ -52,13 +77,42 @@ public class LoginServlet extends HttpServlet {
         if (userVerification) {
 
             if (username.substring(0, 1).equalsIgnoreCase("p")) {
+                for(int i=0;i<allPatientuser.size();i++){
+
+                    if(allPatientuser.get(i).getpUsername().equalsIgnoreCase(username)){
+                        session.setAttribute("firstName",allPatientuser.get(i).getpName());
+                    }
+
+
+                }
+
+
+
+
                 session.setAttribute("username",username);
                 session.setAttribute("signInPatient","true");
 //                session.setAttribute("signInGlobal","true");
                 response.sendRedirect("patientFrontPage.jsp");
                 return;
 
-            } else if (username.substring(0, 1).equalsIgnoreCase("d")) {
+            } else if (username.substring(0, 1).equalsIgnoreCase(username)) {
+
+
+                for(int i=0;i<allDocUser.size();i++){
+
+                    if(allDocUser.get(i).getDusername().equalsIgnoreCase("d")){
+                        session.setAttribute("firstName",allDocUser.get(i).getdName());
+
+
+                    }
+
+
+                }
+
+
+
+
+
                 session.setAttribute("username",username);
                 session.setAttribute("signInDoctor","true");
 //                session.setAttribute("signInGlobal","true");

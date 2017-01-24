@@ -105,7 +105,7 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        <% String username = (String) session.getAttribute("username"); %>
+                        <% String username = (String) session.getAttribute("firstName"); %>
                         <%= username%>
                         <b class="caret"></b>
                     </a>
