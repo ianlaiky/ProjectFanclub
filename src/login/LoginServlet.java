@@ -95,12 +95,12 @@ public class LoginServlet extends HttpServlet {
                 response.sendRedirect("patientFrontPage.jsp");
                 return;
 
-            } else if (username.substring(0, 1).equalsIgnoreCase(username)) {
+            } else if (username.substring(0, 1).equalsIgnoreCase("d")) {
 
 
                 for(int i=0;i<allDocUser.size();i++){
 
-                    if(allDocUser.get(i).getDusername().equalsIgnoreCase("d")){
+                    if(allDocUser.get(i).getDusername().equalsIgnoreCase(username)){
                         session.setAttribute("firstName",allDocUser.get(i).getdName());
 
 
