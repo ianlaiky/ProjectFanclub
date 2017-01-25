@@ -140,38 +140,43 @@
                                     <%--</button>--%>
                                     <%--<h4> or be classical </h4>--%>
                                 <%--</div>--%>
-                                <form class="form" method="post" action="/patientSignUp">
-                                    <div class="card-content">
-                                        <div class="input-group">
-                                                <span class="input-group-addon">
-                                                    <i class="material-icons">face</i>
-                                                </span>
-                                            <input type="text" class="form-control" name="firstName" placeholder="First Name...">
-                                        </div>
-                                        <div class="input-group">
-                                                <span class="input-group-addon">
-                                                    <i class="material-icons">contact_phone</i>
-                                                </span>
-                                            <input type="text" class="form-control" name="contactPhone" placeholder="Phone number...">
-                                        </div>
-                                        <div class="input-group">
-                                                <span class="input-group-addon">
-                                                    <i class="material-icons">lock_outline</i>
-                                                </span>
-                                            <input type="password" placeholder="Password..." name="pPass" class="form-control" />
-                                        </div>
-                                        <!-- If you want to add a checkbox to this form, uncomment this code -->
-                                        <%--<div class="checkbox">--%>
-                                            <%--<label>--%>
-                                                <%--<input type="checkbox" name="optionsCheckboxes" checked> I agree to the--%>
-                                                <%--<a href="#something">terms and conditions</a>.--%>
-                                            <%--</label>--%>
+                                <%--<form class="form" method="post" action="/patientSignUp">--%>
+                                    <%--<div class="card-content">--%>
+                                        <%--<div class="input-group">--%>
+                                                <%--<span class="input-group-addon">--%>
+                                                    <%--<i class="material-icons">face</i>--%>
+                                                <%--</span>--%>
+                                            <%--<input type="text" class="form-control" name="c" placeholder="First Name...">--%>
                                         <%--</div>--%>
-                                    </div>
-                                    <div class="footer text-center">
-                                        <button class="btn btn-primary btn-round">Sign Up</button>
-                                    </div>
-                                </form>
+                                        <%--<div class="input-group">--%>
+                                                <%--<span class="input-group-addon">--%>
+                                                    <%--<i class="material-icons">contact_phone</i>--%>
+                                                <%--</span>--%>
+                                            <%--<input type="text" class="form-control" name="contactPhone" placeholder="Phone number...">--%>
+                                        <%--</div>--%>
+                                        <%--<div class="input-group">--%>
+                                                <%--<span class="input-group-addon">--%>
+                                                    <%--<i class="material-icons">lock_outline</i>--%>
+                                                <%--</span>--%>
+                                            <%--<input type="password" placeholder="Password..." name="pPass" class="form-control" />--%>
+                                        <%--</div>--%>
+                                        <%--<!-- If you want to add a checkbox to this form, uncomment this code -->--%>
+                                        <%--&lt;%&ndash;<div class="checkbox">&ndash;%&gt;--%>
+                                            <%--&lt;%&ndash;<label>&ndash;%&gt;--%>
+                                                <%--&lt;%&ndash;<input type="checkbox" name="optionsCheckboxes" checked> I agree to the&ndash;%&gt;--%>
+                                                <%--&lt;%&ndash;<a href="#something">terms and conditions</a>.&ndash;%&gt;--%>
+                                            <%--&lt;%&ndash;</label>&ndash;%&gt;--%>
+                                        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+                                    <%--</div>--%>
+                                    <%--<div class="footer text-center">--%>
+                                        <%--<button href="#pablo" class="btn btn-primary btn-round">Sign Up</button>--%>
+                                    <%--</div>--%>
+                                <%--</form>--%>
+
+
+                              <center><h1>Registeration Sucess</h1></center>
+                                    <center><h2>Your Login username is: <%=session.getAttribute("patientSignUpUsername")%></h2></center>
+                                    <center><a href="index.html" class="btn btn-primary btn-round">Login Now</a> </center>
                             </div>
                         </div>
                     </div>

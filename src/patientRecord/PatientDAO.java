@@ -2,6 +2,7 @@ package patientRecord;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -71,6 +72,45 @@ public class PatientDAO {
 
         }
         return allowUser;
+    }
+
+
+    public String createPatient(String firstName,String password,String phone){
+
+
+
+        List<PatientrecordEntity>checkList = new ArrayList<>();
+        checkList=getAllPatientUserAndPass();
+
+       String a = checkList.get(checkList.size()-1).getpUsername();
+        System.out.println("sizee"+a);
+
+        System.out.println(a.substring(1));
+
+        int pateintid = Integer.parseInt(a.substring(1))+1;
+        System.out.println(pateintid);
+
+
+        String newpatt = "p"+pateintid;
+
+        System.out.println("hey name???"+firstName);
+        System.out.println(password);
+
+
+        PatientrecordEntity newPat = new PatientrecordEntity(newpatt,password,firstName,phone);
+
+        em.getTransaction().begin();
+        em.persist(newPat);
+        em.getTransaction().commit();
+        System.out.println("Saving patient");
+
+return newpatt;
+
+
+
+
+
+
     }
 
 
