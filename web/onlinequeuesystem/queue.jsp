@@ -1,4 +1,7 @@
-<%--
+<%@ page import="patientRecord.PatientDAO" %>
+<%@ page import="patientRecord.PatientrecordEntity" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: Ying
   Date: 11/12/2016
@@ -57,9 +60,29 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
+    <
+    <link href="../web/onlinequeuesystem/qe.css" rel="stylesheet"/>
+
+    <style>
+        .control-label {
+            font-size: 50px;
+        }
+
+    </style>
 </head>
 
 <body>
+<%
+    if (session.getAttribute("signInPatient") == null) {
+        response.sendRedirect("../errorPage.jsp");
+    } else {
+        if (session.getAttribute("signInPatient").equals("false")) {
+            response.sendRedirect("../errorPage.jsp");
+        }
+
+    }
+
+%>
 <div class="wrapper">
     <div class="sidebar" data-active-color="green" data-background-color="white"
          data-image="../../assets/img/sidebar-1.jpg">
@@ -335,246 +358,206 @@
                 </div>
             </div>
         </nav>
+        <%--<div class="content">--%>
+        <%--<div class="container-fluid">--%>
+        <%--<div class="col-sm-8 col-sm-offset-2">--%>
+
+        <%--&lt;%&ndash;// -- Insert all the awesome body content here&ndash;%&gt;--%>
+
+
+        <%--<div class="container">--%>
+
+
+        <%--<form class="well form-horizontal" action=" " method="post" id="contact_form">--%>
+        <%--<fieldset>--%>
+
+        <%--<!-- Form Name -->--%>
+        <%--<legend>--%>
+        <%--<h1>Get your Queue Number ! </h1>--%>
+        <%--</legend>--%>
+        <%--<div class="col-md-6">--%>
+        <%--<div class="card">--%>
+        <%--<form id="quieeyu" action="" method="">--%>
+        <%--<div class="card-header card-header-icon" data-background-color="rose">--%>
+        <%--<i class="material-icons">contacts</i>--%>
+        <%--</div>--%>
+        <%--<div class="card-content">--%>
+        <%--<h4 class="card-title">Login Form</h4>--%>
+        <%--<div class="form-group label-floating">--%>
+        <%--<label class="control-label">Email Address--%>
+        <%--<star>*</star>--%>
+        <%--</label>--%>
+        <%--<input class="form-control" name="email" type="text" email="true" required="true" />--%>
+        <%--</div>--%>
+        <%--<div class="form-group label-floating">--%>
+        <%--<label class="control-label">Password--%>
+        <%--<star>*</star>--%>
+        <%--</label>--%>
+        <%--<input class="form-control" name="password" type="password" required="true" />--%>
+        <%--</div>--%>
+        <%--<div class="category form-category">--%>
+        <%--<star>*</star> Required fields</div>--%>
+        <%--<div class="text-center">--%>
+        <%--<button type="submit" class="btn btn-rose btn-fill btn-wd">Register</button>--%>
+        <%--</div>--%>
+        <%--</div>--%>
+        <%--</form>--%>
+        <%--</div>--%>
+        <%--</div>--%>
+
+        <%--<!-- Text input-->--%>
+
+
+        <%--<!-- Text input-->--%>
+        <%--&lt;%&ndash;<div class="form-group">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<label class="col-md-4 control-label">Website or domain name</label>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<div class="col-md-4 inputGroupContainer">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<div class="input-group">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<input name="website" placeholder="Website or domain name" class="form-control" type="text">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+
+        <%--<!-- radio checks -->--%>
+        <%--&lt;%&ndash;<div class="form-group">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<label class="col-md-4 control-label">Do you have hosting?</label>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<div class="col-md-4">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<div class="radio">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<label>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<input type="radio" name="hosting" value="yes" /> Yes&ndash;%&gt;--%>
+        <%--&lt;%&ndash;</label>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<div class="radio">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<label>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<input type="radio" name="hosting" value="no" /> No&ndash;%&gt;--%>
+        <%--&lt;%&ndash;</label>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+
+        <%--<!-- Text area -->--%>
+
+        <%--&lt;%&ndash;<div class="form-group">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<label class="col-md-4 control-label">Project Description</label>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<div class="col-md-4 inputGroupContainer">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<div class="input-group">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<textarea class="form-control" name="comment" placeholder="Project Description"></textarea>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+
+        <%--<!-- Button -->--%>
+        <%--<div class="form-group">--%>
+        <%--<label class="col-md-4 control-label"></label>--%>
+        <%--<div class="col-md-4">--%>
+        <%--<form action="queueformdisplay.jsp">--%>
+        <%--<button type="submit" class="btn btn-warning">Get Queue Number! <span--%>
+        <%--class="glyphicon glyphicon-send"></span></button>--%>
+        <%--</form>--%>
+
+        <%--</div>--%>
+        <%--</div>--%>
+        <%--&lt;%&ndash;<!-- Success message -->&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<div class="alert alert-success" role="alert" id="success_message">Success <i&ndash;%&gt;--%>
+        <%--&lt;%&ndash;class="glyphicon glyphicon-thumbs-up"></i> Your Queue Number is 1440! Thank you&ndash;%&gt;--%>
+        <%--&lt;%&ndash;for waiting!s&ndash;%&gt;--%>
+        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+
+
+        <%--&lt;%&ndash;<p id="date"></p>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<script>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;document.getElementById("date").innerHTML = Date();&ndash;%&gt;--%>
+        <%--&lt;%&ndash;</script>&ndash;%&gt;--%>
+
+
+        <%--</fieldset>--%>
+        <%--</form>--%>
+        <%--</div>--%>
+        <%--</div><!-- /.container -->--%>
+
+        <%--</div>--%>
+        <%--</div>--%>
+
         <div class="content">
             <div class="container-fluid">
-                <div class="col-sm-8 col-sm-offset-2">
+                <div class="row">
+                    <%
 
-                    <%--// -- Insert all the awesome body content here--%>
+                        PatientDAO pat = new PatientDAO();
+                        List<PatientrecordEntity> allPat = new ArrayList<>();
+
+                        allPat = pat.getAllPatientUserAndPass();
+
+                        String curretnsession = (String) session.getAttribute("username");
+                        String phoneNow = "";
 
 
-                    <div class="container">
+                        for (int i = 0; i < allPat.size(); i++) {
 
+                            if (curretnsession.equalsIgnoreCase(allPat.get(i).getpUsername())) {
+                                phoneNow = allPat.get(i).getpPhoneNumber();
+                            }
 
-                        <form class="well form-horizontal" action=" " method="post" id="contact_form">
-                            <fieldset>
+                        }
+                        System.out.println(phoneNow);
+                    %>
 
-                                <!-- Form Name -->
-                                <legend>
-                                    <center>Get Queue Number</center>
-                                </legend>
+                    <div class="col-md-12">
+                        <div class="card">
+                            <form id="LoginValidation" action="" method="">
+                                <div class="card-header card-header-icon" data-background-color="rose">
+                                    <i class="material-icons">alarm_on</i>
+                                </div>
+                                <div class="card-content">
+                                    <h4 class="card-title">Get Queue Number Here!</h4>
+                                    <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">perm_identity</i>
+                                            </span>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Name</label>
+                                            <input value="<%=session.getAttribute("firstName")%>" disabled
+                                                   class="form-control"
+                                                   name="Name" type="text"/>
 
-                                <!-- Text input-->
-
-                                <div class="form-group">
-                                    <label class="col-md-4 control-label">First Name</label>
-                                    <div class="col-md-4 inputGroupContainer">
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i
-                                                    class="glyphicon glyphicon-user"></i></span>
-                                            <input name="first_name" placeholder="First Name" class="form-control"
-                                                   type="text">
                                         </div>
                                     </div>
-                                </div>
+                                    <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">contact_phone</i>
+                                            </span>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">PhoneNumber</label>
 
-                                <!-- Text input-->
 
-                                <div class="form-group">
-                                    <label class="col-md-4 control-label">Last Name</label>
-                                    <div class="col-md-4 inputGroupContainer">
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i
-                                                    class="glyphicon glyphicon-user"></i></span>
-                                            <input name="last_name" placeholder="Last Name" class="form-control"
-                                                   type="text">
+                                            <input value="<%=phoneNow%>" disabled class="form-control"
+                                                   name="phoneNumber"
+                                                   type="text"/>
                                         </div>
                                     </div>
+
+
+                                </div>
+                                <div class="category form-category">
+
+
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-rose btn-fill btn-wd">Get Queue
+                                        Number
+                                    </button>
                                 </div>
 
-                                <!-- Text input-->
-                                <div class="form-group">
-                                    <label class="col-md-4 control-label">E-Mail</label>
-                                    <div class="col-md-4 inputGroupContainer">
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                            <input name="email" placeholder="E-Mail Address" class="form-control"
-                                                   type="text">
-                                        </div>
-                                    </div>
-                                </div>
 
+                            </form>
 
-                                <!-- Text input-->
-
-                                <div class="form-group">
-                                    <label class="col-md-4 control-label">Phone #</label>
-                                    <div class="col-md-4 inputGroupContainer">
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                                            <input name="phone" placeholder="(845)555-1212" class="form-control"
-                                                   type="text">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Text input-->
-
-                                <div class="form-group">
-                                    <label class="col-md-4 control-label">Address</label>
-                                    <div class="col-md-4 inputGroupContainer">
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i
-                                                    class="glyphicon glyphicon-home"></i></span>
-                                            <input name="address" placeholder="Address" class="form-control"
-                                                   type="text">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Text input-->
-
-                                <div class="form-group">
-                                    <label class="col-md-4 control-label">City</label>
-                                    <div class="col-md-4 inputGroupContainer">
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i
-                                                    class="glyphicon glyphicon-home"></i></span>
-                                            <input name="city" placeholder="city" class="form-control" type="text">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Select Basic -->
-
-                                <div class="form-group">
-                                    <label class="col-md-4 control-label">State</label>
-                                    <div class="col-md-4 selectContainer">
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i
-                                                    class="glyphicon glyphicon-list"></i></span>
-                                            <select name="state" class="form-control selectpicker">
-                                                <option value=" ">Please select your state</option>
-                                                <option>Alabama</option>
-                                                <option>Alaska</option>
-                                                <option>Arizona</option>
-                                                <option>Arkansas</option>
-                                                <option>California</option>
-                                                <option>Colorado</option>
-                                                <option>Connecticut</option>
-                                                <option>Delaware</option>
-                                                <option>District of Columbia</option>
-                                                <option> Florida</option>
-                                                <option>Georgia</option>
-                                                <option>Hawaii</option>
-                                                <option>daho</option>
-                                                <option>Illinois</option>
-                                                <option>Indiana</option>
-                                                <option>Iowa</option>
-                                                <option> Kansas</option>
-                                                <option>Kentucky</option>
-                                                <option>Louisiana</option>
-                                                <option>Maine</option>
-                                                <option>Maryland</option>
-                                                <option> Mass</option>
-                                                <option>Michigan</option>
-                                                <option>Minnesota</option>
-                                                <option>Mississippi</option>
-                                                <option>Missouri</option>
-                                                <option>Montana</option>
-                                                <option>Nebraska</option>
-                                                <option>Nevada</option>
-                                                <option>New Hampshire</option>
-                                                <option>New Jersey</option>
-                                                <option>New Mexico</option>
-                                                <option>New York</option>
-                                                <option>North Carolina</option>
-                                                <option>North Dakota</option>
-                                                <option>Ohio</option>
-                                                <option>Oklahoma</option>
-                                                <option>Oregon</option>
-                                                <option>Pennsylvania</option>
-                                                <option>Rhode Island</option>
-                                                <option>South Carolina</option>
-                                                <option>South Dakota</option>
-                                                <option>Tennessee</option>
-                                                <option>Texas</option>
-                                                <option> Uttah</option>
-                                                <option>Vermont</option>
-                                                <option>Virginia</option>
-                                                <option>Washington</option>
-                                                <option>West Virginia</option>
-                                                <option>Wisconsin</option>
-                                                <option>Wyoming</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Text input-->
-
-                                <div class="form-group">
-                                    <label class="col-md-4 control-label">Zip Code</label>
-                                    <div class="col-md-4 inputGroupContainer">
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i
-                                                    class="glyphicon glyphicon-home"></i></span>
-                                            <input name="zip" placeholder="Zip Code" class="form-control" type="text">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Text input-->
-                                <%--<div class="form-group">--%>
-                                <%--<label class="col-md-4 control-label">Website or domain name</label>--%>
-                                <%--<div class="col-md-4 inputGroupContainer">--%>
-                                <%--<div class="input-group">--%>
-                                <%--<span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>--%>
-                                <%--<input name="website" placeholder="Website or domain name" class="form-control" type="text">--%>
-                                <%--</div>--%>
-                                <%--</div>--%>
-                                <%--</div>--%>
-
-                                <!-- radio checks -->
-                                <%--<div class="form-group">--%>
-                                <%--<label class="col-md-4 control-label">Do you have hosting?</label>--%>
-                                <%--<div class="col-md-4">--%>
-                                <%--<div class="radio">--%>
-                                <%--<label>--%>
-                                <%--<input type="radio" name="hosting" value="yes" /> Yes--%>
-                                <%--</label>--%>
-                                <%--</div>--%>
-                                <%--<div class="radio">--%>
-                                <%--<label>--%>
-                                <%--<input type="radio" name="hosting" value="no" /> No--%>
-                                <%--</label>--%>
-                                <%--</div>--%>
-                                <%--</div>--%>
-                                <%--</div>--%>
-
-                                <!-- Text area -->
-
-                                <%--<div class="form-group">--%>
-                                <%--<label class="col-md-4 control-label">Project Description</label>--%>
-                                <%--<div class="col-md-4 inputGroupContainer">--%>
-                                <%--<div class="input-group">--%>
-                                <%--<span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>--%>
-                                <%--<textarea class="form-control" name="comment" placeholder="Project Description"></textarea>--%>
-                                <%--</div>--%>
-                                <%--</div>--%>
-                                <%--</div>--%>
-
-                                <!-- Button -->
-                                <div class="form-group">
-                                    <label class="col-md-4 control-label"></label>
-                                    <div class="col-md-4">
-                                        <form action="queueformdisplay.jsp">
-                                            <button type="submit" class="btn btn-warning">Send <span
-                                                    class="glyphicon glyphicon-send"></span></button>
-                                        </form>
-
-                                    </div>
-                                </div>
-                                <!-- Success message -->
-                                <div class="alert alert-success" role="alert" id="success_message">Success <i
-                                        class="glyphicon glyphicon-thumbs-up"></i> Your Queue Number is 1440! Thank you
-                                    for waiting!s
-                                </div>
-
-                            </fieldset>
-                        </form>
+                        </div>
                     </div>
-                </div><!-- /.container -->
 
+
+                </div>
             </div>
         </div>
     </div>
@@ -617,99 +600,99 @@
 </div>
 </div>
 <div class="fixed-plugin">
-    <div class="dropdown show-dropdown">
-        <a href="#" data-toggle="dropdown">
-            <i class="fa fa-cog fa-2x"> </i>
-        </a>
-        <ul class="dropdown-menu">
-            <li class="header-title"> Sidebar Filters</li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger active-color">
-                    <div class="badge-colors text-center">
-                        <span class="badge filter badge-blue" data-color="blue"></span>
-                        <span class="badge filter badge-blue" data-color="blue"></span>
-                        <span class="badge filter badge-green" data-color="green"></span>
-                        <span class="badge filter badge-orange" data-color="orange"></span>
-                        <span class="badge filter badge-red" data-color="red"></span>
-                        <span class="badge filter badge-rose active" data-color="green"></span>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="header-title">Sidebar Background</li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger background-color">
-                    <div class="text-center">
-                        <span class="badge filter badge-white" data-color="white"></span>
-                        <span class="badge filter badge-black active" data-color="black"></span>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger">
-                    <p>Sidebar Mini</p>
-                    <div class="togglebutton switch-sidebar-mini">
-                        <label>
-                            <input type="checkbox" unchecked="">
-                        </label>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger">
-                    <p>Sidebar Image</p>
-                    <div class="togglebutton switch-sidebar-image">
-                        <label>
-                            <input type="checkbox" checked="">
-                        </label>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="header-title">Images</li>
-            <li class="active">
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-1.jpg" alt=""/>
-                </a>
-            </li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-2.jpg" alt=""/>
-                </a>
-            </li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-3.jpg" alt=""/>
-                </a>
-            </li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-4.jpg" alt=""/>
-                </a>
-            </li>
-            <li class="button-container">
-                <div class="">
-                    <a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank"
-                       class="btn btn-rose btn-block">Buy Now</a>
-                </div>
-                <div class="">
-                    <a href="http://www.creative-tim.com/product/material-dashboard" target="_blank"
-                       class="btn btn-info btn-block">Get Free Demo</a>
-                </div>
-            </li>
-            <li class="header-title">Thank you for 95 shares!</li>
-            <li class="button-container">
-                <button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i> &middot;
-                    45
-                </button>
-                <button id="facebook" class="btn btn-social btn-facebook btn-round"><i
-                        class="fa fa-facebook-square"> &middot;</i>50
-                </button>
-            </li>
-        </ul>
-    </div>
+    <%--<div class="dropdown show-dropdown">--%>
+    <%--<a href="#" data-toggle="dropdown">--%>
+    <%--<i class="fa fa-cog fa-2x"> </i>--%>
+    <%--</a>--%>
+    <%--<ul class="dropdown-menu">--%>
+    <%--<li class="header-title"> Sidebar Filters</li>--%>
+    <%--<li class="adjustments-line">--%>
+    <%--<a href="javascript:void(0)" class="switch-trigger active-color">--%>
+    <%--<div class="badge-colors text-center">--%>
+    <%--<span class="badge filter badge-blue" data-color="blue"></span>--%>
+    <%--<span class="badge filter badge-blue" data-color="blue"></span>--%>
+    <%--<span class="badge filter badge-green" data-color="green"></span>--%>
+    <%--<span class="badge filter badge-orange" data-color="orange"></span>--%>
+    <%--<span class="badge filter badge-red" data-color="red"></span>--%>
+    <%--<span class="badge filter badge-rose active" data-color="green"></span>--%>
+    <%--</div>--%>
+    <%--<div class="clearfix"></div>--%>
+    <%--</a>--%>
+    <%--</li>--%>
+    <%--<li class="header-title">Sidebar Background</li>--%>
+    <%--<li class="adjustments-line">--%>
+    <%--<a href="javascript:void(0)" class="switch-trigger background-color">--%>
+    <%--<div class="text-center">--%>
+    <%--<span class="badge filter badge-white" data-color="white"></span>--%>
+    <%--<span class="badge filter badge-black active" data-color="black"></span>--%>
+    <%--</div>--%>
+    <%--<div class="clearfix"></div>--%>
+    <%--</a>--%>
+    <%--</li>--%>
+    <%--<li class="adjustments-line">--%>
+    <%--<a href="javascript:void(0)" class="switch-trigger">--%>
+    <%--<p>Sidebar Mini</p>--%>
+    <%--<div class="togglebutton switch-sidebar-mini">--%>
+    <%--<label>--%>
+    <%--<input type="checkbox" unchecked="">--%>
+    <%--</label>--%>
+    <%--</div>--%>
+    <%--<div class="clearfix"></div>--%>
+    <%--</a>--%>
+    <%--</li>--%>
+    <%--<li class="adjustments-line">--%>
+    <%--<a href="javascript:void(0)" class="switch-trigger">--%>
+    <%--<p>Sidebar Image</p>--%>
+    <%--<div class="togglebutton switch-sidebar-image">--%>
+    <%--<label>--%>
+    <%--<input type="checkbox" checked="">--%>
+    <%--</label>--%>
+    <%--</div>--%>
+    <%--<div class="clearfix"></div>--%>
+    <%--</a>--%>
+    <%--</li>--%>
+    <%--<li class="header-title">Images</li>--%>
+    <%--<li class="active">--%>
+    <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
+    <%--<img src="../../assets/img/sidebar-1.jpg" alt=""/>--%>
+    <%--</a>--%>
+    <%--</li>--%>
+    <%--<li>--%>
+    <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
+    <%--<img src="../../assets/img/sidebar-2.jpg" alt=""/>--%>
+    <%--</a>--%>
+    <%--</li>--%>
+    <%--<li>--%>
+    <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
+    <%--<img src="../../assets/img/sidebar-3.jpg" alt=""/>--%>
+    <%--</a>--%>
+    <%--</li>--%>
+    <%--<li>--%>
+    <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
+    <%--<img src="../../assets/img/sidebar-4.jpg" alt=""/>--%>
+    <%--</a>--%>
+    <%--</li>--%>
+    <%--<li class="button-container">--%>
+    <%--<div class="">--%>
+    <%--<a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank"--%>
+    <%--class="btn btn-rose btn-block">Buy Now</a>--%>
+    <%--</div>--%>
+    <%--<div class="">--%>
+    <%--<a href="http://www.creative-tim.com/product/material-dashboard" target="_blank"--%>
+    <%--class="btn btn-info btn-block">Get Free Demo</a>--%>
+    <%--</div>--%>
+    <%--</li>--%>
+    <%--<li class="header-title">Thank you for 95 shares!</li>--%>
+    <%--<li class="button-container">--%>
+    <%--<button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i> &middot;--%>
+    <%--45--%>
+    <%--</button>--%>
+    <%--<button id="facebook" class="btn btn-social btn-facebook btn-round"><i--%>
+    <%--class="fa fa-facebook-square"> &middot;</i>50--%>
+    <%--</button>--%>
+    <%--</li>--%>
+    <%--</ul>--%>
+    <%--</div>--%>
 </div>
 </body>
 <!--   Core JS Files   -->

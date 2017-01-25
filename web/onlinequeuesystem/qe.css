@@ -10,23 +10,37 @@
     -webkit-border-radius: 13px;
     -moz-border-radius: 13px;
     border-radius: 13px;
-    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-    box-shadow: rgba(0,0,0,1) 0 1px 0;
-    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
     color: white;
     font-size: 16px;
     font-family: Helvetica, Arial, Sans-Serif;
     text-decoration: none;
     vertical-align: middle;
 }
+
 .butt1:hover {
     border-top-color: #28597a;
     background: #28597a;
     color: #ffffff;
 }
+
 .butt1:active {
     border-top-color: #1b435e;
     background: #1b435e;
 }
-#success_message{ display: none;}
+
+#success_message {
+    display: none;
+}
+
+.form-group {
+    font-size: 20px;
+}
+
+.date {
+    font-size: 10px;
+}
+
