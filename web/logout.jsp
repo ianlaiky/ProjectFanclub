@@ -390,7 +390,7 @@
                         document.write(new Date().getFullYear())
                     </script>
                     <a href="http://www.creative-tim.com">Woodlands Integrated Health Campus</a>, made with love by
-                    Fanclub
+                    FanClub
                 </p>
             </div>
         </footer>
