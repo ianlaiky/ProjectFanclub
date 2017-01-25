@@ -39,10 +39,22 @@ public class UserDAO {
         return userId;
     }
 
+    private static User convertToUserRecommendIntake(ResultSet rs) throws SQLException {
+        User user;
+
+        double dailyCalories = rs.getDouble("dailyCalories");
+        double dailyProtein = rs.getDouble("dailyProtein");
+        double dailyCarbo = rs.getDouble("dailyCarbo");
+        double dailyFat = rs.getDouble("dailyFat");
+
+
+        user = new User(dailyCalories,dailyProtein,dailyCarbo,dailyFat);
+
+        return user;
+    }
     private static User convertToUserParticular(ResultSet rs) throws SQLException {
         User user;
 
-        int userId = rs.getInt("userId");
         String uname= rs.getString("uname");
         int age = rs.getInt("age");
         String gender= rs.getString("gender");
@@ -51,7 +63,7 @@ public class UserDAO {
         double weight = rs.getDouble("weight");
 
 
-        user = new User(userId, uname, age, gender,  intensity,  uheight, weight);
+        user = new User( uname, age, gender,  intensity,  uheight, weight);
 
         return user;
     }
@@ -171,7 +183,7 @@ public class UserDAO {
         db.getConnection();
 
         // step 2 - declare the SQL statement
-        dbQuery = "SELECT userId, uname, age, gender,  intensity,  uheight, weight FROM user WHERE uname = ? ";
+        dbQuery = "SELECT uname, age, gender,  intensity,  uheight, weight FROM user WHERE uname = ? ";
 
         //SELECT loanId,l.itemName,count(*)quantity, loanDate, dueDate,i.id, username FROM loanrecord l inner join inventory i on l.itemName = i.itemName WHERE username = ? group by loanId,itemName,loanDate,dueDate,i.id, username";
 
@@ -184,6 +196,42 @@ public class UserDAO {
            if (rs.next()) {
                  user = convertToUserParticular(rs);
              //   list.add(user);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        // step 4 - close connection
+        db.terminate();
+
+        return user;
+    }
+
+
+    public static User retrieveRecommendIntakeByUsername(String uname) {
+        // declare local variables
+        User user = null;
+        ResultSet rs = null;
+        DBController db = new DBController();
+        String dbQuery;
+        PreparedStatement pstmt;
+
+        // step 1 -connect to database
+        db.getConnection();
+
+        // step 2 - declare the SQL statement
+        dbQuery = "SELECT dailyCalories, dailyProtein, dailyCarbo, dailyFat FROM user WHERE uname = ? ";
+
+        //SELECT loanId,l.itemName,count(*)quantity, loanDate, dueDate,i.id, username FROM loanrecord l inner join inventory i on l.itemName = i.itemName WHERE username = ? group by loanId,itemName,loanDate,dueDate,i.id, username";
+
+        pstmt = db.getPreparedStatement(dbQuery);
+
+        // step 3 - execute query
+        try {
+            pstmt.setString(1, uname);
+            rs = pstmt.executeQuery();
+            if (rs.next()) {
+                user = convertToUserRecommendIntake(rs);
             }
         } catch (Exception e) {
             e.printStackTrace();
