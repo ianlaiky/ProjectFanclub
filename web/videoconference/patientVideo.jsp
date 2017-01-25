@@ -372,7 +372,7 @@
                                     <div id="step2">
                                         <p>Your id: <span id="my-id">...</span></p>
                                         <p>Please wait for the doctor to call you</p>
-                                        <a href="/patientPIDDelete" class="myButton">Leave call</a>
+                                        <a href="/patientPIDDel" class="myButton">Leave call</a>
 
 
                                         <br>
@@ -417,7 +417,7 @@
                                     <!-- Call in progress -->
                                     <div id="step3">
                                         <p>Currently in call with <span id="their-id">...</span></p>
-                                        <p><a href="#" class="pure-button pure-button-error" id="end-call">End call</a></p>
+                                        <p><a href="/patientPIDDel" class="pure-button pure-button-error" id="end-call">End call</a></p>
                                         </p>
                                     </div>
                                 </div>

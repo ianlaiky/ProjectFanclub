@@ -105,7 +105,7 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        <% String username = (String) session.getAttribute("username"); %>
+                        <% String username = (String) session.getAttribute("firstName"); %>
                         <%= username%>
                         <b class="caret"></b>
                     </a>
@@ -368,7 +368,7 @@
                     <%--<!-- Insert all the awesome body content here--%>
 
 
-                <a href="videoconference/pidNewFrontDoctor.jsp"><img src="assets/img/videoConferenceF.png" class="frontPageRounded"></a>
+                <a href="videoconference/patientPIDSelect.jsp"><img src="assets/img/videoConferenceF.png" class="frontPageRounded"></a>
 
 
 

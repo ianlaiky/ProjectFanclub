@@ -1,10 +1,12 @@
+<%@ page import="videoconference.VideoConferenceDAO" %>
+<%@ page import="java.util.List" %>
+<%@ page import="videoconference.VideoconferenceEntity" %>
+<%@ page import="java.util.ArrayList" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
 
 <head>
-
-
     <meta charset="utf-8"/>
     <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png"/>
     <link rel="icon" type="image/png" href="../../assets/img/favicon.png"/>
@@ -42,38 +44,20 @@
           content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design."/>
     <meta property="og:site_name" content="Creative Tim"/>
     <!-- Bootstrap core CSS     -->
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet"/>
     <!--  Material Dashboard CSS    -->
-    <link href="../assets/css/material-dashboard2.css" rel="stylesheet"/>
+    <link href="../../assets/css/material-dashboard2.css" rel="stylesheet"/>
     <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="../assets/css/demo2.css" rel="stylesheet"/>
+    <link href="../../assets/css/demo2.css" rel="stylesheet"/>
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
 
+
     <style>
 
 
-
-        .card {
-            display: inline-block;
-            position: relative;
-            width: 130%;
-            left:-150px;
-            margin: 25px 0;
-            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
-            border-radius: 6px;
-            color: rgba(0, 0, 0, 0.87);
-            background: #fff;
-        }
-
-
-
-        .wizard-card {
-            min-height: 410px;
-            box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-        }
     </style>
 </head>
 
@@ -123,8 +107,8 @@
                 </div>
             </div>
             <ul class="nav">
-                <li class="active">
-                    <a href="../index.jsp">
+                <li>
+                    <a href="docVideo.jsp">
                         <i class="material-icons">dashboard</i>
                         <p>Live Web Calling</p>
                     </a>
@@ -139,13 +123,16 @@
                     <div class="collapse" id="pagesExamples">
                         <ul class="nav">
                             <li>
-                                <a href="patientReportView.jsp">View Reports</a>
+                                <a href="docReportView.jsp">View Reports</a>
+                            </li>
+                            <li>
+                                <a href="docReportInsert.jsp">View Reports</a>
                             </li>
 
                         </ul>
                     </div>
                 </li>
-               </li>
+                </li>
             </ul>
         </div>
     </div>
@@ -225,150 +212,137 @@
         </nav>
         <div class="content">
             <div class="container-fluid">
-                <div class="col-sm-8 col-sm-offset-2">
-                    <!--      Wizard container        -->
+
+                <!--      Wizard container        -->
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header card-header-icon" data-background-color="rose">
+                                <i class="material-icons">assignment</i>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="card-title">Patient In Queue</h4>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead class="text-primary">
+                                        <th>User Id</th>
+                                        <th>PID (For reference)</th>
+                                        <th>Call User</th>
+
+                                        </thead>
+                                        <tbody>
+
+                                        <%
+                                            VideoConferenceDAO vd = new VideoConferenceDAO();
+
+                                            List<VideoconferenceEntity> all = new ArrayList<>();
+                                            ArrayList<String> user = new ArrayList<>();
+                                            ArrayList<String> pid = new ArrayList<>();
+
+                                            all = vd.getAllPID();
+
+                                            for (int i = 0; i < all.size(); i++) {
+
+                                                if (all.get(i).getTypeOfUser().equalsIgnoreCase("p")) {
+
+                                                    user.add(all.get(i).getUsername());
+                                                    pid.add(all.get(i).getPid());
+
+
+                                        %>
+
+                                        <tr>
+
+
+                                            <form method="post" action="/videoConPidRetrieve">
+                                                <td><%=all.get(i).getUsername()%>
+                                                </td>
+                                                <td><%=all.get(i).getPid()%>
+
+                                                </td>
+
+
+                                                <input class="patientoutlineTextbox" type="hidden" name="formPidUsername" value="<%=all.get(i).getUsername()%>">
+                                                <input class="patientoutlineTextbox" type="hidden" name="formpidPid" value="<%=all.get(i).getPid()%>">
+
+
+                                                <td><input class="btn btn-next btn-fill btn-rose btn-wd" type="submit" value="Call"></td>
 
 
 
+                                            </form>
 
 
+                                            </td>
 
-                    <div class="wizard-container">
-                        <div class="card wizard-card" data-color="green" id="wizardProfile">
-                            <link rel="stylesheet" href="style.css">
-                            <script src="http://cdn.peerjs.com/0.3/peer.min.js"></script>
-                            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-                            <script>
-                                navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
-                            // PeerJS object
-                            var peer = new Peer({key: 'ezdeolfd1x7p66r', debug: 3});
-                            peer.on('open', function () {
-                                $('#my-id').text(peer.id);
-
-                                $('#hiddenFieldForPID').val(peer.id);
-                            });</script>
-
-                            <%--pid js to jsp--%>
+                                        </tr>
 
 
+                                        <%
+                                                }
 
 
-                            <div class="pure-g">
+                                            }
 
-                                <!-- Video area -->
-                                <%--<div class="pure-u-2-3" id="video-container">--%>
 
-                                    <%--<video id="their-video" autoplay></video>--%>
-                                    <%--<video id="my-video" muted="true" autoplay></video>--%>
-                                <%--</div>--%>
+                                        %>
 
-                                <!-- Steps -->
-                                <div class="pure-u-1-3">
-                                    <%--<h2>Web Calling</h2>--%>
 
-                                    <!-- Get local audio/video stream -->
-                                    <%--<div id="step1">--%>
-                                        <%--<p>Please click `allow` on the top of the screen so we can access your webcam and microphone for calls.</p>--%>
-                                        <%--<div id="step1-error">--%>
-                                            <%--<p>Failed to access the webcam and microphone. Make sure to run this demo on an http server and click--%>
-                                                <%--allow when asked for permission by the browser.</p>--%>
-                                            <%--<a href="#" class="pure-button pure-button-error" id="step1-retry">Try again</a>--%>
-                                        <%--</div>--%>
-                                    <%--</div>--%>
-
-                                    <!-- Make calls to others -->
-                                    <%--<div id="step2">--%>
-                                        <p>Your id: <span id="my-id">...</span></p>
-                                        <form  method="post" action="/doctorPIDSave">
-                                            <input id="hiddenFieldForPID" name="hiddenFieldForPID"/>
-                                            <input type="submit">
-                                        </form>
-
-                                        <%--&lt;%&ndash;<p>Share this id with others so they can call you.</p>&ndash;%&gt;--%>
-                                        <%--&lt;%&ndash;<h3>Make a call</h3>&ndash;%&gt;--%>
-                                        <%--<div class="pure-form">--%>
-                                            <%--&lt;%&ndash;<input type="text" placeholder="Call user id..." id="callto-id">&ndash;%&gt;--%>
-                                            <%--<a href="#" class="pure-button pure-button-success" id="make-call">Call</a>--%>
-                                        <%--</div>--%>
-                                    <%--</div>--%>
-
-                                    <!-- Call in progress -->
-                                    <%--<div id="step3">--%>
-                                        <%--<p>Currently in call with <span id="their-id">...</span></p>--%>
-                                        <%--<p><a href="#" class="pure-button pure-button-error" id="end-call">End call</a></p>--%>
-                                    <%--</div>--%>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
-
-
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br> <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-
-
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-
-
-
                         </div>
+
+
                     </div>
-                    <!-- wizard container -->
                 </div>
+
+
             </div>
+            <!-- wizard container -->
         </div>
-        <footer class="footer">
-            <div class="container-fluid">
-                <nav class="pull-left">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Company
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Portfolio
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Blog
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <p class="copyright pull-right">
-                    &copy;
-                    <script>
-                        document.write(new Date().getFullYear())
-                    </script>
-                    <a href="http://www.creative-tim.com">Woodlands Integrated Health Campus</a>, made with love by
-                    Fanclub
-                </p>
-            </div>
-        </footer>
     </div>
+</div>
+<footer class="footer">
+    <div class="container-fluid">
+        <nav class="pull-left">
+            <ul>
+                <li>
+                    <a href="#">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Company
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Portfolio
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Blog
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <p class="copyright pull-right">
+            &copy;
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            <a href="http://www.creative-tim.com">Woodlands Integrated Health Campus</a>, made with love by
+            Fanclub
+        </p>
+    </div>
+</footer>
+</div>
 </div>
 <div class="fixed-plugin">
     <div class="dropdown show-dropdown">

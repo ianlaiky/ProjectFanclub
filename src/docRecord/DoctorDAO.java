@@ -23,7 +23,7 @@ public class DoctorDAO {
         List<DoctorrecordEntity> list = null;
 
         try {
-            Query query = em.createQuery("select a from docRecord a");
+            Query query = em.createQuery("select a from DoctorrecordEntity a");
             list = query.getResultList();
         } catch (Exception e) {
             e.printStackTrace();

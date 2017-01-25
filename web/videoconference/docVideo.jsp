@@ -97,6 +97,7 @@
              data-ps-id="27535860-4b1b-c8e5-ec90-4de4d32f70a0">
             <div class="user">
                 <div class="photo">
+
                     <img src="../../assets/img/faces/marc.jpg"/>
                 </div>
                 <div class="info">
@@ -116,6 +117,7 @@
                                 <a href="#">Settings</a>
                             </li>
                         </ul>
+
                     </div>
                 </div>
             </div>
@@ -232,7 +234,127 @@
                             <script src="http://cdn.peerjs.com/0.3/peer.min.js"></script>
                             <script type="text/javascript"
                                     src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-                            <script src="videoDoc.js"></script>
+                            <script>
+
+                                // Compatibility shim
+                                navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+                                // PeerJS object
+                                var peer = new Peer({key: 'ezdeolfd1x7p66r', debug: 3});
+                                peer.on('open', function () {
+                                    $('#my-id').text(peer.id);
+
+                                });
+                                // Receiving a call
+                                peer.on('call', function (call) {
+                                    // Answer the call automatically (instead of prompting user) for demo purposes
+
+                                    var r = confirm("Answer Call?");
+                                    if (r == true) {
+                                        console.log("Confrimed")
+                                        call.answer(window.localStream);
+                                        step3(call);
+                                    }
+
+
+                                });
+                                peer.on('error', function (err) {
+                                    alert(err.message);
+                                    // Return to step 2 if error occurs
+                                    step2();
+                                });
+                                // Click handlers setup
+
+
+                                $(function () {
+                                    console.log("reereqweeewer");
+                                    console.log('<%=session.getAttribute("docCalledPid")%>');
+
+
+                                    $('#make-call').click(function () {
+                                        // Initiate a call!
+
+                                        console.log("clickec")
+
+                                        var call = peer.call($('#callto-id').val(), window.localStream);
+                                        step3(call);
+
+
+                                        console.log("test run");
+
+//                                        var call = peer.call($('9ch8da60nf315rk9', window.localStream);
+//                                        step3(call);
+                                    });
+                                    $('#end-call').click(function () {
+                                        window.existingCall.close();
+                                        step2();
+                                    });
+                                    // Retry if getUserMedia fails
+                                    $('#step1-retry').click(function () {
+                                        $('#step1-error').hide();
+                                        step1();
+                                    });
+                                    // Get things started
+                                    step1();
+
+
+//                                    $("#make-call").trigger( "click" );
+                                    console.log("test run start");
+
+                                    var ppid = '<%=session.getAttribute("docCalledPid")%>';
+
+                                    $('#callto-id').val(ppid);
+
+                                    <%--console.log("DB PPID"+ppid);--%>
+
+                                    <%--var call = peer.call(ppid, window.localStream);--%>
+                                    <%--step3(call);--%>
+
+//                                    $('#make-call').trigger('click');
+                                    console.log("test run end");
+                                });
+
+                                function step1() {
+                                    console.log("step 1 runn");
+                                    // Get audio/video stream
+                                    navigator.getUserMedia({audio: true, video: true}, function (stream) {
+                                        // Set your video displays
+                                        $('#my-video').prop('src', URL.createObjectURL(stream));
+                                        window.localStream = stream;
+                                        step2();
+                                    }, function () {
+                                        $('#step1-error').show();
+                                    });
+
+
+                                }
+                                function step2() {
+
+                                    $('#step1, #step3').hide();
+                                    $('#step2').show();
+                                }
+                                function step3(call) {
+
+                                    console.log("step 3 run")
+                                    // Hang up on an existing call if present
+                                    if (window.existingCall) {
+                                        window.existingCall.close();
+                                    }
+                                    console.log("step 3 run")
+                                    // Wait for stream on the call, then set peer video display
+                                    call.on('stream', function (stream) {
+                                        $('#their-video').prop('src', URL.createObjectURL(stream));
+                                    });
+                                    console.log("step 3 run")
+                                    // UI stuff
+                                    window.existingCall = call;
+                                    $('#their-id').text(call.peer);
+                                    call.on('close', step2);
+                                    $('#step1, #step2').hide();
+                                    $('#step3').show();
+                                }
+
+
+                            </script>
 
                             <div class="pure-g">
 
@@ -267,7 +389,9 @@
                                         <h3>Make a call</h3>
                                         <div class="pure-form">
                                             <input type="text" placeholder="Call user id..." id="callto-id">
-                                            <a href="#" class="pure-button pure-button-success" id="make-call">Call</a>
+                                            <button href="#" class="pure-button pure-button-success" id="make-call">
+                                                Callh
+                                            </button>
                                         </div>
                                     </div>
 
@@ -351,97 +475,97 @@
 </div>
 <div class="fixed-plugin">
     <%--<div class="dropdown show-dropdown">--%>
-        <%--<a href="#" data-toggle="dropdown">--%>
-            <%--<i class="fa fa-cog fa-2x"> </i>--%>
-        <%--</a>--%>
-        <%--<ul class="dropdown-menu">--%>
-            <%--<li class="header-title"> Sidebar Filters</li>--%>
-            <%--<li class="adjustments-line">--%>
-                <%--<a href="javascript:void(0)" class="switch-trigger active-color">--%>
-                    <%--<div class="badge-colors text-center">--%>
-                        <%--<span class="badge filter badge-purple" data-color="purple"></span>--%>
-                        <%--<span class="badge filter badge-blue" data-color="blue"></span>--%>
-                        <%--<span class="badge filter badge-green" data-color="green"></span>--%>
-                        <%--<span class="badge filter badge-orange" data-color="orange"></span>--%>
-                        <%--<span class="badge filter badge-red" data-color="red"></span>--%>
-                        <%--<span class="badge filter badge-rose active" data-color="green"></span>--%>
-                    <%--</div>--%>
-                    <%--<div class="clearfix"></div>--%>
-                <%--</a>--%>
-            <%--</li>--%>
-            <%--<li class="header-title">Sidebar Background</li>--%>
-            <%--<li class="adjustments-line">--%>
-                <%--<a href="javascript:void(0)" class="switch-trigger background-color">--%>
-                    <%--<div class="text-center">--%>
-                        <%--<span class="badge filter badge-white" data-color="white"></span>--%>
-                        <%--<span class="badge filter badge-black active" data-color="black"></span>--%>
-                    <%--</div>--%>
-                    <%--<div class="clearfix"></div>--%>
-                <%--</a>--%>
-            <%--</li>--%>
-            <%--<li class="adjustments-line">--%>
-                <%--<a href="javascript:void(0)" class="switch-trigger">--%>
-                    <%--<p>Sidebar Mini</p>--%>
-                    <%--<div class="togglebutton switch-sidebar-mini">--%>
-                        <%--<label>--%>
-                            <%--<input type="checkbox" unchecked="">--%>
-                        <%--</label>--%>
-                    <%--</div>--%>
-                    <%--<div class="clearfix"></div>--%>
-                <%--</a>--%>
-            <%--</li>--%>
-            <%--<li class="adjustments-line">--%>
-                <%--<a href="javascript:void(0)" class="switch-trigger">--%>
-                    <%--<p>Sidebar Image</p>--%>
-                    <%--<div class="togglebutton switch-sidebar-image">--%>
-                        <%--<label>--%>
-                            <%--<input type="checkbox" checked="">--%>
-                        <%--</label>--%>
-                    <%--</div>--%>
-                    <%--<div class="clearfix"></div>--%>
-                <%--</a>--%>
-            <%--</li>--%>
-            <%--<li class="header-title">Images</li>--%>
-            <%--<li class="active">--%>
-                <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
-                    <%--<img src="../../assets/img/sidebar-1.jpg" alt=""/>--%>
-                <%--</a>--%>
-            <%--</li>--%>
-            <%--<li>--%>
-                <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
-                    <%--<img src="../../assets/img/sidebar-2.jpg" alt=""/>--%>
-                <%--</a>--%>
-            <%--</li>--%>
-            <%--<li>--%>
-                <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
-                    <%--<img src="../../assets/img/sidebar-3.jpg" alt=""/>--%>
-                <%--</a>--%>
-            <%--</li>--%>
-            <%--<li>--%>
-                <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
-                    <%--<img src="../../assets/img/sidebar-4.jpg" alt=""/>--%>
-                <%--</a>--%>
-            <%--</li>--%>
-            <%--<li class="button-container">--%>
-                <%--<div class="">--%>
-                    <%--<a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank"--%>
-                       <%--class="btn btn-rose btn-block">Buy Now</a>--%>
-                <%--</div>--%>
-                <%--<div class="">--%>
-                    <%--<a href="http://www.creative-tim.com/product/material-dashboard" target="_blank"--%>
-                       <%--class="btn btn-info btn-block">Get Free Demo</a>--%>
-                <%--</div>--%>
-            <%--</li>--%>
-            <%--<li class="header-title">Thank you for 95 shares!</li>--%>
-            <%--<li class="button-container">--%>
-                <%--<button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i> &middot;--%>
-                    <%--45--%>
-                <%--</button>--%>
-                <%--<button id="facebook" class="btn btn-social btn-facebook btn-round"><i--%>
-                        <%--class="fa fa-facebook-square"> &middot;</i>50--%>
-                <%--</button>--%>
-            <%--</li>--%>
-        <%--</ul>--%>
+    <%--<a href="#" data-toggle="dropdown">--%>
+    <%--<i class="fa fa-cog fa-2x"> </i>--%>
+    <%--</a>--%>
+    <%--<ul class="dropdown-menu">--%>
+    <%--<li class="header-title"> Sidebar Filters</li>--%>
+    <%--<li class="adjustments-line">--%>
+    <%--<a href="javascript:void(0)" class="switch-trigger active-color">--%>
+    <%--<div class="badge-colors text-center">--%>
+    <%--<span class="badge filter badge-purple" data-color="purple"></span>--%>
+    <%--<span class="badge filter badge-blue" data-color="blue"></span>--%>
+    <%--<span class="badge filter badge-green" data-color="green"></span>--%>
+    <%--<span class="badge filter badge-orange" data-color="orange"></span>--%>
+    <%--<span class="badge filter badge-red" data-color="red"></span>--%>
+    <%--<span class="badge filter badge-rose active" data-color="green"></span>--%>
+    <%--</div>--%>
+    <%--<div class="clearfix"></div>--%>
+    <%--</a>--%>
+    <%--</li>--%>
+    <%--<li class="header-title">Sidebar Background</li>--%>
+    <%--<li class="adjustments-line">--%>
+    <%--<a href="javascript:void(0)" class="switch-trigger background-color">--%>
+    <%--<div class="text-center">--%>
+    <%--<span class="badge filter badge-white" data-color="white"></span>--%>
+    <%--<span class="badge filter badge-black active" data-color="black"></span>--%>
+    <%--</div>--%>
+    <%--<div class="clearfix"></div>--%>
+    <%--</a>--%>
+    <%--</li>--%>
+    <%--<li class="adjustments-line">--%>
+    <%--<a href="javascript:void(0)" class="switch-trigger">--%>
+    <%--<p>Sidebar Mini</p>--%>
+    <%--<div class="togglebutton switch-sidebar-mini">--%>
+    <%--<label>--%>
+    <%--<input type="checkbox" unchecked="">--%>
+    <%--</label>--%>
+    <%--</div>--%>
+    <%--<div class="clearfix"></div>--%>
+    <%--</a>--%>
+    <%--</li>--%>
+    <%--<li class="adjustments-line">--%>
+    <%--<a href="javascript:void(0)" class="switch-trigger">--%>
+    <%--<p>Sidebar Image</p>--%>
+    <%--<div class="togglebutton switch-sidebar-image">--%>
+    <%--<label>--%>
+    <%--<input type="checkbox" checked="">--%>
+    <%--</label>--%>
+    <%--</div>--%>
+    <%--<div class="clearfix"></div>--%>
+    <%--</a>--%>
+    <%--</li>--%>
+    <%--<li class="header-title">Images</li>--%>
+    <%--<li class="active">--%>
+    <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
+    <%--<img src="../../assets/img/sidebar-1.jpg" alt=""/>--%>
+    <%--</a>--%>
+    <%--</li>--%>
+    <%--<li>--%>
+    <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
+    <%--<img src="../../assets/img/sidebar-2.jpg" alt=""/>--%>
+    <%--</a>--%>
+    <%--</li>--%>
+    <%--<li>--%>
+    <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
+    <%--<img src="../../assets/img/sidebar-3.jpg" alt=""/>--%>
+    <%--</a>--%>
+    <%--</li>--%>
+    <%--<li>--%>
+    <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
+    <%--<img src="../../assets/img/sidebar-4.jpg" alt=""/>--%>
+    <%--</a>--%>
+    <%--</li>--%>
+    <%--<li class="button-container">--%>
+    <%--<div class="">--%>
+    <%--<a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank"--%>
+    <%--class="btn btn-rose btn-block">Buy Now</a>--%>
+    <%--</div>--%>
+    <%--<div class="">--%>
+    <%--<a href="http://www.creative-tim.com/product/material-dashboard" target="_blank"--%>
+    <%--class="btn btn-info btn-block">Get Free Demo</a>--%>
+    <%--</div>--%>
+    <%--</li>--%>
+    <%--<li class="header-title">Thank you for 95 shares!</li>--%>
+    <%--<li class="button-container">--%>
+    <%--<button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i> &middot;--%>
+    <%--45--%>
+    <%--</button>--%>
+    <%--<button id="facebook" class="btn btn-social btn-facebook btn-round"><i--%>
+    <%--class="fa fa-facebook-square"> &middot;</i>50--%>
+    <%--</button>--%>
+    <%--</li>--%>
+    <%--</ul>--%>
     <%--</div>--%>
 </div>
 </body>
