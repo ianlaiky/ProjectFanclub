@@ -1049,7 +1049,7 @@ table {
     /*margin-top: 15px;*/
     width: 150px;
     height: auto;
-    left:0;
+    left: 0;
     top: 0;
     background-color: #eee;
 
@@ -1061,8 +1061,8 @@ table {
     height: auto;
     max-height: 480px;
     width: 100%;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     background-color: #eee;
     /*content: url(images/not.jpg);*/
 }

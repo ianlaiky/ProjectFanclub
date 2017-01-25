@@ -243,9 +243,9 @@
                                             PatientDAO pat = new PatientDAO();
 
 
-                                            List<PatientrecordEntity>patLsit= new ArrayList<>();
+                                            List<PatientrecordEntity> patLsit = new ArrayList<>();
 
-                                            patLsit=pat.getAllPatientUserAndPass();
+                                            patLsit = pat.getAllPatientUserAndPass();
 
                                             List<VideoconferenceEntity> all = new ArrayList<>();
                                             ArrayList<String> user = new ArrayList<>();
@@ -253,7 +253,7 @@
 
                                             all = vd.getAllPID();
 
-                                            String firstname="";
+                                            String firstname = "";
 
                                             for (int i = 0; i < all.size(); i++) {
 
@@ -262,14 +262,14 @@
                                                     user.add(all.get(i).getUsername());
                                                     pid.add(all.get(i).getPid());
 
-                                                    System.out.println("patlsit size= "+patLsit.size());
+                                                    System.out.println("patlsit size= " + patLsit.size());
 
 
-                                                    for(int o=0;o<patLsit.size();o++){
-                                                        if(patLsit.get(o).getpUsername().equalsIgnoreCase(all.get(i).getUsername())){
+                                                    for (int o = 0; o < patLsit.size(); o++) {
+                                                        if (patLsit.get(o).getpUsername().equalsIgnoreCase(all.get(i).getUsername())) {
 
-                                                             firstname = patLsit.get(o).getpName();
-                                                            System.out.println("firstname ="+firstname);
+                                                            firstname = patLsit.get(o).getpName();
+                                                            System.out.println("firstname =" + firstname);
 
                                                         }
 
@@ -287,9 +287,8 @@
                                                 </td>
 
 
-                                                    <td><%= firstname%></td>
-
-
+                                                <td><%= firstname%>
+                                                </td>
 
 
                                                 <td><%=all.get(i).getPid()%>
@@ -297,12 +296,14 @@
                                                 </td>
 
 
-                                                <input class="patientoutlineTextbox" type="hidden" name="formPidUsername" value="<%=all.get(i).getUsername()%>">
-                                                <input class="patientoutlineTextbox" type="hidden" name="formpidPid" value="<%=all.get(i).getPid()%>">
+                                                <input class="patientoutlineTextbox" type="hidden"
+                                                       name="formPidUsername" value="<%=all.get(i).getUsername()%>">
+                                                <input class="patientoutlineTextbox" type="hidden" name="formpidPid"
+                                                       value="<%=all.get(i).getPid()%>">
 
 
-                                                <td><input class="btn btn-next btn-fill btn-rose btn-wd" type="submit" value="Call"></td>
-
+                                                <td><input class="btn btn-next btn-fill btn-rose btn-wd" type="submit"
+                                                           value="Call"></td>
 
 
                                             </form>

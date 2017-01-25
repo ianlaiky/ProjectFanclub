@@ -58,28 +58,28 @@
 
     <style>
         .myButton {
-            background-color:#44c767;
-            -moz-border-radius:11px;
-            -webkit-border-radius:11px;
-            border-radius:11px;
-            display:inline-block;
-            cursor:pointer;
-            color:#ffffff;
-            font-family:Arial;
-            font-size:16px;
-            padding:8px 17px;
-            text-decoration:none;
-            text-shadow:0px 0px 0px #2f6627;
+            background-color: #44c767;
+            -moz-border-radius: 11px;
+            -webkit-border-radius: 11px;
+            border-radius: 11px;
+            display: inline-block;
+            cursor: pointer;
+            color: #ffffff;
+            font-family: Arial;
+            font-size: 16px;
+            padding: 8px 17px;
+            text-decoration: none;
+            text-shadow: 0px 0px 0px #2f6627;
         }
+
         .myButton:hover {
-            background-color:#5cbf2a;
+            background-color: #5cbf2a;
         }
+
         .myButton:active {
-            position:relative;
-            top:1px;
+            position: relative;
+            top: 1px;
         }
-
-
 
         .card {
             display: inline-block;
@@ -262,7 +262,10 @@
                                 // Compatibility shim
                                 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
                                 // PeerJS object
-                                var peer = new Peer('<%=session.getAttribute("patientPID")%>',{key: 'ezdeolfd1x7p66r', debug: 3});
+                                var peer = new Peer('<%=session.getAttribute("patientPID")%>', {
+                                    key: 'ezdeolfd1x7p66r',
+                                    debug: 3
+                                });
                                 peer.on('open', function () {
                                     $('#my-id').text(peer.id);
 
@@ -358,7 +361,7 @@
                                     <!-- Get local audio/video stream -->
                                     <div id="step1">
                                         <%--<p>Please click `allow` on the top of the screen so we can access your webcam--%>
-                                            <%--and microphone for calls.</p>--%>
+                                        <%--and microphone for calls.</p>--%>
                                         <div id="step1-error">
                                             <p>Failed to access the webcam and microphone. Make sure to run this demo on
                                                 an http server and click
@@ -379,7 +382,7 @@
                                         <p>Others in the Queue:</p>
 
                                         <p>
-                                            <%
+                                                <%
                                                 List<VideoconferenceEntity> po = new ArrayList<>();
 
                                                 VideoConferenceDAO vi = new VideoConferenceDAO();
@@ -398,26 +401,27 @@
 
                                             %>
 
-                                            <% for(int i=0;i<currentUser.size();i++){ %>
-<li>
-                                                <%=currentUser.get(i)%>
+                                                <% for(int i=0;i<currentUser.size();i++){ %>
+                                        <li>
+                                            <%=currentUser.get(i)%>
 
-                                    </li>
-                                            <%}%>
+                                        </li>
+                                        <%}%>
 
                                         </p>
                                         <%--<p>Share this id with others so they can call you.</p>--%>
                                         <%--<h3>Make a call</h3>--%>
                                         <%--<div class="pure-form">--%>
-                                            <%--&lt;%&ndash;<input type="text" placeholder="Call user id..." id="callto-id">&ndash;%&gt;--%>
-                                            <%--<a href="#" class="pure-button pure-button-success" id="make-call">Call</a>--%>
+                                        <%--&lt;%&ndash;<input type="text" placeholder="Call user id..." id="callto-id">&ndash;%&gt;--%>
+                                        <%--<a href="#" class="pure-button pure-button-success" id="make-call">Call</a>--%>
                                         <%--</div>--%>
                                     </div>
 
                                     <!-- Call in progress -->
                                     <div id="step3">
                                         <p>Currently in call with <span id="their-id">...</span></p>
-                                        <p><a href="/patientPIDDel" class="pure-button pure-button-error" id="end-call">End call</a></p>
+                                        <p><a href="/patientPIDDel" class="pure-button pure-button-error" id="end-call">End
+                                            call</a></p>
                                         </p>
                                     </div>
                                 </div>

@@ -4,7 +4,7 @@
 // Compatibility shim
 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 // PeerJS object
-var peer = new Peer('projectfanclub161215',{key: 'ezdeolfd1x7p66r', debug: 3});
+var peer = new Peer('projectfanclub161215', {key: 'ezdeolfd1x7p66r', debug: 3});
 peer.on('open', function () {
     $('#my-id').text(peer.id);
 });

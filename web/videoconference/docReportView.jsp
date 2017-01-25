@@ -2,6 +2,7 @@
 <!doctype html>
 <html lang="en">
 
+
 <head>
     <meta charset="utf-8"/>
     <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png"/>
@@ -206,7 +207,6 @@
                 <!--      Wizard container        -->
 
 
-
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">
@@ -401,20 +401,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
             </div>
