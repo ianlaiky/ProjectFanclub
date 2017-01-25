@@ -42,8 +42,15 @@ public class User {
         this.curFat = curFat;
         this.curCarbo = curCarbo;
     }
-    public User(int userId, String uname, int age, String gender, String intensity, int uheight, double weight) {
-        this.userId = userId;
+
+
+    public User( double dailyCalories, double dailyProtein, double dailyCarbo, double dailyFat) {
+        this.dailyCalories = dailyCalories;
+        this.dailyProtein = dailyProtein;
+        this.dailyCarbo = dailyCarbo;
+        this.dailyFat = dailyFat;
+    }
+    public User(String uname, int age, String gender, String intensity, int uheight, double weight) {
         this.uname = uname;
         this.age = age;
         this.gender = gender;

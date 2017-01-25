@@ -1,4 +1,6 @@
-<%--
+<%@ page import="foodDiet.UserDAO" %>
+<%@ page import="foodDiet.User" %>
+<%@ page import="java.text.DecimalFormat" %><%--
   Created by IntelliJ IDEA.
   User: Ying
   Date: 15/12/2016
@@ -62,6 +64,10 @@
 
     }
 
+%>
+<%
+    UserDAO db = new UserDAO();
+    User user = db.retrieveRecommendIntakeByUsername(session.getAttribute("username").toString());
 %>
 <div class="wrapper">
     <div class="sidebar" data-active-color="green" data-background-color="black" data-image="../../assets/img/sidebar-1.jpg">
@@ -241,9 +247,10 @@
                                         </div>
                                         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                             <div class="panel-body">
-                                                BMI: 3.22
-                                                BMR: 1.232
-                                                Your personalized calories intake is : 2000
+                                                <%
+                                                    DecimalFormat df = new DecimalFormat("##");
+                                                %>
+                                                Your personalized Calories intake is :<pre>        <%=df.format(user.getDailyCalories())%> calories           </pre>
                                             </div>
                                         </div>
                                     </div>
@@ -258,7 +265,9 @@
                                         </div>
                                         <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                             <div class="panel-body">
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                             Daily Recommended Protein intake :<pre>        <%=user.getDailyProtein()%> grams            </pre><br>
+                                             Daily Recommended Carbohydrates intake :<pre>       <%=user.getDailyCarbo()%> grams            </pre><br>
+                                             Daily Recommended Fats intake :<pre>        <%=user.getDailyFat()%> grams           </pre>
                                             </div>
                                         </div>
                                     </div>
@@ -273,7 +282,7 @@
                                         </div>
                                         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                             <div class="panel-body">
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                Under Construction
                                             </div>
                                         </div>
                                     </div>
