@@ -2,6 +2,8 @@
 <%@ page import="java.util.List" %>
 <%@ page import="videoconference.VideoconferenceEntity" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="patientRecord.PatientDAO" %>
+<%@ page import="patientRecord.PatientrecordEntity" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
@@ -228,6 +230,7 @@
                                     <table class="table">
                                         <thead class="text-primary">
                                         <th>User Id</th>
+                                        <th>Name</th>
                                         <th>PID (For reference)</th>
                                         <th>Call User</th>
 
@@ -237,11 +240,20 @@
                                         <%
                                             VideoConferenceDAO vd = new VideoConferenceDAO();
 
+                                            PatientDAO pat = new PatientDAO();
+
+
+                                            List<PatientrecordEntity>patLsit= new ArrayList<>();
+
+                                            patLsit=pat.getAllPatientUserAndPass();
+
                                             List<VideoconferenceEntity> all = new ArrayList<>();
                                             ArrayList<String> user = new ArrayList<>();
                                             ArrayList<String> pid = new ArrayList<>();
 
                                             all = vd.getAllPID();
+
+                                            String firstname="";
 
                                             for (int i = 0; i < all.size(); i++) {
 
@@ -249,6 +261,20 @@
 
                                                     user.add(all.get(i).getUsername());
                                                     pid.add(all.get(i).getPid());
+
+                                                    System.out.println("patlsit size= "+patLsit.size());
+
+
+                                                    for(int o=0;o<patLsit.size();o++){
+                                                        if(patLsit.get(o).getpUsername().equalsIgnoreCase(all.get(i).getUsername())){
+
+                                                             firstname = patLsit.get(o).getpName();
+                                                            System.out.println("firstname ="+firstname);
+
+                                                        }
+
+
+                                                    }
 
 
                                         %>
@@ -259,6 +285,13 @@
                                             <form method="post" action="/videoConPidRetrieve">
                                                 <td><%=all.get(i).getUsername()%>
                                                 </td>
+
+
+                                                    <td><%= firstname%></td>
+
+
+
+
                                                 <td><%=all.get(i).getPid()%>
 
                                                 </td>

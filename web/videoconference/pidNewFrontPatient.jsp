@@ -246,6 +246,10 @@
                                 $('#my-id').text(peer.id);
 
                                 $('#hiddenFieldForPID').val(peer.id);
+
+
+                                document.getElementById("btnenablemepls").disabled = false;
+                                document.getElementById('btnenablemepls').textContent = "Start Call Now";
                             });</script>
 
                             <%--pid js to jsp--%>
@@ -253,7 +257,7 @@
 
 
 
-                            <div class="pure-g">
+                            <%--<div class="pure-g">--%>
 
                                 <!-- Video area -->
                                 <%--<div class="pure-u-2-3" id="video-container">--%>
@@ -263,7 +267,7 @@
                                 <%--</div>--%>
 
                                 <!-- Steps -->
-                                <div class="pure-u-1-3">
+                                <%--<div class="pure-u-1-3">--%>
                                     <%--<h2>Web Calling</h2>--%>
 
                                     <!-- Get local audio/video stream -->
@@ -278,13 +282,44 @@
 
                                     <!-- Make calls to others -->
                                     <%--<div id="step2">--%>
-                                        <p>Your id: <span id="my-id">...</span></p>
+
+                                                <%--<form id="RegisterValidation" action="" method="">--%>
+                                                    <%--<div class="card-header card-header-icon" data-background-color="rose">--%>
+                                                        <%--<i class="material-icons">mail_outline</i>--%>
+                                                    <%--</div>--%>
+                                                    <%--<div class="card-content">--%>
+                                                        <%--<h4 class="card-title">Video Call</h4>--%>
+                                                        <%--<div class="form-group label-floating">--%>
+                                                            <%--<label class="control-label">--%>
+                                                                <%--Your ID:--%>
+                                                                <%--<small>*</small>--%>
+                                                            <%--</label>--%>
+                                                            <%--<input class="form-control" name="email" type="email" required="true" />--%>
+                                                        <%--</div>--%>
+
+
+
+                                                        <%--<div class="form-footer text-center">--%>
+
+                                                            <%--<button type="submit" class="btn btn-rose btn-fill">Register</button>--%>
+                                                        <%--</div>--%>
+                                                    <%--</div>--%>
+                                                <%--</form>--%>
+
+
+
+<center>                        <h1>Welcome, <%=session.getAttribute("firstName")%></h1>
+                                        <h2>Your Username Is: <%=session.getAttribute("username")%></h2>
                                         <form  method="post" action="/patientPIDSav">
-                                            <input id="hiddenFieldForPID" name="hiddenFieldForPID"/>
-                                            <input type="submit">
+
+
+
+
+                                            <input id="hiddenFieldForPID" name="hiddenFieldForPID" hidden/>
+                                            <button id="btnenablemepls" class="btn btn-rose btn-fill"  type="submit" disabled>Getting ready...</button>
                                         </form>
 
-
+</center>
                                         <%--&lt;%&ndash;<p>Share this id with others so they can call you.</p>&ndash;%&gt;--%>
                                         <%--&lt;%&ndash;<h3>Make a call</h3>&ndash;%&gt;--%>
                                         <%--<div class="pure-form">--%>
