@@ -146,19 +146,19 @@
                                                 <span class="input-group-addon">
                                                     <i class="material-icons">face</i>
                                                 </span>
-                                            <input type="text" class="form-control" name="firstName" placeholder="First Name...">
+                                            <input type="text" class="form-control" name="firstName" placeholder="First Name..." required>
                                         </div>
                                         <div class="input-group">
                                                 <span class="input-group-addon">
                                                     <i class="material-icons">contact_phone</i>
                                                 </span>
-                                            <input type="text" class="form-control" name="contactPhone" placeholder="Phone number...">
+                                            <input type="text" class="form-control" pattern= "[0-9]{8}" name="contactPhone" placeholder="Phone number: 12345678" required>
                                         </div>
                                         <div class="input-group">
                                                 <span class="input-group-addon">
                                                     <i class="material-icons">lock_outline</i>
                                                 </span>
-                                            <input type="password" placeholder="Password..." name="pPass" class="form-control" />
+                                            <input type="password" placeholder="Password..." name="pPass" class="form-control" required>
                                         </div>
                                         <!-- If you want to add a checkbox to this form, uncomment this code -->
                                         <%--<div class="checkbox">--%>
