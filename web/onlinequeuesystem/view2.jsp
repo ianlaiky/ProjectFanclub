@@ -339,204 +339,209 @@
                 </div>
             </div>
         </nav>
-        <div class="content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="card-header card-header-icon" data-background-color="rose">
-                                <i class="material-icons">assignment</i>
-                            </div>
-                            <div class="card-content">
-                                <h4 class="card-title">View queue details</h4>
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead class="text-primary">
-                                        <th>Name</th>
-                                        <th>Number of Queues Taken</th>
-                                        <th>Number of Patients ahead of you</th>
-                                        <th>Estimated Waiting Time</th>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>John Lim</td>
-                                            <td>3</td>
-                                            <td>5</td>
-                                            <td class="text-primary">20mins</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Harper Riquelm</td>
-                                            <td>10</td>
-                                            <td>89</td>
-                                            <td class="text-primary">70 mins</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sage Rodriguez</td>
-                                            <td>12</td>
-                                            <td>6</td>
-                                            <td class="text-primary">50 mins</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Philip Chaney</td>
-                                            <td>12</td>
-                                            <td>8</td>
-                                            <td class="text-primary">10 mins</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Doris Greene</td>
-                                            <td>12</td>
-                                            <td>7</td>
-                                            <td class="text-primary">15 mins</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Mason Porter</td>
-                                            <td>5</td>
-                                            <td>21</td>
-                                            <td class="text-primary">15 mins</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="card card-plain">
-                                <div class="card-header card-header-icon" data-background-color="rose">
-                                    <i class="material-icons">assignment</i>
-                                </div>
-                                <h4 class="card-title">Table on Plain Background</h4>
-                                <p class="category">Here is a subtitle for this table</p>
-                                <div class="card-content table-responsive">
-                                    <table class="table table-hover">
-                                        <thead>
-                                        <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Salary</th>
-                                        <th>Country</th>
-                                        <th>City</th>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Dakota Rice</td>
-                                            <td>$36,738</td>
-                                            <td>Niger</td>
-                                            <td>Oud-Turnhout</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Minerva Hooper</td>
-                                            <td>$23,789</td>
-                                            <td>Curaçao</td>
-                                            <td>Sinaai-Waas</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Sage Rodriguez</td>
-                                            <td>$56,142</td>
-                                            <td>Netherlands</td>
-                                            <td>Baileux</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>Philip Chaney</td>
-                                            <td>$38,735</td>
-                                            <td>Korea, South</td>
-                                            <td>Overland Park</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>Doris Greene</td>
-                                            <td>$63,542</td>
-                                            <td>Malawi</td>
-                                            <td>Feldkirchen in Kärnten</td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>Mason Porter</td>
-                                            <td>$78,615</td>
-                                            <td>Chile</td>
-                                            <td>Gloucester</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header card-header-icon" data-background-color="rose">
-                                    <i class="material-icons">assignment</i>
-                                </div>
-                                <h4 class="card-title">Regular Table with Colors</h4>
-                                <div class="card-content table-responsive table-full-width">
-                                    <table class="table table-hover">
-                                        <thead>
-                                        <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Salary</th>
-                                        <th>Country</th>
-                                        <th>City</th>
-                                        </thead>
-                                        <tbody>
-                                        <tr class="success">
-                                            <td>1</td>
-                                            <td>Dakota Rice (Success)</td>
-                                            <td>$36,738</td>
-                                            <td>Niger</td>
-                                            <td>Oud-Turnhout</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Minerva Hooper</td>
-                                            <td>$23,789</td>
-                                            <td>Curaçao</td>
-                                            <td>Sinaai-Waas</td>
-                                        </tr>
-                                        <tr class="info">
-                                            <td>3</td>
-                                            <td>Sage Rodriguez (Info)</td>
-                                            <td>$56,142</td>
-                                            <td>Netherlands</td>
-                                            <td>Baileux</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>Philip Chaney</td>
-                                            <td>$38,735</td>
-                                            <td>Korea, South</td>
-                                            <td>Overland Park</td>
-                                        </tr>
-                                        <tr class="danger">
-                                            <td>5</td>
-                                            <td>Doris Greene (Danger)</td>
-                                            <td>$63,542</td>
-                                            <td>Malawi</td>
-                                            <td>Feldkirchen in Kärnten</td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>Mason Porter</td>
-                                            <td>$78,615</td>
-                                            <td>Chile</td>
-                                            <td>Gloucester</td>
-                                        </tr>
-                                        <tr class="warning">
-                                            <td>7</td>
-                                            <td>Mike Chaney (Warning)</td>
-                                            <td>$38,735</td>
-                                            <td>Romania</td>
-                                            <td>Bucharest</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+
+        <center><h1>Hello, <%=session.getAttribute("firstName")%>
+        </h1></center>
+        <center><h2>Patients who are ahead of you</h2></center>
+        <%--<div class="content">--%>
+        <%--<div class="container-fluid">--%>
+        <%--<div class="row">--%>
+        <%--<div class="col-md-12">--%>
+        <%--<div class="card">--%>
+        <%--<div class="card-header card-header-icon" data-background-color="rose">--%>
+        <%--<i class="material-icons">assignment</i>--%>
+        <%--</div>--%>
+        <%--<div class="card-content">--%>
+        <%--<h4 class="card-title">View queue details</h4>--%>
+        <%--<div class="table-responsive">--%>
+        <%--<table class="table">--%>
+        <%--<thead class="text-primary">--%>
+        <%--<th>Name</th>--%>
+        <%--<th>Number of Queues Taken</th>--%>
+        <%--<th>Number of Patients ahead of you</th>--%>
+        <%--<th>Estimated Waiting Time</th>--%>
+        <%--</thead>--%>
+        <%--<tbody>--%>
+        <%--<tr>--%>
+        <%--<td>John Lim</td>--%>
+        <%--<td>3</td>--%>
+        <%--<td>5</td>--%>
+        <%--<td class="text-primary">20mins</td>--%>
+        <%--</tr>--%>
+        <%--<tr>--%>
+        <%--<td>Harper Riquelm</td>--%>
+        <%--<td>10</td>--%>
+        <%--<td>89</td>--%>
+        <%--<td class="text-primary">70 mins</td>--%>
+        <%--</tr>--%>
+        <%--<tr>--%>
+        <%--<td>Sage Rodriguez</td>--%>
+        <%--<td>12</td>--%>
+        <%--<td>6</td>--%>
+        <%--<td class="text-primary">50 mins</td>--%>
+        <%--</tr>--%>
+        <%--<tr>--%>
+        <%--<td>Philip Chaney</td>--%>
+        <%--<td>12</td>--%>
+        <%--<td>8</td>--%>
+        <%--<td class="text-primary">10 mins</td>--%>
+        <%--</tr>--%>
+        <%--<tr>--%>
+        <%--<td>Doris Greene</td>--%>
+        <%--<td>12</td>--%>
+        <%--<td>7</td>--%>
+        <%--<td class="text-primary">15 mins</td>--%>
+        <%--</tr>--%>
+        <%--<tr>--%>
+        <%--<td>Mason Porter</td>--%>
+        <%--<td>5</td>--%>
+        <%--<td>21</td>--%>
+        <%--<td class="text-primary">15 mins</td>--%>
+        <%--</tr>--%>
+        <%--</tbody>--%>
+        <%--</table>--%>
+        <%--</div>--%>
+        <%--</div>--%>
+        <%--</div>--%>
+        <%--<div class="col-md-12">--%>
+        <%--<div class="card card-plain">--%>
+        <%--<div class="card-header card-header-icon" data-background-color="rose">--%>
+        <%--<i class="material-icons">assignment</i>--%>
+        <%--</div>--%>
+        <%--<h4 class="card-title">Table on Plain Background</h4>--%>
+        <%--<p class="category">Here is a subtitle for this table</p>--%>
+        <%--<div class="card-content table-responsive">--%>
+        <%--<table class="table table-hover">--%>
+        <%--<thead>--%>
+        <%--<th>ID</th>--%>
+        <%--<th>Name</th>--%>
+        <%--<th>Salary</th>--%>
+        <%--<th>Country</th>--%>
+        <%--<th>City</th>--%>
+        <%--</thead>--%>
+        <%--<tbody>--%>
+        <%--<tr>--%>
+        <%--<td>1</td>--%>
+        <%--<td>Dakota Rice</td>--%>
+        <%--<td>$36,738</td>--%>
+        <%--<td>Niger</td>--%>
+        <%--<td>Oud-Turnhout</td>--%>
+        <%--</tr>--%>
+        <%--<tr>--%>
+        <%--<td>2</td>--%>
+        <%--<td>Minerva Hooper</td>--%>
+        <%--<td>$23,789</td>--%>
+        <%--<td>Curaçao</td>--%>
+        <%--<td>Sinaai-Waas</td>--%>
+        <%--</tr>--%>
+        <%--<tr>--%>
+        <%--<td>3</td>--%>
+        <%--<td>Sage Rodriguez</td>--%>
+        <%--<td>$56,142</td>--%>
+        <%--<td>Netherlands</td>--%>
+        <%--<td>Baileux</td>--%>
+        <%--</tr>--%>
+        <%--<tr>--%>
+        <%--<td>4</td>--%>
+        <%--<td>Philip Chaney</td>--%>
+        <%--<td>$38,735</td>--%>
+        <%--<td>Korea, South</td>--%>
+        <%--<td>Overland Park</td>--%>
+        <%--</tr>--%>
+        <%--<tr>--%>
+        <%--<td>5</td>--%>
+        <%--<td>Doris Greene</td>--%>
+        <%--<td>$63,542</td>--%>
+        <%--<td>Malawi</td>--%>
+        <%--<td>Feldkirchen in Kärnten</td>--%>
+        <%--</tr>--%>
+        <%--<tr>--%>
+        <%--<td>6</td>--%>
+        <%--<td>Mason Porter</td>--%>
+        <%--<td>$78,615</td>--%>
+        <%--<td>Chile</td>--%>
+        <%--<td>Gloucester</td>--%>
+        <%--</tr>--%>
+        <%--</tbody>--%>
+        <%--</table>--%>
+        <%--</div>--%>
+        <%--</div>--%>
+        <%--</div>--%>
+        <%--<div class="col-md-12">--%>
+        <%--<div class="card">--%>
+        <%--<div class="card-header card-header-icon" data-background-color="rose">--%>
+        <%--<i class="material-icons">assignment</i>--%>
+        <%--</div>--%>
+        <%--<h4 class="card-title">Regular Table with Colors</h4>--%>
+        <%--<div class="card-content table-responsive table-full-width">--%>
+        <%--<table class="table table-hover">--%>
+        <%--<thead>--%>
+        <%--<th>ID</th>--%>
+        <%--<th>Name</th>--%>
+        <%--<th>Salary</th>--%>
+        <%--<th>Country</th>--%>
+        <%--<th>City</th>--%>
+        <%--</thead>--%>
+        <%--<tbody>--%>
+        <%--<tr class="success">--%>
+        <%--<td>1</td>--%>
+        <%--<td>Dakota Rice (Success)</td>--%>
+        <%--<td>$36,738</td>--%>
+        <%--<td>Niger</td>--%>
+        <%--<td>Oud-Turnhout</td>--%>
+        <%--</tr>--%>
+        <%--<tr>--%>
+        <%--<td>2</td>--%>
+        <%--<td>Minerva Hooper</td>--%>
+        <%--<td>$23,789</td>--%>
+        <%--<td>Curaçao</td>--%>
+        <%--<td>Sinaai-Waas</td>--%>
+        <%--</tr>--%>
+        <%--<tr class="info">--%>
+        <%--<td>3</td>--%>
+        <%--<td>Sage Rodriguez (Info)</td>--%>
+        <%--<td>$56,142</td>--%>
+        <%--<td>Netherlands</td>--%>
+        <%--<td>Baileux</td>--%>
+        <%--</tr>--%>
+        <%--<tr>--%>
+        <%--<td>4</td>--%>
+        <%--<td>Philip Chaney</td>--%>
+        <%--<td>$38,735</td>--%>
+        <%--<td>Korea, South</td>--%>
+        <%--<td>Overland Park</td>--%>
+        <%--</tr>--%>
+        <%--<tr class="danger">--%>
+        <%--<td>5</td>--%>
+        <%--<td>Doris Greene (Danger)</td>--%>
+        <%--<td>$63,542</td>--%>
+        <%--<td>Malawi</td>--%>
+        <%--<td>Feldkirchen in Kärnten</td>--%>
+        <%--</tr>--%>
+        <%--<tr>--%>
+        <%--<td>6</td>--%>
+        <%--<td>Mason Porter</td>--%>
+        <%--<td>$78,615</td>--%>
+        <%--<td>Chile</td>--%>
+        <%--<td>Gloucester</td>--%>
+        <%--</tr>--%>
+        <%--<tr class="warning">--%>
+        <%--<td>7</td>--%>
+        <%--<td>Mike Chaney (Warning)</td>--%>
+        <%--<td>$38,735</td>--%>
+        <%--<td>Romania</td>--%>
+        <%--<td>Bucharest</td>--%>
+        <%--</tr>--%>
+        <%--</tbody>--%>
+        <%--</table>--%>
+        <%--</div>--%>
+        <%--</div>--%>
+        <%--</div>--%>
+        <%--</div>--%>
+        <%--</div>--%>
+        <%--</div>--%>
+        <%--</div>--%>
         <footer class="footer">
             <div class="container-fluid">
                 <nav class="pull-left">

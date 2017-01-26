@@ -59,6 +59,8 @@ public class QueuServlet extends HttpServlet {
         QueueSystemDAO aa = new QueueSystemDAO();
         aa.createQueue(user, newQueueno);
 
+        session.setAttribute("newQueueNo",newQueueno);
+
         response.sendRedirect("onlinequeuesystem/queueNoDisplay.jsp");
 
         return;
