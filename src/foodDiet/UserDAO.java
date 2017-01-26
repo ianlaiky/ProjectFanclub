@@ -39,7 +39,7 @@ public class UserDAO {
         return userId;
     }
 
-    private static User convertToUserRecommendIntake(ResultSet rs) throws SQLException {
+    private User convertToUserRecommendIntake(ResultSet rs) throws SQLException {
         User user;
 
         double dailyCalories = rs.getDouble("dailyCalories");
@@ -52,7 +52,7 @@ public class UserDAO {
 
         return user;
     }
-    private static User convertToUserParticular(ResultSet rs) throws SQLException {
+    private User convertToUserParticular(ResultSet rs) throws SQLException {
         User user;
 
         String uname= rs.getString("uname");
@@ -67,7 +67,7 @@ public class UserDAO {
 
         return user;
     }
-    private static User convertToUser(ResultSet rs) throws SQLException {
+    private User convertToUser(ResultSet rs) throws SQLException {
         User user;
 
         int userId = rs.getInt("userId");
@@ -94,7 +94,7 @@ public class UserDAO {
         return user;
     }
 
-    public static boolean createUser(int userId, String uname, int age, String gender, String intensity, int uheight, double weight, double dailyCalories, double dailyProtein, double dailyCarbo, double dailyFat, double curCalories, double curProtein, double curFat, double curCarbo) {
+    public boolean createUser(int userId, String uname, int age, String gender, String intensity, int uheight, double weight, double dailyCalories, double dailyProtein, double dailyCarbo, double dailyFat, double curCalories, double curProtein, double curFat, double curCarbo) {
         // declare local variables
         boolean success = false;
         DBController db = new DBController();
@@ -141,7 +141,7 @@ public class UserDAO {
         return success;
     }
 
-    public static ArrayList<User> retrieveAllUser() {
+    public ArrayList<User> retrieveAllUser() {
         // declare local variables
         ArrayList<User> list = new ArrayList<User>();
         ResultSet rs = null;
@@ -171,7 +171,7 @@ public class UserDAO {
         return list;
     }
 
-    public static User retrieveUserByUsername(String uname) {
+    public User retrieveUserByUsername(String uname) {
         // declare local variables
        User user = null;
         ResultSet rs = null;
@@ -208,7 +208,7 @@ public class UserDAO {
     }
 
 
-    public static User retrieveRecommendIntakeByUsername(String uname) {
+    public User retrieveRecommendIntakeByUsername(String uname) {
         // declare local variables
         User user = null;
         ResultSet rs = null;
