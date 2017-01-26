@@ -509,36 +509,12 @@
                     %>
 
 
-                    <%
-
-                        List<OnlinequeuesystemEntity> queueList = (List<OnlinequeuesystemEntity>) session.getAttribute("queueList");
-                        for (int i = 0; i < queueList.size(); i++) {
-                            System.out.println("running");
-                            System.out.println(queueList.get(i).getQueueNumber());
-
-
-                        }
-                        int newQueueno;
-                        if (queueList.size() == 0) {
-                            newQueueno = 1;
-
-                        } else {
-
-                            newQueueno = queueList.get(queueList.size() - 1).getQueueNumber() + 1;
-
-
-                        }
-                        String user = (String) session.getAttribute("username");
-                        QueueSystemDAO aa = new QueueSystemDAO();
-                        aa.createQueue(user, newQueueno);
-
-                    %>
 
 
 
                     <div class="col-md-12">
                         <div class="card">
-                            <form id="LoginValidation" action="" method="">
+                            <form id="LoginValidation" action="post" method="/onlinequeuesystem">
                                 <div class="card-header card-header-icon" data-background-color="rose">
                                     <i class="material-icons">alarm_on</i>
                                 </div>
