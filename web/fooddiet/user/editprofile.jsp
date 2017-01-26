@@ -240,7 +240,7 @@
                                         <div class="col-sm-7">
                                             <div class="form-group label-floating">
                                                 <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="required" value="<%=user.getUname()%>" required="true" />
+                                                <input class="form-control" type="text" name="name" value="<%=user.getUname()%>" required="true" />
                                             </div>
                                         </div>
 
@@ -250,7 +250,7 @@
                                         <div class="col-sm-7">
                                             <div class="form-group label-floating">
                                                 <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="number" value="<%=user.getAge()%>" number="true" />
+                                                <input class="form-control" type="text" name="age" value="<%=user.getAge()%>" number="true" />
                                             </div>
                                         </div>
                                     </div>
@@ -261,9 +261,9 @@
 
                                             <select class="selectpicker" id="intense" data-style="select-with-transition" title="Choose Physical Activity Intensity" data-size="4" >
                                                 <option disabled> Choose an intensity best suit you</option>
-                                                <option value="sedentary">Sedentary </option>
-                                                <option value="moderate">Moderately Active</option>
-                                                <option value="active">Active</option>
+                                                <option name="intensity" value="sedentary">Sedentary </option>
+                                                <option name="intensity" value="moderate">Moderately Active</option>
+                                                <option name="intensity" value="active">Active</option>
                                             </select>
                                                <%
                                                    System.out.println(user.getIntensity());
@@ -272,15 +272,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-footer text-center">
-                                    <button type="submit" class="btn btn-rose btn-fill">Update Particulars</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="card">
-                            <form method="get" action="/" class="form-horizontal">
+                                <br>
+                                <br>
+                                <hr>
+                                <br>
                                 <div class="card-header card-header-text" data-background-color="orange">
                                     <h4 class="card-title">Measurements</h4>
                                 </div>
@@ -293,7 +288,7 @@
                                             <div class="col-xs-5">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label"></label>
-                                                    <input class="form-control" type="text" name="number" value="<%=user.getHeight()%>" number="true" />
+                                                    <input class="form-control" type="text" name="height" value="<%=user.getHeight()%>" number="true" />
                                                 </div>
                                             </div>
                                             <label class="col-xs-2 label-on-right">
@@ -309,7 +304,7 @@
                                             <div class="col-xs-5">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label"></label>
-                                                    <input class="form-control" type="text" name="number" value="<%=user.getWeight()%>" number="true" />
+                                                    <input class="form-control" type="text" name="weight" value="<%=user.getWeight()%>" number="true" />
                                                 </div>
                                             </div>
                                             <label class="col-xs-2 label-on-right">
@@ -321,7 +316,9 @@
                                 <div class="card-footer text-center">
                                     <button type="submit" class="btn btn-rose btn-fill">Save</button>
                                 </div>
+
                             </form>
+
                         </div>
                     </div>
                   <!--  <div class="col-md-12">

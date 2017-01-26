@@ -243,7 +243,7 @@ public class UserDAO {
         return user;
     }
 
-    public static boolean updateMeasurement(int uheight,double weight, String uname) {
+    public boolean updateMeasurement(int uheight,double weight, String uname) {
         // declare local variables
         boolean success = false;
         DBController db = new DBController();
