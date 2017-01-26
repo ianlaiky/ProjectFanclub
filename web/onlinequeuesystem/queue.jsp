@@ -1,7 +1,9 @@
 <%@ page import="patientRecord.PatientDAO" %>
 <%@ page import="patientRecord.PatientrecordEntity" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%@ page import="queue.OnlinequeuesystemEntity" %>
+<%@ page import="queue.QueueSystemDAO" %><%--
   Created by IntelliJ IDEA.
   User: Ying
   Date: 11/12/2016
@@ -82,7 +84,9 @@
 
     }
 
+
 %>
+
 <div class="wrapper">
     <div class="sidebar" data-active-color="green" data-background-color="white"
          data-image="../../assets/img/sidebar-1.jpg">
@@ -115,7 +119,7 @@
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="../onlinequeuesystem/view2.jsp">View Estimated Waiting Time</a>
+                                <a href="../onlinequeuesystem/view2.jsp">View Queue Details</a>
                             </li>
                             <li>
                                 <a href="#">Edit Profile</a>
@@ -490,19 +494,47 @@
 
                         allPat = pat.getAllPatientUserAndPass();
 
-                        String curretnsession = (String) session.getAttribute("username");
+                        String currentsession = (String) session.getAttribute("username");
                         String phoneNow = "";
 
 
                         for (int i = 0; i < allPat.size(); i++) {
 
-                            if (curretnsession.equalsIgnoreCase(allPat.get(i).getpUsername())) {
+                            if (currentsession.equalsIgnoreCase(allPat.get(i).getpUsername())) {
                                 phoneNow = allPat.get(i).getpPhoneNumber();
                             }
 
                         }
                         System.out.println(phoneNow);
                     %>
+
+
+                    <%
+
+                        List<OnlinequeuesystemEntity> queueList = (List<OnlinequeuesystemEntity>) session.getAttribute("queueList");
+                        for (int i = 0; i < queueList.size(); i++) {
+                            System.out.println("running");
+                            System.out.println(queueList.get(i).getQueueNumber());
+
+
+                        }
+                        int newQueueno;
+                        if (queueList.size() == 0) {
+                            newQueueno = 1;
+
+                        } else {
+
+                            newQueueno = queueList.get(queueList.size() - 1).getQueueNumber() + 1;
+
+
+                        }
+                        String user = (String) session.getAttribute("username");
+                        QueueSystemDAO aa = new QueueSystemDAO();
+                        aa.createQueue(user, newQueueno);
+
+                    %>
+
+
 
                     <div class="col-md-12">
                         <div class="card">
