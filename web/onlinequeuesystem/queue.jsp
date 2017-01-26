@@ -122,10 +122,13 @@
                                 <a href="../onlinequeuesystem/view2.jsp">View Queue Details</a>
                             </li>
                             <li>
-                                <a href="#">Edit Profile</a>
+                                <a href="../onlinequeuesystem/waitingTime.jsp">View Estimated Waiting Time</a>
                             </li>
                             <li>
-                                <a href="#">Settings</a>
+                                <a href="/logout">
+                                    <i class="material-icons">exit_to_app</i>
+                                    <p>Logout</p>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -507,9 +510,6 @@
                         }
                         System.out.println(phoneNow);
                     %>
-
-
-
 
 
                     <div class="col-md-12">
