@@ -240,7 +240,7 @@
                                         <div class="col-sm-7">
                                             <div class="form-group label-floating">
                                                 <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="required" value="<%=user.getUname()%>" required="true" />
+                                                <input class="form-control" type="text" name="name" value="<%=user.getUname()%>" required="true" />
                                             </div>
                                         </div>
 
@@ -250,7 +250,7 @@
                                         <div class="col-sm-7">
                                             <div class="form-group label-floating">
                                                 <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="number" value="<%=user.getAge()%>" number="true" />
+                                                <input class="form-control" type="text" name="age" value="<%=user.getAge()%>" number="true" />
                                             </div>
                                         </div>
                                     </div>
@@ -258,24 +258,24 @@
                                     <div class="row">
                                         <label class="col-sm-2 label-on-left">Physical Activity Intensity</label>
                                         <div class="col-lg-7 col-md-6 col-sm-3">
-                                            <select class="selectpicker" data-style="select-with-transition" title="Choose Physical Activity Intensity" data-size="4">
+
+                                            <select class="selectpicker" id="intense" data-style="select-with-transition" title="Choose Physical Activity Intensity" data-size="4" >
                                                 <option disabled> Choose an intensity best suit you</option>
-                                                <option value="2">Sedentary </option>
-                                                <option value="3">Moderately Active</option>
-                                                <option value="4">Active</option>
+                                                <option name="intensity" value="sedentary">Sedentary </option>
+                                                <option name="intensity" value="moderate">Moderately Active</option>
+                                                <option name="intensity" value="active">Active</option>
                                             </select>
+                                               <%
+                                                   System.out.println(user.getIntensity());
+                                               %>
+
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-footer text-center">
-                                    <button type="submit" class="btn btn-rose btn-fill">Update Particulars</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="card">
-                            <form method="get" action="/" class="form-horizontal">
+                                <br>
+                                <br>
+                                <hr>
+                                <br>
                                 <div class="card-header card-header-text" data-background-color="orange">
                                     <h4 class="card-title">Measurements</h4>
                                 </div>
@@ -288,7 +288,7 @@
                                             <div class="col-xs-5">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label"></label>
-                                                    <input class="form-control" type="text" name="number" value="<%=user.getHeight()%>" number="true" />
+                                                    <input class="form-control" type="text" name="height" value="<%=user.getHeight()%>" number="true" />
                                                 </div>
                                             </div>
                                             <label class="col-xs-2 label-on-right">
@@ -304,7 +304,7 @@
                                             <div class="col-xs-5">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label"></label>
-                                                    <input class="form-control" type="text" name="number" value="<%=user.getWeight()%>" number="true" />
+                                                    <input class="form-control" type="text" name="weight" value="<%=user.getWeight()%>" number="true" />
                                                 </div>
                                             </div>
                                             <label class="col-xs-2 label-on-right">
@@ -316,7 +316,9 @@
                                 <div class="card-footer text-center">
                                     <button type="submit" class="btn btn-rose btn-fill">Save</button>
                                 </div>
+
                             </form>
+
                         </div>
                     </div>
                   <!--  <div class="col-md-12">
@@ -569,15 +571,34 @@
         $(id).validate({
             errorPlacement: function(error, element) {
                 $(element).parent('div').addClass('has-error');
-            }
-        });
+    }
+    });
     }
 
+
     $(document).ready(function() {
+
+        //   var selected2 = <%=user.getIntensity()%>;
+        //  $("select option").filter(function(){
+        //      return $(this).val(selected2);
+        //    }).prop('selected',true);
+
+
+        // $('.intense option[value=<%=user.getIntensity()%>]').attr('selected','selected');
+
+
+        //   $("div.intense").val("<%=user.getIntensity()%>").change();
+
+
+
+
+
         setFormValidation('#RegisterValidation');
         setFormValidation('#TypeValidation');
         setFormValidation('#LoginValidation');
         setFormValidation('#RangeValidation');
+
+
     });
 </script>
 

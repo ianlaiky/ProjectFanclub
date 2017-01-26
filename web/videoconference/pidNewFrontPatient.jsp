@@ -55,20 +55,17 @@
     <style>
 
 
-
         .card {
             display: inline-block;
             position: relative;
             width: 130%;
-            left:-150px;
+            left: -150px;
             margin: 25px 0;
             box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
             border-radius: 6px;
             color: rgba(0, 0, 0, 0.87);
             background: #fff;
         }
-
-
 
         .wizard-card {
             min-height: 410px;
@@ -145,7 +142,7 @@
                         </ul>
                     </div>
                 </li>
-               </li>
+                </li>
             </ul>
         </div>
     </div>
@@ -229,146 +226,176 @@
                     <!--      Wizard container        -->
 
 
-
-
-
-
                     <div class="wizard-container">
                         <div class="card wizard-card" data-color="green" id="wizardProfile">
                             <link rel="stylesheet" href="style.css">
                             <script src="http://cdn.peerjs.com/0.3/peer.min.js"></script>
-                            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+                            <script type="text/javascript"
+                                    src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
                             <script>
                                 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
-                            // PeerJS object
-                            var peer = new Peer({key: 'ezdeolfd1x7p66r', debug: 3});
-                            peer.on('open', function () {
-                                $('#my-id').text(peer.id);
+                                // PeerJS object
+                                var peer = new Peer({key: 'ezdeolfd1x7p66r', debug: 3});
+                                peer.on('open', function () {
+                                    $('#my-id').text(peer.id);
 
-                                $('#hiddenFieldForPID').val(peer.id);
-                            });</script>
+                                    $('#hiddenFieldForPID').val(peer.id);
+
+
+                                    document.getElementById("btnenablemepls").disabled = false;
+                                    document.getElementById('btnenablemepls').textContent = "Start Call Now";
+                                });</script>
 
                             <%--pid js to jsp--%>
 
 
+                            <%--<div class="pure-g">--%>
+
+                            <!-- Video area -->
+                            <%--<div class="pure-u-2-3" id="video-container">--%>
+
+                            <%--<video id="their-video" autoplay></video>--%>
+                            <%--<video id="my-video" muted="true" autoplay></video>--%>
+                            <%--</div>--%>
+
+                            <!-- Steps -->
+                            <%--<div class="pure-u-1-3">--%>
+                            <%--<h2>Web Calling</h2>--%>
+
+                            <!-- Get local audio/video stream -->
+                            <%--<div id="step1">--%>
+                            <%--<p>Please click `allow` on the top of the screen so we can access your webcam and microphone for calls.</p>--%>
+                            <%--<div id="step1-error">--%>
+                            <%--<p>Failed to access the webcam and microphone. Make sure to run this demo on an http server and click--%>
+                            <%--allow when asked for permission by the browser.</p>--%>
+                            <%--<a href="#" class="pure-button pure-button-error" id="step1-retry">Try again</a>--%>
+                            <%--</div>--%>
+                            <%--</div>--%>
+
+                            <!-- Make calls to others -->
+                            <%--<div id="step2">--%>
+
+                            <%--<form id="RegisterValidation" action="" method="">--%>
+                            <%--<div class="card-header card-header-icon" data-background-color="rose">--%>
+                            <%--<i class="material-icons">mail_outline</i>--%>
+                            <%--</div>--%>
+                            <%--<div class="card-content">--%>
+                            <%--<h4 class="card-title">Video Call</h4>--%>
+                            <%--<div class="form-group label-floating">--%>
+                            <%--<label class="control-label">--%>
+                            <%--Your ID:--%>
+                            <%--<small>*</small>--%>
+                            <%--</label>--%>
+                            <%--<input class="form-control" name="email" type="email" required="true" />--%>
+                            <%--</div>--%>
 
 
-                            <div class="pure-g">
+                            <%--<div class="form-footer text-center">--%>
 
-                                <!-- Video area -->
-                                <%--<div class="pure-u-2-3" id="video-container">--%>
-
-                                    <%--<video id="their-video" autoplay></video>--%>
-                                    <%--<video id="my-video" muted="true" autoplay></video>--%>
-                                <%--</div>--%>
-
-                                <!-- Steps -->
-                                <div class="pure-u-1-3">
-                                    <%--<h2>Web Calling</h2>--%>
-
-                                    <!-- Get local audio/video stream -->
-                                    <%--<div id="step1">--%>
-                                        <%--<p>Please click `allow` on the top of the screen so we can access your webcam and microphone for calls.</p>--%>
-                                        <%--<div id="step1-error">--%>
-                                            <%--<p>Failed to access the webcam and microphone. Make sure to run this demo on an http server and click--%>
-                                                <%--allow when asked for permission by the browser.</p>--%>
-                                            <%--<a href="#" class="pure-button pure-button-error" id="step1-retry">Try again</a>--%>
-                                        <%--</div>--%>
-                                    <%--</div>--%>
-
-                                    <!-- Make calls to others -->
-                                    <%--<div id="step2">--%>
-                                        <p>Your id: <span id="my-id">...</span></p>
-                                        <form  method="post" action="/patientPIDSav">
-                                            <input id="hiddenFieldForPID" name="hiddenFieldForPID"/>
-                                            <input type="submit">
-                                        </form>
-
-                                        <%--&lt;%&ndash;<p>Share this id with others so they can call you.</p>&ndash;%&gt;--%>
-                                        <%--&lt;%&ndash;<h3>Make a call</h3>&ndash;%&gt;--%>
-                                        <%--<div class="pure-form">--%>
-                                            <%--&lt;%&ndash;<input type="text" placeholder="Call user id..." id="callto-id">&ndash;%&gt;--%>
-                                            <%--<a href="#" class="pure-button pure-button-success" id="make-call">Call</a>--%>
-                                        <%--</div>--%>
-                                    <%--</div>--%>
-
-                                    <!-- Call in progress -->
-                                    <%--<div id="step3">--%>
-                                        <%--<p>Currently in call with <span id="their-id">...</span></p>--%>
-                                        <%--<p><a href="#" class="pure-button pure-button-error" id="end-call">End call</a></p>--%>
-                                    <%--</div>--%>
-                                </div>
-                            </div>
+                            <%--<button type="submit" class="btn btn-rose btn-fill">Register</button>--%>
+                            <%--</div>--%>
+                            <%--</div>--%>
+                            <%--</form>--%>
 
 
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br> <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
+                            <center><h1>Welcome, <%=session.getAttribute("firstName")%>
+                            </h1>
+                                <h2>Your Username Is: <%=session.getAttribute("username")%>
+                                </h2>
+                                <form method="post" action="/patientPIDSav">
 
 
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
+                                    <input id="hiddenFieldForPID" name="hiddenFieldForPID" hidden/>
+                                    <button id="btnenablemepls" class="btn btn-rose btn-fill" type="submit" disabled>
+                                        Getting ready...
+                                    </button>
+                                </form>
 
+                            </center>
+                            <%--&lt;%&ndash;<p>Share this id with others so they can call you.</p>&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<h3>Make a call</h3>&ndash;%&gt;--%>
+                            <%--<div class="pure-form">--%>
+                            <%--&lt;%&ndash;<input type="text" placeholder="Call user id..." id="callto-id">&ndash;%&gt;--%>
+                            <%--<a href="#" class="pure-button pure-button-success" id="make-call">Call</a>--%>
+                            <%--</div>--%>
+                            <%--</div>--%>
 
-
+                            <!-- Call in progress -->
+                            <%--<div id="step3">--%>
+                            <%--<p>Currently in call with <span id="their-id">...</span></p>--%>
+                            <%--<p><a href="#" class="pure-button pure-button-error" id="end-call">End call</a></p>--%>
+                            <%--</div>--%>
                         </div>
                     </div>
-                    <!-- wizard container -->
+
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br> <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+
                 </div>
             </div>
+            <!-- wizard container -->
         </div>
-        <footer class="footer">
-            <div class="container-fluid">
-                <nav class="pull-left">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Company
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Portfolio
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Blog
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <p class="copyright pull-right">
-                    &copy;
-                    <script>
-                        document.write(new Date().getFullYear())
-                    </script>
-                    <a href="http://www.creative-tim.com">Woodlands Integrated Health Campus</a>, made with love by
-                    Fanclub
-                </p>
-            </div>
-        </footer>
     </div>
+</div>
+<footer class="footer">
+    <div class="container-fluid">
+        <nav class="pull-left">
+            <ul>
+                <li>
+                    <a href="#">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Company
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Portfolio
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Blog
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <p class="copyright pull-right">
+            &copy;
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            <a href="http://www.creative-tim.com">Woodlands Integrated Health Campus</a>, made with love by
+            Fanclub
+        </p>
+    </div>
+</footer>
+</div>
 </div>
 <div class="fixed-plugin">
     <div class="dropdown show-dropdown">

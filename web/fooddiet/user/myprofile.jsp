@@ -342,7 +342,7 @@
                                     <div class="tab-pane" id="address">
                                         <div class="row">
                                             <div class="col-sm-12 ">
-                                                <h4 class="info-text"> Do you want to keep fit? </h4>
+                                                <h4 class="info-text"> Your measurements will help us in more accurate calculation </h4>
                                             </div>
                                             <div class="col-sm-7 col-sm-offset-2">
                                                 <div class="form-group label-floating">

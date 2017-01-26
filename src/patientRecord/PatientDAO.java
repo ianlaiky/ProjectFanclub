@@ -80,14 +80,36 @@ public class PatientDAO {
 
 
         List<PatientrecordEntity>checkList = new ArrayList<>();
+
+        ArrayList<Integer> tempNo = new ArrayList<>();
+
         checkList=getAllPatientUserAndPass();
+
+        for(int i=0;i<checkList.size();i++){
+
+
+tempNo.add(Integer.valueOf(checkList.get(i).getpUsername().substring(1)));
+            System.out.println("testtt");
+            System.out.println(tempNo.get(i));
+
+        }
+
+
+        int max = tempNo.get(0);
+
+        for (int i = 1; i < tempNo.size(); i++) {
+            if (tempNo.get(i) > max) {
+                max = tempNo.get(i);
+            }
+        }
+        System.out.println("MAXXX "+max);
 
        String a = checkList.get(checkList.size()-1).getpUsername();
         System.out.println("sizee"+a);
 
-        System.out.println(a.substring(1));
+        System.out.println(a.charAt(1));
 
-        int pateintid = Integer.parseInt(a.substring(1))+1;
+        int pateintid = max+1;
         System.out.println(pateintid);
 
 
