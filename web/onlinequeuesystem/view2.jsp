@@ -1,4 +1,7 @@
-<%--
+<%@ page import="queue.OnlinequeuesystemEntity" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="queue.QueueSystemDAO" %><%--
   Created by IntelliJ IDEA.
   User: aravin
   Date: 16-Dec-16
@@ -340,10 +343,32 @@
             </div>
         </nav>
 
-
+        <br>
         <center><h1>Hello, <%=session.getAttribute("firstName")%>
         </h1></center>
         <center><h2>Patients who are ahead of you</h2></center>
+        <%
+
+            List<OnlinequeuesystemEntity> othersinq = new ArrayList<>();
+
+            QueueSystemDAO qu = new QueueSystemDAO();
+            othersinq = qu.getAllQueueData();
+
+
+            for (int i = 0; i < othersinq.size(); i++) {
+
+
+        %>
+        <center>
+            <li><%=othersinq.get(i).getPatientName()%>
+            </li>
+        </center>
+
+        <%
+            }
+
+
+        %>
         <%--<div class="content">--%>
         <%--<div class="container-fluid">--%>
         <%--<div class="row">--%>
