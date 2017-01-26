@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Created by Ian on 26/1/2017.
  */
-@WebServlet(name = "QueuServlet")
+@WebServlet(name = "QueuServlet", urlPatterns = "/onlinequeuesystem")
 public class QueuServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("Queue servlet run");
@@ -37,7 +37,7 @@ public class QueuServlet extends HttpServlet {
 
 
         List<OnlinequeuesystemEntity> queueList = (List<OnlinequeuesystemEntity>) session.getAttribute("queueList");
-        System.out.println(queueList);
+        System.out.println("Queue list0"+queueLis.size());
 
         for (int i = 0; i < queueList.size(); i++) {
             System.out.println("running");

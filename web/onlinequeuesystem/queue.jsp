@@ -514,7 +514,7 @@
 
                     <div class="col-md-12">
                         <div class="card">
-                            <form id="LoginValidation" action="post" method="/onlinequeuesystem">
+                            <form id="LoginValidation" action="/onlinequeuesystem" method="post">
                                 <div class="card-header card-header-icon" data-background-color="rose">
                                     <i class="material-icons">alarm_on</i>
                                 </div>
