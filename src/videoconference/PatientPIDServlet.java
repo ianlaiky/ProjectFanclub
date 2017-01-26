@@ -22,43 +22,39 @@ public class PatientPIDServlet extends HttpServlet {
         String a = request.getParameter("hiddenFieldForPID");
         String user = (String) session.getAttribute("username");
 
-        System.out.println("PIUD user"+user);
+        System.out.println("PIUD user" + user);
 
-        session.setAttribute("patientPID",a);
+        session.setAttribute("patientPID", a);
 
         VideoConferenceDAO nat = new VideoConferenceDAO();
 
 
         List<VideoconferenceEntity> userFromdb = nat.getAllPID();
-        System.out.println("Test: "+userFromdb.size());
+        System.out.println("Test: " + userFromdb.size());
 
-        boolean waterTest=false;
+        boolean waterTest = false;
 
-        for(int i=0;i<userFromdb.size();i++){
+        for (int i = 0; i < userFromdb.size(); i++) {
 
-            if(userFromdb.get(i).getUsername().equalsIgnoreCase(user)){
-                waterTest=true;
+            if (userFromdb.get(i).getUsername().equalsIgnoreCase(user)) {
+                waterTest = true;
             }
 
 
         }
 
-        if(waterTest){
+        if (waterTest) {
             nat.deleteViaPatientUsername(user);
-            nat.createPIDPatient(user,a,"p");
-        }else if(!waterTest){
+            nat.createPIDPatient(user, a, "p");
+        } else if (!waterTest) {
 
-            nat.createPIDPatient(user,a,"p");
-
+            nat.createPIDPatient(user, a, "p");
 
 
         }
 
 
-
 //        System.out.println("Size of nat"+userFromdb.size());
-
-
 
 
 //        for(int i=0;i<userFromdb.size();i++){
@@ -78,15 +74,9 @@ public class PatientPIDServlet extends HttpServlet {
 //        }
 
 
-
-
-
-
         response.sendRedirect("videoconference/patientVideo.jsp");
         System.out.println(a);
         return;
-
-
 
 
     }

@@ -32,7 +32,6 @@ public class LoginServlet extends HttpServlet {
 
 
 
-
        List<PatientrecordEntity> allPatientuser = new ArrayList<>();
         List<DoctorrecordEntity> allDocUser = new ArrayList<>();
 
@@ -108,7 +107,6 @@ public class LoginServlet extends HttpServlet {
 
 
                 }
-
 
 
 

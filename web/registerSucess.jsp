@@ -6,7 +6,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png"/>
     <link rel="icon" type="image/png" href="assets/img/favicon.png"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>Hospital Health</title>
+    <title>Material Dashboard PRO by Creative Tim | Premium Bootstrap Admin Template</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
     <meta name="viewport" content="width=device-width"/>
     <!-- Canonical SEO -->
@@ -60,31 +60,31 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href=" dashboard.html ">Hospital Health</a>
+            <a class="navbar-brand" href=" dashboard.html ">Material Dashboard Pro</a>
         </div>
         <div class="collapse navbar-collapse">
-            <%--<ul class="nav navbar-nav navbar-right">--%>
-            <%--<li>--%>
-            <%--<a href="dashboard.html">--%>
-            <%--<i class="material-icons">dashboard</i> Dashboard--%>
-            <%--</a>--%>
-            <%--</li>--%>
-            <%--<li class=" active ">--%>
-            <%--<a href="register.html">--%>
-            <%--<i class="material-icons">person_add</i> Register--%>
-            <%--</a>--%>
-            <%--</li>--%>
-            <%--<li class="">--%>
-            <%--<a href="index.html">--%>
-            <%--<i class="material-icons">fingerprint</i> Login--%>
-            <%--</a>--%>
-            <%--</li>--%>
-            <%--<li class="">--%>
-            <%--<a href="lock.html">--%>
-            <%--<i class="material-icons">lock_open</i> Lock--%>
-            <%--</a>--%>
-            <%--</li>--%>
-            <%--</ul>--%>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="dashboard.html">
+                        <i class="material-icons">dashboard</i> Dashboard
+                    </a>
+                </li>
+                <li class=" active ">
+                    <a href="register.html">
+                        <i class="material-icons">person_add</i> Register
+                    </a>
+                </li>
+                <li class="">
+                    <a href="index.html">
+                        <i class="material-icons">fingerprint</i> Login
+                    </a>
+                </li>
+                <li class="">
+                    <a href="lock.html">
+                        <i class="material-icons">lock_open</i> Lock
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
@@ -146,41 +146,44 @@
                                 <%--</button>--%>
                                 <%--<h4> or be classical </h4>--%>
                                 <%--</div>--%>
-                                <form class="form" method="post" action="/patientSignUp">
-                                    <div class="card-content">
-                                        <div class="input-group">
-                                                <span class="input-group-addon">
-                                                    <i class="material-icons">face</i>
-                                                </span>
-                                            <input type="text" class="form-control" name="firstName"
-                                                   placeholder="First Name..." required>
-                                        </div>
-                                        <div class="input-group">
-                                                <span class="input-group-addon">
-                                                    <i class="material-icons">contact_phone</i>
-                                                </span>
-                                            <input type="text" class="form-control" pattern="[0-9]{8}"
-                                                   name="contactPhone" placeholder="Phone number: 12345678" required>
-                                        </div>
-                                        <div class="input-group">
-                                                <span class="input-group-addon">
-                                                    <i class="material-icons">lock_outline</i>
-                                                </span>
-                                            <input type="password" placeholder="Password..." name="pPass"
-                                                   class="form-control" required>
-                                        </div>
-                                        <!-- If you want to add a checkbox to this form, uncomment this code -->
-                                        <%--<div class="checkbox">--%>
-                                        <%--<label>--%>
-                                        <%--<input type="checkbox" name="optionsCheckboxes" checked> I agree to the--%>
-                                        <%--<a href="#something">terms and conditions</a>.--%>
-                                        <%--</label>--%>
-                                        <%--</div>--%>
-                                    </div>
-                                    <div class="footer text-center">
-                                        <button class="btn btn-primary btn-round">Sign Up</button>
-                                    </div>
-                                </form>
+                                <%--<form class="form" method="post" action="/patientSignUp">--%>
+                                <%--<div class="card-content">--%>
+                                <%--<div class="input-group">--%>
+                                <%--<span class="input-group-addon">--%>
+                                <%--<i class="material-icons">face</i>--%>
+                                <%--</span>--%>
+                                <%--<input type="text" class="form-control" name="c" placeholder="First Name...">--%>
+                                <%--</div>--%>
+                                <%--<div class="input-group">--%>
+                                <%--<span class="input-group-addon">--%>
+                                <%--<i class="material-icons">contact_phone</i>--%>
+                                <%--</span>--%>
+                                <%--<input type="text" class="form-control" name="contactPhone" placeholder="Phone number...">--%>
+                                <%--</div>--%>
+                                <%--<div class="input-group">--%>
+                                <%--<span class="input-group-addon">--%>
+                                <%--<i class="material-icons">lock_outline</i>--%>
+                                <%--</span>--%>
+                                <%--<input type="password" placeholder="Password..." name="pPass" class="form-control" />--%>
+                                <%--</div>--%>
+                                <%--<!-- If you want to add a checkbox to this form, uncomment this code -->--%>
+                                <%--&lt;%&ndash;<div class="checkbox">&ndash;%&gt;--%>
+                                <%--&lt;%&ndash;<label>&ndash;%&gt;--%>
+                                <%--&lt;%&ndash;<input type="checkbox" name="optionsCheckboxes" checked> I agree to the&ndash;%&gt;--%>
+                                <%--&lt;%&ndash;<a href="#something">terms and conditions</a>.&ndash;%&gt;--%>
+                                <%--&lt;%&ndash;</label>&ndash;%&gt;--%>
+                                <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+                                <%--</div>--%>
+                                <%--<div class="footer text-center">--%>
+                                <%--<button href="#pablo" class="btn btn-primary btn-round">Sign Up</button>--%>
+                                <%--</div>--%>
+                                <%--</form>--%>
+
+
+                                <center><h1>Registeration Sucess</h1></center>
+                                <center><h2>Your Login username is: <%=session.getAttribute("patientSignUpUsername")%>
+                                </h2></center>
+                                <center><a href="index.html" class="btn btn-primary btn-round">Login Now</a></center>
                             </div>
                         </div>
                     </div>
@@ -189,112 +192,118 @@
         </div>
         <footer class="footer">
             <div class="container">
-                <%--<nav class="pull-left">--%>
-                <%--<ul>--%>
-                <%--<li>--%>
-                <%--<a href="#">--%>
-                <%--Home--%>
-                <%--</a>--%>
-                <%--</li>--%>
-                <%--<li>--%>
-                <%--<a href="#">--%>
-                <%--Company--%>
-                <%--</a>--%>
-                <%--</li>--%>
-                <%--<li>--%>
-                <%--<a href="#">--%>
-                <%--Portfolio--%>
-                <%--</a>--%>
-                <%--</li>--%>
-                <%--<li>--%>
-                <%--<a href="#">--%>
-                <%--Blog--%>
-                <%--</a>--%>
-                <%--</li>--%>
-                <%--</ul>--%>
-                <%--</nav>--%>
+                <nav class="pull-left">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Company
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Portfolio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Blog
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
                 <p class="copyright pull-right">
                     &copy;
                     <script>
                         document.write(new Date().getFullYear())
                     </script>
-                    Fanclub
+                    <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
                 </p>
             </div>
         </footer>
     </div>
 </div>
 </body>
-<%--<div class="fixed-plugin">--%>
-<%--<div class="dropdown show-dropdown">--%>
-<%--<a href="#" data-toggle="dropdown">--%>
-<%--<i class="fa fa-cog fa-2x"> </i>--%>
-<%--</a>--%>
-<%--<ul class="dropdown-menu">--%>
-<%--<li class="header-title">Background Style</li>--%>
-<%--<li class="adjustments-line">--%>
-<%--<a href="javascript:void(0)" class="switch-trigger">--%>
-<%--<p>Background Image</p>--%>
-<%--<div class="togglebutton switch-sidebar-image">--%>
-<%--<label>--%>
-<%--<input type="checkbox" checked="">--%>
-<%--</label>--%>
-<%--</div>--%>
-<%--<div class="clearfix"></div>--%>
-<%--</a>--%>
-<%--</li>--%>
-<%--<li class="adjustments-line">--%>
-<%--<a href="javascript:void(0)" class="switch-trigger active-color">--%>
-<%--<p>Filters</p>--%>
-<%--<div class="badge-colors pull-right">--%>
-<%--<span class="badge filter active" data-color="black"></span>--%>
-<%--<span class="badge filter badge-blue" data-color="blue"></span>--%>
-<%--<span class="badge filter badge-green" data-color="green"></span>--%>
-<%--<span class="badge filter badge-orange" data-color="orange"></span>--%>
-<%--<span class="badge filter badge-red" data-color="red"></span>--%>
-<%--<span class="badge filter badge-purple" data-color="purple"></span>--%>
-<%--<span class="badge filter badge-rose" data-color="rose"></span>--%>
-<%--</div>--%>
-<%--<div class="clearfix"></div>--%>
-<%--</a>--%>
-<%--</li>--%>
-<%--<li class="header-title">Background Images</li>--%>
-<%--<li class="active">--%>
-<%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
-<%--<img src="../../assets/img/sidebar-1.jpg" data-src="../../assets/img/login.jpeg" alt="" />--%>
-<%--</a>--%>
-<%--</li>--%>
-<%--<li>--%>
-<%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
-<%--<img src="../../assets/img/sidebar-2.jpg" data-src="../../assets/img/lock.jpeg" alt="" />--%>
-<%--</a>--%>
-<%--</li>--%>
-<%--<li>--%>
-<%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
-<%--<img src="../../assets/img/sidebar-3.jpg" data-src="../../assets/img/header-doc.jpeg" alt="" />--%>
-<%--</a>--%>
-<%--</li>--%>
-<%--<li>--%>
-<%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
-<%--<img src="../../assets/img/sidebar-4.jpg" data-src="../../assets/img/bg-pricing.jpeg" alt="" />--%>
-<%--</a>--%>
-<%--</li>--%>
-<%--<li class="button-container">--%>
-<%--<div class="">--%>
-<%--<a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-primary btn-block btn-fill">Buy Now!</a>--%>
-<%--</div>--%>
-<%--<div class="">--%>
-<%--<a href="http://www.creative-tim.com/product/material-dashboard" target="_blank" class="btn btn-info btn-block">Get Free Demo</a>--%>
-<%--</div>--%>
-<%--</li>--%>
-<%--<li class="header-title">Thank you for 95 shares!</li>--%>
-<%--<li class="button-container">--%>
-<%--<button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i> &middot; 45</button>--%>
-<%--<button id="facebook" class="btn btn-social btn-facebook btn-round"><i class="fa fa-facebook-square"></i> &middot; 50</button>--%>
-<%--</li>--%>
-<%--</ul>--%>
-<%--</div>--%>
-<%--</div>--%>
+<div class="fixed-plugin">
+    <div class="dropdown show-dropdown">
+        <a href="#" data-toggle="dropdown">
+            <i class="fa fa-cog fa-2x"> </i>
+        </a>
+        <ul class="dropdown-menu">
+            <li class="header-title">Background Style</li>
+            <li class="adjustments-line">
+                <a href="javascript:void(0)" class="switch-trigger">
+                    <p>Background Image</p>
+                    <div class="togglebutton switch-sidebar-image">
+                        <label>
+                            <input type="checkbox" checked="">
+                        </label>
+                    </div>
+                    <div class="clearfix"></div>
+                </a>
+            </li>
+            <li class="adjustments-line">
+                <a href="javascript:void(0)" class="switch-trigger active-color">
+                    <p>Filters</p>
+                    <div class="badge-colors pull-right">
+                        <span class="badge filter active" data-color="black"></span>
+                        <span class="badge filter badge-blue" data-color="blue"></span>
+                        <span class="badge filter badge-green" data-color="green"></span>
+                        <span class="badge filter badge-orange" data-color="orange"></span>
+                        <span class="badge filter badge-red" data-color="red"></span>
+                        <span class="badge filter badge-purple" data-color="purple"></span>
+                        <span class="badge filter badge-rose" data-color="rose"></span>
+                    </div>
+                    <div class="clearfix"></div>
+                </a>
+            </li>
+            <li class="header-title">Background Images</li>
+            <li class="active">
+                <a class="img-holder switch-trigger" href="javascript:void(0)">
+                    <img src="../../assets/img/sidebar-1.jpg" data-src="../../assets/img/login.jpeg" alt=""/>
+                </a>
+            </li>
+            <li>
+                <a class="img-holder switch-trigger" href="javascript:void(0)">
+                    <img src="../../assets/img/sidebar-2.jpg" data-src="../../assets/img/lock.jpeg" alt=""/>
+                </a>
+            </li>
+            <li>
+                <a class="img-holder switch-trigger" href="javascript:void(0)">
+                    <img src="../../assets/img/sidebar-3.jpg" data-src="../../assets/img/header-doc.jpeg" alt=""/>
+                </a>
+            </li>
+            <li>
+                <a class="img-holder switch-trigger" href="javascript:void(0)">
+                    <img src="../../assets/img/sidebar-4.jpg" data-src="../../assets/img/bg-pricing.jpeg" alt=""/>
+                </a>
+            </li>
+            <li class="button-container">
+                <div class="">
+                    <a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank"
+                       class="btn btn-primary btn-block btn-fill">Buy Now!</a>
+                </div>
+                <div class="">
+                    <a href="http://www.creative-tim.com/product/material-dashboard" target="_blank"
+                       class="btn btn-info btn-block">Get Free Demo</a>
+                </div>
+            </li>
+            <li class="header-title">Thank you for 95 shares!</li>
+            <li class="button-container">
+                <button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i> &middot;
+                    45
+                </button>
+                <button id="facebook" class="btn btn-social btn-facebook btn-round"><i
+                        class="fa fa-facebook-square"></i> &middot; 50
+                </button>
+            </li>
+        </ul>
+    </div>
+</div>
 </body>
 <!--   Core JS Files   -->
 <script src="assets/js/jquery-3.1.1.min.js" type="text/javascript"></script>

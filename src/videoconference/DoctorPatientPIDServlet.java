@@ -20,19 +20,16 @@ public class DoctorPatientPIDServlet extends HttpServlet {
         String username = request.getParameter("formPidUsername");
         String pid = request.getParameter("formpidPid");
 
-        System.out.println("Doc selected: "+pid);
+        System.out.println("Doc selected: " + pid);
 
-        session.setAttribute("dicCalledUsername",username);
-        session.setAttribute("docCalledPid",pid);
-
-
+        session.setAttribute("dicCalledUsername", username);
+        session.setAttribute("docCalledPid", pid);
 
 
         VideoConferenceDAO vid = new VideoConferenceDAO();
         vid.deleteViaPatientUsername(username);
 
         response.sendRedirect("videoconference/docVideo.jsp");
-
 
 
     }

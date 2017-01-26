@@ -27,28 +27,21 @@ public class PatientPIDDelServlet extends HttpServlet {
         System.out.println("delete user");
 
 
-
-
-
-
         VideoConferenceDAO vid = new VideoConferenceDAO();
 
 
         List<VideoconferenceEntity> allList = new ArrayList<>();
 
-        allList=vid.getAllPID();
+        allList = vid.getAllPID();
 
-        for(int i=0;i<allList.size();i++){
+        for (int i = 0; i < allList.size(); i++) {
 
-            if(allList.get(i).getUsername().equalsIgnoreCase(user)){
+            if (allList.get(i).getUsername().equalsIgnoreCase(user)) {
                 vid.deleteViaPatientUsername(user);
 
             }
 
         }
-
-
-
 
 
         System.out.println("delete end");
