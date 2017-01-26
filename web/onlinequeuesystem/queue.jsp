@@ -119,10 +119,16 @@
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="../onlinequeuesystem/view2.jsp">View Queue Details</a>
+                                <a href="../onlinequeuesystem/view2.jsp">
+                                    <i class="material-icons">pageview</i>
+                                    <p>View Queue Details</p>
+                                </a>
                             </li>
                             <li>
-                                <a href="../onlinequeuesystem/waitingTime.jsp">View Estimated Waiting Time</a>
+                                <a href="../onlinequeuesystem/waitingTime.jsp">
+                                    <i class="material-icons">av_timer</i>
+                                    <p>View Estimated Waiting Time</p>
+                                </a>
                             </li>
                             <li>
                                 <a href="/logout">

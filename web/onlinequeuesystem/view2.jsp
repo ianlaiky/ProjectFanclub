@@ -360,8 +360,8 @@
 
         %>
         <center>
-            <li><%=othersinq.get(i).getPatientName()%>
-            </li>
+            <p><%=othersinq.get(i).getPatientName()%>
+            </p>
         </center>
 
         <%
