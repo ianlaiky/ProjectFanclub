@@ -243,4 +243,39 @@ public class UserDAO {
         return user;
     }
 
+    public static boolean updateMeasurement(int uheight,double weight, String uname) {
+        // declare local variables
+        boolean success = false;
+        DBController db = new DBController();
+        String dbQuery;
+        PreparedStatement pstmt;
+
+        // step 1 - establish connection to database
+        db.getConnection();
+
+        // step 2 - declare the SQL statement
+        dbQuery = "UPDATE user SET uheight = ?, weight = ?  WHERE uname = ?";
+        pstmt = db.getPreparedStatement(dbQuery);
+
+        // step 3 - to update record using executeUpdate method
+        try {
+
+            pstmt.setInt(1, uheight);
+            pstmt.setDouble(2, weight);
+            pstmt.setString(3, uname);
+
+            if (pstmt.executeUpdate() == 1)
+                success = true;
+            pstmt.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println(success);
+        // step 4 - close connection
+        db.terminate();
+
+        return success;
+    }
+
+
 }
