@@ -105,7 +105,7 @@
         .connection {
             float: left;
             height: 250px;
-            width: 200px;
+            width: 100%;
             overflow: scroll;
             background-color: #fff;
             padding: 10px;
@@ -713,9 +713,28 @@
                                                                            <%--src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"--%>
                                                                            <%--alt="Fork me on GitHub"></a>--%>
 
+                            <script>
+
+                                $(function (){
+                                    $('#pid').hide();
+
+                                    $('#rid').hide();
+
+
+                                    $('#connect').hide();
+
+                                    $('#close').hide();
+
+                                });
+
+                            </script>
+
+
                             <div id="actions">
-                                Your PeerJS ID is <span id="pid"></span><br>
-                                Connect to a peer: <input type="text" id="rid" placeholder="Someone else's id"><input class="button" type="button" value="Connect" id="connect"><br><br>
+                                <%--Your PeerJS ID is --%>
+                                <span id="pid"></span><br>
+                                <%--Connect to a peer: --%>
+                                    <input type="text" id="rid" placeholder="Someone else's id"><input class="button" type="button" value="Connect" id="connect"><br><br>
 
                                 <form id="send">
                                     <input type="text" id="text" placeholder="Enter message"><input class="button" type="submit" value="Send to selected peers">
@@ -732,16 +751,16 @@
                             </div>
 
 
-                            <div class="warning browser">
-                                <div class="important">Your browser version: <span id="browsers"></span><br>
-                                    Currently <strong>Firefox 22+ and Google Chrome 26.0.1403.0 or above</strong> is required.</div>For more up to date compatibility
-                                information see <a href="http://peerjs.com/status">PeerJS WebRTC
-                                Status</a><br>Note that this demo may also fail if you are behind
-                                stringent firewalls or both you and the remote peer and behind symmetric
-                                NATs.
+                            <%--<div class="warning browser">--%>
+                                <%--<div class="important">Your browser version: <span id="browsers"></span><br>--%>
+                                    <%--Currently <strong>Firefox 22+ and Google Chrome 26.0.1403.0 or above</strong> is required.</div>For more up to date compatibility--%>
+                                <%--information see <a href="http://peerjs.com/status">PeerJS WebRTC--%>
+                                <%--Status</a><br>Note that this demo may also fail if you are behind--%>
+                                <%--stringent firewalls or both you and the remote peer and behind symmetric--%>
+                                <%--NATs.--%>
 
-                                <div class="log" style="color:#FF7500;text-shadow:none;padding:15px;background:#eee"><strong>Connection status</strong>:<br></div>
-                            </div>
+                                <%--<div class="log" style="color:#FF7500;text-shadow:none;padding:15px;background:#eee"><strong>Connection status</strong>:<br></div>--%>
+                            <%--</div>--%>
 
                             <br>
                             <br>
@@ -750,21 +769,8 @@
                             <br>
                             <br>
                             <br> <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
 
 
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
 
 
                         </div>
