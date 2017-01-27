@@ -77,7 +77,7 @@
         .connection {
             float: left;
             height: 250px;
-            width: 200px;
+            width: 100%;
             overflow: scroll;
             background-color: #fff;
             padding: 10px;
@@ -379,7 +379,7 @@
                                 function connect(c) {
                                     // Handle a chat connection.
                                     if (c.label === 'chat') {
-                                        var chatbox = $('<div></div>').addClass('connection').addClass('active').attr('id', c.peer);
+                                        var chatbox = $('<div></div>').addClass('connection').addClass('activee').attr('id', c.peer);
                                         var header = $('<h1></h1>').html('Chat with <strong>' + c.peer + '</strong>');
                                         var messages = $('<div><em>Peer connected.</em></div>').addClass('messages');
                                         chatbox.append(header);
@@ -387,10 +387,10 @@
 
                                         // Select connection handler.
                                         chatbox.on('click', function() {
-                                            if ($(this).attr('class').indexOf('active') === -1) {
-                                                $(this).addClass('active');
+                                            if ($(this).attr('class').indexOf('activee') === -1) {
+                                                $(this).addClass('activee');
                                             } else {
-                                                $(this).removeClass('active');
+                                                $(this).removeClass('activee');
                                             }
                                         });
                                         $('.filler').hide();
@@ -509,7 +509,7 @@
                                     });
                                     // Goes through each active peer and calls FN on its connections.
                                     function eachActiveConnection(fn) {
-                                        var actives = $('.active');
+                                        var actives = $('.activee');
                                         var checkedIds = {};
                                         actives.each(function() {
                                             var peerId = $(this).attr('id');
@@ -539,6 +539,11 @@
 
                                     $('#make-call').click(function () {
                                         // Initiate a call!
+
+
+$('#connect').click();
+
+
 
                                         console.log("clickec")
 
@@ -707,7 +712,7 @@
 
                             <div id="actions">
                                 Your PeerJS ID is <span id="pid"></span><br>
-                                Connect to a peer: <input type="text" id="rid" placeholder="Someone else's id"><input class="button" type="button" value="Connect" id="connect"><br><br>
+                                Connect to a peer: <input type="text" id="rid" placeholder="Someone else's id"><button class="button" type="button" value="Connect" id="connect"></button><br><br>
 
                                 <form id="send">
                                     <input type="text" id="text" placeholder="Enter message"><input class="button" type="submit" value="Send to selected peers">
