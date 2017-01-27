@@ -379,9 +379,9 @@
 
 
                                         <br>
-                                        <p>Others in the Queue:</p>
 
-                                        <p>
+
+
                                                 <%
                                                 List<VideoconferenceEntity> po = new ArrayList<>();
 
@@ -402,13 +402,13 @@
                                             %>
 
                                                 <% for(int i=0;i<currentUser.size();i++){ %>
-                                        <li>
-                                            <%=currentUser.get(i)%>
+                                        <%--<li>--%>
+                                            <%--<%=currentUser.get(i)%>--%>
 
-                                        </li>
+                                        <%--</li>--%>
                                         <%}%>
+                                        <p>Patients in the Queue: <span style="text-decoration:underline" ><%=currentUser.size()%></span></p>
 
-                                        </p>
                                         <%--<p>Share this id with others so they can call you.</p>--%>
                                         <%--<h3>Make a call</h3>--%>
                                         <%--<div class="pure-form">--%>
