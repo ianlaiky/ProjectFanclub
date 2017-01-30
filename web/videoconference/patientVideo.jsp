@@ -411,7 +411,7 @@
                                     // Handle a chat connection.
                                     if (c.label === 'chat') {
                                         var chatbox = $('<div></div>').addClass('connection').addClass('activee').attr('id', c.peer);
-                                        var header = $('<h1></h1>').html('Chat with <strong>' + c.peer + '</strong>');
+                                        var header = $('<h1></h1>').html('Chating with <strong>' + 'Doctor' + '</strong>');
                                         var messages = $('<div><em>Peer connected.</em></div>').addClass('messages');
                                         chatbox.append(header);
                                         chatbox.append(messages);
@@ -747,7 +747,7 @@
                                 <div class="clear"></div></div>
 
                             <div id="box" style="background: #fff; font-size: 18px;padding:40px 30px; text-align: center;">
-                                Drag file here to send to active connections.
+                                Drag file here
                             </div>
 
 
