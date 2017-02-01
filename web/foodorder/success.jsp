@@ -1,4 +1,8 @@
-<%@ page import="java.util.ArrayList" %><%--
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="foodOrder.foodOrderDAO" %>
+<%@ page import="java.util.List" %>
+<%@ page import="foodOrder.FoodorderEntity" %>
+<%@ page import="java.util.Collections" %><%--
   Created by IntelliJ IDEA.
   User: astaroh
   Date: 12/15/2016
@@ -10,21 +14,30 @@
 <head>
     <title>Order List</title>
     <%
-    ArrayList<String> orderList = new ArrayList<String>();
-    orderList = (ArrayList<String>)session.getAttribute("orderList");
-   // String itemTest = orderList.get(0);
+//    ArrayList<String> orderList = new ArrayList<String>();
+//    orderList = (ArrayList<String>)session.getAttribute("orderList");
 
+        foodOrderDAO fod = new foodOrderDAO();
+        List<FoodorderEntity> fodList;
+        fodList = fod.getAllfoodOrder();
+//        Collections.sort(fodList);
+    %>
 
+    <%
+        ArrayList<String> foodNamesArr = new ArrayList<>();
+        for (int i = 0 ; i<fodList.size() ; i++){
+            foodNamesArr.add(fodList.get(i).getFoodName());
+        }
+        Collections.sort(foodNamesArr);
     %>
 </head>
 <body>
-<%--TEMP DEMO EDIT PARAMETER!!!--%>
-<%--<%=itemTest%>--%>
+
 <h3><b>Food Order List</b></h3>
 <%
-    for(int i = 0 ; i<orderList.size();i++){
+    for(int i = 0 ; i<foodNamesArr.size();i++){
 %>
-<%=orderList.get(i)%><br>
+<%=foodNamesArr.get(i)%><br>
 <% } %>
 </body>
 </html>

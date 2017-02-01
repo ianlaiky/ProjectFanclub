@@ -343,62 +343,6 @@
             <div class="container-fluid">
                 <div class="col-sm-8 col-sm-offset-2">
                     <!-- Insert all the awesome body content here-->
-                    <%--<div id="content">--%>
-                    <%--<div id="left">--%>
-                        <%--<div id="object1"></div>--%>
-                        <%--<div id="object2"></div>--%>
-                    <%--</div>--%>
-
-                    <%--<div id="right">--%>
-                        <%--<div id="object3"></div>--%>
-                        <%--<div id="object4"></div>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
-                    <%--<div class="container">--%>
-                        <%--<h2>Panels with Contextual Classes</h2>--%>
-                        <%--<div class="panel-group">--%>
-                            <%--<div class="panel panel-default">--%>
-                                <%--<div class="panel-heading">Panel with panel-default class</div>--%>
-                                <%--<div class="panel-body">Panel Content</div>--%>
-                            <%--</div>--%>
-
-                            <%--<div class="panel panel-primary">--%>
-                                <%--<div class="panel-heading">Panel with panel-primary class</div>--%>
-                                <%--<div class="panel-body">Panel Content</div>--%>
-                            <%--</div>--%>
-
-                            <%--<div class="panel panel-success">--%>
-                                <%--<div class="panel-heading">Panel with panel-success class</div>--%>
-                                <%--<div class="panel-body">Panel Content</div>--%>
-                            <%--</div>--%>
-
-                            <%--<div class="panel panel-info">--%>
-                                <%--<div class="panel-heading">Panel with panel-info class</div>--%>
-                                <%--<div class="panel-body">Panel Content</div>--%>
-                            <%--</div>--%>
-
-                            <%--<div class="panel panel-warning">--%>
-                                <%--<div class="panel-heading">Panel with panel-warning class</div>--%>
-                                <%--<div class="panel-body">Panel Content</div>--%>
-                            <%--</div>--%>
-
-                            <%--<div class="panel panel-danger">--%>
-                                <%--<div class="panel-heading">Panel with panel-danger class</div>--%>
-                                <%--<div class="panel-body">Panel Content</div>--%>
-                            <%--</div>--%>
-                        <%--</div>--%>
-                    <%--</div>--%>
-                    <div class="panel panel-warning">
-                        <div class="panel-heading"><h2><b>Food advised not to eat</b></h2></div>
-                        <div class="panel-body">Food items</div>
-                    </div>
-
-                    <div class="panel panel-danger">
-                        <div class="panel-heading"><h2><b>Restricted food</b></h2></div>
-                        <div class="panel-body">Food items</div>
-                    </div>
-
-
 
                     <!--end of content-->
                 </div>
