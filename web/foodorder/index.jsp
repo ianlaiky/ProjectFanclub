@@ -220,6 +220,8 @@
         });
 
 
+
+
         jQuery(function () {
             $("#btnCNoodles").click(function (e) {
                 e.preventDefault();
@@ -228,6 +230,24 @@
 
             });
         });
+        jQuery(function () {
+            $("#btnApple").click(function (e) {
+              e.preventDefault();
+              $("#foodApple").val("Apple");
+              $("#orderlisttable").append("<tr><td>Apple</td></tr>");
+
+         });
+        });
+
+        jQuery(function () {
+            $("#btnPear").click(function (e) {
+                e.preventDefault();
+                $("#foodPear").val("Pear");
+               $("#orderlisttable").append("<tr><td>Pear</td></tr>");
+
+           });
+        });
+
         jQuery(function () {
             $("#btnCornflakes").click(function (e) {
                 e.preventDefault();
@@ -323,7 +343,7 @@
                                 <a href="../foodorder/dietaryrestrictions.jsp">Dietary Restrictions</a>
                             </li>
                             <li>
-                                <a href="#">Diet Recommendation</a>
+                                <a href="../foodorder/dietrecommend.jsp">Diet Recommendation</a>
                             </li>
                             <li>
                                 <a href="#">FeedBack</a>
@@ -743,6 +763,8 @@
 
                                             <div class="foodOrderContainer">
                                                 <input type="text" id="foodOrange" name="food"/>
+                                                <input type="text" id="foodApple" name="food"/>
+                                                <input type="text" id="foodPear" name="food"/>
                                             </div>
 
                                             <div class="item">
@@ -751,6 +773,26 @@
                                                 <span class="caption">Orange
                                                     </span>
                                                 <button type="button" id="btnOrange"
+                                                        class="btn btn-primary btn-circle"><i
+                                                        class="glyphicon glyphicon-plus"></i></button>
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="images/apple.jpg" class="img-circle" alt="apple"
+                                                     style="width: 240px;height:140px;">
+                                                <span class="caption">Apple
+                                                    </span>
+                                                <button type="button" id="btnApple"
+                                                        class="btn btn-primary btn-circle"><i
+                                                        class="glyphicon glyphicon-plus"></i></button>
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="images/pear.jpg" class="img-circle" alt="pear"
+                                                     style="width: 240px;height:140px;">
+                                                <span class="caption">Pear
+                                                    </span>
+                                                <button type="button" id="btnPear"
                                                         class="btn btn-primary btn-circle"><i
                                                         class="glyphicon glyphicon-plus"></i></button>
                                             </div>
