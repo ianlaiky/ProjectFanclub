@@ -37,7 +37,9 @@
 <%
     for(int i = 0 ; i<foodNamesArr.size();i++){
 %>
-<%=foodNamesArr.get(i)%><br>
+<%=foodNamesArr.get(i)
+%>
+<br>
 <% } %>
 </body>
 </html>

@@ -1,4 +1,8 @@
-<%--
+<%@ page import="foodOrder.foodOrderDAO" %>
+<%@ page import="foodOrder.FoodorderEntity" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.Collections" %><%--
   Created by IntelliJ IDEA.
   User: astaroh
   Date: 2/1/2017
@@ -58,13 +62,10 @@
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <style type="text/css">
-        /*.panel-body{*/
-        /*width:300px;*/
-        /*}*/
-        /*.panel-heading{*/
-        /*width:300px;*/
-        /*}*/
+
     </style>
+
+
 </head>
 
 <body>
@@ -78,7 +79,7 @@
 -->
         <div class="logo">
             <a href="http://www.creative-tim.com" class="simple-text">
-                Diet restrictions
+                Diet Recommendation
             </a>
         </div>
         <div class="logo logo-mini">
@@ -103,7 +104,7 @@
                                 <a href="../foodorder/index.jsp">Order</a>
                             </li>
                             <li>
-                                <a href="#">Dietary Restrictions</a>
+                                <a href="../foodorder/dietaryrestrictions.jsp">Dietary Restrictions</a>
                             </li>
                             <li>
                                 <a href="#">Diet Recommendation</a>
@@ -350,6 +351,69 @@
             <div class="container-fluid">
                 <div class="col-sm-8 col-sm-offset-2">
                     <!-- Insert all the awesome body content here-->
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="form-group label-floating">
+                                <label class="control-label">Enter Date of Meal ( DD/MM/YYYY )</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group label-floating">
+                                <button type="submit" class="btn btn-primary center-block">View diet</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card">
+                        <div class="card-header" data-background-color="purple">
+                            <h4 font color="white">Your Diet</h4>
+
+                        </div>
+                        <div class="card-content table-responsive">
+                            <table class="table table-hover">
+                                <thead class="text-warning">
+                                <th>Food</th>
+                                <th>Quantity</th>
+
+                                </thead>
+                                <tbody>
+
+                                    <%
+                                        foodOrderDAO fod = new foodOrderDAO();
+                                        List<FoodorderEntity> fodList;
+                                        fodList = fod.getAllfoodOrder();
+
+
+
+
+
+                                        //making array of food names only
+                                        ArrayList<String> foodNamesArr = new ArrayList<>();
+                                        for (int i = 0 ; i<fodList.size() ; i++){
+                                            foodNamesArr.add(fodList.get(i).getFoodName());
+                                        }
+                                        Collections.sort(foodNamesArr);
+
+                                    %>
+                                    <%
+                                        for(int i = 0; i<fodList.size(); i++){
+                                    %>
+                                    <tr>
+
+                                    <td><%=fodList.get(i).getFoodName()%></td>
+
+                                    <td><%=fodList.get(i).getFoodQuantity()%></td>
+
+                                    </tr>
+                                    <% }
+                                        %>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
 
                     <!--end of content-->
                 </div>
