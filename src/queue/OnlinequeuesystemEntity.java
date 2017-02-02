@@ -1,9 +1,6 @@
 package queue;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Created by aravin on 25-Jan-17.
@@ -12,6 +9,15 @@ import javax.persistence.Table;
 @Table(name = "onlinequeuesystem", schema = "jedp", catalog = "")
 public class OnlinequeuesystemEntity {
     private int queueNumber;
+    private String patientName;
+
+    public OnlinequeuesystemEntity() {
+    }
+
+    public OnlinequeuesystemEntity(int queueNumber, String patientName) {
+        this.queueNumber = queueNumber;
+        this.patientName = patientName;
+    }
 
     @Id
     @Column(name = "queueNumber")
@@ -23,6 +29,16 @@ public class OnlinequeuesystemEntity {
         this.queueNumber = queueNumber;
     }
 
+    @Basic
+    @Column(name = "patientName")
+    public String getPatientName() {
+        return patientName;
+    }
+
+    public void setPatientName(String patientName) {
+        this.patientName = patientName;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -31,12 +47,15 @@ public class OnlinequeuesystemEntity {
         OnlinequeuesystemEntity that = (OnlinequeuesystemEntity) o;
 
         if (queueNumber != that.queueNumber) return false;
+        if (patientName != null ? !patientName.equals(that.patientName) : that.patientName != null) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        return queueNumber;
+        int result = queueNumber;
+        result = 31 * result + (patientName != null ? patientName.hashCode() : 0);
+        return result;
     }
 }

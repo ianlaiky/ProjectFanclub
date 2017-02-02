@@ -1,17 +1,15 @@
-<%@ page import="patientRecord.PatientDAO" %>
-<%@ page import="patientRecord.PatientrecordEntity" %>
-<%@ page import="java.util.ArrayList" %>
+<%@ page import="foodOrder.foodOrderDAO" %>
+<%@ page import="foodOrder.FoodorderEntity" %>
 <%@ page import="java.util.List" %>
-<%@ page import="queue.OnlinequeuesystemEntity" %>
-<%@ page import="queue.QueueSystemDAO" %><%--
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.Collections" %><%--
   Created by IntelliJ IDEA.
-  User: Ying
-  Date: 11/12/2016
-  Time: 4:24 AM
+  User: astaroh
+  Date: 2/1/2017
+  Time: 9:08 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <!doctype html>
 <html lang="en">
 
@@ -62,33 +60,17 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
-    <
-    <link href="../web/onlinequeuesystem/qe.css" rel="stylesheet"/>
-
-    <style>
-        .control-label {
-            font-size: 50px;
-        }
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style type="text/css">
 
     </style>
+
+
 </head>
 
 <body>
-<%
-    if (session.getAttribute("signInPatient") == null) {
-        response.sendRedirect("../errorPage.jsp");
-    } else {
-        if (session.getAttribute("signInPatient").equals("false")) {
-            response.sendRedirect("../errorPage.jsp");
-        }
-
-    }
-
-
-%>
-
 <div class="wrapper">
-    <div class="sidebar" data-active-color="green" data-background-color="white"
+    <div class="sidebar" data-active-color="green" data-background-color="black"
          data-image="../../assets/img/sidebar-1.jpg">
         <!--
     Tip 1: You can change the color of active element of the sidebar using: data-active-color="purple | blue | green | orange | red | rose"
@@ -97,7 +79,7 @@
 -->
         <div class="logo">
             <a href="http://www.creative-tim.com" class="simple-text">
-                Online Queue System
+                Diet Recommendation
             </a>
         </div>
         <div class="logo logo-mini">
@@ -113,28 +95,22 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        <%= session.getAttribute("username") %>
+                        Junkiat
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="../onlinequeuesystem/view2.jsp">
-                                    <i class="material-icons">pageview</i>
-                                    <p>View Queue Details</p>
-                                </a>
+                                <a href="../foodorder/index.jsp">Order</a>
                             </li>
                             <li>
-                                <a href="../onlinequeuesystem/waitingTime.jsp">
-                                    <i class="material-icons">av_timer</i>
-                                    <p>View Estimated Waiting Time</p>
-                                </a>
+                                <a href="../foodorder/dietaryrestrictions.jsp">Dietary Restrictions</a>
                             </li>
                             <li>
-                                <a href="/logout">
-                                    <i class="material-icons">exit_to_app</i>
-                                    <p>Logout</p>
-                                </a>
+                                <a href="#">Diet Recommendation</a>
+                            </li>
+                            <li>
+                                <a href="#">FeedBack</a>
                             </li>
                         </ul>
                     </div>
@@ -142,7 +118,7 @@
             </div>
             <ul class="nav">
                 <li class="active">
-                    <a href="queue.jsp">
+                    <a href="index.jsp">
                         <i class="material-icons">dashboard</i>
                         <p>Dashboard</p>
                     </a>
@@ -371,342 +347,210 @@
                 </div>
             </div>
         </nav>
-        <%--<div class="content">--%>
-        <%--<div class="container-fluid">--%>
-        <%--<div class="col-sm-8 col-sm-offset-2">--%>
-
-        <%--&lt;%&ndash;// -- Insert all the awesome body content here&ndash;%&gt;--%>
-
-
-        <%--<div class="container">--%>
-
-
-        <%--<form class="well form-horizontal" action=" " method="post" id="contact_form">--%>
-        <%--<fieldset>--%>
-
-        <%--<!-- Form Name -->--%>
-        <%--<legend>--%>
-        <%--<h1>Get your Queue Number ! </h1>--%>
-        <%--</legend>--%>
-        <%--<div class="col-md-6">--%>
-        <%--<div class="card">--%>
-        <%--<form id="quieeyu" action="" method="">--%>
-        <%--<div class="card-header card-header-icon" data-background-color="rose">--%>
-        <%--<i class="material-icons">contacts</i>--%>
-        <%--</div>--%>
-        <%--<div class="card-content">--%>
-        <%--<h4 class="card-title">Login Form</h4>--%>
-        <%--<div class="form-group label-floating">--%>
-        <%--<label class="control-label">Email Address--%>
-        <%--<star>*</star>--%>
-        <%--</label>--%>
-        <%--<input class="form-control" name="email" type="text" email="true" required="true" />--%>
-        <%--</div>--%>
-        <%--<div class="form-group label-floating">--%>
-        <%--<label class="control-label">Password--%>
-        <%--<star>*</star>--%>
-        <%--</label>--%>
-        <%--<input class="form-control" name="password" type="password" required="true" />--%>
-        <%--</div>--%>
-        <%--<div class="category form-category">--%>
-        <%--<star>*</star> Required fields</div>--%>
-        <%--<div class="text-center">--%>
-        <%--<button type="submit" class="btn btn-rose btn-fill btn-wd">Register</button>--%>
-        <%--</div>--%>
-        <%--</div>--%>
-        <%--</form>--%>
-        <%--</div>--%>
-        <%--</div>--%>
-
-        <%--<!-- Text input-->--%>
-
-
-        <%--<!-- Text input-->--%>
-        <%--&lt;%&ndash;<div class="form-group">&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<label class="col-md-4 control-label">Website or domain name</label>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<div class="col-md-4 inputGroupContainer">&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<div class="input-group">&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<input name="website" placeholder="Website or domain name" class="form-control" type="text">&ndash;%&gt;--%>
-        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-
-        <%--<!-- radio checks -->--%>
-        <%--&lt;%&ndash;<div class="form-group">&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<label class="col-md-4 control-label">Do you have hosting?</label>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<div class="col-md-4">&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<div class="radio">&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<label>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<input type="radio" name="hosting" value="yes" /> Yes&ndash;%&gt;--%>
-        <%--&lt;%&ndash;</label>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<div class="radio">&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<label>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<input type="radio" name="hosting" value="no" /> No&ndash;%&gt;--%>
-        <%--&lt;%&ndash;</label>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-
-        <%--<!-- Text area -->--%>
-
-        <%--&lt;%&ndash;<div class="form-group">&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<label class="col-md-4 control-label">Project Description</label>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<div class="col-md-4 inputGroupContainer">&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<div class="input-group">&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<textarea class="form-control" name="comment" placeholder="Project Description"></textarea>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-
-        <%--<!-- Button -->--%>
-        <%--<div class="form-group">--%>
-        <%--<label class="col-md-4 control-label"></label>--%>
-        <%--<div class="col-md-4">--%>
-        <%--<form action="queueformdisplay.jsp">--%>
-        <%--<button type="submit" class="btn btn-warning">Get Queue Number! <span--%>
-        <%--class="glyphicon glyphicon-send"></span></button>--%>
-        <%--</form>--%>
-
-        <%--</div>--%>
-        <%--</div>--%>
-        <%--&lt;%&ndash;<!-- Success message -->&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<div class="alert alert-success" role="alert" id="success_message">Success <i&ndash;%&gt;--%>
-        <%--&lt;%&ndash;class="glyphicon glyphicon-thumbs-up"></i> Your Queue Number is 1440! Thank you&ndash;%&gt;--%>
-        <%--&lt;%&ndash;for waiting!s&ndash;%&gt;--%>
-        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-
-
-        <%--&lt;%&ndash;<p id="date"></p>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<script>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;document.getElementById("date").innerHTML = Date();&ndash;%&gt;--%>
-        <%--&lt;%&ndash;</script>&ndash;%&gt;--%>
-
-
-        <%--</fieldset>--%>
-        <%--</form>--%>
-        <%--</div>--%>
-        <%--</div><!-- /.container -->--%>
-
-        <%--</div>--%>
-        <%--</div>--%>
-
         <div class="content">
             <div class="container-fluid">
-                <div class="row">
-                    <%
+                <div class="col-sm-8 col-sm-offset-2">
+                    <!-- Insert all the awesome body content here-->
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="form-group label-floating">
+                                <label class="control-label">Enter Date of Meal ( DD/MM/YYYY )</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group label-floating">
+                                <button type="submit" class="btn btn-primary center-block">View diet</button>
+                            </div>
+                        </div>
 
-                        PatientDAO pat = new PatientDAO();
-                        List<PatientrecordEntity> allPat = new ArrayList<>();
+                    </div>
+                    <div class="card">
+                        <div class="card-header" data-background-color="purple">
+                            <h4 font color="white">Your Diet</h4>
 
-                        allPat = pat.getAllPatientUserAndPass();
+                        </div>
+                        <div class="card-content table-responsive">
+                            <table class="table table-hover">
+                                <thead class="text-warning">
+                                <th>Food</th>
+                                <th>Quantity</th>
 
-                        String currentsession = (String) session.getAttribute("username");
-                        String phoneNow = "";
+                                </thead>
+                                <tbody>
 
-
-                        for (int i = 0; i < allPat.size(); i++) {
-
-                            if (currentsession.equalsIgnoreCase(allPat.get(i).getpUsername())) {
-                                phoneNow = allPat.get(i).getpPhoneNumber();
-                            }
-
-                        }
-                        System.out.println(phoneNow);
-                    %>
-
-
-                    <div class="col-md-12">
-                        <div class="card">
-                            <form id="LoginValidation" action="/onlinequeuesystem" method="post">
-                                <div class="card-header card-header-icon" data-background-color="rose">
-                                    <i class="material-icons">alarm_on</i>
-                                </div>
-                                <div class="card-content">
-                                    <h4 class="card-title">Get Queue Number Here!</h4>
-                                    <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <i class="material-icons">perm_identity</i>
-                                            </span>
-                                        <div class="form-group label-floating">
-                                            <label class="control-label">Name</label>
-                                            <input value="<%=session.getAttribute("firstName")%>" disabled
-                                                   class="form-control"
-                                                   name="Name" type="text"/>
-
-                                        </div>
-                                    </div>
-                                    <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <i class="material-icons">contact_phone</i>
-                                            </span>
-                                        <div class="form-group label-floating">
-                                            <label class="control-label">PhoneNumber</label>
+                                    <%
+                                        foodOrderDAO fod = new foodOrderDAO();
+                                        List<FoodorderEntity> fodList;
+                                        fodList = fod.getAllfoodOrder();
 
 
-                                            <input value="<%=phoneNow%>" disabled class="form-control"
-                                                   name="phoneNumber"
-                                                   type="text"/>
-                                        </div>
-                                    </div>
 
 
-                                </div>
-                                <div class="category form-category">
+
+                                        //making array of food names only
+                                        ArrayList<String> foodNamesArr = new ArrayList<>();
+                                        for (int i = 0 ; i<fodList.size() ; i++){
+                                            foodNamesArr.add(fodList.get(i).getFoodName());
+                                        }
+                                        Collections.sort(foodNamesArr);
+
+                                    %>
+                                    <%
+                                        for(int i = 0; i<fodList.size(); i++){
+                                    %>
+                                    <tr>
+
+                                    <td><%=fodList.get(i).getFoodName()%></td>
+
+                                    <td><%=fodList.get(i).getFoodQuantity()%></td>
+
+                                    </tr>
+                                    <% }
+                                        %>
 
 
-                                </div>
-                                <div class="text-center">
-                                    <button type="submit" class="btn btn-rose btn-fill btn-wd">Get Queue
-                                        Number
-                                    </button>
-                                </div>
-
-
-                            </form>
-
+                                </tbody>
+                            </table>
                         </div>
                     </div>
 
-
+                    <!--end of content-->
                 </div>
             </div>
         </div>
+        <footer class="footer">
+            <div class="container-fluid">
+                <nav class="pull-left">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Company
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Portfolio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Blog
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <p class="copyright pull-right">
+                    &copy;
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script>
+                    <a href="http://www.creative-tim.com">Woodlands Integrated Health Campus</a>, made with love by
+                    Fanclub
+                </p>
+            </div>
+        </footer>
     </div>
-    <footer class="footer">
-        <div class="container-fluid">
-            <nav class="pull-left">
-                <ul>
-                    <li>
-                        <a href="#">
-                            Home test
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Company
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Portfolio
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Blog
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <p class="copyright pull-right">
-                &copy;
-                <script>
-                    document.write(new Date().getFullYear())
-                </script>
-                <a href="http://www.creative-tim.com">Woodlands Integrated Health Campus</a>, made with love by
-                Fanclub
-            </p>
-        </div>
-    </footer>
-</div>
 </div>
 <div class="fixed-plugin">
-    <%--<div class="dropdown show-dropdown">--%>
-    <%--<a href="#" data-toggle="dropdown">--%>
-    <%--<i class="fa fa-cog fa-2x"> </i>--%>
-    <%--</a>--%>
-    <%--<ul class="dropdown-menu">--%>
-    <%--<li class="header-title"> Sidebar Filters</li>--%>
-    <%--<li class="adjustments-line">--%>
-    <%--<a href="javascript:void(0)" class="switch-trigger active-color">--%>
-    <%--<div class="badge-colors text-center">--%>
-    <%--<span class="badge filter badge-blue" data-color="blue"></span>--%>
-    <%--<span class="badge filter badge-blue" data-color="blue"></span>--%>
-    <%--<span class="badge filter badge-green" data-color="green"></span>--%>
-    <%--<span class="badge filter badge-orange" data-color="orange"></span>--%>
-    <%--<span class="badge filter badge-red" data-color="red"></span>--%>
-    <%--<span class="badge filter badge-rose active" data-color="green"></span>--%>
-    <%--</div>--%>
-    <%--<div class="clearfix"></div>--%>
-    <%--</a>--%>
-    <%--</li>--%>
-    <%--<li class="header-title">Sidebar Background</li>--%>
-    <%--<li class="adjustments-line">--%>
-    <%--<a href="javascript:void(0)" class="switch-trigger background-color">--%>
-    <%--<div class="text-center">--%>
-    <%--<span class="badge filter badge-white" data-color="white"></span>--%>
-    <%--<span class="badge filter badge-black active" data-color="black"></span>--%>
-    <%--</div>--%>
-    <%--<div class="clearfix"></div>--%>
-    <%--</a>--%>
-    <%--</li>--%>
-    <%--<li class="adjustments-line">--%>
-    <%--<a href="javascript:void(0)" class="switch-trigger">--%>
-    <%--<p>Sidebar Mini</p>--%>
-    <%--<div class="togglebutton switch-sidebar-mini">--%>
-    <%--<label>--%>
-    <%--<input type="checkbox" unchecked="">--%>
-    <%--</label>--%>
-    <%--</div>--%>
-    <%--<div class="clearfix"></div>--%>
-    <%--</a>--%>
-    <%--</li>--%>
-    <%--<li class="adjustments-line">--%>
-    <%--<a href="javascript:void(0)" class="switch-trigger">--%>
-    <%--<p>Sidebar Image</p>--%>
-    <%--<div class="togglebutton switch-sidebar-image">--%>
-    <%--<label>--%>
-    <%--<input type="checkbox" checked="">--%>
-    <%--</label>--%>
-    <%--</div>--%>
-    <%--<div class="clearfix"></div>--%>
-    <%--</a>--%>
-    <%--</li>--%>
-    <%--<li class="header-title">Images</li>--%>
-    <%--<li class="active">--%>
-    <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
-    <%--<img src="../../assets/img/sidebar-1.jpg" alt=""/>--%>
-    <%--</a>--%>
-    <%--</li>--%>
-    <%--<li>--%>
-    <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
-    <%--<img src="../../assets/img/sidebar-2.jpg" alt=""/>--%>
-    <%--</a>--%>
-    <%--</li>--%>
-    <%--<li>--%>
-    <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
-    <%--<img src="../../assets/img/sidebar-3.jpg" alt=""/>--%>
-    <%--</a>--%>
-    <%--</li>--%>
-    <%--<li>--%>
-    <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
-    <%--<img src="../../assets/img/sidebar-4.jpg" alt=""/>--%>
-    <%--</a>--%>
-    <%--</li>--%>
-    <%--<li class="button-container">--%>
-    <%--<div class="">--%>
-    <%--<a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank"--%>
-    <%--class="btn btn-rose btn-block">Buy Now</a>--%>
-    <%--</div>--%>
-    <%--<div class="">--%>
-    <%--<a href="http://www.creative-tim.com/product/material-dashboard" target="_blank"--%>
-    <%--class="btn btn-info btn-block">Get Free Demo</a>--%>
-    <%--</div>--%>
-    <%--</li>--%>
-    <%--<li class="header-title">Thank you for 95 shares!</li>--%>
-    <%--<li class="button-container">--%>
-    <%--<button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i> &middot;--%>
-    <%--45--%>
-    <%--</button>--%>
-    <%--<button id="facebook" class="btn btn-social btn-facebook btn-round"><i--%>
-    <%--class="fa fa-facebook-square"> &middot;</i>50--%>
-    <%--</button>--%>
-    <%--</li>--%>
-    <%--</ul>--%>
-    <%--</div>--%>
+    <div class="dropdown show-dropdown">
+        <a href="#" data-toggle="dropdown">
+            <i class="fa fa-cog fa-2x"> </i>
+        </a>
+        <ul class="dropdown-menu">
+            <li class="header-title"> Sidebar Filters</li>
+            <li class="adjustments-line">
+                <a href="javascript:void(0)" class="switch-trigger active-color">
+                    <div class="badge-colors text-center">
+                        <span class="badge filter badge-purple" data-color="purple"></span>
+                        <span class="badge filter badge-blue" data-color="blue"></span>
+                        <span class="badge filter badge-green" data-color="green"></span>
+                        <span class="badge filter badge-orange" data-color="orange"></span>
+                        <span class="badge filter badge-red" data-color="red"></span>
+                        <span class="badge filter badge-rose active" data-color="green"></span>
+                    </div>
+                    <div class="clearfix"></div>
+                </a>
+            </li>
+            <li class="header-title">Sidebar Background</li>
+            <li class="adjustments-line">
+                <a href="javascript:void(0)" class="switch-trigger background-color">
+                    <div class="text-center">
+                        <span class="badge filter badge-white" data-color="white"></span>
+                        <span class="badge filter badge-black active" data-color="black"></span>
+                    </div>
+                    <div class="clearfix"></div>
+                </a>
+            </li>
+            <li class="adjustments-line">
+                <a href="javascript:void(0)" class="switch-trigger">
+                    <p>Sidebar Mini</p>
+                    <div class="togglebutton switch-sidebar-mini">
+                        <label>
+                            <input type="checkbox" unchecked="">
+                        </label>
+                    </div>
+                    <div class="clearfix"></div>
+                </a>
+            </li>
+            <li class="adjustments-line">
+                <a href="javascript:void(0)" class="switch-trigger">
+                    <p>Sidebar Image</p>
+                    <div class="togglebutton switch-sidebar-image">
+                        <label>
+                            <input type="checkbox" checked="">
+                        </label>
+                    </div>
+                    <div class="clearfix"></div>
+                </a>
+            </li>
+            <li class="header-title">Images</li>
+            <li class="active">
+                <a class="img-holder switch-trigger" href="javascript:void(0)">
+                    <img src="../../assets/img/sidebar-1.jpg" alt=""/>
+                </a>
+            </li>
+            <li>
+                <a class="img-holder switch-trigger" href="javascript:void(0)">
+                    <img src="../../assets/img/sidebar-2.jpg" alt=""/>
+                </a>
+            </li>
+            <li>
+                <a class="img-holder switch-trigger" href="javascript:void(0)">
+                    <img src="../../assets/img/sidebar-3.jpg" alt=""/>
+                </a>
+            </li>
+            <li>
+                <a class="img-holder switch-trigger" href="javascript:void(0)">
+                    <img src="../../assets/img/sidebar-4.jpg" alt=""/>
+                </a>
+            </li>
+            <li class="button-container">
+                <div class="">
+                    <a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank"
+                       class="btn btn-rose btn-block">Buy Now</a>
+                </div>
+                <div class="">
+                    <a href="http://www.creative-tim.com/product/material-dashboard" target="_blank"
+                       class="btn btn-info btn-block">Get Free Demo</a>
+                </div>
+            </li>
+            <li class="header-title">Thank you for 95 shares!</li>
+            <li class="button-container">
+                <button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i> &middot;
+                    45
+                </button>
+                <button id="facebook" class="btn btn-social btn-facebook btn-round"><i
+                        class="fa fa-facebook-square"> &middot;</i>50
+                </button>
+            </li>
+        </ul>
+    </div>
 </div>
 </body>
 <!--   Core JS Files   -->
@@ -758,3 +602,4 @@
 </script>
 
 </html>
+

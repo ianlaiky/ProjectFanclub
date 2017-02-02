@@ -1,3 +1,17 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: aravin
+  Date: 26-Jan-17
+  Time: 10:52 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%--
+  Created by IntelliJ IDEA.
+  User: aravin
+  Date: 25-Jan-17
+  Time: 6:37 PM
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page import="patientRecord.PatientDAO" %>
 <%@ page import="patientRecord.PatientrecordEntity" %>
 <%@ page import="java.util.ArrayList" %>
@@ -62,7 +76,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
-    <
+
     <link href="../web/onlinequeuesystem/qe.css" rel="stylesheet"/>
 
     <style>
@@ -119,22 +133,13 @@
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="../onlinequeuesystem/view2.jsp">
-                                    <i class="material-icons">pageview</i>
-                                    <p>View Queue Details</p>
-                                </a>
+                                <a href="../onlinequeuesystem/view2.jsp">View Queue Details</a>
                             </li>
                             <li>
-                                <a href="../onlinequeuesystem/waitingTime.jsp">
-                                    <i class="material-icons">av_timer</i>
-                                    <p>View Estimated Waiting Time</p>
-                                </a>
+                                <a href="#">Edit Profile</a>
                             </li>
                             <li>
-                                <a href="/logout">
-                                    <i class="material-icons">exit_to_app</i>
-                                    <p>Logout</p>
-                                </a>
+                                <a href="#">Settings</a>
                             </li>
                         </ul>
                     </div>
@@ -496,79 +501,28 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <%
+                    <%--<%--%>
 
-                        PatientDAO pat = new PatientDAO();
-                        List<PatientrecordEntity> allPat = new ArrayList<>();
+                    <center><h1>Estimated Waiting Time:</h1></center>
 
-                        allPat = pat.getAllPatientUserAndPass();
+                    <%--PatientDAO pat = new PatientDAO();--%>
+                    <%--List<PatientrecordEntity> allPat = new ArrayList<>();--%>
 
-                        String currentsession = (String) session.getAttribute("username");
-                        String phoneNow = "";
+                    <%--allPat = pat.getAllPatientUserAndPass();--%>
 
-
-                        for (int i = 0; i < allPat.size(); i++) {
-
-                            if (currentsession.equalsIgnoreCase(allPat.get(i).getpUsername())) {
-                                phoneNow = allPat.get(i).getpPhoneNumber();
-                            }
-
-                        }
-                        System.out.println(phoneNow);
-                    %>
+                    <%--String currentsession = (String) session.getAttribute("username");--%>
+                    <%--String phoneNow = "";--%>
 
 
-                    <div class="col-md-12">
-                        <div class="card">
-                            <form id="LoginValidation" action="/onlinequeuesystem" method="post">
-                                <div class="card-header card-header-icon" data-background-color="rose">
-                                    <i class="material-icons">alarm_on</i>
-                                </div>
-                                <div class="card-content">
-                                    <h4 class="card-title">Get Queue Number Here!</h4>
-                                    <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <i class="material-icons">perm_identity</i>
-                                            </span>
-                                        <div class="form-group label-floating">
-                                            <label class="control-label">Name</label>
-                                            <input value="<%=session.getAttribute("firstName")%>" disabled
-                                                   class="form-control"
-                                                   name="Name" type="text"/>
+                    <%--for (int i = 0; i < allPat.size(); i++) {--%>
 
-                                        </div>
-                                    </div>
-                                    <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <i class="material-icons">contact_phone</i>
-                                            </span>
-                                        <div class="form-group label-floating">
-                                            <label class="control-label">PhoneNumber</label>
+                    <%--if (currentsession.equalsIgnoreCase(allPat.get(i).getpUsername())) {--%>
+                    <%--phoneNow = allPat.get(i).getpPhoneNumber();--%>
+                    <%--}--%>
 
-
-                                            <input value="<%=phoneNow%>" disabled class="form-control"
-                                                   name="phoneNumber"
-                                                   type="text"/>
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                                <div class="category form-category">
-
-
-                                </div>
-                                <div class="text-center">
-                                    <button type="submit" class="btn btn-rose btn-fill btn-wd">Get Queue
-                                        Number
-                                    </button>
-                                </div>
-
-
-                            </form>
-
-                        </div>
-                    </div>
+                    <%--}--%>
+                    <%--System.out.println(phoneNow);--%>
+                    <%--%>--%>
 
 
                 </div>
@@ -758,3 +712,4 @@
 </script>
 
 </html>
+

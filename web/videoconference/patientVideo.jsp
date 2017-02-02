@@ -97,7 +97,126 @@
             min-height: 410px;
             box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
         }
+
+
+        /*chat*/
+
+
+        .connection {
+            float: left;
+            height: 250px;
+            width: 100%;
+            overflow: scroll;
+            background-color: #fff;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+        }
+        .connection div {
+            margin: 5px 0;
+        }
+        .connection.active {
+            border-color: #FF7500;
+        }
+        h1 {
+            font-size: 15px;
+            padding: 5px 10px;
+            margin: 0 -10px 0 -10px;
+            border-bottom: 1px solid #ccc;
+            font-weight: 300;
+        }
+        .active h1 strong {
+            color: #FF7500;
+        }
+        .file, em {
+            color: #999;
+            font-style: italic;
+        }
+        #wrap {
+            background-color: #ddd;
+            border-width: 1px 0;
+            border-color: #ccc;
+            border-style: solid;
+        }
+        .clear {
+            clear: both;
+        }
+        .peer {
+            color: #FF7500;
+            font-weight: 600;
+        }
+        .you {
+            color: #0C6BA1;
+            font-weight: 600;
+        }
+        #pid {
+            display: inline-block;
+            padding: 5px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            color: #0C6BA1;
+            font-weight: 600;
+        }
+        .warning {
+            font-size: 12px;
+            line-height: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            text-shadow: 0 1px 0 rgba(0,0,0,0.4);
+            font-weight: 300;
+            border-width: 1px 0;
+            border-color: #000;
+            border-style: solid;
+        }
+        a {
+            color: #F2C777;
+        }
+        .filler {
+            display: block;
+            padding: 10px;
+        }
+        #actions {
+            padding: 10px;
+        }
+
+        button, input {
+            font-size: 15px;
+            font-family: Arial;
+            border: 1px solid #ccc;
+            border-right: 0;
+            padding: 5px;
+            background: #fff;
+            margin: 0;
+            color: #444;
+            text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+        }
+        input:focus {
+            outline: none;
+        }
+        .button, button {
+            cursor: pointer;
+            background-color: #ddd;
+            border: 1px solid #ccc;
+
+
+        }
+        form {
+            display: inline-block;
+        }
+        #close {
+            background-color: #FF7500;
+            border-color: #c15c06;
+        }
+
+        .important {
+            font-size: 15px;
+            color: #F2C777;
+            margin-bottom: 10px;
+        }
     </style>
+
 </head>
 
 <body>
@@ -264,33 +383,190 @@
                                 // PeerJS object
                                 var peer = new Peer('<%=session.getAttribute("patientPID")%>', {
                                     key: 'ezdeolfd1x7p66r',
-                                    debug: 3
+                                    debug: 3,
+                                    logFunction: function() {
+                                        var copy = Array.prototype.slice.call(arguments).join(' ');
+                                        $('.log').append(copy + '<br>');
+                                    }
                                 });
+
+                                var connectedPeers = {};
+                                peer.on('open', function(id){
+                                    $('#pid').text(id);
+                                });
+
+                                peer.on('connection', connect);
+
+
+                                peer.on('error', function (err) {
+                                    alert(err.message);
+                                    // Return to step 2 if error occurs
+                                    step2();
+                                });
+
+                                // Handle a connection object.
+                                function connect(c) {
+                                    console.log("chat running")
+
+                                    // Handle a chat connection.
+                                    if (c.label === 'chat') {
+                                        var chatbox = $('<div></div>').addClass('connection').addClass('activee').attr('id', c.peer);
+                                        var header = $('<h1></h1>').html('Chating with <strong>' + 'Doctor' + '</strong>');
+                                        var messages = $('<div><em>Peer connected.</em></div>').addClass('messages');
+                                        chatbox.append(header);
+                                        chatbox.append(messages);
+
+                                        // Select connection handler.
+                                        chatbox.on('click', function() {
+                                            if ($(this).attr('class').indexOf('activee') === -1) {
+                                                $(this).addClass('activee');
+                                            } else {
+                                                $(this).removeClass('activee');
+                                            }
+                                        });
+                                        $('.filler').hide();
+                                        $('#connections').append(chatbox);
+                                        c.on('data', function(data) {
+                                            messages.append('<div><span class="peer">' + c.peer + '</span>: ' + data +
+                                                '</div>');
+                                        });
+                                        c.on('close', function() {
+                                            alert(c.peer + ' has left the chat.');
+                                            chatbox.remove();
+                                            if ($('.connection').length === 0) {
+                                                $('.filler').show();
+                                            }
+                                            delete connectedPeers[c.peer];
+                                        });
+                                    } else if (c.label === 'file') {
+                                        c.on('data', function(data) {
+                                            // If we're getting a file, create a URL for it.
+                                            if (data.constructor === ArrayBuffer) {
+                                                var dataView = new Uint8Array(data);
+                                                var dataBlob = new Blob([dataView]);
+                                                var url = window.URL.createObjectURL(dataBlob);
+                                                $('#' + c.peer).find('.messages').append('<div><span class="file">' +
+                                                    c.peer + ' has sent you a <a target="_blank" href="' + url + '">file</a>.</span></div>');
+                                            }
+                                        });
+                                    }
+                                    connectedPeers[c.peer] = 1;
+                                }
+
+
+
                                 peer.on('open', function () {
                                     $('#my-id').text(peer.id);
-
                                     $('#hiddenFieldForPID').text(peer.id);
                                 });
                                 // Receiving a call
                                 peer.on('call', function (call) {
                                     // Answer the call automatically (instead of prompting user) for demo purposes
-
                                     var r = confirm("Answer Call?");
                                     if (r == true) {
                                         console.log("Confrimed")
                                         call.answer(window.localStream);
                                         step3(call);
                                     }
-
-
                                 });
-                                peer.on('error', function (err) {
-                                    alert(err.message);
-                                    // Return to step 2 if error occurs
-                                    step2();
-                                });
+
                                 // Click handlers setup
                                 $(function () {
+
+
+
+
+
+                                   // chat
+
+                                    // Prepare file drop box.
+                                    var box = $('#box');
+                                    box.on('dragenter', doNothing);
+                                    box.on('dragover', doNothing);
+                                    box.on('drop', function(e){
+                                        e.originalEvent.preventDefault();
+                                        var file = e.originalEvent.dataTransfer.files[0];
+                                        eachActiveConnection(function(c, $c) {
+                                            if (c.label === 'file') {
+                                                c.send(file);
+                                                $c.find('.messages').append('<div><span class="file">You sent a file.</span></div>');
+                                            }
+                                        });
+                                    });
+                                    function doNothing(e){
+                                        e.preventDefault();
+                                        e.stopPropagation();
+                                    }
+                                    // Connect to a peer
+                                    $('#connect').click(function() {
+                                        var requestedPeer = $('#rid').val();
+                                        if (!connectedPeers[requestedPeer]) {
+                                            // Create 2 connections, one labelled chat and another labelled file.
+                                            var c = peer.connect(requestedPeer, {
+                                                label: 'chat',
+                                                serialization: 'none',
+                                                metadata: {message: 'hi i want to chat with you!'}
+                                            });
+                                            c.on('open', function() {
+                                                connect(c);
+                                            });
+                                            c.on('error', function(err) { alert(err); });
+                                            var f = peer.connect(requestedPeer, { label: 'file', reliable: true });
+                                            f.on('open', function() {
+                                                connect(f);
+                                            });
+                                            f.on('error', function(err) { alert(err); });
+                                        }
+                                        connectedPeers[requestedPeer] = 1;
+                                    });
+                                    // Close a connection.
+                                    $('#close').click(function() {
+                                        eachActiveConnection(function(c) {
+                                            c.close();
+                                        });
+                                    });
+                                    // Send a chat message to all active connections.
+                                    $('#send').submit(function(e) {
+                                        e.preventDefault();
+                                        // For each active connection, send the message.
+                                        var msg = $('#text').val();
+                                        eachActiveConnection(function(c, $c) {
+                                            if (c.label === 'chat') {
+                                                c.send(msg);
+                                                $c.find('.messages').append('<div><span class="you">You: </span>' + msg
+                                                    + '</div>');
+                                            }
+                                        });
+                                        $('#text').val('');
+                                        $('#text').focus();
+                                    });
+                                    // Goes through each active peer and calls FN on its connections.
+                                    function eachActiveConnection(fn) {
+                                        var actives = $('.activee');
+                                        var checkedIds = {};
+                                        actives.each(function() {
+                                            var peerId = $(this).attr('id');
+                                            console.log("whta peerid is this? " )+peerId;
+
+
+                                            if (!checkedIds[peerId]) {
+                                                var conns = peer.connections[peerId];
+                                                for (var i = 0, ii = conns.length; i < ii; i += 1) {
+                                                    var conn = conns[i];
+                                                    fn(conn, $(this));
+                                                }
+                                            }
+                                            checkedIds[peerId] = 1;
+                                        });
+                                    }
+                                    // Show browser version
+                                    $('#browsers').text(navigator.userAgent);
+
+
+
+
+
+
                                     $('#make-call').click(function () {
                                         // Initiate a call!
                                         var call = peer.call('projectfanclub161215', window.localStream);
@@ -307,6 +583,10 @@
                                     });
                                     // Get things started
                                     step1();
+
+
+
+
                                 });
                                 function step1() {
                                     // Get audio/video stream
@@ -320,7 +600,6 @@
                                     });
                                 }
                                 function step2() {
-
                                     $('#step1, #step3').hide();
                                     $('#step2').show();
                                 }
@@ -339,7 +618,15 @@
                                     call.on('close', step2);
                                     $('#step1, #step2').hide();
                                     $('#step3').show();
-                                }</script>
+                                }
+
+                                window.onunload = window.onbeforeunload = function(e) {
+                                    if (!!peer && !peer.destroyed) {
+                                        peer.destroy();
+                                    }
+                                };
+
+                            </script>
 
                             <%--pid js to jsp--%>
                             <input type="hidden" id="hiddenFieldForPID"/>
@@ -379,36 +666,29 @@
 
 
                                         <br>
-                                        <p>Others in the Queue:</p>
-
-                                        <p>
-                                                <%
-                                                List<VideoconferenceEntity> po = new ArrayList<>();
-
-                                                VideoConferenceDAO vi = new VideoConferenceDAO();
-
-                                                po = vi.getAllPID();
-
-                                                ArrayList<String> currentUser = new ArrayList<String>();
-
-                                                for(int i=0;i<po.size();i++){
-                                                    if(po.get(i).getTypeOfUser().equalsIgnoreCase("p")){
-                                                        currentUser.add(po.get(i).getUsername());
-                                                    }
 
 
+                                        <%
+                                            List<VideoconferenceEntity> po = new ArrayList<>();
+                                            VideoConferenceDAO vi = new VideoConferenceDAO();
+                                            po = vi.getAllPID();
+                                            ArrayList<String> currentUser = new ArrayList<String>();
+                                            for (int i = 0; i < po.size(); i++) {
+                                                if (po.get(i).getTypeOfUser().equalsIgnoreCase("p")) {
+                                                    currentUser.add(po.get(i).getUsername());
                                                 }
+                                            }
+                                        %>
 
-                                            %>
+                                        <% for (int i = 0; i < currentUser.size(); i++) { %>
+                                        <%--<li>--%>
+                                        <%--<%=currentUser.get(i)%>--%>
 
-                                                <% for(int i=0;i<currentUser.size();i++){ %>
-                                        <li>
-                                            <%=currentUser.get(i)%>
-
-                                        </li>
+                                        <%--</li>--%>
                                         <%}%>
+                                        <p>Patients in the Queue: <span
+                                                style="text-decoration:underline"><%=currentUser.size()%></span></p>
 
-                                        </p>
                                         <%--<p>Share this id with others so they can call you.</p>--%>
                                         <%--<h3>Make a call</h3>--%>
                                         <%--<div class="pure-form">--%>
@@ -428,6 +708,60 @@
                             </div>
 
 
+                            <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>
+                            <%--<a href="https://github.com/peers/peerjs"><img style="position: absolute; top: 0; right: 0; border: 0;"--%>
+                                                                           <%--src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"--%>
+                                                                           <%--alt="Fork me on GitHub"></a>--%>
+
+                            <script>
+
+                                $(function (){
+                                    $('#pid').hide();
+
+                                    $('#rid').hide();
+
+
+                                    $('#connect').hide();
+
+                                    $('#close').hide();
+
+                                });
+
+                            </script>
+
+
+                            <div id="actions">
+                                <%--Your PeerJS ID is --%>
+                                <span id="pid"></span><br>
+                                <%--Connect to a peer: --%>
+                                    <input type="text" id="rid" placeholder="Someone else's id"><input class="button" type="button" value="Connect" id="connect"><br><br>
+
+                                <form id="send">
+                                    <input type="text" id="text" placeholder="Enter message"><input class="button" type="submit" value="Send to selected peers">
+                                </form>
+                                <button id="close">Close selected connections</button>
+                            </div>
+
+                            <div id="wrap"><div id="connections"><span class="filler">You have not yet
+        made any connections.</span></div>
+                                <div class="clear"></div></div>
+
+                            <div id="box" style="background: #fff; font-size: 18px;padding:40px 30px; text-align: center;">
+                                Drag file here
+                            </div>
+
+
+                            <%--<div class="warning browser">--%>
+                                <%--<div class="important">Your browser version: <span id="browsers"></span><br>--%>
+                                    <%--Currently <strong>Firefox 22+ and Google Chrome 26.0.1403.0 or above</strong> is required.</div>For more up to date compatibility--%>
+                                <%--information see <a href="http://peerjs.com/status">PeerJS WebRTC--%>
+                                <%--Status</a><br>Note that this demo may also fail if you are behind--%>
+                                <%--stringent firewalls or both you and the remote peer and behind symmetric--%>
+                                <%--NATs.--%>
+
+                                <%--<div class="log" style="color:#FF7500;text-shadow:none;padding:15px;background:#eee"><strong>Connection status</strong>:<br></div>--%>
+                            <%--</div>--%>
+
                             <br>
                             <br>
                             <br>
@@ -435,21 +769,8 @@
                             <br>
                             <br>
                             <br> <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
 
 
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
 
 
                         </div>
