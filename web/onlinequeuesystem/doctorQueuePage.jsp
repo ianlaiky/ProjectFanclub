@@ -522,13 +522,13 @@
                         <div class="card">
                             <form id="LoginValidation" action="/queueDel" method="post">
                                 <div class="card-header card-header-icon" data-background-color="rose">
-                                    <i class="material-icons">alarm_on</i>
+                                    <i class="material-icons">delete</i>
                                 </div>
                                 <div class="card-content">
                                     <h4 class="card-title">Deletion of Queue Number </h4>
                                     <div class="input-group">
                                             <span class="input-group-addon">
-                                                <i class="material-icons">perm_identity</i>
+
                                             </span>
                                         <div class="form-group label-floating">
                                             <label class="control-label">Patients who are in the Queue currently</label>

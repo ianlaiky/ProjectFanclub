@@ -22,9 +22,26 @@ public class QueuServlet extends HttpServlet {
         QueueSystemDAO qs = new QueueSystemDAO();
         List<OnlinequeuesystemEntity> queueLis = new ArrayList<OnlinequeuesystemEntity>();
 
+        String currentUser = (String) session.getAttribute("username");
 
-        Integer no = (Integer) session.getAttribute("queueNo");
+
+
+
+//        Integer no = (Integer) session.getAttribute("queueNo");
         queueLis = qs.getAllQueueData();
+
+        for(int i=0;i<queueLis.size();i++){
+
+if(currentUser.equalsIgnoreCase(queueLis.get(i).getPatientName())){
+
+  int tempno = queueLis.get(i).getQueueNumber();
+  qs.deleteViaQueueNo(tempno);
+
+}
+
+
+        }
+
 
 //        for (int i = 0; i < queueList.size(); i++) {
 //
