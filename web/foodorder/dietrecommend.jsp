@@ -2,7 +2,10 @@
 <%@ page import="foodOrder.FoodorderEntity" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="java.util.Collections" %><%--
+<%@ page import="java.util.Collections" %>
+<%@ page import="java.text.DateFormat" %>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.text.SimpleDateFormat" %><%--
   Created by IntelliJ IDEA.
   User: astaroh
   Date: 2/1/2017
@@ -18,6 +21,8 @@
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png"/>
     <link rel="icon" type="image/png" href="../assets/img/favicon.png"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <title>Vision API</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
     <meta name="viewport" content="width=device-width"/>
@@ -66,6 +71,26 @@
     </style>
 
 
+    <script>
+
+
+
+        jQuery(function () {
+                    $("#viewDiet").click(function (e) {
+                        e.preventDefault();
+
+                        var dateinput = $('#dateInput').val();
+
+                        alert(dateinput);
+
+
+                    });
+        });
+    </script>
+
+
+
+
 </head>
 
 <body>
@@ -95,7 +120,7 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        Junkiat
+                        <%= session.getAttribute("firstName")%>
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
@@ -355,12 +380,16 @@
                         <div class="col-md-9">
                             <div class="form-group label-floating">
                                 <label class="control-label">Enter Date of Meal ( DD/MM/YYYY )</label>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" id="dateInput">
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group label-floating">
-                                <button type="submit" class="btn btn-primary center-block">View diet</button>
+                                <button type="button" id= "viewDiet" class="btn btn-primary center-block">View diet</button>
+                                <button type="button" id="btnFPorridge"
+                                        class="btn btn-primary btn-circle hoverable"
+                                        value="defaultvalue"><i
+                                        class="glyphicon glyphicon-plus"></i></button>
                             </div>
                         </div>
 
@@ -375,36 +404,47 @@
                                 <thead class="text-warning">
                                 <th>Food</th>
                                 <th>Quantity</th>
+                                <th>Date</th>
 
                                 </thead>
                                 <tbody>
 
                                     <%
                                         foodOrderDAO fod = new foodOrderDAO();
+
+                                        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+                                        Date date = new Date();
+                                        String currentdate = dateFormat.format(date);
+
+
                                         List<FoodorderEntity> fodList;
                                         fodList = fod.getAllfoodOrder();
 
+                                        //filter list for current user meals
 
-
-
-
-                                        //making array of food names only
-                                        ArrayList<String> foodNamesArr = new ArrayList<>();
+                                        ArrayList<FoodorderEntity> dietList = new ArrayList<>();
                                         for (int i = 0 ; i<fodList.size() ; i++){
-                                            foodNamesArr.add(fodList.get(i).getFoodName());
+
+                                            String a = fodList.get(i).getPatientId();
+                                            String b = (String) session.getAttribute("username");
+                                            if(a.equals(b)){
+                                                dietList.add(fodList.get(i));
+
+                                    }
                                         }
-                                        Collections.sort(foodNamesArr);
+
 
                                     %>
                                     <%
-                                        for(int i = 0; i<fodList.size(); i++){
+                                        for(int i = 0; i<dietList.size(); i++){
                                     %>
                                     <tr>
 
-                                    <td><%=fodList.get(i).getFoodName()%></td>
+                                    <td><%=dietList.get(i).getFoodName()%></td>
 
-                                    <td><%=fodList.get(i).getFoodQuantity()%></td>
+                                    <td><%=dietList.get(i).getFoodQuantity()%></td>
 
+                                    <td><%=currentdate%></td>
                                     </tr>
                                     <% }
                                         %>
@@ -598,7 +638,17 @@
 <script type="text/javascript">
     $().ready(function () {
         demo.initMaterialWizard();
+
     });
+
+//        $("#viewDiet").click(function (e) {
+//            e.preventDefault();
+//            var dateValue = document.getelementById("dateInput");
+//            alert("testalert");
+//
+//
+//        });
+
 </script>
 
 </html>

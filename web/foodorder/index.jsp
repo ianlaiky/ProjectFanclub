@@ -165,11 +165,13 @@
 
 
 
+
         jQuery(function () {
             $("#btnFPorridge").click(function (e) {
                 e.preventDefault();
                 $("#foodFP").val("Fish Porridge");
                 $("#orderlisttable").append("<tr><td>Fish Porridge</td></tr>");
+
 
 
             });
@@ -331,7 +333,7 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        Junkiat
+                        <%= session.getAttribute("firstName")%>
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">

@@ -3,11 +3,10 @@ package foodOrder;
 import javax.persistence.*;
 
 /**
- * Created by astaroh on 12/14/2016.
+ * Created by astaroh on 2/2/2017.
  */
 @Entity
-@Table(name = "foodorder", schema = "jedp")
-        //(name = "foodorder", schema = "jedp", catalog = "")
+@Table(name = "foodorder", schema = "jedp", catalog = "")
 public class FoodorderEntity {
     private int idfoodorder;
     private String foodName;
@@ -15,19 +14,22 @@ public class FoodorderEntity {
     private String patientId;
     private String patientName;
     private String roomId;
+    private String orderdate;
+
+
     public FoodorderEntity(int idfoodorder,String foodName,String foodQuantity,String patientId,
-    String patientName,String roomId){
+                           String patientName,String roomId,String orderdate){
         this.idfoodorder = idfoodorder;
         this.foodName = foodName;
         this.foodQuantity = foodQuantity;
         this.patientId = patientId;
         this.patientName = patientName;
         this.roomId = roomId;
+        this.orderdate = orderdate;
     }
 
     public FoodorderEntity() {
     }
-
     @Id
     @Column(name = "idfoodorder", nullable = false)
     public int getIdfoodorder() {
@@ -88,6 +90,16 @@ public class FoodorderEntity {
         this.roomId = roomId;
     }
 
+    @Basic
+    @Column(name = "orderdate", nullable = true, length = 45)
+    public String getOrderdate() {
+        return orderdate;
+    }
+
+    public void setOrderdate(String orderdate) {
+        this.orderdate = orderdate;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -101,6 +113,7 @@ public class FoodorderEntity {
         if (patientId != null ? !patientId.equals(that.patientId) : that.patientId != null) return false;
         if (patientName != null ? !patientName.equals(that.patientName) : that.patientName != null) return false;
         if (roomId != null ? !roomId.equals(that.roomId) : that.roomId != null) return false;
+        if (orderdate != null ? !orderdate.equals(that.orderdate) : that.orderdate != null) return false;
 
         return true;
     }
@@ -113,9 +126,7 @@ public class FoodorderEntity {
         result = 31 * result + (patientId != null ? patientId.hashCode() : 0);
         result = 31 * result + (patientName != null ? patientName.hashCode() : 0);
         result = 31 * result + (roomId != null ? roomId.hashCode() : 0);
+        result = 31 * result + (orderdate != null ? orderdate.hashCode() : 0);
         return result;
     }
-
-
-
 }
