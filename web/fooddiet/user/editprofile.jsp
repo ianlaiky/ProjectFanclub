@@ -262,11 +262,11 @@
                                         <label class="col-sm-2 label-on-left">Physical Activity Intensity</label>
                                         <div class="col-lg-7 col-md-6 col-sm-3">
 
-                                            <select class="selectpicker" id="intense" data-style="select-with-transition" title="Choose Physical Activity Intensity" data-size="4" >
+                                            <select name="intensity" class="selectpicker" id="intense" data-style="select-with-transition" title="Choose Physical Activity Intensity" data-size="4" >
                                                 <option disabled> Choose an intensity best suit you</option>
-                                                <option name="intensity" value="sedentary">Sedentary </option>
-                                                <option name="intensity" value="moderate">Moderately Active</option>
-                                                <option name="intensity" value="active">Active</option>
+                                                <option value="sedentary">Sedentary </option>
+                                                <option value="moderate">Moderately Active</option>
+                                                <option value="active">Active</option>
                                             </select>
                                                <%
                                                    System.out.println(user.getIntensity());
@@ -431,7 +431,7 @@
                 <script>
                     document.write(new Date().getFullYear())
                 </script>
-                <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+                <a href="http://www.creative-tim.com">Woodlands Integrated Health Campus</a>, made with love by Fanclub
             </p>
         </div>
     </footer>
