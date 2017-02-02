@@ -95,7 +95,7 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        Junkiat
+                        <%= session.getAttribute("firstName")%>
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
@@ -384,26 +384,29 @@
                                         List<FoodorderEntity> fodList;
                                         fodList = fod.getAllfoodOrder();
 
+                                        //filter list for current user meals
 
-
-
-
-                                        //making array of food names only
-                                        ArrayList<String> foodNamesArr = new ArrayList<>();
+                                        ArrayList<FoodorderEntity> dietList = new ArrayList<>();
                                         for (int i = 0 ; i<fodList.size() ; i++){
-                                            foodNamesArr.add(fodList.get(i).getFoodName());
+
+                                            String a = fodList.get(i).getPatientId();
+                                            String b = (String) session.getAttribute("username");
+                                            if(a.equals(b)){
+                                                dietList.add(fodList.get(i));
+
+                                    }
                                         }
-                                        Collections.sort(foodNamesArr);
+
 
                                     %>
                                     <%
-                                        for(int i = 0; i<fodList.size(); i++){
+                                        for(int i = 0; i<dietList.size(); i++){
                                     %>
                                     <tr>
 
-                                    <td><%=fodList.get(i).getFoodName()%></td>
+                                    <td><%=dietList.get(i).getFoodName()%></td>
 
-                                    <td><%=fodList.get(i).getFoodQuantity()%></td>
+                                    <td><%=dietList.get(i).getFoodQuantity()%></td>
 
                                     </tr>
                                     <% }

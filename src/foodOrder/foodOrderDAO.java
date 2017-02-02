@@ -30,7 +30,7 @@ public class foodOrderDAO {
         List<FoodorderEntity>list =  null;
         list = getAllfoodOrder();
         int id = list.size()+1;
-        FoodorderEntity order = new FoodorderEntity(id,foodName,foodQuantity,"1223",patientName,roomId);
+        FoodorderEntity order = new FoodorderEntity(id,foodName,foodQuantity,patientId,patientName,roomId);
         em.getTransaction().begin();
         em.persist(order);
         em.getTransaction().commit();
