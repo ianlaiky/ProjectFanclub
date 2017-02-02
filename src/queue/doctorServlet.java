@@ -20,8 +20,9 @@ public class doctorServlet extends HttpServlet {
             System.out.println(results[i]);
             qn.deleteViaQueueNo(Integer.parseInt(results[i]));
 
-
         }
+        response.sendRedirect("onlinequeuesystem/doctorQueuePage.jsp");
+        return;
 
 
     }

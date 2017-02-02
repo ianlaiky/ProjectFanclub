@@ -80,6 +80,7 @@ if(currentUser.equalsIgnoreCase(queueLis.get(i).getPatientName())){
 
         response.sendRedirect("onlinequeuesystem/queueNoDisplay.jsp");
 
+
         return;
     }
 
