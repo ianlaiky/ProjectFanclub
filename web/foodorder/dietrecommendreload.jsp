@@ -74,20 +74,6 @@
     <script>
 
 
-
-//        jQuery(function () {
-//                    $("#viewDiet").click(function (e) {
-////                        e.preventDefault();
-//
-////                        var dateinput = $('#dateInput').val();
-////                        $("#dietTable > tbody").empty();
-//
-//
-//
-//
-//
-//                    });
-//        });
     </script>
 
 
@@ -134,7 +120,7 @@
                                 <a href="../foodorder/dietaryrestrictions.jsp">Dietary Restrictions</a>
                             </li>
                             <li>
-                                <a href="#">Diet Recommendation</a>
+                                <a href="../foodorder/dietrecommend.jsp">Diet Recommendation</a>
                             </li>
                             <li>
                                 <a href="#">FeedBack</a>
@@ -386,30 +372,27 @@
                     <!-- Insert all the awesome body content here-->
 
                     <form action="/dietservlet" action="get">
-                    <div class="row">
-                        <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-md-9">
 
 
-                            <div class="form-group label-floating">
-                                <label class="control-label">Enter Date of Meal ( DD/MM/YYYY )</label>
-                                <input type="text" class="form-control" id="dateInput" name="enterdate" val="">
-
-
-
+                                <div class="form-group label-floating">
+                                    <label class="control-label">Enter Date of Meal ( DD/MM/YYYY )</label>
+                                    <input type="text" class="form-control" id="dateInput" name="enterdate">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-group label-floating">
-                                <button type="submit" id= "viewDiet" class="btn btn-primary center-block">View diet</button>
+                            <div class="col-md-3">
+                                <div class="form-group label-floating">
+                                    <button type="submit" id= "viewDiet" class="btn btn-primary center-block" >View diet</button>
 
+                                </div>
                             </div>
-                        </div>
 
-                    </div>
+                        </div>
                     </form>
                     <div class="card">
                         <div class="card-header" data-background-color="purple">
-                            <h4 font color="white">Your Diet for TODAY</h4>
+                            <h4 font color="white">Your Diet</h4>
 
                         </div>
                         <div class="card-content table-responsive">
@@ -422,45 +405,49 @@
                                 </thead>
                                 <tbody>
 
-                                    <%
-                                        foodOrderDAO fod = new foodOrderDAO();
+                                <%
+                                    foodOrderDAO fod = new foodOrderDAO();
 
-                                        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-                                        Date date = new Date();
-                                        String currentdate = dateFormat.format(date);
+//                                    DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+//                                    Date date = new Date();
+//                                    String requestDate = dateFormat.format(date);
 
 
-                                        List<FoodorderEntity> fodList;
-                                        fodList = fod.getAllfoodOrder();
+                                    List<FoodorderEntity> fodList;
+                                    fodList = fod.getAllfoodOrder();
 
-                                        //filter list for current user meals
+                                    //filter list for current user meals
 
-                                        ArrayList<FoodorderEntity> dietList = new ArrayList<>();
-                                        for (int i = 0 ; i<fodList.size() ; i++){
+                                    ArrayList<FoodorderEntity> dietList = new ArrayList<>();
+                                    for (int i = 0 ; i<fodList.size() ; i++){
 
-                                            String a = fodList.get(i).getPatientId();
-                                            String b = (String) session.getAttribute("username");
-                                            if(a.equals(b)){
-                                                dietList.add(fodList.get(i));
+                                        String a = fodList.get(i).getPatientId();
+                                        String b = (String) session.getAttribute("username");
 
-                                    }
+                                        String foodDate = fodList.get(i).getOrderdate();
+                                        String dateRequested = (String) session.getAttribute("enterdate");
+                                        //different condition when reload
+                                        if(a.equals(b) && foodDate.equals(dateRequested)){
+                                            dietList.add(fodList.get(i));
+
                                         }
+                                    }
 
 
-                                    %>
-                                    <%
-                                        for(int i = 0; i<dietList.size(); i++){
-                                    %>
-                                    <tr>
+                                %>
+                                <%
+                                    for(int i = 0; i<dietList.size(); i++){
+                                %>
+                                <tr>
 
                                     <td><%=dietList.get(i).getFoodName()%></td>
 
                                     <td><%=dietList.get(i).getFoodQuantity()%></td>
 
-                                    <td><%=currentdate%></td>
-                                    </tr>
-                                    <% }
-                                        %>
+                                    <td><%=session.getAttribute("enterdate")%></td>
+                                </tr>
+                                <% }
+                                %>
 
 
                                 </tbody>
@@ -654,13 +641,13 @@
 
     });
 
-//        $("#viewDiet").click(function (e) {
-//            e.preventDefault();
-//            var dateValue = document.getelementById("dateInput");
-//            alert("testalert");
-//
-//
-//        });
+    //        $("#viewDiet").click(function (e) {
+    //            e.preventDefault();
+    //            var dateValue = document.getelementById("dateInput");
+    //            alert("testalert");
+    //
+    //
+    //        });
 
 </script>
 
