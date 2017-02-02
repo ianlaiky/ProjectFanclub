@@ -26,11 +26,11 @@ public class foodOrderDAO {
         }
         return list;
     }
-    public FoodorderEntity createFoodOrder(String foodName,String foodQuantity,String patientId,String patientName,String roomId ){
+    public FoodorderEntity createFoodOrder(String foodName,String foodQuantity,String patientId,String patientName,String roomId,String orderdate ){
         List<FoodorderEntity>list =  null;
         list = getAllfoodOrder();
         int id = list.size()+1;
-        FoodorderEntity order = new FoodorderEntity(id,foodName,foodQuantity,patientId,patientName,roomId);
+        FoodorderEntity order = new FoodorderEntity(id,foodName,foodQuantity,patientId,patientName,roomId,orderdate);
         em.getTransaction().begin();
         em.persist(order);
         em.getTransaction().commit();
