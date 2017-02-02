@@ -46,4 +46,18 @@ public class VisitorBookingDAO {
 
     }
 
+    public VisitorbookingEntity createVisitorBooking(String firstName, String nric, String date, String time, String phone, String email, String relativeNric, String patientName, String roomNo, String username) {
+
+        VisitorbookingEntity vid = new VisitorbookingEntity(firstName,nric,date,time,phone,email,relativeNric,patientName,roomNo,username);
+
+        em.getTransaction().begin();
+        em.persist(vid);
+        em.getTransaction().commit();
+        System.out.println("Saving data");
+
+        return null;
+
+
+    }
+
 }

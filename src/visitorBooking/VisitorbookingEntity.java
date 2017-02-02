@@ -17,8 +17,23 @@ public class VisitorbookingEntity {
     private String relativeNric;
     private String patientName;
     private String roomNo;
-    private String visitorBookingcol;
     private String username;
+
+    public VisitorbookingEntity() {
+    }
+
+    public VisitorbookingEntity(String firstName, String nric, String date, String time, String phone, String email, String relativeNric, String patientName, String roomNo, String username) {
+        this.firstName = firstName;
+        this.nric = nric;
+        this.date = date;
+        this.time = time;
+        this.phone = phone;
+        this.email = email;
+        this.relativeNric = relativeNric;
+        this.patientName = patientName;
+        this.roomNo = roomNo;
+        this.username = username;
+    }
 
     @Basic
     @Column(name = "firstName", nullable = false, length = 45)
@@ -110,16 +125,6 @@ public class VisitorbookingEntity {
         this.roomNo = roomNo;
     }
 
-    @Basic
-    @Column(name = "visitorBookingcol", nullable = false, length = 45)
-    public String getVisitorBookingcol() {
-        return visitorBookingcol;
-    }
-
-    public void setVisitorBookingcol(String visitorBookingcol) {
-        this.visitorBookingcol = visitorBookingcol;
-    }
-
     @Id
     @Column(name = "username", nullable = false, length = 45)
     public String getUsername() {
@@ -146,8 +151,6 @@ public class VisitorbookingEntity {
         if (relativeNric != null ? !relativeNric.equals(that.relativeNric) : that.relativeNric != null) return false;
         if (patientName != null ? !patientName.equals(that.patientName) : that.patientName != null) return false;
         if (roomNo != null ? !roomNo.equals(that.roomNo) : that.roomNo != null) return false;
-        if (visitorBookingcol != null ? !visitorBookingcol.equals(that.visitorBookingcol) : that.visitorBookingcol != null)
-            return false;
         if (username != null ? !username.equals(that.username) : that.username != null) return false;
 
         return true;
@@ -164,7 +167,6 @@ public class VisitorbookingEntity {
         result = 31 * result + (relativeNric != null ? relativeNric.hashCode() : 0);
         result = 31 * result + (patientName != null ? patientName.hashCode() : 0);
         result = 31 * result + (roomNo != null ? roomNo.hashCode() : 0);
-        result = 31 * result + (visitorBookingcol != null ? visitorBookingcol.hashCode() : 0);
         result = 31 * result + (username != null ? username.hashCode() : 0);
         return result;
     }
