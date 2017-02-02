@@ -26,6 +26,7 @@ public class UpdateUserServlet extends HttpServlet {
         double weight= Double.parseDouble(request.getParameter("weight"));
         int age = Integer.parseInt(request.getParameter("age"));
         String intensity = request.getParameter("intensity");
+        System.out.println(intensity + "nyanki");
         User a = db.retrieveUserByUsername(name);
         String gender = a.getGender();
 

@@ -233,7 +233,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">
-                            <form id="TypeValidation" class="form-horizontal" action="" method="">
+                            <form id="TypeValidation" class="form-horizontal" action="/updateUser" method="GET">
                                 <div class="card-header card-header-text" data-background-color="rose">
                                     <h4 class="card-title">Profile</h4>
                                 </div>
