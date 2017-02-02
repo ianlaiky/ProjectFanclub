@@ -1,5 +1,7 @@
 <%@ page import="foodDiet.UserDAO" %>
-<%@ page import="foodDiet.User" %><%--
+<%@ page import="foodDiet.User" %>
+<%@ page import="com.google.gson.Gson" %>
+<%@ page import="java.util.Properties" %><%--
   Created by IntelliJ IDEA.
   User: Ying
   Date: 14/12/2016
@@ -67,6 +69,7 @@
 <%
     UserDAO db = new UserDAO();
     User user = db.retrieveUserByUsername(session.getAttribute("username").toString());
+
 %>
 <div class="wrapper">
     <div class="sidebar" data-active-color="green" data-background-color="black" data-image="../../assets/img/sidebar-1.jpg">
@@ -576,21 +579,57 @@
     }
 
 
+
+
+   /*    function sendJSON(json) {
+            var stringifiedData = JSON.stringify(json);
+
+            jQuery.ajax({
+                url: '/editprofile',
+                data: {stringified: stringifiedData},
+                success: function(data) {
+                    //code to handle successful AJAX post
+                    var selected2 = JSON.parse(json);
+                    var selected3 = selected2.intensity;
+                    $("select option").filter(function(){
+                        return $(this).val(selected3);
+                    }).prop('selected',true);
+
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    alert(jqXHR + " - " + textStatus + " - " + errorThrown);
+                }
+
+            });
+        } */
+
     $(document).ready(function() {
 
-        //   var selected2 = <%=user.getIntensity()%>;
-        //  $("select option").filter(function(){
-        //      return $(this).val(selected2);
-        //    }).prop('selected',true);
+       /*   foo();
+          function foo(){
+
+              var value =
+              alert(value);
+          } */
+        $("#intense").val("<%=user.getIntensity()%>").change();
+        alert($("#intense").val());
 
 
-        // $('.intense option[value=<%=user.getIntensity()%>]').attr('selected','selected');
+
+     //    $('.intense option[value=]').attr('selected','selected');
+
+
 
 
         //   $("div.intense").val("<%=user.getIntensity()%>").change();
 
 
-
+/*
+     var selected2 = ;
+     $("#intense option").filter(function(){
+     return $(this).val(selected2);
+     }).prop('selected',true);
+     */
 
 
         setFormValidation('#RegisterValidation');

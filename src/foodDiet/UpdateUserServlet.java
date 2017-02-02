@@ -25,6 +25,8 @@ public class UpdateUserServlet extends HttpServlet {
         int height = Integer.parseInt(request.getParameter("height"));
         double weight= Double.parseDouble(request.getParameter("weight"));
 
+
+
         db.updateMeasurement(height,weight,name);
         response.sendRedirect("fooddiet/user/editprofile.jsp");
     }

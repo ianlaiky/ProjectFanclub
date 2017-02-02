@@ -67,7 +67,16 @@
             border: 1px solid blue;
         }
 
-        img { max-width:100%; }
+        img {
+            position: relative;
+            float: left;
+            width:  100px;
+            height: 100px;
+            background-position: 50% 50%;
+            background-repeat:   no-repeat;
+            background-size:     cover;
+
+        }
 
         a {
             -webkit-transition: all 150ms ease;
@@ -95,6 +104,16 @@
         .thumbnails li> .fff .caption {
             background:#fff !important;
             padding:10px
+        }
+
+        .thumbnails {
+            height: 500px;
+            /*width: 400px;*/
+            overflow: hidden;
+        }
+        .thumbnails img {
+            height: 400px;
+            width: 250px;
         }
 
         /* Page Header */
@@ -176,10 +195,10 @@
 <body>
 <%
     if(session.getAttribute("signInPatient")==null){
-        response.sendRedirect("errorPage.jsp");
+        response.sendRedirect("../../errorPage.jsp");
     }else{
         if(session.getAttribute("signInPatient").equals("false")){
-            response.sendRedirect("errorPage.jsp");
+            response.sendRedirect("../../errorPage.jsp");
         }
 
     }
