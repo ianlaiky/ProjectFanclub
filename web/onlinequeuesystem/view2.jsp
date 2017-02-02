@@ -346,7 +346,7 @@
         <br>
         <center><h1>Hello, <%=session.getAttribute("firstName")%>
         </h1></center>
-        <center><h2>Patients who are ahead of you</h2></center>
+        <center><h2>Patients who are in Queue</h2></center>
         <%
 
             List<OnlinequeuesystemEntity> othersinq = new ArrayList<>();

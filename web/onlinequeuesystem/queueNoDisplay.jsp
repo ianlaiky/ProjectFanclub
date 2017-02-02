@@ -129,7 +129,8 @@
                                 <a href="../onlinequeuesystem/view2.jsp">View Queue Details</a>
                             </li>
                             <li>
-                                <a href="#">Edit Profile</a>
+                                <a href="../onlinequeuesystem/viewestimatedwaitingtime.jsp">View Estimated Waiting
+                                    Time</a>
                             </li>
                             <li>
                                 <a href="#">Settings</a>
