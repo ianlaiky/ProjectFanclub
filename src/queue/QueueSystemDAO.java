@@ -48,7 +48,7 @@ public class QueueSystemDAO {
 
     }
 
-    public boolean deleteViaQueueNo(String no) {
+    public boolean deleteViaQueueNo(int no) {
 //        boolean suc = false;
 
 
