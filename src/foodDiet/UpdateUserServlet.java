@@ -24,10 +24,14 @@ public class UpdateUserServlet extends HttpServlet {
         String name = session.getAttribute("username").toString();
         int height = Integer.parseInt(request.getParameter("height"));
         double weight= Double.parseDouble(request.getParameter("weight"));
+        int age = Integer.parseInt(request.getParameter("age"));
+        String intensity = request.getParameter("intensity");
+        User a = db.retrieveUserByUsername(name);
+        String gender = a.getGender();
 
-
-
-        db.updateMeasurement(height,weight,name);
+        db.updateMeasurement(age,intensity,height,weight,Utility.calCalories(weight,height,age,gender,intensity),Utility.calProtein(weight,height,age
+                ,gender,intensity),Utility.calCarbo(weight,height,age,gender,intensity
+        ),Utility.calFat(weight,height,age,gender,intensity),name);
         response.sendRedirect("fooddiet/user/editprofile.jsp");
     }
 }

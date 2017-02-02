@@ -243,7 +243,7 @@ public class UserDAO {
         return user;
     }
 
-    public boolean updateMeasurement(int uheight,double weight, String uname) {
+    public boolean updateMeasurement(int age, String intensity,int uheight,double weight, double dailyCalories, double dailyProtein, double dailyCarbo, double dailyFat,String uname) {
         // declare local variables
         boolean success = false;
         DBController db = new DBController();
@@ -254,15 +254,21 @@ public class UserDAO {
         db.getConnection();
 
         // step 2 - declare the SQL statement
-        dbQuery = "UPDATE user SET uheight = ?, weight = ?  WHERE uname = ?";
+        dbQuery = "UPDATE user SET age = ?, intensity = ?, uheight = ?, weight = ?, dailyCalories = ?,  dailyProtein = ?, dailyCarbo = ?, dailyFat = ?  WHERE uname = ?";
         pstmt = db.getPreparedStatement(dbQuery);
 
         // step 3 - to update record using executeUpdate method
         try {
 
-            pstmt.setInt(1, uheight);
-            pstmt.setDouble(2, weight);
-            pstmt.setString(3, uname);
+            pstmt.setInt(1, age);
+            pstmt.setString(2, intensity);
+            pstmt.setInt(3, uheight);
+            pstmt.setDouble(4, weight);
+            pstmt.setDouble(5, dailyCalories);
+            pstmt.setDouble(6, dailyProtein);
+            pstmt.setDouble(7, dailyCarbo);
+            pstmt.setDouble(8, dailyFat);
+            pstmt.setString(9, uname);
 
             if (pstmt.executeUpdate() == 1)
                 success = true;

@@ -243,7 +243,7 @@
                                         <div class="col-sm-7">
                                             <div class="form-group label-floating">
                                                 <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="name" value="<%=user.getUname()%>" required="true" />
+                                                <input class="form-control" type="text" name="name" value="<%=user.getUname()%>" required="true" disabled/>
                                             </div>
                                         </div>
 
@@ -581,27 +581,7 @@
 
 
 
-   /*    function sendJSON(json) {
-            var stringifiedData = JSON.stringify(json);
 
-            jQuery.ajax({
-                url: '/editprofile',
-                data: {stringified: stringifiedData},
-                success: function(data) {
-                    //code to handle successful AJAX post
-                    var selected2 = JSON.parse(json);
-                    var selected3 = selected2.intensity;
-                    $("select option").filter(function(){
-                        return $(this).val(selected3);
-                    }).prop('selected',true);
-
-                },
-                error: function(jqXHR, textStatus, errorThrown) {
-                    alert(jqXHR + " - " + textStatus + " - " + errorThrown);
-                }
-
-            });
-        } */
 
     $(document).ready(function() {
 
@@ -612,24 +592,9 @@
               alert(value);
           } */
         $("#intense").val("<%=user.getIntensity()%>").change();
-        alert($("#intense").val());
+        //alert($("#intense").val());
 
 
-
-     //    $('.intense option[value=]').attr('selected','selected');
-
-
-
-
-        //   $("div.intense").val("<%=user.getIntensity()%>").change();
-
-
-/*
-     var selected2 = ;
-     $("#intense option").filter(function(){
-     return $(this).val(selected2);
-     }).prop('selected',true);
-     */
 
 
         setFormValidation('#RegisterValidation');
