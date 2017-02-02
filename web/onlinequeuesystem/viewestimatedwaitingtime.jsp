@@ -1,3 +1,13 @@
+<%@ page import="queue.QueueSystemDAO" %>
+<%@ page import="queue.OnlinequeuesystemEntity" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %><%--
+  Created by IntelliJ IDEA.
+  User: aravin
+  Date: 16-Dec-16
+  Time: 9:24 AM
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page import="patientRecord.PatientDAO" %>
 <%@ page import="patientRecord.PatientrecordEntity" %>
 <%@ page import="java.util.ArrayList" %>
@@ -125,7 +135,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="../onlinequeuesystem/viewestimatedwaitingtime.jsp">
+                                <a href="../onlinequeuesystem/waitingTime.jsp">
                                     <i class="material-icons">av_timer</i>
                                     <p>View Estimated Waiting Time</p>
                                 </a>
@@ -497,79 +507,31 @@
             <div class="container-fluid">
                 <div class="row">
                     <%
+                        QueueSystemDAO qs = new QueueSystemDAO();
+                        List<OnlinequeuesystemEntity> time = new ArrayList<OnlinequeuesystemEntity>();
 
-                        PatientDAO pat = new PatientDAO();
-                        List<PatientrecordEntity> allPat = new ArrayList<>();
+                        time = qs.getAllQueueData();
 
-                        allPat = pat.getAllPatientUserAndPass();
+                        Integer inttt = (Integer) session.getAttribute("newQueueNo");
 
-                        String currentsession = (String) session.getAttribute("username");
-                        String phoneNow = "";
+                        System.out.println(inttt);
 
+                        int lessNo = 0;
 
-                        for (int i = 0; i < allPat.size(); i++) {
+                        for (int i = 0; i < time.size(); i++) {
 
-                            if (currentsession.equalsIgnoreCase(allPat.get(i).getpUsername())) {
-                                phoneNow = allPat.get(i).getpPhoneNumber();
+                            int temp = time.get(i).getQueueNumber();
+
+                            if (temp < inttt) {
+                                lessNo = lessNo + 1;
                             }
 
+
                         }
-                        System.out.println(phoneNow);
+
                     %>
 
-
-                    <div class="col-md-12">
-                        <div class="card">
-                            <form id="LoginValidation" action="/onlinequeuesystem" method="post">
-                                <div class="card-header card-header-icon" data-background-color="rose">
-                                    <i class="material-icons">alarm_on</i>
-                                </div>
-                                <div class="card-content">
-                                    <h4 class="card-title">Get Queue Number Here!</h4>
-                                    <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <i class="material-icons">perm_identity</i>
-                                            </span>
-                                        <div class="form-group label-floating">
-                                            <label class="control-label">Name</label>
-                                            <input value="<%=session.getAttribute("firstName")%>" disabled
-                                                   class="form-control"
-                                                   name="Name" type="text"/>
-
-                                        </div>
-                                    </div>
-                                    <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <i class="material-icons">contact_phone</i>
-                                            </span>
-                                        <div class="form-group label-floating">
-                                            <label class="control-label">PhoneNumber</label>
-
-
-                                            <input value="<%=phoneNow%>" disabled class="form-control"
-                                                   name="phoneNumber"
-                                                   type="text"/>
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                                <div class="category form-category">
-
-
-                                </div>
-                                <div class="text-center">
-                                    <button type="submit" class="btn btn-rose btn-fill btn-wd">Get Queue
-                                        Number
-                                    </button>
-                                </div>
-
-
-                            </form>
-
-                        </div>
-                    </div>
-
+                    <center><h1>Your Estimated Waiting Time is  <%=lessNo * 10%> Minutes</h1></center>
 
                 </div>
             </div>
@@ -758,3 +720,4 @@
 </script>
 
 </html>
+
