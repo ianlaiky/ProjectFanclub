@@ -72,7 +72,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
-    <
+
     <link href="../web/onlinequeuesystem/qe.css" rel="stylesheet"/>
 
     <style>
@@ -254,7 +254,7 @@
                     <div class="collapse" id="tablesExamples">
                         <ul class="nav">
                             <li>
-                                <a href="../tables/regular.html">Regular Tables</a>
+                                <a href="../tables/regular.html">View Waiting Time</a>
                             </li>
                             <li>
                                 <a href="../tables/extended.html">Extended Tables</a>

@@ -344,6 +344,8 @@
         </nav>
 
         <br>
+        <br>
+        <br>
         <center><h1>Hello, <%=session.getAttribute("firstName")%>
         </h1></center>
         <center><h2>Patients who are in Queue</h2></center>
@@ -360,8 +362,8 @@
 
         %>
         <center>
-            <p><%=othersinq.get(i).getPatientName()%>
-            </p>
+            <li><%=othersinq.get(i).getPatientName()%>
+            </li>
         </center>
 
         <%
@@ -567,41 +569,41 @@
         <%--</div>--%>
         <%--</div>--%>
         <%--</div>--%>
-        <footer class="footer">
-            <div class="container-fluid">
-                <nav class="pull-left">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Company
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Portfolio
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Blog
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <p class="copyright pull-right">
-                    &copy;
-                    <script>
-                        document.write(new Date().getFullYear())
-                    </script>
-                    <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
-                </p>
-            </div>
-        </footer>
+        <%--<footer class="footer">--%>
+            <%--<div class="container-fluid">--%>
+                <%--<nav class="pull-left">--%>
+                    <%--<ul>--%>
+                        <%--<li>--%>
+                            <%--<a href="#">--%>
+                                <%--Home--%>
+                            <%--</a>--%>
+                        <%--</li>--%>
+                        <%--<li>--%>
+                            <%--<a href="#">--%>
+                                <%--Company--%>
+                            <%--</a>--%>
+                        <%--</li>--%>
+                        <%--<li>--%>
+                            <%--<a href="#">--%>
+                                <%--Portfolio--%>
+                            <%--</a>--%>
+                        <%--</li>--%>
+                        <%--<li>--%>
+                            <%--<a href="#">--%>
+                                <%--Blog--%>
+                            <%--</a>--%>
+                        <%--</li>--%>
+                    <%--</ul>--%>
+                <%--</nav>--%>
+                <%--<p class="copyright pull-right">--%>
+                    <%--&copy;--%>
+                    <%--<script>--%>
+                        <%--document.write(new Date().getFullYear())--%>
+                    <%--</script>--%>
+                    <%--<a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web--%>
+                <%--</p>--%>
+            <%--</div>--%>
+        <%--</footer>--%>
     </div>
 </div>
 <div class="fixed-plugin">
