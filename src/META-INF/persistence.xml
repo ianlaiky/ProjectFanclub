@@ -9,6 +9,7 @@
         <class>videoconference.VideoconferenceEntity</class>
         <class>queue.OnlinequeuesystemEntity</class>
         <class>foodOrder.FoodorderEntity</class>
+        <class>visitorBooking.VisitorbookingEntity</class>
         <properties>
             <property name="eclipselink.jdbc.url" value="jdbc:mysql://localhost:3306"/>
             <property name="eclipselink.jdbc.driver" value="com.mysql.jdbc.Driver"/>

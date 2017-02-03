@@ -371,6 +371,8 @@
                     <a href="videoconference/patientPIDSelect.jsp"><img src="assets/img/videoConferenceF.png"
                                                                         class="frontPageRounded"></a>
 
+                    <a href="onlinequeuesystem/doctorQueuePage.jsp"><img src="assets/img/queue-512.png"
+                                                                         class="frontPageRounded"></a>
 
                     <%---->--%>
                 </div>
