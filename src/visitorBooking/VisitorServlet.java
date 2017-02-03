@@ -9,7 +9,7 @@ import java.io.IOException;
 /**
  * Created by aravi on 03-Feb-17.
  */
-@javax.servlet.annotation.WebServlet(name = "VisitorServlet", urlpatterns="/visitorBk")
+@javax.servlet.annotation.WebServlet(name = "VisitorServlet", urlPatterns="/visitorBk")
 public class VisitorServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
