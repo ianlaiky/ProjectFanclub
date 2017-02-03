@@ -23,6 +23,7 @@ function uploadFiles (event) {
     var reader = new FileReader();
     reader.onloadend = processFile;
     reader.readAsDataURL(file);
+    alert("check");
 }
 
 /**
@@ -79,7 +80,7 @@ function sendFileToCloudVision (content) {
         });
 } */
 
-
+/*
 $('#results').text('Loading...');
 $.post({
         url: CV_URL,
@@ -88,14 +89,108 @@ $.post({
     }).fail(   function (response) {
 
     // show the raw json
-    $('#results').text(JSON.stringify(response));
+   // $('#results').text(JSON.stringify(response));
     var text = '<b>Is this </b> ' + response.list[3].labelAnnotations.description + '? <br/>';
     text += '<b>Confidence level for this prediction: </b>' + response.list[3].labelAnnotations.score + '<br/>';
-    $('#labeldetect').append(text);
+    $('#results').append(text);
 
 
-}).done(displayJSON);
+
+});//.done(displayJSON);
 }
+*/
+
+
+   $('#results2').text('Loading...');
+    $.post({
+        url: CV_URL,
+        data: JSON.stringify(request),
+        contentType: 'application/json'
+    }).fail(   function (jqXHR, textStatus, errorThrown) {
+        $('#results').text('ERRORS: ' + textStatus + ' ' + errorThrown);
+        console.log(textStatus + ' ' + errorThrown);
+
+        // show the raw json
+        // $('#results').text(JSON.stringify(response));
+
+    }).done(function (response) {
+        var text;
+        console.log(response);
+        $.each(response, function (key, data) {
+            console.log(key)
+            $.each(data, function (index, data) {
+                console.log('index', data)
+
+                $.each(data.labelAnnotations, function (key, data) {
+                    console.log('index', data)
+                    if(data.score < 0.953 && data.score >= 0.8){
+                        console.log('index', data)
+                        text = '<b>Is this </b> ' + JSON.stringify(data.description) + '? <br/>';
+                        text += '<b>Confidence level for this prediction: </b>' + JSON.stringify(data.score) + '<br/>';
+                     return false;
+                    }
+
+                })
+            })
+        })
+
+        document.getElementById('results2').innerHTML = text;
+        var evt = new Event('results-displayed');
+        evt.results = text;
+        document.dispatchEvent(evt);
+
+    });
+}
+        /*
+
+ ====original important====
+         .done(function (response){
+         console.log(response);
+         $.each(response, function (key, data) {
+         console.log(key)
+         $.each(data, function (index, data) {
+         console.log('index', data)
+
+         $.each(data.labelAnnotations[3],function(key,data){
+         console.log('index', data)
+         var text = '<b>Is this </b> ' + JSON.stringify(data) + '? <br/>';
+         text += '<b>Confidence level for this prediction: </b>' + JSON.stringify(data.score) + '<br/>';
+         document.getElementById('results2').innerHTML = text;
+         })
+         })
+         })
+
+
+
+         ==== oeiginal ====
+        var obj = JSON.parse(response);
+        $.each( obj, function(i, item) {
+            alert(obj.responses[i].labelAnnotations[i].score);
+        });​
+
+        var text = '<b>Is this </b> ' + response.responses.labelAnnotations[3].description + '? <br/>';
+        text += '<b>Confidence level for this prediction: </b>' + response.responses.labelAnnotations[3].score + '<br/>';
+        document.getElementById('results').innerHTML = text;
+        alert("done"); */
+
+
+
+
+
+   /* $('#results').text('Loading...');
+    $.post({
+        url: CV_URL,
+        data: JSON.stringify(request),
+        contentType: 'application/json'
+    }).fail(   function (jqXHR, textStatus, errorThrown) {
+        $('#results').text('ERRORS: ' + textStatus + ' ' + errorThrown);
+        console.log(textStatus + ' ' + errorThrown);
+
+        // show the raw json
+        // $('#results').text(JSON.stringify(response));
+
+    }).done(displayJSON2);
+} */
 
     /**
      * Displays the results.
@@ -107,6 +202,16 @@ $.post({
         evt.results = contents;
         document.dispatchEvent(evt);
     }
+
+function displayJSON2 (data) {
+    var contents = JSON.stringify(data, null, 4);
+    var obj = JSON.parse(contents);
+    var a = obj.response.list[3].labelAnnotations.score;
+    $('#results').text(arr);
+    var evt = new Event('results-displayed');
+    evt.results = contents;
+    document.dispatchEvent(evt);
+}
 
     function readURL(input){
         if(input.files && input.files[0]){

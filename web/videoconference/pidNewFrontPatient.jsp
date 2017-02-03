@@ -101,7 +101,7 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        test
+                        <%= session.getAttribute("firstName")%>
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
