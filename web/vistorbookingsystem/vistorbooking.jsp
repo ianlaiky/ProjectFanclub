@@ -350,8 +350,9 @@
 
 
 
+                       -->
+                    <form action="" method="post">
 
-                        -->
                     <div class="col-sm-6">
                         <div class="input-group">
                                                         <span class="input-group-addon">
@@ -438,16 +439,13 @@
                                 <i class="material-icons">perm_identity</i>
                             </span>
                             <div class="form-group label-floating">
-                                <label class="control-label">Relative's NRIC
+                                <label class="control-label">Patient's NRIC
                                 </label>
                                 <input name="pNRIC" type="text" class="form-control" required>
                                 <button type="button">Get information</button>
                             </div>
                         </div>
                         <div class="input-group">
-                            <div class="picture-container">
-                                <div class="picture">
-                                    <img src="../../assets/img/default-avatar.png" class="picture-src" id="wizardPicturePreview" title="" /><br>
                                     <div class="form-group label-floating">
                                         <label class="control-label">Patient Name
                                         </label>
@@ -460,6 +458,9 @@
                                     </div>
                                 </div>
                             </div>
+
+
+                    </form>
                         </div>
 
                     </div>
