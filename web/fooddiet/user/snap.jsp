@@ -561,9 +561,8 @@
                             </ul>
                         </nav>
                         </div>
-                        <div id="#labeldetect">
+                        <div id="results2"></div>
 
-                        </div>
                     </div>
                 </div>
             </div>
