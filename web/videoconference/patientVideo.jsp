@@ -367,6 +367,8 @@
                             <script type="text/javascript"
                                     src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
                             <script>
+
+
                                 // Compatibility shim
                                 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
                                 // PeerJS object
@@ -420,12 +422,23 @@
                                                 '</div>');
                                         });
                                         c.on('close', function() {
+
+
+
                                             alert(c.peer + ' has left the chat.');
                                             chatbox.remove();
                                             if ($('.connection').length === 0) {
                                                 $('.filler').show();
                                             }
                                             delete connectedPeers[c.peer];
+
+
+                                            $('#step2').show();
+
+                                            document.getElementById("yuioe").disabled = false;
+                                            document.getElementById("yuioe").textContent = "Leave Call";
+                                            console.log("Button click??");
+
                                         });
                                     } else if (c.label === 'file') {
                                         c.on('data', function(data) {
@@ -651,9 +664,12 @@
                                     <div id="step2">
                                         <p>Your id: <span id="my-id">...</span></p>
                                         <p>Please wait for the doctor to call you</p>
-                                        <a href="/patientPIDDel" class="myButton">Leave call</a>
+
+                                        <form method="get" action="/patientPIDDel">
 
 
+                                      <button type="submit" class="myButton" id="yuioe" disabled>Call Ongoing....</button>
+                                        </form>
                                         <br>
 
 

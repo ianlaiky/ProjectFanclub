@@ -222,7 +222,7 @@
                             </div>
                             <div class="card-content">
                                 <h4 class="card-title">Patient In Queue</h4>
-                                sadsa
+
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead class="text-primary">
