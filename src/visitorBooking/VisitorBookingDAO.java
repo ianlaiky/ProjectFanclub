@@ -19,8 +19,8 @@ public class VisitorBookingDAO {
     }
 
 
-    public List<VisitorBookingDAO> getAllVisitorData() {
-        List<VisitorBookingDAO> list = null;
+    public List<VisitorbookingEntity> getAllVisitorData() {
+        List<VisitorbookingEntity> list = null;
 
         try {
             Query query = em.createQuery("select a from VisitorbookingEntity a");

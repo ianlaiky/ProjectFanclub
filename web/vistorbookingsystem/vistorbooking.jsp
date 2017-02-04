@@ -351,7 +351,7 @@
 
 
                        -->
-                    <form action="" method="post">
+                    <form action="/VistorbookingServlet" method="post">
 
                     <div class="col-sm-6">
                         <div class="input-group">
@@ -361,7 +361,7 @@
                             <div class="form-group label-floating">
                                 <label class="control-label">Name
                                 </label>
-                                <input name="name" type="text" class="form-control" required="true">
+                                <input name="name" type="text" class="form-control" value="<%=session.getAttribute("firstName")%>" required="true" disabled>
                             </div>
                         </div>
                         <div class="input-group">
@@ -382,7 +382,7 @@
                             <div class="form-group label-floating">
                                 <label class="control-label">Date
                                 </label>
-                                <input  type="text" class="form-control" id="datepicker" required>
+                                <input  type="text" class="form-control" id="datepicker" name="date" required>
                             </div>
                             <div class="input-group">
                                 <meta charset="utf-8">
@@ -405,12 +405,12 @@
                             <div class="form-group label-floating">
                                 <label class="control-label">Select Time
                                 </label>
-                                <select>
-                                    <option value="1">13:00</option>
-                                    <option value="2">14:00</option>
-                                    <option value="3">15:00</option>
-                                    <option value="4">16:00</option>
-                                    <option value="5">17:00</option>
+                                <select name="time">
+                                    <option value="13:00">13:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
                                 </select>
                             </div>
                         </div>
@@ -439,9 +439,9 @@
                                 <i class="material-icons">perm_identity</i>
                             </span>
                             <div class="form-group label-floating">
-                                <label class="control-label">Patient's NRIC
+                                <label class="control-label">Relative's NRIC
                                 </label>
-                                <input name="pNRIC" type="text" class="form-control" required>
+                                <input  type="text" class="form-control" name="relativeNRIC"required>
                                 <button type="button">Get information</button>
                             </div>
                         </div>
@@ -449,14 +449,15 @@
                                     <div class="form-group label-floating">
                                         <label class="control-label">Patient Name
                                         </label>
-                                        <input type="text"  class="form-control" id="patientName">
+                                        <input type="text"  class="form-control" name="patientName">
                                     </div>
                                     <div class="form-group label-floating">
                                         <label class="control-label">Room number
                                         </label>
-                                        <input type="text" class="form-control" id="roomnum">
+                                        <input type="text" class="form-control" name="roomnum">
                                     </div>
                                 </div>
+                        <input type="submit">
                             </div>
 
 
@@ -466,10 +467,7 @@
                     </div>
                 </div>
             </div>
-            <a href="../vistorbookingsystem/certification.jsp" type="button" style=  "position: fixed;
-                    bottom: 50px;
-                    margin-right: 300px;
-                    margin-left: 800px;">submit</a>
+
         </div>
         <footer class="footer">
             <div class="container-fluid">
