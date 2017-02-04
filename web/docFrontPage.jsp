@@ -71,7 +71,6 @@
         response.sendRedirect("errorPage.jsp");
     } else {
         if (session.getAttribute("signInDoctor").equals("false")) {
-            System.out.println("false ran");
             response.sendRedirect("errorPage.jsp");
         }
 
