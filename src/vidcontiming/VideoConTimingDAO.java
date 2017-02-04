@@ -52,6 +52,8 @@ public class VideoConTimingDAO {
 
     public VidcomtimingEntity createRecord(String docUsername, String patientUsername, String date, String startTime, String endTime) {
 
+        System.out.println("videocon recrd save run");
+
        VideoConTimingDAO g=new VideoConTimingDAO();
 
        List<VidcomtimingEntity> gL = g.getAllRecord();

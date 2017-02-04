@@ -664,7 +664,7 @@ $('#connect').click();
                                     <!-- Call in progress -->
                                     <div id="step3">
                                         <p>Currently in call with <span id="their-id">...</span></p>
-                                        <p><a href="#" class="pure-button pure-button-error" id="end-call">End call</a>
+                                        <p><a href="/vidconRecordSave" class="pure-button pure-button-error" id="end-call">End call</a>
                                         </p>
                                     </div>
                                 </div>
