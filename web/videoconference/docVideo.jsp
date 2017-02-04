@@ -246,21 +246,10 @@
                     </a>
                 </li>
                 <li>
-                    <a data-toggle="collapse" href="#pagesExamples">
+                    <a href="callHistory.jsp">
                         <i class="material-icons">image</i>
-                        <p>Consultation Report
-                            <b class="caret"></b>
-                        </p>
+                        <p>Call History</p>
                     </a>
-                    <div class="collapse" id="pagesExamples">
-                        <ul class="nav">
-                            <li>
-                                <a href="patientReportView.jsp">View Reports</a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </li>
                 </li>
             </ul>
         </div>
