@@ -5,6 +5,7 @@
 <%@ page import="patientRecord.PatientDAO" %>
 <%@ page import="patientRecord.PatientrecordEntity" %>
 <%@ page import="vidcontiming.VideoConTimingDAO" %>
+<%@ page import="vidcontiming.VidcomtimingEntity" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
@@ -221,90 +222,88 @@
                             </div>
                             <div class="card-content">
                                 <h4 class="card-title">Patient In Queue</h4>
+                                sadsa
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead class="text-primary">
-                                        <th>User Id</th>
-                                        <th>Name</th>
-                                        <th>PID (For reference)</th>
-                                        <th>Call User</th>
+                                        <th>ID</th>
+                                        <th>Doctor Username</th>
+                                        <th>Patient Username</th>
+                                        <th>Date</th>
+                                        <th>Start Time</th>
+                                        <th>End Time</th>
+                                        <th>Bills Paid</th>
+                                        <th>Toggle Bill paid</th>
 
                                         </thead>
                                         <tbody>
 
+
                                         <%
 
+                                            VideoConTimingDAO da = new VideoConTimingDAO();
+
+                                            List<VidcomtimingEntity> list = new ArrayList<>();
+
+                                            list=da.getAllRecord();
+
+
+
+
+                                            for(int i=0;i<list.size();i++){
 
 
 
 
 
-                                            VideoConferenceDAO vd = new VideoConferenceDAO();
-
-                                            PatientDAO pat = new PatientDAO();
 
 
-                                            List<PatientrecordEntity> patLsit = new ArrayList<>();
-
-                                            patLsit = pat.getAllPatientUserAndPass();
-
-                                            List<VideoconferenceEntity> all = new ArrayList<>();
-                                            ArrayList<String> user = new ArrayList<>();
-                                            ArrayList<String> pid = new ArrayList<>();
-
-                                            all = vd.getAllPID();
-
-                                            String firstname = "";
-
-                                            for (int i = 0; i < all.size(); i++) {
-
-                                                if (all.get(i).getTypeOfUser().equalsIgnoreCase("p")) {
-
-                                                    user.add(all.get(i).getUsername());
-                                                    pid.add(all.get(i).getPid());
-
-                                                    System.out.println("patlsit size= " + patLsit.size());
+                                                %>
 
 
-                                                    for (int o = 0; o < patLsit.size(); o++) {
-                                                        if (patLsit.get(o).getpUsername().equalsIgnoreCase(all.get(i).getUsername())) {
-
-                                                            firstname = patLsit.get(o).getpName();
-                                                            System.out.println("firstname =" + firstname);
-
-                                                        }
 
 
-                                                    }
-
-
-                                        %>
 
                                         <tr>
 
 
-                                            <form method="post" action="/videoConPidRetrieve">
-                                                <td><%=all.get(i).getUsername()%>
+                                            <form method="post" action="/vidconRecordUpdatebi">
+                                                <td><%=list.get(i).getId()%>
                                                 </td>
 
 
-                                                <td><%= firstname%>
+                                                <td><%=list.get(i).getDocUsername()%>
                                                 </td>
 
 
-                                                <td><%=all.get(i).getPid()%>
+                                                <td><%=list.get(i).getPatientUsername()%>
 
                                                 </td>
 
 
-                                                <input class="patientoutlineTextbox" type="hidden"
-                                                       name="formPidUsername" value="<%=all.get(i).getUsername()%>">
-                                                <input class="patientoutlineTextbox" type="hidden" name="formpidPid"
-                                                       value="<%=all.get(i).getPid()%>">
+                                                <td><%=list.get(i).getDate()%>
 
+                                                </td>
+                                                <td><%=list.get(i).getStartTime()%>
+
+                                                </td>
+
+                                                <td><%=list.get(i).getEndTime()%>
+
+                                                </td>
+
+                                                <td><%=list.get(i).getBillsPaid()%>
+
+                                                </td>
+
+                                                <input type="hidden" name="billsIDNow"
+                                                       value="<%=list.get(i).getId()%>">
+
+                                                <input type="hidden" name="billsNow"
+                                                       value="<%=list.get(i).getBillsPaid()%>">
 
                                                 <td><input class="btn btn-next btn-fill btn-rose btn-wd" type="submit"
-                                                           value="Call"></td>
+                                                           value="Toggle Bills"></td>
 
 
                                             </form>
@@ -315,14 +314,29 @@
                                         </tr>
 
 
-                                        <%
-                                                }
 
+
+
+
+
+
+
+
+
+                                                <%
 
                                             }
 
 
+
+
                                         %>
+
+
+
+
+
+
 
 
                                         </tbody>
