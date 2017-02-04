@@ -327,12 +327,12 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="material-icons">dashboard</i>
-                                <p class="hidden-lg hidden-md">Dashboard</p>
-                            </a>
-                        </li>
+                        <%--<li>--%>
+                        <%--<a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">--%>
+                        <%--<i class="material-icons">dashboard</i>--%>
+                        <%--<p class="hidden-lg hidden-md">Dashboard</p>--%>
+                        <%--</a>--%>
+                        <%--</li>--%>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="material-icons">notifications</i>
@@ -538,15 +538,29 @@
                                                 for (int i = 0; i < uu.size(); i++) {
 
                                             %>
-                                            <input type="checkbox" name="QueueD" value="<%=uu.get(i).getQueueNumber()%>"
-                                                   type="text"><%=uu.get(i).getQueueNumber()%><br>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="QueueD"
+                                                           value="<%=uu.get(i).getQueueNumber()%>"
+                                                           type="text"><%=uu.get(i).getQueueNumber()%><br>
+                                                    <%
+                                                        }
 
 
-                                            <%
-                                                }
+                                                    %>
+
+                                                </label>
+                                            </div>
+
+                                            <%--<input type="checkbox" name="QueueD" value="<%=uu.get(i).getQueueNumber()%>"--%>
+                                            <%--type="text"><%=uu.get(i).getQueueNumber()%><br>--%>
 
 
-                                            %>
+                                            <%--<%--%>
+                                            <%--}--%>
+
+
+                                            <%--%>--%>
 
 
                                         </div>
@@ -559,7 +573,11 @@
 
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-rose btn-fill btn-wd">Delete Queue Number
+
+                                    <button type="submit" class="btn btn-rose btn-fill btn-wd"><i
+                                            class="material-icons">delete_forever</i> Delete Queue Number
+                                        <i
+                                                class="material-icons">delete_forever</i>
                                     </button>
                                 </div>
 

@@ -65,12 +65,12 @@
     <
     <link href="../web/onlinequeuesystem/qe.css" rel="stylesheet"/>
 
-    <style>
-        .control-label {
-            font-size: 50px;
-        }
+    <%--<style>--%>
+        <%--.control-label {--%>
+            <%--font-size: 50px;--%>
+        <%--}--%>
 
-    </style>
+    <%--</style>--%>
 </head>
 
 <body>
@@ -88,7 +88,7 @@
 %>
 
 <div class="wrapper">
-    <div class="sidebar" data-active-color="green" data-background-color="white"
+    <div class="sidebar" data-active-color="green" data-background-color="black"
          data-image="../../assets/img/sidebar-1.jpg">
         <!--
     Tip 1: You can change the color of active element of the sidebar using: data-active-color="purple | blue | green | orange | red | rose"
