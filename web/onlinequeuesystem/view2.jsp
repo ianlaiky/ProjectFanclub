@@ -352,29 +352,20 @@
             <center><h1>Hello, <%=session.getAttribute("firstName")%>
                 <i style="font-size:48px" class="material-icons">face</i>
             </h1></center>
-            <center><h2>Patients who are in Queue</h2></center>
-            <%
+            <center><h2>Patients who are in Queue:
+                <%
 
-                List<OnlinequeuesystemEntity> othersinq = new ArrayList<>();
+                    List<OnlinequeuesystemEntity> othersinq = new ArrayList<>();
 
-                QueueSystemDAO qu = new QueueSystemDAO();
-                othersinq = qu.getAllQueueData();
-
-
-                for (int i = 0; i < othersinq.size(); i++) {
+                    QueueSystemDAO qu = new QueueSystemDAO();
+                    othersinq = qu.getAllQueueData();
 
 
-            %>
-            <center>
-                <li><%=othersinq.get(i).getPatientName()%>
-                </li>
-            </center>
-
-            <%
-                }
+                %>
+                <%=othersinq.size()%>
+            </h2></center>
 
 
-            %>
         </div>
         <%--<div class="content">--%>
         <%--<div class="container-fluid">--%>
