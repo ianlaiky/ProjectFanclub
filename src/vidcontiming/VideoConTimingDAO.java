@@ -22,11 +22,11 @@ public class VideoConTimingDAO {
 
 
 
-    public boolean deleteVideoConRecord(String username) {
+    public boolean deleteVideoConRecord(String id) {
 //        boolean suc = false;
 
 
-        VidcomtimingEntity vid = em.find(VidcomtimingEntity.class, username);
+        VidcomtimingEntity vid = em.find(VidcomtimingEntity.class, id);
         em.getTransaction().begin();
         em.remove(vid);
         em.getTransaction().commit();
@@ -62,9 +62,9 @@ public class VideoConTimingDAO {
 
        String id = d+"";
 
+String bills = "n";
 
-
-        VidcomtimingEntity vid = new VidcomtimingEntity(docUsername,patientUsername,date,startTime,endTime,id);
+        VidcomtimingEntity vid = new VidcomtimingEntity(docUsername,patientUsername,date,startTime,endTime,id,bills);
 
         em.getTransaction().begin();
         em.persist(vid);
@@ -72,6 +72,19 @@ public class VideoConTimingDAO {
         System.out.println("Saving PID for patient");
 
         return null;
+
+
+
+
+    }
+
+
+    public void updateBilling(String id,String update){
+
+        VidcomtimingEntity vid = em.find(VidcomtimingEntity.class,id);
+        em.getTransaction().begin();
+        vid.setBillsPaid(update);
+        em.getTransaction().commit();
 
 
     }

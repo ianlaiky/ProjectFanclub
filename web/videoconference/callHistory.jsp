@@ -4,6 +4,7 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="patientRecord.PatientDAO" %>
 <%@ page import="patientRecord.PatientrecordEntity" %>
+<%@ page import="vidcontiming.VideoConTimingDAO" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
@@ -232,6 +233,12 @@
                                         <tbody>
 
                                         <%
+
+
+
+
+
+
                                             VideoConferenceDAO vd = new VideoConferenceDAO();
 
                                             PatientDAO pat = new PatientDAO();
