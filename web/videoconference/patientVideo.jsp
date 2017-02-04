@@ -367,6 +367,8 @@
                             <script type="text/javascript"
                                     src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
                             <script>
+
+
                                 // Compatibility shim
                                 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
                                 // PeerJS object
@@ -431,7 +433,11 @@
                                             delete connectedPeers[c.peer];
 
 
-                                            $('.myButton').click();
+                                            $('#step2').show();
+
+                                            document.getElementById("yuioe").disabled = false;
+                                            document.getElementById("yuioe").textContent = "Leave Call";
+                                            console.log("Button click??");
 
                                         });
                                     } else if (c.label === 'file') {
@@ -658,9 +664,12 @@
                                     <div id="step2">
                                         <p>Your id: <span id="my-id">...</span></p>
                                         <p>Please wait for the doctor to call you</p>
-                                        <button href="/patientPIDDel" class="myButton">Leave call</button>
+
+                                        <form method="get" action="/patientPIDDel">
 
 
+                                      <button type="submit" class="myButton" id="yuioe" disabled>Call Ongoing....</button>
+                                        </form>
                                         <br>
 
 
