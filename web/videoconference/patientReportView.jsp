@@ -103,22 +103,11 @@
                         <p>Live Web Calling</p>
                     </a>
                 </li>
-                <li class="active">
-                    <a data-toggle="collapse" href="#pagesExamples">
+                <li>
+                    <a href="callHistory.jsp">
                         <i class="material-icons">image</i>
-                        <p>Consultation Report
-                            <b class="caret"></b>
-                        </p>
+                        <p>Call History</p>
                     </a>
-                    <div class="collapse" id="pagesExamples">
-                        <ul class="nav">
-                            <li class="active">
-                                <a href="patientReportView.jsp">View Reports</a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </li>
                 </li>
             </ul>
         </div>

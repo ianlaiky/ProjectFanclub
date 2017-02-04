@@ -14,17 +14,19 @@ public class VidcomtimingEntity {
     private String startTime;
     private String endTime;
     private String id;
+    private String billsPaid;
 
     public VidcomtimingEntity() {
     }
 
-    public VidcomtimingEntity(String docUsername, String patientUsername, String date, String startTime, String endTime, String id) {
+    public VidcomtimingEntity(String docUsername, String patientUsername, String date, String startTime, String endTime, String id, String billsPaid) {
         this.docUsername = docUsername;
         this.patientUsername = patientUsername;
         this.date = date;
         this.startTime = startTime;
         this.endTime = endTime;
         this.id = id;
+        this.billsPaid = billsPaid;
     }
 
     @Basic
@@ -87,6 +89,16 @@ public class VidcomtimingEntity {
         this.id = id;
     }
 
+    @Basic
+    @Column(name = "billsPaid", nullable = false, length = 45)
+    public String getBillsPaid() {
+        return billsPaid;
+    }
+
+    public void setBillsPaid(String billsPaid) {
+        this.billsPaid = billsPaid;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -101,6 +113,7 @@ public class VidcomtimingEntity {
         if (startTime != null ? !startTime.equals(that.startTime) : that.startTime != null) return false;
         if (endTime != null ? !endTime.equals(that.endTime) : that.endTime != null) return false;
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
+        if (billsPaid != null ? !billsPaid.equals(that.billsPaid) : that.billsPaid != null) return false;
 
         return true;
     }
@@ -113,6 +126,7 @@ public class VidcomtimingEntity {
         result = 31 * result + (startTime != null ? startTime.hashCode() : 0);
         result = 31 * result + (endTime != null ? endTime.hashCode() : 0);
         result = 31 * result + (id != null ? id.hashCode() : 0);
+        result = 31 * result + (billsPaid != null ? billsPaid.hashCode() : 0);
         return result;
     }
 }
