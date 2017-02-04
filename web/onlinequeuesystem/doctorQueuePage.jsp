@@ -91,16 +91,17 @@
 </head>
 
 <body>
+
+
 <%
-    if (session.getAttribute("signInPatient") == null) {
-        response.sendRedirect("../errorPage.jsp");
+    if (session.getAttribute("signInDoctor") == null) {
+        response.sendRedirect("errorPage.jsp");
     } else {
-        if (session.getAttribute("signInPatient").equals("false")) {
-            response.sendRedirect("../errorPage.jsp");
+        if (session.getAttribute("signInDoctor").equals("false")) {
+            response.sendRedirect("errorPage.jsp");
         }
 
     }
-
 
 %>
 
