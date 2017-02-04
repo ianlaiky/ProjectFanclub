@@ -78,7 +78,7 @@
 -->
         <div class="logo">
             <a href="http://www.creative-tim.com" class="simple-text">
-                Creative Tim
+                ONLINE QUEUE SYSTEM
             </a>
         </div>
         <div class="logo logo-mini">
@@ -89,6 +89,7 @@
         <div class="sidebar-wrapper">
             <div class="user">
                 <div class="photo">
+                    <img src="../assets/img/faces/marc.jpg"/>
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
@@ -284,7 +285,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"> Regular Tables </a>
+                    <%--<a class="navbar-brand" href="#"> Regular Tables </a>--%>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -348,11 +349,13 @@
         <br>
         <br>
         <br>
-        <div style="background-color: lightblue">
+        <br>
+        <br>
+        <div style="background-color: lightgray">
             <center><h1>Hello, <%=session.getAttribute("firstName")%>
-                <i style="font-size:48px" class="material-icons">face</i>
+                <i style="font-size:50px" class="material-icons">face</i>
             </h1></center>
-            <center><h2>Patients who are in Queue:
+            <center><h2><i style="font-size:30px" class="material-icons">queue</i> Patients who are in Queue:
                 <%
 
                     List<OnlinequeuesystemEntity> othersinq = new ArrayList<>();
@@ -361,9 +364,36 @@
                     othersinq = qu.getAllQueueData();
 
 
+                    QueueSystemDAO qs = new QueueSystemDAO();
+                    List<OnlinequeuesystemEntity> time = new ArrayList<OnlinequeuesystemEntity>();
+
+                    time = qs.getAllQueueData();
+
+                    Integer inttt = (Integer) session.getAttribute("newQueueNo");
+
+                    System.out.println(inttt);
+
+                    int lessNo = 0;
+
+                    for (int i = 0; i < time.size(); i++) {
+
+                        int temp = time.get(i).getQueueNumber();
+
+                        if (temp < inttt) {
+                            lessNo = lessNo + 1;
+                        }
+
+
+                    }
+
+
                 %>
                 <%=othersinq.size()%>
             </h2></center>
+            <center><h2><i style="font-size:30px"
+                           class="material-icons">alarm</i> Your Estimated Waiting Time is: <%=lessNo * 10%> Minutes
+            </h2>
+            </center>
 
 
         </div>

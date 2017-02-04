@@ -124,12 +124,12 @@
                                     <p>View Queue Details</p>
                                 </a>
                             </li>
-                            <li>
-                                <a href="../onlinequeuesystem/viewestimatedwaitingtime.jsp">
-                                    <i class="material-icons">av_timer</i>
-                                    <p>View Estimated Waiting Time</p>
-                                </a>
-                            </li>
+                            <%--<li>--%>
+                                <%--<a href="../onlinequeuesystem/viewestimatedwaitingtime.jsp">--%>
+                                    <%--<i class="material-icons">av_timer</i>--%>
+                                    <%--<p>View Estimated Waiting Time</p>--%>
+                                <%--</a>--%>
+                            <%--</li>--%>
                             <li>
                                 <a href="/logout">
                                     <i class="material-icons">exit_to_app</i>
