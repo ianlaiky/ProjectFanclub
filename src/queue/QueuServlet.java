@@ -31,7 +31,7 @@ public class QueuServlet extends HttpServlet {
         queueLis = qs.getAllQueueData();
 
         for(int i=0;i<queueLis.size();i++){
-
+// if same patient take queue no he will get another one and will overwrite the other queue num
 if(currentUser.equalsIgnoreCase(queueLis.get(i).getPatientName())){
 
   int tempno = queueLis.get(i).getQueueNumber();
@@ -56,6 +56,8 @@ if(currentUser.equalsIgnoreCase(queueLis.get(i).getPatientName())){
         List<OnlinequeuesystemEntity> queueList = (List<OnlinequeuesystemEntity>) session.getAttribute("queueList");
         System.out.println("Queue list0"+queueLis.size());
 
+
+        // issuing queue number to user
         for (int i = 0; i < queueList.size(); i++) {
             System.out.println("running");
             System.out.println("Qeueueno: "+queueList.get(i).getQueueNumber());
