@@ -504,7 +504,7 @@
                                             var peerId = $(this).attr('id');
                                             if (!checkedIds[peerId]) {
                                                 var conns = peer.connections[peerId];
-                                                console.log("wtf is con??"+conns);
+                                                console.log("wt is con??"+conns);
                                                 for (var i = 0, ii = conns.length; i < ii; i += 1) {
                                                     var conn = conns[i];
                                                     fn(conn, $(this));

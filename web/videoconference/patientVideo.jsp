@@ -420,12 +420,19 @@
                                                 '</div>');
                                         });
                                         c.on('close', function() {
+
+
+
                                             alert(c.peer + ' has left the chat.');
                                             chatbox.remove();
                                             if ($('.connection').length === 0) {
                                                 $('.filler').show();
                                             }
                                             delete connectedPeers[c.peer];
+
+
+                                            $('.myButton').click();
+
                                         });
                                     } else if (c.label === 'file') {
                                         c.on('data', function(data) {
@@ -651,7 +658,7 @@
                                     <div id="step2">
                                         <p>Your id: <span id="my-id">...</span></p>
                                         <p>Please wait for the doctor to call you</p>
-                                        <a href="/patientPIDDel" class="myButton">Leave call</a>
+                                        <button href="/patientPIDDel" class="myButton">Leave call</button>
 
 
                                         <br>
