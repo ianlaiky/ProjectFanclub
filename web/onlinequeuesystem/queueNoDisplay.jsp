@@ -496,11 +496,18 @@
             <div class="container-fluid">
                 <div class="row">
                     <%--<%--%>
-
-                    <center><h1>Hello,<%=session.getAttribute("firstName")%>
-                    </h1></center>
-                    <center><h1>Your Queue Number is <%=session.getAttribute("newQueueNo")%>
-                    </h1></center>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div style="background-color: lightblue">
+                        <center><h1>Hello,<%=session.getAttribute("firstName")%>
+                            <i style="font-size:48px" class="material-icons">face</i>
+                        </h1></center>
+                        <center><h1>Your Queue Number is <%=session.getAttribute("newQueueNo")%>
+                        </h1></center>
+                    </div>
 
 
                     <%--PatientDAO pat = new PatientDAO();--%>
