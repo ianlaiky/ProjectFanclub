@@ -89,7 +89,7 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        Zixiang
+                        <%= session.getAttribute("username") %>
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
@@ -423,6 +423,11 @@
                         </div>
 
                     </div>
+                    <button type="button" style="position: fixed;
+                    bottom: 110px;
+                    margin-right: 300px;
+                    margin-left: 800px;">download
+                    </button>
 
 
 
@@ -440,55 +445,6 @@
 
 
 
-            <button type="button" style="position: fixed;
-                    bottom: 110px;
-                    margin-right: 300px;
-                    margin-left: 800px;">download
-            </button>
-            <div class="content">
-                <div class="container-fluid">
-                    <div class="row">
-
-                    </div>
-                    <footer class="footer">
-                        <div class="container-fluid">
-                            <nav class="pull-left">
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            Home
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Company
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Portfolio
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Blog
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                            <p class="copyright pull-right">
-                                &copy;
-                                <script>
-                                    document.write(new Date().getFullYear())
-                                </script>
-                                <a href="http://www.creative-tim.com">Woodlands Integrated Health Campus</a>, made with
-                                love by
-                                Fanclub
-                            </p>
-                        </div>
-                    </footer>
-                </div>
-            </div>
             <div class="fixed-plugin">
                 <div class="dropdown show-dropdown">
                     <a href="#" data-toggle="dropdown">
