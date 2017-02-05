@@ -122,8 +122,17 @@ $.post({
 
                 $.each(data.labelAnnotations, function (key, data) {
                     console.log('index', data)
-                    if(data.score < 0.953 && data.score >= 0.8){
+                    if(data.score >= 0.7){
                         console.log('index', data)
+
+
+                         /*   return item.description == "food", item.description == "\'dish\'", item.description == "dessert"
+                                ,item.description == "plant", item.description == "produce", item.description == "fruit"
+                                ,item.description == "berry", item.description == "baked goods",item.description == "fast food",
+                            item.description == "meal". item.description == "slider",  item.description == "cuisine",
+                            item.description == "'asian food'", item.description == "side dish"; */
+
+
                         text = '<b>Is this </b> ' + JSON.stringify(data.description) + '? <br/>';
                         text += '<b>Confidence level for this prediction: </b>' + JSON.stringify(data.score) + '<br/>';
                      return false;
@@ -212,7 +221,17 @@ function displayJSON2 (data) {
     document.dispatchEvent(evt);
 }
 
+Array.prototype.removeIf = function(callback) {
+    var i = this.length;
+    while (i--) {
+        if (callback(this[i], i)) {
+            this.splice(i, 1);
+        }
+    }
+};
+
 function filtering(data){
+
 
 }
 
