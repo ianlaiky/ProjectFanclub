@@ -23,7 +23,6 @@ function uploadFiles (event) {
     var reader = new FileReader();
     reader.onloadend = processFile;
     reader.readAsDataURL(file);
-    alert("check");
 }
 
 /**
@@ -211,6 +210,10 @@ function displayJSON2 (data) {
     var evt = new Event('results-displayed');
     evt.results = contents;
     document.dispatchEvent(evt);
+}
+
+function filtering(data){
+
 }
 
     function readURL(input){
