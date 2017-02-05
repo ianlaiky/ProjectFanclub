@@ -87,7 +87,7 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed" aria-expanded="true">
-                        <%=session.getAttribute("username")%>
+                        <%=session.getAttribute("firstName")%>
                         <b class="caret"></b>
                     </a>
                     <div class="collapse in" id="collapseExample">
@@ -269,7 +269,7 @@
                                                     <div class="form-group label-floating">
                                                         <label class="control-label">Name
                                                         </label>
-                                                        <input name="name" type="text" class="form-control" value="<%=session.getAttribute("username")%>">
+                                                        <input name="name" type="text" class="form-control" value=" <%=session.getAttribute("firstName")%>">
                                                     </div>
                                                 </div>
                                                 <div class="input-group">

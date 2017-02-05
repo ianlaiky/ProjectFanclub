@@ -1,11 +1,8 @@
 <%@ page import="foodOrder.foodOrderDAO" %>
 <%@ page import="foodOrder.FoodorderEntity" %>
-<%@ page import="java.util.List" %>
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="java.util.Collections" %>
 <%@ page import="java.text.DateFormat" %>
-<%@ page import="java.util.Date" %>
-<%@ page import="java.text.SimpleDateFormat" %><%--
+<%@ page import="java.text.SimpleDateFormat" %>
+<%@ page import="java.util.*" %><%--
   Created by IntelliJ IDEA.
   User: astaroh
   Date: 2/1/2017
@@ -71,7 +68,24 @@
     </style>
 
 
-    <script>
+
+    <script type="text/javascript">
+
+//        jQuery(function () {
+//            $("#viewDiet").click(function (e) {
+//                e.preventDefault();
+//
+//                var protein = $('#protein').val();
+//
+//
+//
+//
+//
+//
+//            });
+//        });
+
+
 
 
     </script>
@@ -371,6 +385,12 @@
                 <div class="col-sm-8 col-sm-offset-2">
                     <!-- Insert all the awesome body content here-->
 
+                    <%--nutrients container--%>
+                    <input type="hidden" id="protein" value="1.1">
+                    <input type="hidden" id="fat" value="2.4">
+
+
+
                     <form action="/dietservlet" action="get">
                         <div class="row">
                             <div class="col-md-9">
@@ -405,7 +425,63 @@
                                 </thead>
                                 <tbody>
 
+
+
+                                <%!
+
+                                    double protein = 0;
+                                    double fat =0;
+                                    double carboh=0;
+                                    double salt=0;
+                                    double sugar=0;
+                                    double fibre=0;
+                                    %>
                                 <%
+
+                                protein=0;
+                                fat=0;
+                                carboh=0;
+                                salt=0;
+                                sugar=0;
+                                fibre=0;
+                                System.out.println("Protein refreshed!"+ protein);
+                                %>
+
+                                <%!
+                                    public void updateNutrients(String foodName, int quantity){
+
+                                        if (foodName.equals("Fish Porridge")) {
+
+                                            protein =  protein + 17 * quantity ;
+//                                            session.setAttribute("protein",protein);
+                                            fat = fat + 3 * quantity;
+                                            salt = salt + 1.6 * quantity;
+
+                                        }
+
+                                        if(foodName.equals("Apple")){
+                                            carboh= carboh + 17 * quantity;
+                                            fibre = fibre + 3 * quantity;
+                                            sugar = sugar+ 13 * quantity;
+
+                                        }
+                                        if(foodName.equals("Chicken Noodles")){
+                                            protein = protein + 9 * quantity;
+                                            fat = fat+ 4 * quantity;
+                                            salt = salt + 1 *quantity;
+                                            carboh = carboh + 13 * quantity;
+                                            sugar = sugar + 1 *quantity;
+                                            fibre = fibre + 1 * quantity;
+                                        }
+
+
+
+
+                                    }
+                                %>
+                                <%
+
+
                                     foodOrderDAO fod = new foodOrderDAO();
 
 //                                    DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
@@ -433,27 +509,71 @@
                                         }
                                     }
 
+                                    //getting merged quantity
+                                    ArrayList<String> foodNamesArr = new ArrayList<>();
+                                    for (int i = 0 ; i<dietList.size() ; i++){
+                                        foodNamesArr.add(dietList.get(i).getFoodName());
+                                    }
+                                    Collections.sort(foodNamesArr);
+
+                                    Map<String, Integer> map = new HashMap<String, Integer>();
+                                    for (String temp : foodNamesArr) {
+                                        Integer count = map.get(temp);
+                                        map.put(temp, (count == null) ? 1 : count + 1);
+                                    }
+
+
+
 
                                 %>
                                 <%
-                                    for(int i = 0; i<dietList.size(); i++){
+                                    for (Map.Entry<String, Integer> entry : map.entrySet()) {
                                 %>
                                 <tr>
 
-                                    <td><%=dietList.get(i).getFoodName()%></td>
+                                    <td><%=entry.getKey()%></td>
 
-                                    <td><%=dietList.get(i).getFoodQuantity()%></td>
+                                    <td><%=entry.getValue()%></td>
 
                                     <td><%=session.getAttribute("enterdate")%></td>
+
+
                                 </tr>
-                                <% }
+                                <%
+                                        if (entry.getKey().equals("Fish Porridge")) {
+                                            updateNutrients(entry.getKey(),entry.getValue());
+                                        }
+                                        if(entry.getKey().equals("Apple")){
+                                            updateNutrients(entry.getKey(),entry.getValue());
+
+                                        }
+                                        if(entry.getKey().equals("Chicken Noodles")){
+                                            updateNutrients(entry.getKey(),entry.getValue());
+                                        }
+
+                                        session.setAttribute("carboh",carboh);
+                                        session.setAttribute("sugar",sugar);
+                                        session.setAttribute("fibre",fibre);
+                                        session.setAttribute("protein",protein);
+                                        session.setAttribute("fat",fat);
+                                        session.setAttribute("salt",salt);
+
+                                    }
                                 %>
+
+
+
+
+
+
 
 
                                 </tbody>
                             </table>
                         </div>
                     </div>
+
+                    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
 
                     <!--end of content-->
                 </div>
@@ -635,20 +755,58 @@
 <script src="../../assets/js/material-dashboard2.js"></script>
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="../../assets/js/demo2.js"></script>
+
+<script src="../../assets/js/jquery.canvasjs.min.js"></script>
+
 <script type="text/javascript">
     $().ready(function () {
         demo.initMaterialWizard();
 
     });
 
-    //        $("#viewDiet").click(function (e) {
-    //            e.preventDefault();
-    //            var dateValue = document.getelementById("dateInput");
-    //            alert("testalert");
-    //
-    //
-    //        });
 
+
+    window.onload = function () {
+
+
+
+        var chart = new CanvasJS.Chart("chartContainer",
+            {
+                title:{
+                    text: "Diet Nutrition"
+                },
+                animationEnabled: true,
+                axisY: {
+                    title: "Grams(g)"
+                },
+                legend: {
+                    verticalAlign: "bottom",
+                    horizontalAlign: "center"
+                },
+                theme: "theme2",
+                data: [
+
+                    {
+
+                        type: "column",
+                        showInLegend: true,
+                        legendMarkerColor: "grey",
+                        legendText: "D.fibre = Dietary Fibre",
+                        dataPoints: [
+                            {y: <%=session.getAttribute("protein")%> , label: "Protein"},
+                            {y: <%=session.getAttribute("fat")%>,  label: "Fat" },
+                            {y: <%=session.getAttribute("carboh")%>,  label: "Carbohydrates"},
+                            {y: <%=session.getAttribute("sugar")%>,  label: "Sugar"},
+                            {y: <%=session.getAttribute("salt")%>,  label: "Sodium(Salt)"},
+                            {y: <%=session.getAttribute("fibre")%>, label: "D.Fibre"},
+
+                        ]
+                    }
+                ]
+            });
+
+        chart.render();
+    }
 </script>
 
 </html>

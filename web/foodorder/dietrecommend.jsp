@@ -1,11 +1,8 @@
 <%@ page import="foodOrder.foodOrderDAO" %>
 <%@ page import="foodOrder.FoodorderEntity" %>
-<%@ page import="java.util.List" %>
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="java.util.Collections" %>
 <%@ page import="java.text.DateFormat" %>
-<%@ page import="java.util.Date" %>
-<%@ page import="java.text.SimpleDateFormat" %><%--
+<%@ page import="java.text.SimpleDateFormat" %>
+<%@ page import="java.util.*" %><%--
   Created by IntelliJ IDEA.
   User: astaroh
   Date: 2/1/2017
@@ -77,10 +74,10 @@
 
 //        jQuery(function () {
 //                    $("#viewDiet").click(function (e) {
-////                        e.preventDefault();
+//                        e.preventDefault();
 //
-////                        var dateinput = $('#dateInput').val();
-////                        $("#dietTable > tbody").empty();
+//                        var dateinput = $('#protein').val();
+//                        alert(dateinput);
 //
 //
 //
@@ -440,22 +437,41 @@
 
                                             String a = fodList.get(i).getPatientId();
                                             String b = (String) session.getAttribute("username");
-                                            if(a.equals(b)){
+                                            String foodDate = fodList.get(i).getOrderdate();
+
+                                            if(a.equals(b) && foodDate.equals(currentdate)){
                                                 dietList.add(fodList.get(i));
 
                                     }
                                         }
 
+                                        //getting merged quantity
+                                        ArrayList<String> foodNamesArr = new ArrayList<>();
+                                        for (int i = 0 ; i<dietList.size() ; i++){
+                                            foodNamesArr.add(dietList.get(i).getFoodName());
+                                        }
+                                        Collections.sort(foodNamesArr);
+
+                                        Map<String, Integer> map = new HashMap<String, Integer>();
+                                        for (String temp : foodNamesArr) {
+                                            Integer count = map.get(temp);
+                                            map.put(temp, (count == null) ? 1 : count + 1);
+                                        }
+
+
+
+
+
 
                                     %>
                                     <%
-                                        for(int i = 0; i<dietList.size(); i++){
+                                        for (Map.Entry<String, Integer> entry : map.entrySet()) {
                                     %>
                                     <tr>
 
-                                    <td><%=dietList.get(i).getFoodName()%></td>
+                                    <td><%=entry.getKey()%></td>
 
-                                    <td><%=dietList.get(i).getFoodQuantity()%></td>
+                                    <td><%=entry.getValue()%></td>
 
                                     <td><%=currentdate%></td>
                                     </tr>
