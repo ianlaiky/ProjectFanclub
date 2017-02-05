@@ -12,7 +12,7 @@
 <%@ page import="queue.OnlinequeuesystemEntity" %>
 <%@ page import="queue.QueueSystemDAO" %><%--
   Created by IntelliJ IDEA.
-  User: Aravin
+  User: aravin
   Date: 11/12/2016
   Time: 4:24 AM
   To change this template use File | Settings | File Templates.
@@ -364,7 +364,7 @@
                     <br>
                     <br>
                     <div style="background-color: lightgrey">
-                        <center><h1>Hello,<%=session.getAttribute("firstName")%>
+                        <center><h1 style="font-weight: bold">Hello,<%=session.getAttribute("firstName")%>
                             <i style="font-size:48px" class="material-icons">face</i>
                         </h1></center>
                         <center><h1 style="font-size:40px">Your Queue Number is: <%=session.getAttribute("newQueueNo")%>
