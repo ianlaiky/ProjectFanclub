@@ -87,7 +87,7 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed" aria-expanded="true">
-                        <%=session.getAttribute("username")%>
+                        <%=session.getAttribute("firstName")%>
                         <b class="caret"></b>
                     </a>
                     <div class="collapse in" id="collapseExample">
