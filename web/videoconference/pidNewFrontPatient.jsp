@@ -132,6 +132,13 @@
                         <p>Call History</p>
                     </a>
                 </li>
+
+                <li>
+                    <a href="/logout">
+                        <i class="material-icons">exit_to_app</i>
+                        <p>Logout</p>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
