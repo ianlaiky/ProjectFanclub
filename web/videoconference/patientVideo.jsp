@@ -229,7 +229,7 @@
     Tip 3: you can change the color of the sidebar with data-background-color="white | black"
 -->
         <div class="logo">
-            <a class="simple-text">
+            <a href="../patientFrontPage.jsp" class="simple-text">
                 Video Chat
             </a>
         </div>
@@ -266,15 +266,21 @@
             </div>
             <ul class="nav">
                 <li class="active">
-                    <a href="../index.jsp">
+                    <a href="#">
                         <i class="material-icons">dashboard</i>
                         <p>Live Web Calling</p>
                     </a>
                 </li>
                 <li>
-                    <a href="callHistory.jsp">
+                    <a href="callHistoryForPat.jsp">
                         <i class="material-icons">image</i>
                         <p>Call History</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/logout">
+                        <i class="material-icons">exit_to_app</i>
+                        <p>Logout</p>
                     </a>
                 </li>
             </ul>

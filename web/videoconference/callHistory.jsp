@@ -75,7 +75,7 @@
     Tip 3: you can change the color of the sidebar with data-background-color="white | black"
 -->
         <div class="logo">
-            <a class="simple-text">
+            <a href="../docFrontPage.jsp" class="simple-text">
                 Video Chat
             </a>
         </div>
@@ -112,7 +112,7 @@
             </div>
             <ul class="nav">
                 <li>
-                    <a href="docVideo.jsp">
+                    <a href="patientPIDSelect.jsp">
                         <i class="material-icons">dashboard</i>
                         <p>Live Web Calling</p>
                     </a>
@@ -121,13 +121,18 @@
 
 
                 <li>
-                    <a href="/logout">
+                    <a href="#">
                         <i class="material-icons">image</i>
                         <p>Call History</p>
                     </a>
                 </li>
 
-
+                <li>
+                    <a href="/logout">
+                        <i class="material-icons">exit_to_app</i>
+                        <p>Logout</p>
+                    </a>
+                </li>
 
 
 
@@ -212,6 +217,9 @@
             <div class="container-fluid">
 
                 <!--      Wizard container        -->
+
+
+
 
 
                 <div class="row">
