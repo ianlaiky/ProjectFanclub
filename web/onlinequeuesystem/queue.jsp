@@ -5,7 +5,7 @@
 <%@ page import="queue.OnlinequeuesystemEntity" %>
 <%@ page import="queue.QueueSystemDAO" %><%--
   Created by IntelliJ IDEA.
-  User: Ying
+  User: Aravin
   Date: 11/12/2016
   Time: 4:24 AM
   To change this template use File | Settings | File Templates.
@@ -97,7 +97,7 @@
 -->
         <div class="logo">
             <a href="../patientFrontPage.jsp" class="simple-text">
-                Online Queue System
+                <i class="material-icons">perm_identity</i> Online Queue System
             </a>
         </div>
         <div class="logo logo-mini">
@@ -113,7 +113,7 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        <%= session.getAttribute("username") %>
+                        <i class="material-icons">account_circle</i> <%= session.getAttribute("username") %>
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
@@ -385,13 +385,13 @@
                                     <i class="material-icons">alarm_on</i>
                                 </div>
                                 <div class="card-content">
-                                    <h4 class="card-title">Get Queue Number Here!</h4>
+                                    <h4 class="card-title" style="font-weight: bold">Get Queue Number Here!</h4>
                                     <div class="input-group">
                                             <span class="input-group-addon">
                                                 <i class="material-icons">perm_identity</i>
                                             </span>
                                         <div class="form-group label-floating">
-                                            <label class="control-label">Name</label>
+                                            <label class="control-label" style="font-weight: bold">Name</label>
                                             <input value="<%=session.getAttribute("firstName")%>" disabled
                                                    class="form-control"
                                                    name="Name" type="text"/>
@@ -403,7 +403,7 @@
                                                 <i class="material-icons">contact_phone</i>
                                             </span>
                                         <div class="form-group label-floating">
-                                            <label class="control-label">PhoneNumber</label>
+                                            <label class="control-label" style="font-weight: bold">PhoneNumber</label>
 
 
                                             <input value="<%=phoneNow%>" disabled class="form-control"
