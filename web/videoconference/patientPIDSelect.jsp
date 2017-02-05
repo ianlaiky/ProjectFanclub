@@ -73,9 +73,10 @@
     Tip 3: you can change the color of the sidebar with data-background-color="white | black"
 -->
         <div class="logo">
-            <a class="simple-text">
+            <a href="../docFrontPage.jsp" class="simple-text">
                 Video Chat
             </a>
+
         </div>
         <div class="logo logo-mini">
             <a class="simple-text">

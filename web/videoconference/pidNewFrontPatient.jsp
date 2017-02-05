@@ -84,7 +84,7 @@
     Tip 3: you can change the color of the sidebar with data-background-color="white | black"
 -->
         <div class="logo">
-            <a class="simple-text">
+            <a href="../patientFrontPage.jsp" class="simple-text">
                 Video Chat
             </a>
         </div>
