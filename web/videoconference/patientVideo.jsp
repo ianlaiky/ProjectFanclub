@@ -711,9 +711,9 @@
                                     <!-- Call in progress -->
                                     <div id="step3">
                                         <p>Currently in call with <span id="their-id">...</span></p>
-                                        <p><a href="/patientPIDDel" class="pure-button pure-button-error" id="end-call">End
-                                            call</a></p>
-                                        </p>
+                                        <%--<p><a href="/patientPIDDel" class="pure-button pure-button-error" id="end-call">End--%>
+                                            <%--call</a></p>--%>
+                                        <%--</p>--%>
                                     </div>
                                 </div>
                             </div>
