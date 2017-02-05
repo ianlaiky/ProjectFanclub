@@ -99,7 +99,7 @@
 -->
         <div class="logo">
             <a href="../patientFrontPage.jsp" class="simple-text">
-                ONLINE QUEUE SYSTEM
+                <i class="material-icons">perm_identity</i> ONLINE QUEUE SYSTEM
             </a>
         </div>
         <div class="logo logo-mini">
@@ -114,7 +114,7 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        <%= session.getAttribute("username") %>
+                        <i class="material-icons">account_circle</i> <%= session.getAttribute("username") %>
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">

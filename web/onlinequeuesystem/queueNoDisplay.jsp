@@ -104,7 +104,7 @@
 -->
         <div class="logo">
             <a href="../docFrontPage.jsp" class="simple-text">
-                Online Queue System
+                <i class="material-icons">perm_identity</i> Online Queue System
             </a>
         </div>
         <div class="logo logo-mini">
@@ -120,7 +120,7 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        <%= session.getAttribute("username") %>
+                        <i class="material-icons">account_circle</i> <%= session.getAttribute("username") %>
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
@@ -174,7 +174,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"> Home </a>
+                    <a class="navbar-brand" href="#"> </a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">

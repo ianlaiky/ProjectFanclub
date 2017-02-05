@@ -116,6 +116,7 @@
         <div class="logo">
             <a href="../docFrontPage.jsp" class="simple-text">
                 Online Queue System
+                Online Queue System
             </a>
         </div>
         <div class="logo logo-mini">
@@ -526,13 +527,14 @@
                                     <i class="material-icons">delete</i>
                                 </div>
                                 <div class="card-content">
-                                    <h4 class="card-title">Deletion of Queue Number </h4>
+                                    <h4 class="card-title" style="font-weight: bold">Deletion of Queue Number </h4>
                                     <div class="input-group">
                                             <span class="input-group-addon">
 
                                             </span>
                                         <div class="form-group label-floating">
-                                            <label style="font-size:14px" class="control-label">Patients who are in the
+                                            <label style="font-size:14px" class="control-label"
+                                                   style="font-weight: bold">Patients who are in the
                                                 Queue currently</label>
 
 
