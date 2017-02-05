@@ -12,7 +12,7 @@
 <%@ page import="queue.OnlinequeuesystemEntity" %>
 <%@ page import="queue.QueueSystemDAO" %><%--
   Created by IntelliJ IDEA.
-  User: Aravin
+  User: aravin
   Date: 11/12/2016
   Time: 4:24 AM
   To change this template use File | Settings | File Templates.
