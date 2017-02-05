@@ -227,7 +227,7 @@
         <br>
         <br>
         <div style="background-color: lightgray">
-            <center><h1>Hello, <%=session.getAttribute("firstName")%>
+            <center><h1 style="font-weight: bold">Hello, <%=session.getAttribute("firstName")%>
                 <i style="font-size:50px" class="material-icons">face</i>
             </h1></center>
             <center>
