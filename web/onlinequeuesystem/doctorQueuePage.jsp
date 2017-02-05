@@ -106,7 +106,7 @@
 %>
 
 <div class="wrapper">
-    <div class="sidebar" data-active-color="green" data-background-color="white"
+    <div class="sidebar" data-active-color="green" data-background-color="black"
          data-image="../../assets/img/sidebar-1.jpg">
         <!--
     Tip 1: You can change the color of active element of the sidebar using: data-active-color="purple | blue | green | orange | red | rose"
@@ -134,20 +134,20 @@
                         <%= session.getAttribute("username") %>
                         <b class="caret"></b>
                     </a>
-                    <div class="collapse" id="collapseExample">
-                        <ul class="nav">
-                            <li>
-                                <a href="../onlinequeuesystem/view2.jsp">View Queue Details</a>
-                            </li>
-                            <li>
-                                <a href="../onlinequeuesystem/viewestimatedwaitingtime.jsp">View Estimated Waiting
-                                    Time</a>
-                            </li>
-                            <li>
-                                <a href="#">Settings</a>
-                            </li>
-                        </ul>
-                    </div>
+                    <%--<div class="collapse" id="collapseExample">--%>
+                        <%--<ul class="nav">--%>
+                            <%--<li>--%>
+                                <%--<a href="../onlinequeuesystem/view2.jsp">View Queue Details</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="../onlinequeuesystem/viewestimatedwaitingtime.jsp">View Estimated Waiting--%>
+                                    <%--Time</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="#">Settings</a>--%>
+                            <%--</li>--%>
+                        <%--</ul>--%>
+                    <%--</div>--%>
                 </div>
             </div>
             <ul class="nav">
@@ -533,6 +533,7 @@
                                             </span>
                                         <div class="form-group label-floating">
                                             <label class="control-label">Patients who are in the Queue currently</label>
+
 
                                             <%
                                                 for (int i = 0; i < uu.size(); i++) {

@@ -95,7 +95,7 @@
 %>
 
 <div class="wrapper">
-    <div class="sidebar" data-active-color="green" data-background-color="white"
+    <div class="sidebar" data-active-color="green" data-background-color="black"
          data-image="../../assets/img/sidebar-1.jpg">
         <!--
     Tip 1: You can change the color of active element of the sidebar using: data-active-color="purple | blue | green | orange | red | rose"
@@ -127,14 +127,15 @@
                         <ul class="nav">
                             <li>
                                 <a href="../onlinequeuesystem/view2.jsp">View Queue Details</a>
+                                <i class="material-icons">pageview</i>
                             </li>
-                            <li>
-                                <a href="../onlinequeuesystem/viewestimatedwaitingtime.jsp">View Estimated Waiting
-                                    Time</a>
-                            </li>
-                            <li>
-                                <a href="#">Settings</a>
-                            </li>
+                            <%--<li>--%>
+                            <%--<a href="../onlinequeuesystem/viewestimatedwaitingtime.jsp">View Estimated Waiting--%>
+                            <%--Time</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                            <%--<a href="#">Settings</a>--%>
+                            <%--</li>--%>
                         </ul>
                     </div>
                 </div>
@@ -501,11 +502,11 @@
                     <br>
                     <br>
                     <br>
-                    <div style="background-color: lightblue">
+                    <div style="background-color: lightgrey">
                         <center><h1>Hello,<%=session.getAttribute("firstName")%>
                             <i style="font-size:48px" class="material-icons">face</i>
                         </h1></center>
-                        <center><h1>Your Queue Number is <%=session.getAttribute("newQueueNo")%>
+                        <center><h1 style="font-size:40px">Your Queue Number is: <%=session.getAttribute("newQueueNo")%>
                         </h1></center>
                     </div>
 
