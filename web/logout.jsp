@@ -346,9 +346,14 @@
                 <div class="col-sm-8 col-sm-offset-2">
                     <%--<!-- Insert all the awesome body content here--%>
 
-                    <h1>You have been logged out</h1> <br>
 
-                    <h1><a href="index.html">Login</a></h1>
+                    <h1 style="font-size: 30px"><i class="material-icons" style="font-size:40px">lock_open </i>
+                        Logged Out</h1> <br> <br> <br>
+
+
+                    <h1><a href="index.html" class="btn btn-rose btn-fill btn-wd"> <i class="material-icons">send</i>
+                        Login</a>
+                    </h1>
 
 
                     <%---->--%>
