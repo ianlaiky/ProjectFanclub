@@ -126,8 +126,8 @@
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="../onlinequeuesystem/view2.jsp">View Queue Details</a>
-                                <i class="material-icons">pageview</i>
+                                <a href="../onlinequeuesystem/view2.jsp"><i class="material-icons">pageview</i> View Queue Details</a>
+
                             </li>
                             <%--<li>--%>
                             <%--<a href="../onlinequeuesystem/viewestimatedwaitingtime.jsp">View Estimated Waiting--%>
