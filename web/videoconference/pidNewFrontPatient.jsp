@@ -121,13 +121,13 @@
             </div>
             <ul class="nav">
                 <li class="active">
-                    <a href="../index.jsp">
+                    <a href="#">
                         <i class="material-icons">dashboard</i>
                         <p>Live Web Calling</p>
                     </a>
                 </li>
                 <li>
-                    <a href="callHistory.jsp">
+                    <a href="callHistoryForPat.jsp">
                         <i class="material-icons">image</i>
                         <p>Call History</p>
                     </a>

@@ -110,7 +110,7 @@
             </div>
             <ul class="nav">
                 <li>
-                    <a href="docVideo.jsp">
+                    <a href="#">
                         <i class="material-icons">dashboard</i>
                         <p>Live Web Calling</p>
                     </a>
