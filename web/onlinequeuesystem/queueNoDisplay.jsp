@@ -103,7 +103,7 @@
     Tip 3: you can change the color of the sidebar with data-background-color="white | black"
 -->
         <div class="logo">
-            <a href="http://www.creative-tim.com" class="simple-text">
+            <a href="../docFrontPage.jsp" class="simple-text">
                 Online Queue System
             </a>
         </div>
@@ -126,7 +126,8 @@
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="../onlinequeuesystem/view2.jsp"><i class="material-icons">pageview</i> View Queue Details</a>
+                                <a href="../onlinequeuesystem/view2.jsp"><i class="material-icons">pageview</i> View
+                                    Queue Details</a>
 
                             </li>
                             <%--<li>--%>

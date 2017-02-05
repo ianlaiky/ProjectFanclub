@@ -114,7 +114,7 @@
     Tip 3: you can change the color of the sidebar with data-background-color="white | black"
 -->
         <div class="logo">
-            <a href="http://www.creative-tim.com" class="simple-text">
+            <a href="../docFrontPage.jsp" class="simple-text">
                 Online Queue System
             </a>
         </div>

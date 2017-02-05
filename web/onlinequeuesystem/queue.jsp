@@ -62,7 +62,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
-    <
+
     <link href="../web/onlinequeuesystem/qe.css" rel="stylesheet"/>
 
     <%--<style>--%>
@@ -96,7 +96,7 @@
     Tip 3: you can change the color of the sidebar with data-background-color="white | black"
 -->
         <div class="logo">
-            <a href="http://www.creative-tim.com" class="simple-text">
+            <a href="../docFrontPage.jsp" class="simple-text">
                 Online Queue System
             </a>
         </div>
