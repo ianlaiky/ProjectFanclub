@@ -87,13 +87,13 @@
     Tip 3: you can change the color of the sidebar with data-background-color="white | black"
 -->
         <div class="logo">
-            <a href="http://www.creative-tim.com" class="simple-text">
-                Food Diet
+            <a href="#" class="simple-text">
+                Patient
             </a>
         </div>
         <div class="logo logo-mini">
-            <a href="http://www.creative-tim.com" class="simple-text">
-                FD
+            <a href="#" class="simple-text">
+                P
             </a>
         </div>
         <div class="sidebar-wrapper ps-container ps-theme-default ps-active-x"
