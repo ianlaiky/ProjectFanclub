@@ -84,7 +84,7 @@
     Tip 3: you can change the color of the sidebar with data-background-color="white | black"
 -->
         <div class="logo">
-            <a class="simple-text">
+            <a href="../patientFrontPage.jsp" class="simple-text">
                 Video Chat
             </a>
         </div>
@@ -101,7 +101,7 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        test
+                        <%= session.getAttribute("firstName")%>
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
@@ -121,27 +121,23 @@
             </div>
             <ul class="nav">
                 <li class="active">
-                    <a href="../index.jsp">
+                    <a href="#">
                         <i class="material-icons">dashboard</i>
                         <p>Live Web Calling</p>
                     </a>
                 </li>
                 <li>
-                    <a data-toggle="collapse" href="#pagesExamples">
+                    <a href="callHistoryForPat.jsp">
                         <i class="material-icons">image</i>
-                        <p>Consultation Report
-                            <b class="caret"></b>
-                        </p>
+                        <p>Call History</p>
                     </a>
-                    <div class="collapse" id="pagesExamples">
-                        <ul class="nav">
-                            <li>
-                                <a href="patientReportView.jsp">View Reports</a>
-                            </li>
-
-                        </ul>
-                    </div>
                 </li>
+
+                <li>
+                    <a href="/logout">
+                        <i class="material-icons">exit_to_app</i>
+                        <p>Logout</p>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -162,61 +158,61 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"> Wizard </a>
+                    <%--<a class="navbar-brand" href="#"></a>--%>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="material-icons">dashboard</i>
-                                <p class="hidden-lg hidden-md">Dashboard</p>
-                            </a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="material-icons">notifications</i>
-                                <span class="notification">5</span>
-                                <p class="hidden-lg hidden-md">
-                                    Notifications
-                                    <b class="caret"></b>
-                                </p>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#">Mike John responded to your email</a>
-                                </li>
-                                <li>
-                                    <a href="#">You have 5 new tasks</a>
-                                </li>
-                                <li>
-                                    <a href="#">You're now friend with Andrew</a>
-                                </li>
-                                <li>
-                                    <a href="#">Another Notification</a>
-                                </li>
-                                <li>
-                                    <a href="#">Another One</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="material-icons">person</i>
-                                <p class="hidden-lg hidden-md">Profile</p>
-                            </a>
-                        </li>
+                        <%--<li>--%>
+                            <%--<a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">--%>
+                                <%--<i class="material-icons">dashboard</i>--%>
+                                <%--<p class="hidden-lg hidden-md">Dashboard</p>--%>
+                            <%--</a>--%>
+                        <%--</li>--%>
+                        <%--<li class="dropdown">--%>
+                            <%--<a href="#" class="dropdown-toggle" data-toggle="dropdown">--%>
+                                <%--<i class="material-icons">notifications</i>--%>
+                                <%--<span class="notification">5</span>--%>
+                                <%--<p class="hidden-lg hidden-md">--%>
+                                    <%--Notifications--%>
+                                    <%--<b class="caret"></b>--%>
+                                <%--</p>--%>
+                            <%--</a>--%>
+                            <%--<ul class="dropdown-menu">--%>
+                                <%--<li>--%>
+                                    <%--<a href="#">Mike John responded to your email</a>--%>
+                                <%--</li>--%>
+                                <%--<li>--%>
+                                    <%--<a href="#">You have 5 new tasks</a>--%>
+                                <%--</li>--%>
+                                <%--<li>--%>
+                                    <%--<a href="#">You're now friend with Andrew</a>--%>
+                                <%--</li>--%>
+                                <%--<li>--%>
+                                    <%--<a href="#">Another Notification</a>--%>
+                                <%--</li>--%>
+                                <%--<li>--%>
+                                    <%--<a href="#">Another One</a>--%>
+                                <%--</li>--%>
+                            <%--</ul>--%>
+                        <%--</li>--%>
+                        <%--<li>--%>
+                            <%--<a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">--%>
+                                <%--<i class="material-icons">person</i>--%>
+                                <%--<p class="hidden-lg hidden-md">Profile</p>--%>
+                            <%--</a>--%>
+                        <%--</li>--%>
                         <li class="separator hidden-lg hidden-md"></li>
                     </ul>
-                    <form class="navbar-form navbar-right" role="search">
-                        <div class="form-group form-search is-empty">
-                            <input type="text" class="form-control" placeholder="Search">
-                            <span class="material-input"></span>
-                        </div>
-                        <button type="submit" class="btn btn-white btn-round btn-just-icon">
-                            <i class="material-icons">search</i>
-                            <div class="ripple-container"></div>
-                        </button>
-                    </form>
+                    <%--<form class="navbar-form navbar-right" role="search">--%>
+                        <%--<div class="form-group form-search is-empty">--%>
+                            <%--<input type="text" class="form-control" placeholder="Search">--%>
+                            <%--<span class="material-input"></span>--%>
+                        <%--</div>--%>
+                        <%--<button type="submit" class="btn btn-white btn-round btn-just-icon">--%>
+                            <%--<i class="material-icons">search</i>--%>
+                            <%--<div class="ripple-container"></div>--%>
+                        <%--</button>--%>
+                    <%--</form>--%>
                 </div>
             </div>
         </nav>
@@ -397,101 +393,101 @@
 </footer>
 </div>
 </div>
-<div class="fixed-plugin">
-    <div class="dropdown show-dropdown">
-        <a href="#" data-toggle="dropdown">
-            <i class="fa fa-cog fa-2x"> </i>
-        </a>
-        <ul class="dropdown-menu">
-            <li class="header-title"> Sidebar Filters</li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger active-color">
-                    <div class="badge-colors text-center">
-                        <span class="badge filter badge-purple" data-color="purple"></span>
-                        <span class="badge filter badge-blue" data-color="blue"></span>
-                        <span class="badge filter badge-green" data-color="green"></span>
-                        <span class="badge filter badge-orange" data-color="orange"></span>
-                        <span class="badge filter badge-red" data-color="red"></span>
-                        <span class="badge filter badge-rose active" data-color="green"></span>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="header-title">Sidebar Background</li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger background-color">
-                    <div class="text-center">
-                        <span class="badge filter badge-white" data-color="white"></span>
-                        <span class="badge filter badge-black active" data-color="black"></span>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger">
-                    <p>Sidebar Mini</p>
-                    <div class="togglebutton switch-sidebar-mini">
-                        <label>
-                            <input type="checkbox" unchecked="">
-                        </label>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger">
-                    <p>Sidebar Image</p>
-                    <div class="togglebutton switch-sidebar-image">
-                        <label>
-                            <input type="checkbox" checked="">
-                        </label>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="header-title">Images</li>
-            <li class="active">
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-1.jpg" alt=""/>
-                </a>
-            </li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-2.jpg" alt=""/>
-                </a>
-            </li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-3.jpg" alt=""/>
-                </a>
-            </li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-4.jpg" alt=""/>
-                </a>
-            </li>
-            <li class="button-container">
-                <div class="">
-                    <a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank"
-                       class="btn btn-rose btn-block">Buy Now</a>
-                </div>
-                <div class="">
-                    <a href="http://www.creative-tim.com/product/material-dashboard" target="_blank"
-                       class="btn btn-info btn-block">Get Free Demo</a>
-                </div>
-            </li>
-            <li class="header-title">Thank you for 95 shares!</li>
-            <li class="button-container">
-                <button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i> &middot;
-                    45
-                </button>
-                <button id="facebook" class="btn btn-social btn-facebook btn-round"><i
-                        class="fa fa-facebook-square"> &middot;</i>50
-                </button>
-            </li>
-        </ul>
-    </div>
-</div>
+<%--<div class="fixed-plugin">--%>
+    <%--<div class="dropdown show-dropdown">--%>
+        <%--<a href="#" data-toggle="dropdown">--%>
+            <%--<i class="fa fa-cog fa-2x"> </i>--%>
+        <%--</a>--%>
+        <%--<ul class="dropdown-menu">--%>
+            <%--<li class="header-title"> Sidebar Filters</li>--%>
+            <%--<li class="adjustments-line">--%>
+                <%--<a href="javascript:void(0)" class="switch-trigger active-color">--%>
+                    <%--<div class="badge-colors text-center">--%>
+                        <%--<span class="badge filter badge-purple" data-color="purple"></span>--%>
+                        <%--<span class="badge filter badge-blue" data-color="blue"></span>--%>
+                        <%--<span class="badge filter badge-green" data-color="green"></span>--%>
+                        <%--<span class="badge filter badge-orange" data-color="orange"></span>--%>
+                        <%--<span class="badge filter badge-red" data-color="red"></span>--%>
+                        <%--<span class="badge filter badge-rose active" data-color="green"></span>--%>
+                    <%--</div>--%>
+                    <%--<div class="clearfix"></div>--%>
+                <%--</a>--%>
+            <%--</li>--%>
+            <%--<li class="header-title">Sidebar Background</li>--%>
+            <%--<li class="adjustments-line">--%>
+                <%--<a href="javascript:void(0)" class="switch-trigger background-color">--%>
+                    <%--<div class="text-center">--%>
+                        <%--<span class="badge filter badge-white" data-color="white"></span>--%>
+                        <%--<span class="badge filter badge-black active" data-color="black"></span>--%>
+                    <%--</div>--%>
+                    <%--<div class="clearfix"></div>--%>
+                <%--</a>--%>
+            <%--</li>--%>
+            <%--<li class="adjustments-line">--%>
+                <%--<a href="javascript:void(0)" class="switch-trigger">--%>
+                    <%--<p>Sidebar Mini</p>--%>
+                    <%--<div class="togglebutton switch-sidebar-mini">--%>
+                        <%--<label>--%>
+                            <%--<input type="checkbox" unchecked="">--%>
+                        <%--</label>--%>
+                    <%--</div>--%>
+                    <%--<div class="clearfix"></div>--%>
+                <%--</a>--%>
+            <%--</li>--%>
+            <%--<li class="adjustments-line">--%>
+                <%--<a href="javascript:void(0)" class="switch-trigger">--%>
+                    <%--<p>Sidebar Image</p>--%>
+                    <%--<div class="togglebutton switch-sidebar-image">--%>
+                        <%--<label>--%>
+                            <%--<input type="checkbox" checked="">--%>
+                        <%--</label>--%>
+                    <%--</div>--%>
+                    <%--<div class="clearfix"></div>--%>
+                <%--</a>--%>
+            <%--</li>--%>
+            <%--<li class="header-title">Images</li>--%>
+            <%--<li class="active">--%>
+                <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
+                    <%--<img src="../../assets/img/sidebar-1.jpg" alt=""/>--%>
+                <%--</a>--%>
+            <%--</li>--%>
+            <%--<li>--%>
+                <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
+                    <%--<img src="../../assets/img/sidebar-2.jpg" alt=""/>--%>
+                <%--</a>--%>
+            <%--</li>--%>
+            <%--<li>--%>
+                <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
+                    <%--<img src="../../assets/img/sidebar-3.jpg" alt=""/>--%>
+                <%--</a>--%>
+            <%--</li>--%>
+            <%--<li>--%>
+                <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
+                    <%--<img src="../../assets/img/sidebar-4.jpg" alt=""/>--%>
+                <%--</a>--%>
+            <%--</li>--%>
+            <%--<li class="button-container">--%>
+                <%--<div class="">--%>
+                    <%--<a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank"--%>
+                       <%--class="btn btn-rose btn-block">Buy Now</a>--%>
+                <%--</div>--%>
+                <%--<div class="">--%>
+                    <%--<a href="http://www.creative-tim.com/product/material-dashboard" target="_blank"--%>
+                       <%--class="btn btn-info btn-block">Get Free Demo</a>--%>
+                <%--</div>--%>
+            <%--</li>--%>
+            <%--<li class="header-title">Thank you for 95 shares!</li>--%>
+            <%--<li class="button-container">--%>
+                <%--<button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i> &middot;--%>
+                    <%--45--%>
+                <%--</button>--%>
+                <%--<button id="facebook" class="btn btn-social btn-facebook btn-round"><i--%>
+                        <%--class="fa fa-facebook-square"> &middot;</i>50--%>
+                <%--</button>--%>
+            <%--</li>--%>
+        <%--</ul>--%>
+    <%--</div>--%>
+<%--</div>--%>
 </body>
 <!--   Core JS Files   -->
 <script src="../../assets/js/jquery-3.1.1.min.js" type="text/javascript"></script>

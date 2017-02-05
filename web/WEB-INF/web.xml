@@ -20,6 +20,7 @@
         </init-param>
     </servlet>
 
+
     <servlet-mapping>
         <servlet-name>RestServlet</servlet-name>
         <url-pattern>/services/*</url-pattern>

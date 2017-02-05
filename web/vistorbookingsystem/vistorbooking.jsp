@@ -92,7 +92,7 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        Zixiang
+                        <%= session.getAttribute("username") %>
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
@@ -350,8 +350,9 @@
 
 
 
+                       -->
+                    <form action="/VistorbookingServlet" method="post">
 
-                        -->
                     <div class="col-sm-6">
                         <div class="input-group">
                                                         <span class="input-group-addon">
@@ -360,7 +361,7 @@
                             <div class="form-group label-floating">
                                 <label class="control-label">Name
                                 </label>
-                                <input name="name" type="text" class="form-control" required="true">
+                                <input name="name" type="text" class="form-control" value="<%=session.getAttribute("firstName")%>" required="true" disabled>
                             </div>
                         </div>
                         <div class="input-group">
@@ -381,7 +382,7 @@
                             <div class="form-group label-floating">
                                 <label class="control-label">Date
                                 </label>
-                                <input  type="text" class="form-control" id="datepicker" required>
+                                <input  type="text" class="form-control" id="datepicker" name="date" required>
                             </div>
                             <div class="input-group">
                                 <meta charset="utf-8">
@@ -404,12 +405,12 @@
                             <div class="form-group label-floating">
                                 <label class="control-label">Select Time
                                 </label>
-                                <select>
-                                    <option value="1">13:00</option>
-                                    <option value="2">14:00</option>
-                                    <option value="3">15:00</option>
-                                    <option value="4">16:00</option>
-                                    <option value="5">17:00</option>
+                                <select name="time">
+                                    <option value="13:00">13:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
                                 </select>
                             </div>
                         </div>
@@ -440,74 +441,33 @@
                             <div class="form-group label-floating">
                                 <label class="control-label">Relative's NRIC
                                 </label>
-                                <input name="pNRIC" type="text" class="form-control" required>
-                                <button type="button">Get information</button>
+                                <input  type="text" class="form-control" name="relativeNRIC"required>
                             </div>
                         </div>
                         <div class="input-group">
-                            <div class="picture-container">
-                                <div class="picture">
-                                    <img src="../../assets/img/default-avatar.png" class="picture-src" id="wizardPicturePreview" title="" /><br>
                                     <div class="form-group label-floating">
                                         <label class="control-label">Patient Name
                                         </label>
-                                        <input type="text"  class="form-control" id="patientName">
+                                        <input type="text"  class="form-control" name="patientName">
                                     </div>
                                     <div class="form-group label-floating">
                                         <label class="control-label">Room number
                                         </label>
-                                        <input type="text" class="form-control" id="roomnum">
+                                        <input type="text" class="form-control" name="roomnum">
                                     </div>
                                 </div>
+                        <input type="submit">
                             </div>
+
+
+                    </form>
                         </div>
 
                     </div>
                 </div>
             </div>
-            <a href="../vistorbookingsystem/certification.jsp" type="button" style=  "position: fixed;
-                    bottom: 50px;
-                    margin-right: 300px;
-                    margin-left: 800px;">submit</a>
-        </div>
-        <footer class="footer">
-            <div class="container-fluid">
-                <nav class="pull-left">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Company
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Portfolio
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Blog
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <p class="copyright pull-right">
-                    &copy;
-                    <script>
-                        document.write(new Date().getFullYear())
-                    </script>
-                    <a href="http://www.creative-tim.com">Woodlands Integrated Health Campus</a>, made with love by
-                    Fanclub
-                </p>
-            </div>
-        </footer>
-    </div>
-</div>
+
+
 <div class="fixed-plugin">
     <div class="dropdown show-dropdown">
         <a href="#" data-toggle="dropdown">

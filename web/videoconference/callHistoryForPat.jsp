@@ -1,3 +1,11 @@
+<%@ page import="videoconference.VideoConferenceDAO" %>
+<%@ page import="java.util.List" %>
+<%@ page import="videoconference.VideoconferenceEntity" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="patientRecord.PatientDAO" %>
+<%@ page import="patientRecord.PatientrecordEntity" %>
+<%@ page import="vidcontiming.VideoConTimingDAO" %>
+<%@ page import="vidcontiming.VidcomtimingEntity" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
@@ -49,6 +57,12 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
+
+
+    <style>
+
+
+    </style>
 </head>
 
 <body>
@@ -61,7 +75,7 @@
     Tip 3: you can change the color of the sidebar with data-background-color="white | black"
 -->
         <div class="logo">
-            <a class="simple-text">
+            <a href="../patientFrontPage.jsp" class="simple-text">
                 Video Chat
             </a>
         </div>
@@ -78,7 +92,7 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        test
+                        <%=session.getAttribute("firstName")%>
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
@@ -103,12 +117,21 @@
                         <p>Live Web Calling</p>
                     </a>
                 </li>
+
+
                 <li>
-                    <a href="callHistory.jsp">
+                    <a href="#">
                         <i class="material-icons">image</i>
                         <p>Call History</p>
                     </a>
                 </li>
+                <li>
+                    <a href="/logout">
+                        <i class="material-icons">exit_to_app</i>
+                        <p>Logout</p>
+                    </a>
+                </li>
+
             </ul>
         </div>
     </div>
@@ -128,7 +151,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"> Wizard </a>
+                    <%--<a class="navbar-brand" href="#"> Wizard </a>--%>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -193,197 +216,101 @@
 
 
                 <div class="row">
+
                     <div class="col-md-12">
+
                         <div class="card">
+
                             <div class="card-header card-header-icon" data-background-color="rose">
                                 <i class="material-icons">assignment</i>
                             </div>
                             <div class="card-content">
-                                <h4 class="card-title">Simple Table</h4>
+                                <h4 class="card-title">Unpaid Sessions</h4>
+
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead class="text-primary">
-                                        <th>Name</th>
-                                        <th>Country</th>
-                                        <th>City</th>
-                                        <th>Salary</th>
+
+                                        <th>Doctor Username</th>
+                                        <th>Patient Username</th>
+                                        <th>Date</th>
+                                        <th>Start Time</th>
+                                        <th>End Time</th>
+                                        <th>Outstanding amount</th>
+
+
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <td>Dakota Rice</td>
-                                            <td>Niger</td>
-                                            <td>Oud-Turnhout</td>
-                                            <td class="text-primary">$36,738</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Minerva Hooper</td>
-                                            <td>Curaçao</td>
-                                            <td>Sinaai-Waas</td>
-                                            <td class="text-primary">$23,789</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sage Rodriguez</td>
-                                            <td>Netherlands</td>
-                                            <td>Baileux</td>
-                                            <td class="text-primary">$56,142</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Philip Chaney</td>
-                                            <td>Korea, South</td>
-                                            <td>Overland Park</td>
-                                            <td class="text-primary">$38,735</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Doris Greene</td>
-                                            <td>Malawi</td>
-                                            <td>Feldkirchen in Kärnten</td>
-                                            <td class="text-primary">$63,542</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Mason Porter</td>
-                                            <td>Chile</td>
-                                            <td>Gloucester</td>
-                                            <td class="text-primary">$78,615</td>
-                                        </tr>
+
+                                        <%
+
+                                            String cuser = (String) session.getAttribute("username");
+
+                                            VideoConTimingDAO da = new VideoConTimingDAO();
+                                            List<VidcomtimingEntity> flist = new ArrayList<>();
+
+                                            List<VidcomtimingEntity> userList = new ArrayList<>();
+
+                                            List<VidcomtimingEntity> billun = new ArrayList<>();
+                                            flist=da.getAllRecord();
+
+
+                                            for(int i=0;i<flist.size();i++){
+
+                                                if(flist.get(i).getPatientUsername().equalsIgnoreCase(cuser)){
+
+                                                    userList.add(flist.get(i));
+                                                }
+
+
+                                            }
+
+
+                                            for(int i=0;i<userList.size();i++){
+
+                                                if(userList.get(i).getBillsPaid().equalsIgnoreCase("false")){
+                                                    billun.add(userList.get(i));
+                                                }
+
+
+                                            }
+
+                                            System.out.println("first list " +flist.size() );
+                                            System.out.println("user list "+userList.size());
+                                            System.out.println("bill un "+billun.size());
+
+
+
+                                            for(int i=0;i<billun.size();i++){
+%>
+<tr>
+
+                                        <td><%=billun.get(i).getDocUsername()%>
+                                        </td>
+                                        <td><%=billun.get(i).getPatientUsername()%>
+                                        </td>
+                                        <td><%=billun.get(i).getDate()%>
+                                        </td>
+                                        <td><%=billun.get(i).getStartTime()%>
+                                        </td>
+                                        <td><%=billun.get(i).getEndTime()%>
+                                        </td>
+    <td>$5</td>
+
+</tr>
+                                                <%
+                                            }
+
+                                        %>
+
+
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12">
-                            <div class="card card-plain">
-                                <div class="card-header card-header-icon" data-background-color="rose">
-                                    <i class="material-icons">assignment</i>
-                                </div>
-                                <h4 class="card-title">Table on Plain Background</h4>
-                                <p class="category">Here is a subtitle for this table</p>
-                                <div class="card-content table-responsive">
-                                    <table class="table table-hover">
-                                        <thead>
-                                        <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Salary</th>
-                                        <th>Country</th>
-                                        <th>City</th>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Dakota Rice</td>
-                                            <td>$36,738</td>
-                                            <td>Niger</td>
-                                            <td>Oud-Turnhout</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Minerva Hooper</td>
-                                            <td>$23,789</td>
-                                            <td>Curaçao</td>
-                                            <td>Sinaai-Waas</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Sage Rodriguez</td>
-                                            <td>$56,142</td>
-                                            <td>Netherlands</td>
-                                            <td>Baileux</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>Philip Chaney</td>
-                                            <td>$38,735</td>
-                                            <td>Korea, South</td>
-                                            <td>Overland Park</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>Doris Greene</td>
-                                            <td>$63,542</td>
-                                            <td>Malawi</td>
-                                            <td>Feldkirchen in Kärnten</td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>Mason Porter</td>
-                                            <td>$78,615</td>
-                                            <td>Chile</td>
-                                            <td>Gloucester</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header card-header-icon" data-background-color="rose">
-                                    <i class="material-icons">assignment</i>
-                                </div>
-                                <h4 class="card-title">Regular Table with Colors</h4>
-                                <div class="card-content table-responsive table-full-width">
-                                    <table class="table table-hover">
-                                        <thead>
-                                        <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Salary</th>
-                                        <th>Country</th>
-                                        <th>City</th>
-                                        </thead>
-                                        <tbody>
-                                        <tr class="success">
-                                            <td>1</td>
-                                            <td>Dakota Rice (Success)</td>
-                                            <td>$36,738</td>
-                                            <td>Niger</td>
-                                            <td>Oud-Turnhout</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Minerva Hooper</td>
-                                            <td>$23,789</td>
-                                            <td>Curaçao</td>
-                                            <td>Sinaai-Waas</td>
-                                        </tr>
-                                        <tr class="info">
-                                            <td>3</td>
-                                            <td>Sage Rodriguez (Info)</td>
-                                            <td>$56,142</td>
-                                            <td>Netherlands</td>
-                                            <td>Baileux</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>Philip Chaney</td>
-                                            <td>$38,735</td>
-                                            <td>Korea, South</td>
-                                            <td>Overland Park</td>
-                                        </tr>
-                                        <tr class="danger">
-                                            <td>5</td>
-                                            <td>Doris Greene (Danger)</td>
-                                            <td>$63,542</td>
-                                            <td>Malawi</td>
-                                            <td>Feldkirchen in Kärnten</td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>Mason Porter</td>
-                                            <td>$78,615</td>
-                                            <td>Chile</td>
-                                            <td>Gloucester</td>
-                                        </tr>
-                                        <tr class="warning">
-                                            <td>7</td>
-                                            <td>Mike Chaney (Warning)</td>
-                                            <td>$38,735</td>
-                                            <td>Romania</td>
-                                            <td>Bucharest</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
+
+
                     </div>
                 </div>
 

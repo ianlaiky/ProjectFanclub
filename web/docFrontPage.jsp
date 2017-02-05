@@ -71,7 +71,6 @@
         response.sendRedirect("errorPage.jsp");
     } else {
         if (session.getAttribute("signInDoctor").equals("false")) {
-            System.out.println("false ran");
             response.sendRedirect("errorPage.jsp");
         }
 
@@ -88,12 +87,12 @@
     Tip 3: you can change the color of the sidebar with data-background-color="white | black"
 -->
         <div class="logo">
-            <a href="http://www.creative-tim.com" class="simple-text">
+            <a href="#" class="simple-text">
                 Doctors
             </a>
         </div>
         <div class="logo logo-mini">
-            <a href="http://www.creative-tim.com" class="simple-text">
+            <a href="#" class="simple-text">
                 Doc
             </a>
         </div>
