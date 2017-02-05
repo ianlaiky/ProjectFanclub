@@ -92,7 +92,7 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        test
+                        <%=session.getAttribute("username")%>
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
@@ -119,16 +119,12 @@
                 </li>
 
 
-
                 <li>
                     <a href="#">
                         <i class="material-icons">image</i>
                         <p>Call History</p>
                     </a>
                 </li>
-
-
-
 
 
             </ul>
@@ -214,132 +210,93 @@
                 <!--      Wizard container        -->
 
 
-
-
-
                 <div class="row">
+
                     <div class="col-md-12">
+
                         <div class="card">
+
                             <div class="card-header card-header-icon" data-background-color="rose">
                                 <i class="material-icons">assignment</i>
                             </div>
                             <div class="card-content">
-                                <h4 class="card-title">Patient In Queue</h4>
+                                <h4 class="card-title">Unpaid Sessions</h4>
 
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead class="text-primary">
-                                        <th>ID</th>
+
                                         <th>Doctor Username</th>
                                         <th>Patient Username</th>
                                         <th>Date</th>
                                         <th>Start Time</th>
                                         <th>End Time</th>
-                                        <th>Bills Paid</th>
-                                        <th>Toggle Bill paid</th>
+                                        <th>Outstanding amount</th>
+
 
                                         </thead>
                                         <tbody>
 
-
                                         <%
 
+                                            String cuser = (String) session.getAttribute("username");
+
                                             VideoConTimingDAO da = new VideoConTimingDAO();
+                                            List<VidcomtimingEntity> flist = new ArrayList<>();
 
-                                            List<VidcomtimingEntity> list = new ArrayList<>();
+                                            List<VidcomtimingEntity> userList = new ArrayList<>();
 
-                                            list=da.getAllRecord();
-
-
-
-
-                                            for(int i=0;i<list.size();i++){
+                                            List<VidcomtimingEntity> billun = new ArrayList<>();
+                                            flist=da.getAllRecord();
 
 
+                                            for(int i=0;i<flist.size();i++){
 
+                                                if(flist.get(i).getPatientUsername().equalsIgnoreCase(cuser)){
 
+                                                    userList.add(flist.get(i));
+                                                }
 
-
-
-                                                %>
-
-
-
-
-
-                                        <tr>
-
-
-                                            <form method="post" action="/vidconRecordUpdatebi">
-                                                <td><%=list.get(i).getId()%>
-                                                </td>
-
-
-                                                <td><%=list.get(i).getDocUsername()%>
-                                                </td>
-
-
-                                                <td><%=list.get(i).getPatientUsername()%>
-
-                                                </td>
-
-
-                                                <td><%=list.get(i).getDate()%>
-
-                                                </td>
-                                                <td><%=list.get(i).getStartTime()%>
-
-                                                </td>
-
-                                                <td><%=list.get(i).getEndTime()%>
-
-                                                </td>
-
-                                                <td><%=list.get(i).getBillsPaid()%>
-
-                                                </td>
-
-                                                <input type="hidden" name="billsIDNow"
-                                                       value="<%=list.get(i).getId()%>">
-
-                                                <input type="hidden" name="billsNow"
-                                                       value="<%=list.get(i).getBillsPaid()%>">
-
-                                                <td><input class="btn btn-next btn-fill btn-rose btn-wd" type="submit"
-                                                           value="Toggle Bills"></td>
-
-
-                                            </form>
-
-
-                                            </td>
-
-                                        </tr>
-
-
-
-
-
-
-
-
-
-
-
-                                                <%
 
                                             }
 
 
+                                            for(int i=0;i<userList.size();i++){
 
+                                                if(userList.get(i).getBillsPaid().equalsIgnoreCase("false")){
+                                                    billun.add(userList.get(i));
+                                                }
+
+
+                                            }
+
+                                            System.out.println("first list " +flist.size() );
+                                            System.out.println("user list "+userList.size());
+                                            System.out.println("bill un "+billun.size());
+
+
+
+                                            for(int i=0;i<billun.size();i++){
+%>
+<tr>
+
+                                        <td><%=billun.get(i).getDocUsername()%>
+                                        </td>
+                                        <td><%=billun.get(i).getPatientUsername()%>
+                                        </td>
+                                        <td><%=billun.get(i).getDate()%>
+                                        </td>
+                                        <td><%=billun.get(i).getStartTime()%>
+                                        </td>
+                                        <td><%=billun.get(i).getEndTime()%>
+                                        </td>
+    <td>$5</td>
+
+</tr>
+                                                <%
+                                            }
 
                                         %>
-
-
-
-
-
-
 
 
                                         </tbody>
