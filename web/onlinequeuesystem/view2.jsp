@@ -10,7 +10,7 @@
 --%>
 <%--
   Created by IntelliJ IDEA.
-  User: Ying
+  User: Aravin
   Date: 14/12/2016
   Time: 8:29 PM
   To change this template use File | Settings | File Templates.
@@ -65,6 +65,27 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
+    <style>body {
+        background: #f5f5f5;
+    }
+
+    #timer {
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+        color: #999;
+        letter-spacing: -1px;
+    }
+
+    #timer span {
+        font-size: 60px;
+        color: #333;
+        margin: 0 3px 0 15px;
+    }
+
+    #timer span:first-child {
+        margin-left: 0;
+    }
+    </style>
 </head>
 
 <body>
@@ -209,44 +230,98 @@
             <center><h1>Hello, <%=session.getAttribute("firstName")%>
                 <i style="font-size:50px" class="material-icons">face</i>
             </h1></center>
-            <center><h2><i style="font-size:30px" class="material-icons">queue</i> Patients who are in Queue:
-                <%
+            <center>
+                <h2><i style="font-size:30px" class="material-icons">queue</i> Patients who are in Queue:
+                    <%
 
-                    List<OnlinequeuesystemEntity> othersinq = new ArrayList<>();
+                        List<OnlinequeuesystemEntity> othersinq = new ArrayList<>();
 
-                    QueueSystemDAO qu = new QueueSystemDAO();
-                    othersinq = qu.getAllQueueData();
+                        QueueSystemDAO qu = new QueueSystemDAO();
+                        othersinq = qu.getAllQueueData();
 
 
-                    QueueSystemDAO qs = new QueueSystemDAO();
-                    List<OnlinequeuesystemEntity> time = new ArrayList<OnlinequeuesystemEntity>();
+                        QueueSystemDAO qs = new QueueSystemDAO();
+                        List<OnlinequeuesystemEntity> time = new ArrayList<OnlinequeuesystemEntity>();
 
-                    time = qs.getAllQueueData();
+                        time = qs.getAllQueueData();
 
-                    Integer inttt = (Integer) session.getAttribute("newQueueNo");
+                        Integer inttt = (Integer) session.getAttribute("newQueueNo");
 
-                    System.out.println(inttt);
+                        System.out.println(inttt);
 
-                    int lessNo = 0;
+                        int lessNo = 0;
 
-                    for (int i = 0; i < time.size(); i++) {
+                        for (int i = 0; i < time.size(); i++) {
 
-                        int temp = time.get(i).getQueueNumber();
+                            int temp = time.get(i).getQueueNumber();
 
-                        if (temp < inttt) {
-                            lessNo = lessNo + 1;
+                            if (temp < inttt) {
+                                lessNo = lessNo + 1;
+                            }
+
+
                         }
 
 
-                    }
+                    %>
+                    <%=othersinq.size()%>
 
 
-                %>
-                <%=othersinq.size()%>
-            </h2></center>
-            <center><h2><i style="font-size:30px"
-                           class="material-icons">alarm</i> Your Estimated Waiting Time is: <%=lessNo * 10%> Minutes
-            </h2>
+                    <%
+                        double ttime = (0.001 / 85) * (lessNo * 1 * 60);
+                    %>
+                    <script>var timer;
+
+                    var compareDate = new Date();
+                    compareDate.setDate(compareDate.getDate() + <%=ttime%>); //just for this demo today + 7 days
+
+                    timer = setInterval(function () {
+                        timeBetweenDates(compareDate);
+                    }, 1000);
+
+                    function timeBetweenDates(toDate) {
+                        var dateEntered = toDate;
+                        var now = new Date();
+                        var difference = dateEntered.getTime() - now.getTime();
+
+
+                        if (difference <= 0) {
+                            alert("Your turn is Here");
+                            // Timer done
+                            clearInterval(timer);
+
+                        } else {
+
+
+                            var seconds = Math.floor(difference / 1000);
+                            var minutes = Math.floor(seconds / 60);
+                            var hours = Math.floor(minutes / 60);
+                            var days = Math.floor(hours / 24);
+
+                            hours %= 24;
+                            minutes %= 60;
+                            seconds %= 60;
+
+                            $("#days").text(days);
+                            $("#hours").text(hours);
+                            $("#minutes").text(minutes);
+                            $("#seconds").text(seconds);
+                        }
+                    }</script>
+                </h2>
+            </center>
+            <center>
+                <h2><i style="font-size:30px"
+                       class="material-icons">alarm</i> Your Estimated Waiting Time is:
+                </h2>
+                <br>
+                <div id="timer"><i style="font-size:40px" class="material-icons">hourglass_empty</i>
+                    <span id="days"></span>days
+                    <span id="hours"></span>hours
+                    <span id="minutes"></span>minutes
+                    <span id="seconds"></span>seconds
+                </div>
+
             </center>
 
 
@@ -486,101 +561,101 @@
         <%--</footer>--%>
     </div>
 </div>
-<div class="fixed-plugin">
-    <div class="dropdown show-dropdown">
-        <a href="#" data-toggle="dropdown">
-            <i class="fa fa-cog fa-2x"> </i>
-        </a>
-        <ul class="dropdown-menu">
-            <li class="header-title"> Sidebar Filters</li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger active-color">
-                    <div class="badge-colors text-center">
-                        <span class="badge filter badge-purple" data-color="purple"></span>
-                        <span class="badge filter badge-blue" data-color="blue"></span>
-                        <span class="badge filter badge-green" data-color="green"></span>
-                        <span class="badge filter badge-orange" data-color="orange"></span>
-                        <span class="badge filter badge-red" data-color="red"></span>
-                        <span class="badge filter badge-rose active" data-color="rose"></span>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="header-title">Sidebar Background</li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger background-color">
-                    <div class="text-center">
-                        <span class="badge filter badge-white" data-color="white"></span>
-                        <span class="badge filter badge-black active" data-color="black"></span>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger">
-                    <p>Sidebar Mini</p>
-                    <div class="togglebutton switch-sidebar-mini">
-                        <label>
-                            <input type="checkbox" unchecked="">
-                        </label>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger">
-                    <p>Sidebar Image</p>
-                    <div class="togglebutton switch-sidebar-image">
-                        <label>
-                            <input type="checkbox" checked="">
-                        </label>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="header-title">Images</li>
-            <li class="active">
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-1.jpg" alt=""/>
-                </a>
-            </li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-2.jpg" alt=""/>
-                </a>
-            </li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-3.jpg" alt=""/>
-                </a>
-            </li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-4.jpg" alt=""/>
-                </a>
-            </li>
-            <li class="button-container">
-                <div class="">
-                    <a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank"
-                       class="btn btn-rose btn-block">Buy Now</a>
-                </div>
-                <div class="">
-                    <a href="http://www.creative-tim.com/product/material-dashboard" target="_blank"
-                       class="btn btn-info btn-block">Get Free Demo</a>
-                </div>
-            </li>
-            <li class="header-title">Thank you for 95 shares!</li>
-            <li class="button-container">
-                <button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i> &middot;
-                    45
-                </button>
-                <button id="facebook" class="btn btn-social btn-facebook btn-round"><i
-                        class="fa fa-facebook-square"> &middot;</i>50
-                </button>
-            </li>
-        </ul>
-    </div>
-</div>
+<%--<div class="fixed-plugin">--%>
+<%--<div class="dropdown show-dropdown">--%>
+<%--<a href="#" data-toggle="dropdown">--%>
+<%--<i class="fa fa-cog fa-2x"> </i>--%>
+<%--</a>--%>
+<%--<ul class="dropdown-menu">--%>
+<%--<li class="header-title"> Sidebar Filters</li>--%>
+<%--<li class="adjustments-line">--%>
+<%--<a href="javascript:void(0)" class="switch-trigger active-color">--%>
+<%--<div class="badge-colors text-center">--%>
+<%--<span class="badge filter badge-purple" data-color="purple"></span>--%>
+<%--<span class="badge filter badge-blue" data-color="blue"></span>--%>
+<%--<span class="badge filter badge-green" data-color="green"></span>--%>
+<%--<span class="badge filter badge-orange" data-color="orange"></span>--%>
+<%--<span class="badge filter badge-red" data-color="red"></span>--%>
+<%--<span class="badge filter badge-rose active" data-color="rose"></span>--%>
+<%--</div>--%>
+<%--<div class="clearfix"></div>--%>
+<%--</a>--%>
+<%--</li>--%>
+<%--<li class="header-title">Sidebar Background</li>--%>
+<%--<li class="adjustments-line">--%>
+<%--<a href="javascript:void(0)" class="switch-trigger background-color">--%>
+<%--<div class="text-center">--%>
+<%--<span class="badge filter badge-white" data-color="white"></span>--%>
+<%--<span class="badge filter badge-black active" data-color="black"></span>--%>
+<%--</div>--%>
+<%--<div class="clearfix"></div>--%>
+<%--</a>--%>
+<%--</li>--%>
+<%--<li class="adjustments-line">--%>
+<%--<a href="javascript:void(0)" class="switch-trigger">--%>
+<%--<p>Sidebar Mini</p>--%>
+<%--<div class="togglebutton switch-sidebar-mini">--%>
+<%--<label>--%>
+<%--<input type="checkbox" unchecked="">--%>
+<%--</label>--%>
+<%--</div>--%>
+<%--<div class="clearfix"></div>--%>
+<%--</a>--%>
+<%--</li>--%>
+<%--<li class="adjustments-line">--%>
+<%--<a href="javascript:void(0)" class="switch-trigger">--%>
+<%--<p>Sidebar Image</p>--%>
+<%--<div class="togglebutton switch-sidebar-image">--%>
+<%--<label>--%>
+<%--<input type="checkbox" checked="">--%>
+<%--</label>--%>
+<%--</div>--%>
+<%--<div class="clearfix"></div>--%>
+<%--</a>--%>
+<%--</li>--%>
+<%--<li class="header-title">Images</li>--%>
+<%--<li class="active">--%>
+<%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
+<%--<img src="../../assets/img/sidebar-1.jpg" alt=""/>--%>
+<%--</a>--%>
+<%--</li>--%>
+<%--<li>--%>
+<%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
+<%--<img src="../../assets/img/sidebar-2.jpg" alt=""/>--%>
+<%--</a>--%>
+<%--</li>--%>
+<%--<li>--%>
+<%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
+<%--<img src="../../assets/img/sidebar-3.jpg" alt=""/>--%>
+<%--</a>--%>
+<%--</li>--%>
+<%--<li>--%>
+<%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
+<%--<img src="../../assets/img/sidebar-4.jpg" alt=""/>--%>
+<%--</a>--%>
+<%--</li>--%>
+<%--<li class="button-container">--%>
+<%--<div class="">--%>
+<%--<a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank"--%>
+<%--class="btn btn-rose btn-block">Buy Now</a>--%>
+<%--</div>--%>
+<%--<div class="">--%>
+<%--<a href="http://www.creative-tim.com/product/material-dashboard" target="_blank"--%>
+<%--class="btn btn-info btn-block">Get Free Demo</a>--%>
+<%--</div>--%>
+<%--</li>--%>
+<%--<li class="header-title">Thank you for 95 shares!</li>--%>
+<%--<li class="button-container">--%>
+<%--<button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i> &middot;--%>
+<%--45--%>
+<%--</button>--%>
+<%--<button id="facebook" class="btn btn-social btn-facebook btn-round"><i--%>
+<%--class="fa fa-facebook-square"> &middot;</i>50--%>
+<%--</button>--%>
+<%--</li>--%>
+<%--</ul>--%>
+<%--</div>--%>
+<%--</div>--%>
 </body>
 <!--   Core JS Files   -->
 <script src="../../assets/js/jquery-3.1.1.min.js" type="text/javascript"></script>
