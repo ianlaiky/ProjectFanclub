@@ -295,17 +295,17 @@
 
 <body>
 
-<%--<%--%>
-<%--if(session.getAttribute("signInPatient")==null){--%>
-<%--response.sendRedirect("../errorPage.jsp");--%>
-<%--}else{--%>
-<%--if(session.getAttribute("signInPatient").equals("false")){--%>
-<%--response.sendRedirect("../errorPage.jsp");--%>
-<%--}--%>
+<%
+if(session.getAttribute("signInPatient")==null){
+response.sendRedirect("../errorPage.jsp");
+}else{
+if(session.getAttribute("signInPatient").equals("false")){
+response.sendRedirect("../errorPage.jsp");
+}
 
-<%--}--%>
+}
 
-<%--%>--%>
+%>
 
 <div class="wrapper">
     <div class="sidebar" data-active-color="green" data-background-color="white"
