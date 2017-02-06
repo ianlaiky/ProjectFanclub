@@ -154,7 +154,7 @@ public class UserDAO {
         // step 2 - declare the SQL statement
         dbQuery = "SELECT * FROM user ";
 
-        // step 3 - using DBControlle readRequest method
+        // step 3 - using DBController readRequest method
         rs = db.readRequest(dbQuery);
         try {
             while (rs.next()) {
