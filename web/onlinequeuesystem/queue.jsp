@@ -403,7 +403,7 @@
                                                 <i class="material-icons">contact_phone</i>
                                             </span>
                                         <div class="form-group label-floating">
-                                            <label class="control-label" style="font-weight: bold">PhoneNumber</label>
+                                            <label class="control-label" style="font-weight: bold">Phone Number</label>
 
 
                                             <input value="<%=phoneNow%>" disabled class="form-control"
@@ -420,7 +420,9 @@
                                 </div>
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-rose btn-fill btn-wd"><i style="font-size:30px"
-                                                                                                  class="material-icons">queue</i>
+                                                                                                  class="material-icons">queue</i><i
+                                            style="font-weight: bold">
+                                    </i>
                                         Get Queue
                                         Number <i style="font-size:30px" class="material-icons">queue</i>
                                     </button>
