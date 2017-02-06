@@ -85,6 +85,10 @@ public class PatientDAO {
 
         checkList=getAllPatientUserAndPass();
 
+        if(checkList==null){
+        PatientrecordEntity x = new PatientrecordEntity("p0","123","du","98745632");
+        checkList.add(x);}
+
         for(int i=0;i<checkList.size();i++){
 
 

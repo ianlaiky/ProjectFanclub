@@ -84,12 +84,15 @@
             margin: 5px;
             border: 1px solid #ccc;
         }
+
         .connection div {
             margin: 5px 0;
         }
+
         .connection.active {
             border-color: #FF7500;
         }
+
         h1 {
             font-size: 15px;
             padding: 5px 10px;
@@ -97,30 +100,37 @@
             border-bottom: 1px solid #ccc;
             font-weight: 300;
         }
+
         .active h1 strong {
             color: #FF7500;
         }
+
         .file, em {
             color: #999;
             font-style: italic;
         }
+
         #wrap {
             background-color: #ddd;
             border-width: 1px 0;
             border-color: #ccc;
             border-style: solid;
         }
+
         .clear {
             clear: both;
         }
+
         .peer {
             color: #FF7500;
             font-weight: 600;
         }
+
         .you {
             color: #0C6BA1;
             font-weight: 600;
         }
+
         #pid {
             display: inline-block;
             padding: 5px;
@@ -130,25 +140,29 @@
             color: #0C6BA1;
             font-weight: 600;
         }
+
         .warning {
             font-size: 12px;
             line-height: 20px;
             padding: 10px;
             background-color: #333;
             color: #fff;
-            text-shadow: 0 1px 0 rgba(0,0,0,0.4);
+            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
             font-weight: 300;
             border-width: 1px 0;
             border-color: #000;
             border-style: solid;
         }
+
         a {
             color: #F2C777;
         }
+
         .filler {
             display: block;
             padding: 10px;
         }
+
         #actions {
             padding: 10px;
         }
@@ -162,21 +176,24 @@
             background: #fff;
             margin: 0;
             color: #444;
-            text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
         }
+
         input:focus {
             outline: none;
         }
+
         .button, button {
             cursor: pointer;
             background-color: #ddd;
             border: 1px solid #ccc;
 
-
         }
+
         form {
             display: inline-block;
         }
+
         #close {
             background-color: #FF7500;
             border-color: #c15c06;
@@ -201,7 +218,7 @@
     Tip 3: you can change the color of the sidebar with data-background-color="white | black"
 -->
         <div class="logo">
-            <a class="simple-text">
+            <a href="../docFrontPage.jsp" class="simple-text">
                 Video Chat
             </a>
         </div>
@@ -240,7 +257,7 @@
             </div>
             <ul class="nav">
                 <li class="active">
-                    <a href="../index.jsp">
+                    <a href="#">
                         <i class="material-icons">dashboard</i>
                         <p>Live Web Calling</p>
                     </a>
@@ -249,6 +266,12 @@
                     <a href="callHistory.jsp">
                         <i class="material-icons">image</i>
                         <p>Call History</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/logout">
+                        <i class="material-icons">exit_to_app</i>
+                        <p>Logout</p>
                     </a>
                 </li>
             </ul>
@@ -270,62 +293,62 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"> Wizard </a>
+                    <%--<a class="navbar-brand" href="#"> Wizard </a>--%>
                 </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="material-icons">dashboard</i>
-                                <p class="hidden-lg hidden-md">Dashboard</p>
-                            </a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="material-icons">notifications</i>
-                                <span class="notification">5</span>
-                                <p class="hidden-lg hidden-md">
-                                    Notifications
-                                    <b class="caret"></b>
-                                </p>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#">Mike John responded to your email</a>
-                                </li>
-                                <li>
-                                    <a href="#">You have 5 new tasks</a>
-                                </li>
-                                <li>
-                                    <a href="#">You're now friend with Andrew</a>
-                                </li>
-                                <li>
-                                    <a href="#">Another Notification</a>
-                                </li>
-                                <li>
-                                    <a href="#">Another One</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="material-icons">person</i>
-                                <p class="hidden-lg hidden-md">Profile</p>
-                            </a>
-                        </li>
-                        <li class="separator hidden-lg hidden-md"></li>
-                    </ul>
-                    <form class="navbar-form navbar-right" role="search">
-                        <div class="form-group form-search is-empty">
-                            <input type="text" class="form-control" placeholder="Search">
-                            <span class="material-input"></span>
-                        </div>
-                        <button type="submit" class="btn btn-white btn-round btn-just-icon">
-                            <i class="material-icons">search</i>
-                            <div class="ripple-container"></div>
-                        </button>
-                    </form>
-                </div>
+                <%--<div class="collapse navbar-collapse">--%>
+                    <%--<ul class="nav navbar-nav navbar-right">--%>
+                        <%--<li>--%>
+                            <%--<a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">--%>
+                                <%--<i class="material-icons">dashboard</i>--%>
+                                <%--<p class="hidden-lg hidden-md">Dashboard</p>--%>
+                            <%--</a>--%>
+                        <%--</li>--%>
+                        <%--<li class="dropdown">--%>
+                            <%--<a href="#" class="dropdown-toggle" data-toggle="dropdown">--%>
+                                <%--<i class="material-icons">notifications</i>--%>
+                                <%--<span class="notification">5</span>--%>
+                                <%--<p class="hidden-lg hidden-md">--%>
+                                    <%--Notifications--%>
+                                    <%--<b class="caret"></b>--%>
+                                <%--</p>--%>
+                            <%--</a>--%>
+                            <%--<ul class="dropdown-menu">--%>
+                                <%--<li>--%>
+                                    <%--<a href="#">Mike John responded to your email</a>--%>
+                                <%--</li>--%>
+                                <%--<li>--%>
+                                    <%--<a href="#">You have 5 new tasks</a>--%>
+                                <%--</li>--%>
+                                <%--<li>--%>
+                                    <%--<a href="#">You're now friend with Andrew</a>--%>
+                                <%--</li>--%>
+                                <%--<li>--%>
+                                    <%--<a href="#">Another Notification</a>--%>
+                                <%--</li>--%>
+                                <%--<li>--%>
+                                    <%--<a href="#">Another One</a>--%>
+                                <%--</li>--%>
+                            <%--</ul>--%>
+                        <%--</li>--%>
+                        <%--<li>--%>
+                            <%--<a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">--%>
+                                <%--<i class="material-icons">person</i>--%>
+                                <%--<p class="hidden-lg hidden-md">Profile</p>--%>
+                            <%--</a>--%>
+                        <%--</li>--%>
+                        <%--<li class="separator hidden-lg hidden-md"></li>--%>
+                    <%--</ul>--%>
+                    <%--&lt;%&ndash;<form class="navbar-form navbar-right" role="search">&ndash;%&gt;--%>
+                        <%--&lt;%&ndash;<div class="form-group form-search is-empty">&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<input type="text" class="form-control" placeholder="Search">&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<span class="material-input"></span>&ndash;%&gt;--%>
+                        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+                        <%--&lt;%&ndash;<button type="submit" class="btn btn-white btn-round btn-just-icon">&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<i class="material-icons">search</i>&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<div class="ripple-container"></div>&ndash;%&gt;--%>
+                        <%--&lt;%&ndash;</button>&ndash;%&gt;--%>
+                    <%--&lt;%&ndash;</form>&ndash;%&gt;--%>
+                <%--</div>--%>
             </div>
         </nav>
         <div class="content">
@@ -345,24 +368,24 @@
                                 // Compatibility shim
                                 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
                                 // PeerJS object
-                                var peer = new Peer({key: 'ezdeolfd1x7p66r', debug: 3,  logFunction: function() {
-                                    var copy = Array.prototype.slice.call(arguments).join(' ');
-                                    $('.log').append(copy + '<br>');
-                                }});
+                                var peer = new Peer({
+                                    key: 'ezdeolfd1x7p66r', debug: 3, logFunction: function () {
+                                        var copy = Array.prototype.slice.call(arguments).join(' ');
+                                        $('.log').append(copy + '<br>');
+                                    }
+                                });
                                 peer.on('open', function () {
                                     $('#my-id').text(peer.id);
-
 
 
                                 });
 
                                 var connectedPeers = {};
                                 // Show this peer's ID.
-                                peer.on('open', function(id){
+                                peer.on('open', function (id) {
                                     $('#pid').text(id);
                                 });
                                 peer.on('connection', connect);
-
 
 
                                 function connect(c) {
@@ -375,7 +398,7 @@
                                         chatbox.append(messages);
 
                                         // Select connection handler.
-                                        chatbox.on('click', function() {
+                                        chatbox.on('click', function () {
                                             if ($(this).attr('class').indexOf('activee') === -1) {
                                                 $(this).addClass('activee');
                                             } else {
@@ -384,11 +407,11 @@
                                         });
                                         $('.filler').hide();
                                         $('#connections').append(chatbox);
-                                        c.on('data', function(data) {
+                                        c.on('data', function (data) {
                                             messages.append('<div><span class="peer">' + c.peer + '</span>: ' + data +
                                                 '</div>');
                                         });
-                                        c.on('close', function() {
+                                        c.on('close', function () {
                                             alert(c.peer + ' has left the chat.');
                                             chatbox.remove();
                                             if ($('.connection').length === 0) {
@@ -397,7 +420,7 @@
                                             delete connectedPeers[c.peer];
                                         });
                                     } else if (c.label === 'file') {
-                                        c.on('data', function(data) {
+                                        c.on('data', function (data) {
                                             // If we're getting a file, create a URL for it.
                                             if (data.constructor === ArrayBuffer) {
                                                 var dataView = new Uint8Array(data);
@@ -439,22 +462,23 @@
                                     var box = $('#box');
                                     box.on('dragenter', doNothing);
                                     box.on('dragover', doNothing);
-                                    box.on('drop', function(e){
+                                    box.on('drop', function (e) {
                                         e.originalEvent.preventDefault();
                                         var file = e.originalEvent.dataTransfer.files[0];
-                                        eachActiveConnection(function(c, $c) {
+                                        eachActiveConnection(function (c, $c) {
                                             if (c.label === 'file') {
                                                 c.send(file);
                                                 $c.find('.messages').append('<div><span class="file">You sent a file.</span></div>');
                                             }
                                         });
                                     });
-                                    function doNothing(e){
+                                    function doNothing(e) {
                                         e.preventDefault();
                                         e.stopPropagation();
                                     }
+
                                     // Connect to a peer
-                                    $('#connect').click(function() {
+                                    $('#connect').click(function () {
                                         var requestedPeer = $('#rid').val();
                                         if (!connectedPeers[requestedPeer]) {
                                             // Create 2 connections, one labelled chat and another labelled file.
@@ -463,30 +487,34 @@
                                                 serialization: 'none',
                                                 metadata: {message: 'hi i want to chat with you!'}
                                             });
-                                            c.on('open', function() {
+                                            c.on('open', function () {
                                                 connect(c);
                                             });
-                                            c.on('error', function(err) { alert(err); });
-                                            var f = peer.connect(requestedPeer, { label: 'file', reliable: true });
-                                            f.on('open', function() {
+                                            c.on('error', function (err) {
+                                                alert(err);
+                                            });
+                                            var f = peer.connect(requestedPeer, {label: 'file', reliable: true});
+                                            f.on('open', function () {
                                                 connect(f);
                                             });
-                                            f.on('error', function(err) { alert(err); });
+                                            f.on('error', function (err) {
+                                                alert(err);
+                                            });
                                         }
                                         connectedPeers[requestedPeer] = 1;
                                     });
                                     // Close a connection.
-                                    $('#close').click(function() {
-                                        eachActiveConnection(function(c) {
+                                    $('#close').click(function () {
+                                        eachActiveConnection(function (c) {
                                             c.close();
                                         });
                                     });
                                     // Send a chat message to all active connections.
-                                    $('#send').submit(function(e) {
+                                    $('#send').submit(function (e) {
                                         e.preventDefault();
                                         // For each active connection, send the message.
                                         var msg = $('#text').val();
-                                        eachActiveConnection(function(c, $c) {
+                                        eachActiveConnection(function (c, $c) {
                                             if (c.label === 'chat') {
                                                 c.send(msg);
                                                 $c.find('.messages').append('<div><span class="you">You: </span>' + msg
@@ -500,11 +528,11 @@
                                     function eachActiveConnection(fn) {
                                         var actives = $('.activee');
                                         var checkedIds = {};
-                                        actives.each(function() {
+                                        actives.each(function () {
                                             var peerId = $(this).attr('id');
                                             if (!checkedIds[peerId]) {
                                                 var conns = peer.connections[peerId];
-                                                console.log("wtf is con??"+conns);
+                                                console.log("wt is con??" + conns);
                                                 for (var i = 0, ii = conns.length; i < ii; i += 1) {
                                                     var conn = conns[i];
                                                     fn(conn, $(this));
@@ -513,13 +541,10 @@
                                             checkedIds[peerId] = 1;
                                         });
                                     }
+
                                     // Show browser version
                                     $('#browsers').text(navigator.userAgent);
                                     //end
-
-
-
-
 
 
                                     console.log("reereqweeewer");
@@ -530,8 +555,7 @@
                                         // Initiate a call!
 
 
-$('#connect').click();
-
+                                        $('#connect').click();
 
 
                                         console.log("clickec")
@@ -614,7 +638,7 @@ $('#connect').click();
                                     $('#step1, #step2').hide();
                                     $('#step3').show();
                                 }
-                                window.onunload = window.onbeforeunload = function(e) {
+                                window.onunload = window.onbeforeunload = function (e) {
                                     if (!!peer && !peer.destroyed) {
                                         peer.destroy();
                                     }
@@ -664,22 +688,11 @@ $('#connect').click();
                                     <!-- Call in progress -->
                                     <div id="step3">
                                         <p>Currently in call with <span id="their-id">...</span></p>
-                                        <p><a href="/vidconRecordSave" class="pure-button pure-button-error" id="end-call">End call</a>
+                                        <p><a href="/vidconRecordSave" class="pure-button pure-button-error"
+                                              id="end-call">End call</a>
                                         </p>
                                     </div>
                                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
                             </div>
@@ -701,32 +714,39 @@ $('#connect').click();
 
                             <div id="actions">
                                 Your PeerJS ID is <span id="pid"></span><br>
-                                Connect to a peer: <input type="text" id="rid" placeholder="Someone else's id"><button class="button" type="button" value="Connect" id="connect"></button><br><br>
+                                Connect to a peer: <input type="text" id="rid" placeholder="Someone else's id">
+                                <button class="button" type="button" value="Connect" id="connect"></button>
+                                <br><br>
 
                                 <form id="send">
-                                    <input type="text" id="text" placeholder="Enter message"><input class="button" type="submit" value="Send to selected peers">
+                                    <input type="text" id="text" placeholder="Enter message"><input class="button"
+                                                                                                    type="submit"
+                                                                                                    value="Send to selected peers">
                                 </form>
                                 <button id="close">Close selected connections</button>
                             </div>
 
-                            <div id="wrap"><div id="connections"><span class="filler">You have not yet
+                            <div id="wrap">
+                                <div id="connections"><span class="filler">You have not yet
         made any connections.</span></div>
-                                <div class="clear"></div></div>
+                                <div class="clear"></div>
+                            </div>
 
-                            <div id="box" style="background: #fff; font-size: 18px;padding:40px 30px; text-align: center;">
+                            <div id="box"
+                                 style="background: #fff; font-size: 18px;padding:40px 30px; text-align: center;">
                                 Drag file here
                             </div>
 
 
                             <%--<div class="warning browser">--%>
-                                <%--<div class="important">Your browser version: <span id="browsers"></span><br>--%>
-                                    <%--Currently <strong>Firefox 22+ and Google Chrome 26.0.1403.0 or above</strong> is required.</div>For more up to date compatibility--%>
-                                <%--information see <a href="http://peerjs.com/status">PeerJS WebRTC--%>
-                                <%--Status</a><br>Note that this demo may also fail if you are behind--%>
-                                <%--stringent firewalls or both you and the remote peer and behind symmetric--%>
-                                <%--NATs.--%>
+                            <%--<div class="important">Your browser version: <span id="browsers"></span><br>--%>
+                            <%--Currently <strong>Firefox 22+ and Google Chrome 26.0.1403.0 or above</strong> is required.</div>For more up to date compatibility--%>
+                            <%--information see <a href="http://peerjs.com/status">PeerJS WebRTC--%>
+                            <%--Status</a><br>Note that this demo may also fail if you are behind--%>
+                            <%--stringent firewalls or both you and the remote peer and behind symmetric--%>
+                            <%--NATs.--%>
 
-                                <%--<div class="log" style="color:#FF7500;text-shadow:none;padding:15px;background:#eee"><strong>Connection status</strong>:<br></div>--%>
+                            <%--<div class="log" style="color:#FF7500;text-shadow:none;padding:15px;background:#eee"><strong>Connection status</strong>:<br></div>--%>
                             <%--</div>--%>
 
                             <br>
@@ -754,8 +774,6 @@ $('#connect').click();
 
 
                         </div>
-
-
 
 
                     </div>

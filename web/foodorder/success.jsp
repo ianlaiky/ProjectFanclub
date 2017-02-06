@@ -1,8 +1,7 @@
-<%@ page import="java.util.ArrayList" %>
 <%@ page import="foodOrder.foodOrderDAO" %>
-<%@ page import="java.util.List" %>
 <%@ page import="foodOrder.FoodorderEntity" %>
-<%@ page import="java.util.Collections" %><%--
+<%@ page import="static org.eclipse.persistence.config.ResultType.Map" %>
+<%@ page import="java.util.*" %><%--
   Created by IntelliJ IDEA.
   User: astaroh
   Date: 12/15/2016
@@ -13,9 +12,20 @@
 <html>
 <head>
     <title>Order List</title>
+    <%--<%! public static void printMap(Map<String, Integer> map) {--%>
+
+        <%--for (Map.Entry<String, Integer> entry : map.entrySet()) {--%>
+
+
+            <%--System.out.println("Food : " + entry.getKey() + " Quantity : "--%>
+                    <%--+ entry.getValue());--%>
+        <%--}--%>
+    <%--}--%>
+    <%--%>--%>
     <%
 //    ArrayList<String> orderList = new ArrayList<String>();
 //    orderList = (ArrayList<String>)session.getAttribute("orderList");
+
 
         foodOrderDAO fod = new foodOrderDAO();
         List<FoodorderEntity> fodList;
@@ -29,17 +39,43 @@
             foodNamesArr.add(fodList.get(i).getFoodName());
         }
         Collections.sort(foodNamesArr);
+
+//        Set<String> uniqueSet = new HashSet<String>(foodNamesArr);
+//        for (String temp : uniqueSet) {
+//            System.out.println(temp + ": " + Collections.frequency(foodNamesArr, temp));
+//        }
+        Map<String, Integer> map = new HashMap<String, Integer>();
+        for (String temp : foodNamesArr) {
+            Integer count = map.get(temp);
+            map.put(temp, (count == null) ? 1 : count + 1);
+        }
+        System.out.println("\nSorted Map");
+        Map<String, Integer> treeMap = new TreeMap<String, Integer>(map);
+
     %>
 </head>
 <body>
 
 <h3><b>Food Order List</b></h3>
-<%
-    for(int i = 0 ; i<foodNamesArr.size();i++){
-%>
-<%=foodNamesArr.get(i)
-%>
+<%--<%--%>
+    <%--for(int i = 0 ; i<foodNamesArr.size();i++){--%>
+<%--%>--%>
+<%--<%=foodNamesArr.get(i)--%>
+<%--%>--%>
+<%--<br>--%>
+<%--<% } %>--%>
+
+<% for (Map.Entry<String, Integer> entry : map.entrySet()) { %>
+
+<%="Food : "+ entry.getKey() +" "+ " " +" Quantity : "
+        + entry.getValue() %>
+
 <br>
 <% } %>
+
+
+
+
+
 </body>
 </html>

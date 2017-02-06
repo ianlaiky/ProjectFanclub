@@ -46,7 +46,7 @@ public class PatientPIDDelServlet extends HttpServlet {
 
         System.out.println("delete end");
 
-        response.sendRedirect("videoconference/pidNewFrontPatient.jsp");
+        response.sendRedirect("videoconference/callHistoryForPat.jsp");
 
         return;
     }

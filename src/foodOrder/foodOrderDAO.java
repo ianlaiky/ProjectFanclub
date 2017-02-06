@@ -44,5 +44,18 @@ public class foodOrderDAO {
 
 
     }
+    public List<FoodorderEntity> getMergedFoodOrder(){
+        List<FoodorderEntity> list = null;
+        try {
+
+            Query query = em.createQuery("select b.foodName , COUNT(b) FROM FoodorderEntity b GROUP BY b.foodName HAVING COUNT(b) > 1");
+
+            list = query.getResultList();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return list;
+
+    }
 
 }

@@ -23,7 +23,6 @@ function uploadFiles (event) {
     var reader = new FileReader();
     reader.onloadend = processFile;
     reader.readAsDataURL(file);
-    alert("check");
 }
 
 /**
@@ -123,8 +122,31 @@ $.post({
 
                 $.each(data.labelAnnotations, function (key, data) {
                     console.log('index', data)
-                    if(data.score < 0.953 && data.score >= 0.8){
+                   // if(data.score >= 0.7 && new String(data.description).valueOf() != new String('\"food\"').valueOf()){
+
+                    /*
+                    Function: Filtering off unnecessary labels
+                     */
+                    if(data.score >= 0.7 && JSON.stringify(data.description) !== '\"food\"' && JSON.stringify(data.description) !== '\"dish\"'
+                    && JSON.stringify(data.description) !== '\"dessert\"' && JSON.stringify(data.description) !== '\"plant\"'
+                        && JSON.stringify(data.description) !== '\"produce\"'  && JSON.stringify(data.description) !== '\"cuisine\"'
+                        && JSON.stringify(data.description) !== '\"fruit\"' && JSON.stringify(data.description) !== '\"berry\"'
+                        && JSON.stringify(data.description) !== '\"baked goods\"'  && JSON.stringify(data.description) !== '\"fast food\"'
+                        && JSON.stringify(data.description) !== '\"meal\"'  && JSON.stringify(data.description) !== '\"slider\"'
+                        && JSON.stringify(data.description) !== '\"asian food\"'  && JSON.stringify(data.description) !== '\"side dish\"'){
+                        console.log(JSON.stringify(data.description) !== '\"food\"');
+                        console.log(JSON.stringify(data.description) !== '\"dish\"');
                         console.log('index', data)
+
+
+                         /*   return item.description == "food", item.description == "\'dish\'", item.description == "dessert"
+                                ,item.description == "plant", item.description == "produce", item.description == "fruit"
+                                ,item.description == "berry", item.description == "baked goods",item.description == "fast food",
+                            item.description == "meal". item.description == "slider",  item.description == "cuisine",
+                            item.description == "'asian food'", item.description == "side dish"; */
+
+
+
                         text = '<b>Is this </b> ' + JSON.stringify(data.description) + '? <br/>';
                         text += '<b>Confidence level for this prediction: </b>' + JSON.stringify(data.score) + '<br/>';
                      return false;
@@ -212,6 +234,17 @@ function displayJSON2 (data) {
     evt.results = contents;
     document.dispatchEvent(evt);
 }
+
+/*Array.prototype.removeIf = function(callback) {
+    var i = this.length;
+    while (i--) {
+        if (callback(this[i], i)) {
+            this.splice(i, 1);
+        }
+    }
+}; */
+
+
 
     function readURL(input){
         if(input.files && input.files[0]){

@@ -1,10 +1,16 @@
+<%@ page import="videoconference.VideoConferenceDAO" %>
+<%@ page import="java.util.List" %>
+<%@ page import="videoconference.VideoconferenceEntity" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="patientRecord.PatientDAO" %>
+<%@ page import="patientRecord.PatientrecordEntity" %>
+<%@ page import="vidcontiming.VideoConTimingDAO" %>
+<%@ page import="vidcontiming.VidcomtimingEntity" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
 
 <head>
-
-
     <meta charset="utf-8"/>
     <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png"/>
     <link rel="icon" type="image/png" href="../../assets/img/favicon.png"/>
@@ -42,35 +48,20 @@
           content="Material Dashboard PRO is a Premium Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design."/>
     <meta property="og:site_name" content="Creative Tim"/>
     <!-- Bootstrap core CSS     -->
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet"/>
     <!--  Material Dashboard CSS    -->
-    <link href="../assets/css/material-dashboard2.css" rel="stylesheet"/>
+    <link href="../../assets/css/material-dashboard2.css" rel="stylesheet"/>
     <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="../assets/css/demo2.css" rel="stylesheet"/>
+    <link href="../../assets/css/demo2.css" rel="stylesheet"/>
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
 
+
     <style>
 
 
-        .card {
-            display: inline-block;
-            position: relative;
-            width: 130%;
-            left: -150px;
-            margin: 25px 0;
-            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
-            border-radius: 6px;
-            color: rgba(0, 0, 0, 0.87);
-            background: #fff;
-        }
-
-        .wizard-card {
-            min-height: 410px;
-            box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-        }
     </style>
 </head>
 
@@ -101,7 +92,7 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        <%= session.getAttribute("firstName")%>
+                        <%=session.getAttribute("firstName")%>
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
@@ -120,25 +111,27 @@
                 </div>
             </div>
             <ul class="nav">
-                <li class="active">
-                    <a href="#">
+                <li>
+                    <a href="pidNewFrontPatient.jsp">
                         <i class="material-icons">dashboard</i>
                         <p>Live Web Calling</p>
                     </a>
                 </li>
+
+
                 <li>
-                    <a href="callHistoryForPat.jsp">
+                    <a href="#">
                         <i class="material-icons">image</i>
                         <p>Call History</p>
                     </a>
                 </li>
-
                 <li>
                     <a href="/logout">
                         <i class="material-icons">exit_to_app</i>
                         <p>Logout</p>
                     </a>
                 </li>
+
             </ul>
         </div>
     </div>
@@ -158,10 +151,10 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <%--<a class="navbar-brand" href="#"></a>--%>
+                    <%--<a class="navbar-brand" href="#"> Wizard </a>--%>
                 </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
+                <%--<div class="collapse navbar-collapse">--%>
+                    <%--<ul class="nav navbar-nav navbar-right">--%>
                         <%--<li>--%>
                             <%--<a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">--%>
                                 <%--<i class="material-icons">dashboard</i>--%>
@@ -201,155 +194,127 @@
                                 <%--<p class="hidden-lg hidden-md">Profile</p>--%>
                             <%--</a>--%>
                         <%--</li>--%>
-                        <li class="separator hidden-lg hidden-md"></li>
-                    </ul>
-                    <%--<form class="navbar-form navbar-right" role="search">--%>
-                        <%--<div class="form-group form-search is-empty">--%>
-                            <%--<input type="text" class="form-control" placeholder="Search">--%>
-                            <%--<span class="material-input"></span>--%>
-                        <%--</div>--%>
-                        <%--<button type="submit" class="btn btn-white btn-round btn-just-icon">--%>
-                            <%--<i class="material-icons">search</i>--%>
-                            <%--<div class="ripple-container"></div>--%>
-                        <%--</button>--%>
-                    <%--</form>--%>
-                </div>
+                        <%--<li class="separator hidden-lg hidden-md"></li>--%>
+                    <%--</ul>--%>
+                    <%--&lt;%&ndash;<form class="navbar-form navbar-right" role="search">&ndash;%&gt;--%>
+                        <%--&lt;%&ndash;<div class="form-group form-search is-empty">&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<input type="text" class="form-control" placeholder="Search">&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<span class="material-input"></span>&ndash;%&gt;--%>
+                        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+                        <%--&lt;%&ndash;<button type="submit" class="btn btn-white btn-round btn-just-icon">&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<i class="material-icons">search</i>&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<div class="ripple-container"></div>&ndash;%&gt;--%>
+                        <%--&lt;%&ndash;</button>&ndash;%&gt;--%>
+                    <%--&lt;%&ndash;</form>&ndash;%&gt;--%>
+                <%--</div>--%>
             </div>
         </nav>
         <div class="content">
             <div class="container-fluid">
-                <div class="col-sm-8 col-sm-offset-2">
-                    <!--      Wizard container        -->
+
+                <!--      Wizard container        -->
 
 
-                    <div class="wizard-container">
-                        <div class="card wizard-card" data-color="green" id="wizardProfile">
-                            <link rel="stylesheet" href="style.css">
-                            <script src="http://cdn.peerjs.com/0.3/peer.min.js"></script>
-                            <script type="text/javascript"
-                                    src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-                            <script>
-                                navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
-                                // PeerJS object
-                                var peer = new Peer({key: 'ezdeolfd1x7p66r', debug: 3});
-                                peer.on('open', function () {
-                                    $('#my-id').text(peer.id);
+                <div class="row">
 
-                                    $('#hiddenFieldForPID').val(peer.id);
+                    <div class="col-md-12">
 
+                        <div class="card">
 
-                                    document.getElementById("btnenablemepls").disabled = false;
-                                    document.getElementById('btnenablemepls').textContent = "Start Call Now";
-                                });</script>
+                            <div class="card-header card-header-icon" data-background-color="rose">
+                                <i class="material-icons">assignment</i>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="card-title">Unpaid Sessions</h4>
 
-                            <%--pid js to jsp--%>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead class="text-primary">
 
-
-                            <%--<div class="pure-g">--%>
-
-                            <!-- Video area -->
-                            <%--<div class="pure-u-2-3" id="video-container">--%>
-
-                            <%--<video id="their-video" autoplay></video>--%>
-                            <%--<video id="my-video" muted="true" autoplay></video>--%>
-                            <%--</div>--%>
-
-                            <!-- Steps -->
-                            <%--<div class="pure-u-1-3">--%>
-                            <%--<h2>Web Calling</h2>--%>
-
-                            <!-- Get local audio/video stream -->
-                            <%--<div id="step1">--%>
-                            <%--<p>Please click `allow` on the top of the screen so we can access your webcam and microphone for calls.</p>--%>
-                            <%--<div id="step1-error">--%>
-                            <%--<p>Failed to access the webcam and microphone. Make sure to run this demo on an http server and click--%>
-                            <%--allow when asked for permission by the browser.</p>--%>
-                            <%--<a href="#" class="pure-button pure-button-error" id="step1-retry">Try again</a>--%>
-                            <%--</div>--%>
-                            <%--</div>--%>
-
-                            <!-- Make calls to others -->
-                            <%--<div id="step2">--%>
-
-                            <%--<form id="RegisterValidation" action="" method="">--%>
-                            <%--<div class="card-header card-header-icon" data-background-color="rose">--%>
-                            <%--<i class="material-icons">mail_outline</i>--%>
-                            <%--</div>--%>
-                            <%--<div class="card-content">--%>
-                            <%--<h4 class="card-title">Video Call</h4>--%>
-                            <%--<div class="form-group label-floating">--%>
-                            <%--<label class="control-label">--%>
-                            <%--Your ID:--%>
-                            <%--<small>*</small>--%>
-                            <%--</label>--%>
-                            <%--<input class="form-control" name="email" type="email" required="true" />--%>
-                            <%--</div>--%>
+                                        <th>Doctor Username</th>
+                                        <th>Patient Username</th>
+                                        <th>Date</th>
+                                        <th>Start Time</th>
+                                        <th>End Time</th>
+                                        <th>Outstanding amount</th>
 
 
-                            <%--<div class="form-footer text-center">--%>
+                                        </thead>
+                                        <tbody>
 
-                            <%--<button type="submit" class="btn btn-rose btn-fill">Register</button>--%>
-                            <%--</div>--%>
-                            <%--</div>--%>
-                            <%--</form>--%>
+                                        <%
+
+                                            String cuser = (String) session.getAttribute("username");
+
+                                            VideoConTimingDAO da = new VideoConTimingDAO();
+                                            List<VidcomtimingEntity> flist = new ArrayList<>();
+
+                                            List<VidcomtimingEntity> userList = new ArrayList<>();
+
+                                            List<VidcomtimingEntity> billun = new ArrayList<>();
+                                            flist=da.getAllRecord();
 
 
-                            <center><h1>Welcome, <%=session.getAttribute("firstName")%>
-                            </h1>
-                                <h2>Your Username Is: <%=session.getAttribute("username")%>
-                                </h2>
-                                <form method="post" action="/patientPIDSav">
+                                            for(int i=0;i<flist.size();i++){
+
+                                                if(flist.get(i).getPatientUsername().equalsIgnoreCase(cuser)){
+
+                                                    userList.add(flist.get(i));
+                                                }
 
 
-                                    <input id="hiddenFieldForPID" name="hiddenFieldForPID" hidden/>
-                                    <button id="btnenablemepls" class="btn btn-rose btn-fill" type="submit" disabled>
-                                        Getting ready...
-                                    </button>
-                                </form>
+                                            }
 
-                            </center>
-                            <%--&lt;%&ndash;<p>Share this id with others so they can call you.</p>&ndash;%&gt;--%>
-                            <%--&lt;%&ndash;<h3>Make a call</h3>&ndash;%&gt;--%>
-                            <%--<div class="pure-form">--%>
-                            <%--&lt;%&ndash;<input type="text" placeholder="Call user id..." id="callto-id">&ndash;%&gt;--%>
-                            <%--<a href="#" class="pure-button pure-button-success" id="make-call">Call</a>--%>
-                            <%--</div>--%>
-                            <%--</div>--%>
 
-                            <!-- Call in progress -->
-                            <%--<div id="step3">--%>
-                            <%--<p>Currently in call with <span id="their-id">...</span></p>--%>
-                            <%--<p><a href="#" class="pure-button pure-button-error" id="end-call">End call</a></p>--%>
-                            <%--</div>--%>
+                                            for(int i=0;i<userList.size();i++){
+
+                                                if(userList.get(i).getBillsPaid().equalsIgnoreCase("false")){
+                                                    billun.add(userList.get(i));
+                                                }
+
+
+                                            }
+
+                                            System.out.println("first list " +flist.size() );
+                                            System.out.println("user list "+userList.size());
+                                            System.out.println("bill un "+billun.size());
+
+
+
+                                            for(int i=0;i<billun.size();i++){
+%>
+<tr>
+
+                                        <td><%=billun.get(i).getDocUsername()%>
+                                        </td>
+                                        <td><%=billun.get(i).getPatientUsername()%>
+                                        </td>
+                                        <td><%=billun.get(i).getDate()%>
+                                        </td>
+                                        <td><%=billun.get(i).getStartTime()%>
+                                        </td>
+                                        <td><%=billun.get(i).getEndTime()%>
+                                        </td>
+    <td>$5</td>
+
+</tr>
+                                                <%
+                                            }
+
+                                        %>
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
+
+
                     </div>
-
-
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br> <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-
-
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-
-
                 </div>
+
+
             </div>
             <!-- wizard container -->
         </div>

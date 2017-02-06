@@ -5,6 +5,7 @@
 <%@ page import="patientRecord.PatientDAO" %>
 <%@ page import="patientRecord.PatientrecordEntity" %>
 <%@ page import="vidcontiming.VideoConTimingDAO" %>
+<%@ page import="vidcontiming.VidcomtimingEntity" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
@@ -74,7 +75,7 @@
     Tip 3: you can change the color of the sidebar with data-background-color="white | black"
 -->
         <div class="logo">
-            <a class="simple-text">
+            <a href="../docFrontPage.jsp" class="simple-text">
                 Video Chat
             </a>
         </div>
@@ -111,7 +112,7 @@
             </div>
             <ul class="nav">
                 <li>
-                    <a href="docVideo.jsp">
+                    <a href="patientPIDSelect.jsp">
                         <i class="material-icons">dashboard</i>
                         <p>Live Web Calling</p>
                     </a>
@@ -120,13 +121,18 @@
 
 
                 <li>
-                    <a href="/logout">
+                    <a href="#">
                         <i class="material-icons">image</i>
                         <p>Call History</p>
                     </a>
                 </li>
 
-
+                <li>
+                    <a href="/logout">
+                        <i class="material-icons">exit_to_app</i>
+                        <p>Logout</p>
+                    </a>
+                </li>
 
 
 
@@ -149,68 +155,71 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"> Wizard </a>
+                    <%--<a class="navbar-brand" href="#"> Wizard </a>--%>
                 </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="material-icons">dashboard</i>
-                                <p class="hidden-lg hidden-md">Dashboard</p>
-                            </a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="material-icons">notifications</i>
-                                <span class="notification">5</span>
-                                <p class="hidden-lg hidden-md">
-                                    Notifications
-                                    <b class="caret"></b>
-                                </p>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#">Mike John responded to your email</a>
-                                </li>
-                                <li>
-                                    <a href="#">You have 5 new tasks</a>
-                                </li>
-                                <li>
-                                    <a href="#">You're now friend with Andrew</a>
-                                </li>
-                                <li>
-                                    <a href="#">Another Notification</a>
-                                </li>
-                                <li>
-                                    <a href="#">Another One</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="material-icons">person</i>
-                                <p class="hidden-lg hidden-md">Profile</p>
-                            </a>
-                        </li>
-                        <li class="separator hidden-lg hidden-md"></li>
-                    </ul>
-                    <form class="navbar-form navbar-right" role="search">
-                        <div class="form-group form-search is-empty">
-                            <input type="text" class="form-control" placeholder="Search">
-                            <span class="material-input"></span>
-                        </div>
-                        <button type="submit" class="btn btn-white btn-round btn-just-icon">
-                            <i class="material-icons">search</i>
-                            <div class="ripple-container"></div>
-                        </button>
-                    </form>
-                </div>
+                <%--<div class="collapse navbar-collapse">--%>
+                    <%--<ul class="nav navbar-nav navbar-right">--%>
+                        <%--<li>--%>
+                            <%--<a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">--%>
+                                <%--<i class="material-icons">dashboard</i>--%>
+                                <%--<p class="hidden-lg hidden-md">Dashboard</p>--%>
+                            <%--</a>--%>
+                        <%--</li>--%>
+                        <%--<li class="dropdown">--%>
+                            <%--<a href="#" class="dropdown-toggle" data-toggle="dropdown">--%>
+                                <%--<i class="material-icons">notifications</i>--%>
+                                <%--<span class="notification">5</span>--%>
+                                <%--<p class="hidden-lg hidden-md">--%>
+                                    <%--Notifications--%>
+                                    <%--<b class="caret"></b>--%>
+                                <%--</p>--%>
+                            <%--</a>--%>
+                            <%--<ul class="dropdown-menu">--%>
+                                <%--<li>--%>
+                                    <%--<a href="#">Mike John responded to your email</a>--%>
+                                <%--</li>--%>
+                                <%--<li>--%>
+                                    <%--<a href="#">You have 5 new tasks</a>--%>
+                                <%--</li>--%>
+                                <%--<li>--%>
+                                    <%--<a href="#">You're now friend with Andrew</a>--%>
+                                <%--</li>--%>
+                                <%--<li>--%>
+                                    <%--<a href="#">Another Notification</a>--%>
+                                <%--</li>--%>
+                                <%--<li>--%>
+                                    <%--<a href="#">Another One</a>--%>
+                                <%--</li>--%>
+                            <%--</ul>--%>
+                        <%--</li>--%>
+                        <%--<li>--%>
+                            <%--<a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">--%>
+                                <%--<i class="material-icons">person</i>--%>
+                                <%--<p class="hidden-lg hidden-md">Profile</p>--%>
+                            <%--</a>--%>
+                        <%--</li>--%>
+                        <%--<li class="separator hidden-lg hidden-md"></li>--%>
+                    <%--</ul>--%>
+                    <%--&lt;%&ndash;<form class="navbar-form navbar-right" role="search">&ndash;%&gt;--%>
+                        <%--&lt;%&ndash;<div class="form-group form-search is-empty">&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<input type="text" class="form-control" placeholder="Search">&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<span class="material-input"></span>&ndash;%&gt;--%>
+                        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+                        <%--&lt;%&ndash;<button type="submit" class="btn btn-white btn-round btn-just-icon">&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<i class="material-icons">search</i>&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<div class="ripple-container"></div>&ndash;%&gt;--%>
+                        <%--&lt;%&ndash;</button>&ndash;%&gt;--%>
+                    <%--&lt;%&ndash;</form>&ndash;%&gt;--%>
+                <%--</div>--%>
             </div>
         </nav>
         <div class="content">
             <div class="container-fluid">
 
                 <!--      Wizard container        -->
+
+
+
 
 
                 <div class="row">
@@ -221,90 +230,88 @@
                             </div>
                             <div class="card-content">
                                 <h4 class="card-title">Patient In Queue</h4>
+
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead class="text-primary">
-                                        <th>User Id</th>
-                                        <th>Name</th>
-                                        <th>PID (For reference)</th>
-                                        <th>Call User</th>
+                                        <th>ID</th>
+                                        <th>Doctor Username</th>
+                                        <th>Patient Username</th>
+                                        <th>Date</th>
+                                        <th>Start Time</th>
+                                        <th>End Time</th>
+                                        <th>Bills Paid</th>
+                                        <th>Toggle Bill paid</th>
 
                                         </thead>
                                         <tbody>
 
+
                                         <%
 
+                                            VideoConTimingDAO da = new VideoConTimingDAO();
+
+                                            List<VidcomtimingEntity> list = new ArrayList<>();
+
+                                            list=da.getAllRecord();
+
+
+
+
+                                            for(int i=0;i<list.size();i++){
 
 
 
 
 
-                                            VideoConferenceDAO vd = new VideoConferenceDAO();
-
-                                            PatientDAO pat = new PatientDAO();
 
 
-                                            List<PatientrecordEntity> patLsit = new ArrayList<>();
-
-                                            patLsit = pat.getAllPatientUserAndPass();
-
-                                            List<VideoconferenceEntity> all = new ArrayList<>();
-                                            ArrayList<String> user = new ArrayList<>();
-                                            ArrayList<String> pid = new ArrayList<>();
-
-                                            all = vd.getAllPID();
-
-                                            String firstname = "";
-
-                                            for (int i = 0; i < all.size(); i++) {
-
-                                                if (all.get(i).getTypeOfUser().equalsIgnoreCase("p")) {
-
-                                                    user.add(all.get(i).getUsername());
-                                                    pid.add(all.get(i).getPid());
-
-                                                    System.out.println("patlsit size= " + patLsit.size());
+                                                %>
 
 
-                                                    for (int o = 0; o < patLsit.size(); o++) {
-                                                        if (patLsit.get(o).getpUsername().equalsIgnoreCase(all.get(i).getUsername())) {
-
-                                                            firstname = patLsit.get(o).getpName();
-                                                            System.out.println("firstname =" + firstname);
-
-                                                        }
 
 
-                                                    }
-
-
-                                        %>
 
                                         <tr>
 
 
-                                            <form method="post" action="/videoConPidRetrieve">
-                                                <td><%=all.get(i).getUsername()%>
+                                            <form method="post" action="/vidconRecordUpdatebi">
+                                                <td><%=list.get(i).getId()%>
                                                 </td>
 
 
-                                                <td><%= firstname%>
+                                                <td><%=list.get(i).getDocUsername()%>
                                                 </td>
 
 
-                                                <td><%=all.get(i).getPid()%>
+                                                <td><%=list.get(i).getPatientUsername()%>
 
                                                 </td>
 
 
-                                                <input class="patientoutlineTextbox" type="hidden"
-                                                       name="formPidUsername" value="<%=all.get(i).getUsername()%>">
-                                                <input class="patientoutlineTextbox" type="hidden" name="formpidPid"
-                                                       value="<%=all.get(i).getPid()%>">
+                                                <td><%=list.get(i).getDate()%>
 
+                                                </td>
+                                                <td><%=list.get(i).getStartTime()%>
+
+                                                </td>
+
+                                                <td><%=list.get(i).getEndTime()%>
+
+                                                </td>
+
+                                                <td><%=list.get(i).getBillsPaid()%>
+
+                                                </td>
+
+                                                <input type="hidden" name="billsIDNow"
+                                                       value="<%=list.get(i).getId()%>">
+
+                                                <input type="hidden" name="billsNow"
+                                                       value="<%=list.get(i).getBillsPaid()%>">
 
                                                 <td><input class="btn btn-next btn-fill btn-rose btn-wd" type="submit"
-                                                           value="Call"></td>
+                                                           value="Toggle Bills"></td>
 
 
                                             </form>
@@ -315,14 +322,29 @@
                                         </tr>
 
 
-                                        <%
-                                                }
 
+
+
+
+
+
+
+
+
+                                                <%
 
                                             }
 
 
+
+
                                         %>
+
+
+
+
+
+
 
 
                                         </tbody>
@@ -379,101 +401,101 @@
 </footer>
 </div>
 </div>
-<div class="fixed-plugin">
-    <div class="dropdown show-dropdown">
-        <a href="#" data-toggle="dropdown">
-            <i class="fa fa-cog fa-2x"> </i>
-        </a>
-        <ul class="dropdown-menu">
-            <li class="header-title"> Sidebar Filters</li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger active-color">
-                    <div class="badge-colors text-center">
-                        <span class="badge filter badge-purple" data-color="purple"></span>
-                        <span class="badge filter badge-blue" data-color="blue"></span>
-                        <span class="badge filter badge-green" data-color="green"></span>
-                        <span class="badge filter badge-orange" data-color="orange"></span>
-                        <span class="badge filter badge-red" data-color="red"></span>
-                        <span class="badge filter badge-rose active" data-color="green"></span>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="header-title">Sidebar Background</li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger background-color">
-                    <div class="text-center">
-                        <span class="badge filter badge-white" data-color="white"></span>
-                        <span class="badge filter badge-black active" data-color="black"></span>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger">
-                    <p>Sidebar Mini</p>
-                    <div class="togglebutton switch-sidebar-mini">
-                        <label>
-                            <input type="checkbox" unchecked="">
-                        </label>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger">
-                    <p>Sidebar Image</p>
-                    <div class="togglebutton switch-sidebar-image">
-                        <label>
-                            <input type="checkbox" checked="">
-                        </label>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="header-title">Images</li>
-            <li class="active">
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-1.jpg" alt=""/>
-                </a>
-            </li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-2.jpg" alt=""/>
-                </a>
-            </li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-3.jpg" alt=""/>
-                </a>
-            </li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-4.jpg" alt=""/>
-                </a>
-            </li>
-            <li class="button-container">
-                <div class="">
-                    <a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank"
-                       class="btn btn-rose btn-block">Buy Now</a>
-                </div>
-                <div class="">
-                    <a href="http://www.creative-tim.com/product/material-dashboard" target="_blank"
-                       class="btn btn-info btn-block">Get Free Demo</a>
-                </div>
-            </li>
-            <li class="header-title">Thank you for 95 shares!</li>
-            <li class="button-container">
-                <button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i> &middot;
-                    45
-                </button>
-                <button id="facebook" class="btn btn-social btn-facebook btn-round"><i
-                        class="fa fa-facebook-square"> &middot;</i>50
-                </button>
-            </li>
-        </ul>
-    </div>
-</div>
+<%--<div class="fixed-plugin">--%>
+    <%--<div class="dropdown show-dropdown">--%>
+        <%--<a href="#" data-toggle="dropdown">--%>
+            <%--<i class="fa fa-cog fa-2x"> </i>--%>
+        <%--</a>--%>
+        <%--<ul class="dropdown-menu">--%>
+            <%--<li class="header-title"> Sidebar Filters</li>--%>
+            <%--<li class="adjustments-line">--%>
+                <%--<a href="javascript:void(0)" class="switch-trigger active-color">--%>
+                    <%--<div class="badge-colors text-center">--%>
+                        <%--<span class="badge filter badge-purple" data-color="purple"></span>--%>
+                        <%--<span class="badge filter badge-blue" data-color="blue"></span>--%>
+                        <%--<span class="badge filter badge-green" data-color="green"></span>--%>
+                        <%--<span class="badge filter badge-orange" data-color="orange"></span>--%>
+                        <%--<span class="badge filter badge-red" data-color="red"></span>--%>
+                        <%--<span class="badge filter badge-rose active" data-color="green"></span>--%>
+                    <%--</div>--%>
+                    <%--<div class="clearfix"></div>--%>
+                <%--</a>--%>
+            <%--</li>--%>
+            <%--<li class="header-title">Sidebar Background</li>--%>
+            <%--<li class="adjustments-line">--%>
+                <%--<a href="javascript:void(0)" class="switch-trigger background-color">--%>
+                    <%--<div class="text-center">--%>
+                        <%--<span class="badge filter badge-white" data-color="white"></span>--%>
+                        <%--<span class="badge filter badge-black active" data-color="black"></span>--%>
+                    <%--</div>--%>
+                    <%--<div class="clearfix"></div>--%>
+                <%--</a>--%>
+            <%--</li>--%>
+            <%--<li class="adjustments-line">--%>
+                <%--<a href="javascript:void(0)" class="switch-trigger">--%>
+                    <%--<p>Sidebar Mini</p>--%>
+                    <%--<div class="togglebutton switch-sidebar-mini">--%>
+                        <%--<label>--%>
+                            <%--<input type="checkbox" unchecked="">--%>
+                        <%--</label>--%>
+                    <%--</div>--%>
+                    <%--<div class="clearfix"></div>--%>
+                <%--</a>--%>
+            <%--</li>--%>
+            <%--<li class="adjustments-line">--%>
+                <%--<a href="javascript:void(0)" class="switch-trigger">--%>
+                    <%--<p>Sidebar Image</p>--%>
+                    <%--<div class="togglebutton switch-sidebar-image">--%>
+                        <%--<label>--%>
+                            <%--<input type="checkbox" checked="">--%>
+                        <%--</label>--%>
+                    <%--</div>--%>
+                    <%--<div class="clearfix"></div>--%>
+                <%--</a>--%>
+            <%--</li>--%>
+            <%--<li class="header-title">Images</li>--%>
+            <%--<li class="active">--%>
+                <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
+                    <%--<img src="../../assets/img/sidebar-1.jpg" alt=""/>--%>
+                <%--</a>--%>
+            <%--</li>--%>
+            <%--<li>--%>
+                <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
+                    <%--<img src="../../assets/img/sidebar-2.jpg" alt=""/>--%>
+                <%--</a>--%>
+            <%--</li>--%>
+            <%--<li>--%>
+                <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
+                    <%--<img src="../../assets/img/sidebar-3.jpg" alt=""/>--%>
+                <%--</a>--%>
+            <%--</li>--%>
+            <%--<li>--%>
+                <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
+                    <%--<img src="../../assets/img/sidebar-4.jpg" alt=""/>--%>
+                <%--</a>--%>
+            <%--</li>--%>
+            <%--<li class="button-container">--%>
+                <%--<div class="">--%>
+                    <%--<a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank"--%>
+                       <%--class="btn btn-rose btn-block">Buy Now</a>--%>
+                <%--</div>--%>
+                <%--<div class="">--%>
+                    <%--<a href="http://www.creative-tim.com/product/material-dashboard" target="_blank"--%>
+                       <%--class="btn btn-info btn-block">Get Free Demo</a>--%>
+                <%--</div>--%>
+            <%--</li>--%>
+            <%--<li class="header-title">Thank you for 95 shares!</li>--%>
+            <%--<li class="button-container">--%>
+                <%--<button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i> &middot;--%>
+                    <%--45--%>
+                <%--</button>--%>
+                <%--<button id="facebook" class="btn btn-social btn-facebook btn-round"><i--%>
+                        <%--class="fa fa-facebook-square"> &middot;</i>50--%>
+                <%--</button>--%>
+            <%--</li>--%>
+        <%--</ul>--%>
+    <%--</div>--%>
+<%--</div>--%>
 </body>
 <!--   Core JS Files   -->
 <script src="../../assets/js/jquery-3.1.1.min.js" type="text/javascript"></script>

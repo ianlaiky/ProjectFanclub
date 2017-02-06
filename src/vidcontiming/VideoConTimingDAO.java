@@ -62,7 +62,7 @@ public class VideoConTimingDAO {
 
        String id = d+"";
 
-String bills = "n";
+String bills = "False";
 
         VidcomtimingEntity vid = new VidcomtimingEntity(docUsername,patientUsername,date,startTime,endTime,id,bills);
 

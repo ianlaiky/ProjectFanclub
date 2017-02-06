@@ -87,12 +87,12 @@
     Tip 3: you can change the color of the sidebar with data-background-color="white | black"
 -->
         <div class="logo">
-            <a href="http://www.creative-tim.com" class="simple-text">
+            <a href="#" class="simple-text">
                 Doctors
             </a>
         </div>
         <div class="logo logo-mini">
-            <a href="http://www.creative-tim.com" class="simple-text">
+            <a href="#" class="simple-text">
                 Doc
             </a>
         </div>
@@ -372,6 +372,8 @@
 
                     <a href="onlinequeuesystem/doctorQueuePage.jsp"><img src="assets/img/queue-512.png"
                                                                          class="frontPageRounded"></a>
+                    <a href="foodorder/success.jsp"><img src="assets/img/apple.jpg" class="frontPageRounded"></a>
+
 
                     <%---->--%>
                 </div>

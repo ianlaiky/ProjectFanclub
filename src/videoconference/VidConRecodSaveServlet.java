@@ -53,6 +53,9 @@ public class VidConRecodSaveServlet extends HttpServlet {
         VideoConTimingDAO sav = new VideoConTimingDAO();
         sav.createRecord(docUsername,patientUsername,currentDate,startTime,endTime);
 
+        response.sendRedirect("videoconference/patientPIDSelect.jsp");
+        return;
+
 
 
 

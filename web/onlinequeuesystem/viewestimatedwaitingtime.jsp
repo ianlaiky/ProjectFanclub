@@ -15,7 +15,7 @@
 <%@ page import="queue.OnlinequeuesystemEntity" %>
 <%@ page import="queue.QueueSystemDAO" %><%--
   Created by IntelliJ IDEA.
-  User: Ying
+  User: Aravin
   Date: 11/12/2016
   Time: 4:24 AM
   To change this template use File | Settings | File Templates.
@@ -506,32 +506,32 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <%
-                        QueueSystemDAO qs = new QueueSystemDAO();
-                        List<OnlinequeuesystemEntity> time = new ArrayList<OnlinequeuesystemEntity>();
+                    <%--<%--%>
+                        <%--QueueSystemDAO qs = new QueueSystemDAO();--%>
+                        <%--List<OnlinequeuesystemEntity> time = new ArrayList<OnlinequeuesystemEntity>();--%>
 
-                        time = qs.getAllQueueData();
+                        <%--time = qs.getAllQueueData();--%>
 
-                        Integer inttt = (Integer) session.getAttribute("newQueueNo");
+                        <%--Integer inttt = (Integer) session.getAttribute("newQueueNo");--%>
 
-                        System.out.println(inttt);
+                        <%--System.out.println(inttt);--%>
 
-                        int lessNo = 0;
+                        <%--int lessNo = 0;--%>
 
-                        for (int i = 0; i < time.size(); i++) {
+                        <%--for (int i = 0; i < time.size(); i++) {--%>
 
-                            int temp = time.get(i).getQueueNumber();
+                            <%--int temp = time.get(i).getQueueNumber();--%>
 
-                            if (temp < inttt) {
-                                lessNo = lessNo + 1;
-                            }
+                            <%--if (temp < inttt) {--%>
+                                <%--lessNo = lessNo + 1;--%>
+                            <%--}--%>
 
 
-                        }
+                        <%--}--%>
 
-                    %>
+                    <%--%>--%>
 
-                    <center><h1>Your Estimated Waiting Time is  <%=lessNo * 10%> Minutes</h1></center>
+                    <%--<center><h1>Your Estimated Waiting Time is  <%=lessNo * 10%> Minutes</h1></center>--%>
 
                 </div>
             </div>
