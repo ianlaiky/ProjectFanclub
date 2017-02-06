@@ -84,9 +84,10 @@ $.ajax({
         $.each(data, function (key, data) {
             console.log("first each",data);
             $.each(data.item, function (key, data) {
-                if (data.offset = 0) {
+                console.log("test sec each",data);
+                if (data.offset == 0) {
 
-                    console.log("sec each",data);
+                    console.log("sec if each",data);
                     ndbno = data.ndbno;
                     console.log(ndbno);
 
