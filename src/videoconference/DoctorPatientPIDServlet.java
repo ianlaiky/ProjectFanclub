@@ -9,6 +9,8 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
 /**
@@ -41,7 +43,7 @@ public class DoctorPatientPIDServlet extends HttpServlet {
 
 
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
-        LocalDate localDate = LocalDate.now();
+        ZonedDateTime localDate = ZonedDateTime.now(ZoneId.of("Asia/Singapore"));
         System.out.println(dtf.format(localDate));
 
         String date = dtf.format(localDate);
@@ -50,7 +52,7 @@ public class DoctorPatientPIDServlet extends HttpServlet {
 
 
         DateTimeFormatter dt = DateTimeFormatter.ofPattern("HH:mm:ss");
-        LocalDateTime now = LocalDateTime.now();
+        ZonedDateTime now = ZonedDateTime.now(ZoneId.of("Asia/Singapore"));
         System.out.println(dt.format(now)); //2016/11/16 12:08:43
 
         String timenow = dt.format(now);

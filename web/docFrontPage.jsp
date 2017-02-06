@@ -106,21 +106,21 @@
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
                         <% String username = (String) session.getAttribute("firstName"); %>
                         <%= username%>
-                        <b class="caret"></b>
+                        <%--<b class="caret"></b>--%>
                     </a>
-                    <div class="collapse" id="collapseExample">
-                        <ul class="nav">
-                            <li>
-                                <a href="../fooddiet/user/myprofile.jsp">My Profile</a>
-                            </li>
-                            <li>
-                                <a href="#">Edit Profile</a>
-                            </li>
-                            <li>
-                                <a href="#">Settings</a>
-                            </li>
-                        </ul>
-                    </div>
+                    <%--<div class="collapse" id="collapseExample">--%>
+                        <%--<ul class="nav">--%>
+                            <%--<li>--%>
+                                <%--<a href="../fooddiet/user/myprofile.jsp">My Profile</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="#">Edit Profile</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="#">Settings</a>--%>
+                            <%--</li>--%>
+                        <%--</ul>--%>
+                    <%--</div>--%>
                 </div>
             </div>
 
