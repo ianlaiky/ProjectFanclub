@@ -264,7 +264,7 @@
                     <div class="collapse in" id="pagesExamples">
                         <ul class="nav">
                             <li>
-                                <a href="#">Snap</a>
+                                <a href="snap.jsp">Snap</a>
                             </li>
                             <li class="active">
                                 <a href="#">Food Content</a>
