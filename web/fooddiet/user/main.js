@@ -139,6 +139,8 @@ $.post({
                         console.log(JSON.stringify(data.description) !== '\"food\"');
                         console.log(JSON.stringify(data.description) !== '\"dish\"');
                         console.log('index', data)
+                        food = data.description.replace("/\'/", "");
+                        console.log(food);
                          /*   return item.description == "food", item.description == "\'dish\'", item.description == "dessert"
                                 ,item.description == "plant", item.description == "produce", item.description == "fruit"
                                 ,item.description == "berry", item.description == "baked goods",item.description == "fast food",
