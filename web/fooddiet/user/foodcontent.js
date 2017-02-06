@@ -11,7 +11,7 @@ console.log(foodResult);
 
 
 
-$.get(
+$.post(
     "https://api.nal.usda.gov/ndb/search",
     {
         "api_key": KEY,
