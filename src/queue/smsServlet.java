@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by aravin on 06-Feb-17.
+ * Created by Aravin on 06-Feb-17.
  */
 @WebServlet(name = "smsServlet", urlPatterns = "/tqitest")
 public class smsServlet extends HttpServlet {
@@ -27,8 +27,10 @@ public class smsServlet extends HttpServlet {
 
         HttpSession session = request.getSession();
         String cUs = (String) session.getAttribute("username");
-        String sa  =(String) session.getAttribute("newQueueNo");
-//        String people = (String) session.getAttribute()
+        Integer sa = (Integer) session.getAttribute("newQueueNo");
+
+        Integer tt = (Integer) session.getAttribute("queuebigssi");
+
 
         PatientDAO d = new PatientDAO();
         List<PatientrecordEntity> dLis = new ArrayList<>();
@@ -38,7 +40,7 @@ public class smsServlet extends HttpServlet {
 
 
         String text = (String) session.getAttribute("timeququecallsms");
-        double r = Double.parseDouble(text);
+        Integer r = Integer.parseInt(text);
         r = r / 60;
         String e = r + "";
 
@@ -57,7 +59,7 @@ public class smsServlet extends HttpServlet {
         Message message = Message
                 .creator(new PhoneNumber(phone),  // to
                         new PhoneNumber("+13172043324"),  // from
-                        "Your queue number is +turn is in " + e + "minutes")
+                        "Your queue number is " + sa + " the total number of people in the queue is " + tt + " turn is in " + e + " minutes ")
                 .create();
 
         response.sendRedirect("onlinequeuesystem/view2.jsp");
