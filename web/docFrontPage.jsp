@@ -372,7 +372,7 @@
 
                     <a href="onlinequeuesystem/doctorQueuePage.jsp"><img src="assets/img/queue-512.png"
                                                                          class="frontPageRounded"></a>
-                    <a href="foodorder/success.jsp"><img src="assets/img/apple.jpg" class="frontPageRounded"></a>
+                    <a href="foodorder/orderlist.jsp"><img src="assets/img/apple.jpg" class="frontPageRounded"></a>
 
 
                     <%---->--%>
