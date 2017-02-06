@@ -82,10 +82,12 @@ $.ajax({
         var text;
         console.log(JSON.stringify(data, null, '    '));
         $.each(data, function (key, data) {
+            console.log("first each",data);
             $.each(data.item, function (key, data) {
-                if (data.item.offset = 0) {
+                if (data.offset = 0) {
 
-                    ndbno = data.item.ndbno;
+                    console.log("sec each",data);
+                    ndbno = data.ndbno;
                     console.log(ndbno);
 
                     //   text = '<b>Is this </b> ' + JSON.stringify(data.description) + '? <br/>';
