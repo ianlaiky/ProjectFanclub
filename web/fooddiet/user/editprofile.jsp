@@ -68,7 +68,7 @@
 %>
 <%
     UserDAO db = new UserDAO();
-    User user = db.retrieveUserByUsername(session.getAttribute("username").toString());
+    User user = db.retrieveUserByUsername(session.getAttribute("firstName").toString());
 
 %>
 <div class="wrapper">

@@ -67,7 +67,7 @@
 %>
 <%
     UserDAO db = new UserDAO();
-    User user = db.retrieveRecommendIntakeByUsername(session.getAttribute("username").toString());
+    User user = db.retrieveRecommendIntakeByUsername(session.getAttribute("firstName").toString());
 %>
 <div class="wrapper">
     <div class="sidebar" data-active-color="green" data-background-color="black" data-image="../../assets/img/sidebar-1.jpg">

@@ -323,7 +323,7 @@
                     <div class="row">
 
 
-                        <div id="results2"></div>
+                        <div id="foodContent"></div>
 
                     </div>
                 </div>
