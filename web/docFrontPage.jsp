@@ -56,7 +56,7 @@
             background: #73AD21;
             padding: 20px;
             width: 150px;
-            height: auto;
+            height: 150px;
 
             margin: 10px;
         }
@@ -372,7 +372,7 @@
 
                     <a href="onlinequeuesystem/doctorQueuePage.jsp"><img src="assets/img/queue-512.png"
                                                                          class="frontPageRounded"></a>
-                    <a href="foodorder/orderlist.jsp"><img src="assets/img/apple.jpg" class="frontPageRounded"></a>
+                    <a href="foodorder/orderlist.jsp"><img src="assets/img/orderlisticon.png" class="frontPageRounded"></a>
 
 
                     <%---->--%>

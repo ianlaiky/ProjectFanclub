@@ -7,7 +7,6 @@
 
 var CV_URL = 'https://vision.googleapis.com/v1/images:annotate?key=' + window.apiKey;
 var food;
-var FOOD_URL = 'https://api.nal.usda.gov/ndb/reports'
 var KEY = FOOD_KEY;
 
 $(function () {
@@ -136,7 +135,8 @@ $.post({
                         && JSON.stringify(data.description) !== '\"fruit\"' && JSON.stringify(data.description) !== '\"berry\"'
                         && JSON.stringify(data.description) !== '\"baked goods\"'  && JSON.stringify(data.description) !== '\"fast food\"'
                         && JSON.stringify(data.description) !== '\"meal\"'  && JSON.stringify(data.description) !== '\"slider\"'
-                        && JSON.stringify(data.description) !== '\"asian food\"'  && JSON.stringify(data.description) !== '\"side dish\"'){
+                        && JSON.stringify(data.description) !== '\"asian food\"'  && JSON.stringify(data.description) !== '\"side dish\"'
+                        && JSON.stringify(data.description) !== '\"bavarian cream\"'){
                         console.log(JSON.stringify(data.description) !== '\"food\"');
                         console.log(JSON.stringify(data.description) !== '\"dish\"');
                         console.log('index', data)
@@ -177,17 +177,7 @@ $.post({
     console.log(KEY);
 
 }
-$.get(
-    FOOD_URL,
-    {
-        "api_key": KEY,
-        "ndbno": "01009"
-    },
-    function(data) {
-        console.log(data);
-        console.log( JSON.stringify(data, null, '    '))
-    }
-);
+
 
 
 

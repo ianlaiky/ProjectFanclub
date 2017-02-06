@@ -57,7 +57,7 @@
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script type="text/javascript" src="key.js"></script>
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="foodcontent.js"></script>
 
     <style type="text/css">
 
@@ -264,10 +264,10 @@
                     <div class="collapse in" id="pagesExamples">
                         <ul class="nav">
                             <li>
-                                <a href="#">Snap</a>
+                                <a href="snap.jsp">Snap</a>
                             </li>
                             <li class="active">
-                                <a href="../pages/timeline.html">Food Content</a>
+                                <a href="#">Food Content</a>
                             </li>
 
                         </ul>
@@ -370,7 +370,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header card-header-text" data-background-color="orange">
-                    <h4 class="card-title">Food Suggestion:</h4>
+                    <h4 class="card-title">Food Nutrition Value</h4>
                 </div>
                 <div class="card-content">
                     <div class="row">
