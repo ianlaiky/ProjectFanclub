@@ -50,5 +50,6 @@
     <orderEntry type="library" name="org.eclipse.persistence:eclipselink:2.6.2" level="project" />
     <orderEntry type="library" name="jquery" level="application" />
     <orderEntry type="library" name="com.google.code.gson:gson:2.8.0" level="project" />
+    <orderEntry type="library" name="com.twilio.sdk:twilio:7.4.0" level="project" />
   </component>
 </module>
