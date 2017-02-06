@@ -10,7 +10,7 @@
 --%>
 <%--
   Created by IntelliJ IDEA.
-  User: aravin
+  User: aravinm
   Date: 14/12/2016
   Time: 8:29 PM
   To change this template use File | Settings | File Templates.
@@ -325,8 +325,16 @@
                 </div>
 
             </center>
+            <br>
             <form action="/tqitest" method="post">
-                <input type="submit">
+                <div class="text-center">
+                    <button type="submit" class="btn btn-rose btn-fill btn-wd"><i style="font-size:30px"
+                                                                                  class="material-icons">add_alert</i><i
+                            style="font-weight: bold">
+                    </i>
+                        Notify me! <i style="font-size:30px" class="material-icons">add_alert</i>
+                    </button>
+                </div>
 
             </form>
 
