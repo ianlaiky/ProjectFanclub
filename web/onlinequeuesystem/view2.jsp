@@ -268,9 +268,9 @@
 
 
                     <%
-                        double ttime = (0.001 / 85) * (lessNo * 1 * 11);
+                        double ttime = (0.001 / 85) * (lessNo * 1 * 10);
 
-                        session.setAttribute("timeququecallsms", lessNo * 1 * 11 + "");
+                        session.setAttribute("timeququecallsms", lessNo * 1 * 10 + "");
                     %>
                     <script>var timer;
 
@@ -288,7 +288,7 @@
 
 
                         if (difference <= 0) {
-                            alert("Hi,your turn is here!");
+                            alert(" Hi, your turn is here! ");
                             // Timer done
                             clearInterval(timer);
 
