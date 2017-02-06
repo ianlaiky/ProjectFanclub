@@ -83,7 +83,7 @@ $.ajax({
         console.log(JSON.stringify(data, null, '    '));
         $.each(data, function (key, data) {
             console.log('index nyan', data)
-            $.each(data, function (key, data) {
+            $.each(data.item, function (key, data) {
                 console.log('index mid', data)
                 if (data.offset = 0) {
                     console.log('index', data);
