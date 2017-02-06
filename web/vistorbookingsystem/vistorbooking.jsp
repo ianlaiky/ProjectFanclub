@@ -459,7 +459,7 @@
                                         <input type="text" class="form-control" name="roomnum">
                                     </div>
                                 </div>
-                        <input type="submit">
+                        <input class="btn btn-rose btn-fill" type="submit">
                             </div>
 
 

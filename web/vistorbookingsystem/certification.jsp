@@ -349,7 +349,7 @@
                 <div class="col-sm-8 col-sm-offset-2">
                     <!-- Insert all the awesome body content here->
 
-
+ <div class="col-sm-6">
 
   -->       <%
 
@@ -365,7 +365,7 @@
 
                 %>
 
-                    <div class="col-sm-6">
+
                         <div class="input-group">
                                                         <span class="input-group-addon">
                                                             <i class="material-icons">face</i>
@@ -428,9 +428,6 @@
                             </div>
                         </div>
 
-                    </div>
-
-
 
 
 
@@ -442,14 +439,18 @@
                         }
 
                     %>
+                    <div class="input-group">
                     <form action="/sendingsms" method="post">
-                    <button type="submit" >Get notification
-                    </button>
+                    <input class="btn btn-rose btn-fill" type="submit" value="Get Notification">
+                    </input>
                     </form>
+                    </div>
+
+            </div>
 
 
 
-            <%--<div class="fixed-plugin">--%>
+        <%--<div class="fixed-plugin">--%>
                 <%--<div class="dropdown show-dropdown">--%>
                     <%--<a href="#" data-toggle="dropdown">--%>
                         <%--<i class="fa fa-cog fa-2x"> </i>--%>
