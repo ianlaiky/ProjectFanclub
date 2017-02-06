@@ -85,21 +85,17 @@ $.ajax({
             console.log('index nyan', data)
             $.each(data, function (key, data) {
                 console.log('index mid', data)
-                $.each(data.item, function (key, data) {
-                    console.log('index moo', data)
+                if (data.offset = 0) {
+                    console.log('index', data);
+                    ndbno = data.ndbno.replace("/\"/", "");
+                    console.log(ndbno);
 
-                    //    Function: Filtering off unnecessary labels
+                    //   text = '<b>Is this </b> ' + JSON.stringify(data.description) + '? <br/>';
+                    //    text += '<b>Confidence level for this prediction: </b>' + JSON.stringify(data.score) + '<br/>';
+                    return false;
+                }
 
-                    if (data.offset = 0) {
-                        console.log('index', data);
-                        ndbno = data.ndbno.replace("/\"/", "");
-                        console.log(ndbno);
 
-                        //   text = '<b>Is this </b> ' + JSON.stringify(data.description) + '? <br/>';
-                        //    text += '<b>Confidence level for this prediction: </b>' + JSON.stringify(data.score) + '<br/>';
-                        return false;
-                    }
-                })
             })
         })
         $.ajax({
