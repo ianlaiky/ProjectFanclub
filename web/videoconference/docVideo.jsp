@@ -708,9 +708,22 @@
                             <br>
                             <br>
 
+                            <br>
+
 
                             <br>
                             <br>
+
+                            <br>
+                            <br>
+                            <script>
+                               $(function(){
+
+                                   $('.btnhideey').hide();
+
+                               });
+
+                            </script>
 
                             <div id="actions">
                                 Your PeerJS ID is <span id="pid"></span><br>
@@ -723,7 +736,7 @@
                                                                                                     type="submit"
                                                                                                     value="Send to selected peers">
                                 </form>
-                                <button id="close">Close selected connections</button>
+                                <button class="btnhideey" id="close">Close selected connections</button>
                             </div>
 
                             <div id="wrap">
