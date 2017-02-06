@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
 /**
@@ -32,7 +34,7 @@ public class VidConRecodSaveServlet extends HttpServlet {
 
 
         DateTimeFormatter dt = DateTimeFormatter.ofPattern("HH:mm:ss");
-        LocalDateTime now = LocalDateTime.now();
+        ZonedDateTime now = ZonedDateTime.now(ZoneId.of("Asia/Singapore"));
         System.out.println(dt.format(now)); //2016/11/16 12:08:43
 
         String timenow = dt.format(now);
