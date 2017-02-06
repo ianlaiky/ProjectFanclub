@@ -13,38 +13,38 @@ var ndbno;
 
 /*
 
-$.get(
-    "https://api.nal.usda.gov/ndb/search/",
-    {
-        "q": foodResult,
-        "api_key": KEY1
+ $.get(
+ "https://api.nal.usda.gov/ndb/search/",
+ {
+ "q": foodResult,
+ "api_key": KEY1
 
-    },
-    function(data) {
-        console.log(data);
-        console.log( JSON.stringify(data, null, '    '))
-    }
-);
-*/
+ },
+ function(data) {
+ console.log(data);
+ console.log( JSON.stringify(data, null, '    '))
+ }
+ );
+ */
 
 /*
-$.get(
-    "https://api.nal.usda.gov/ndb/search/",
-    {
-     //   "q": foodResult,
-        "q": "cheese",
-        "api_key": KEY1
+ $.get(
+ "https://api.nal.usda.gov/ndb/search/",
+ {
+ //   "q": foodResult,
+ "q": "cheese",
+ "api_key": KEY1
 
-    },
-    function(data) {
-        console.log(data);
-        console.log( JSON.stringify(data, null, '    '))
-    }
-);
-*/
+ },
+ function(data) {
+ console.log(data);
+ console.log( JSON.stringify(data, null, '    '))
+ }
+ );
+ */
 
 $.ajax({
-    url:'https://api.nal.usda.gov/ndb/search/?q=' + foodResult  + '&api_key=' + KEY1,
+    url: 'https://api.nal.usda.gov/ndb/search/?q=' + foodResult + '&api_key=' + KEY1,
     type: 'GET',
     dataType: 'json',
     contentType: 'application/json',
@@ -52,40 +52,43 @@ $.ajax({
         var text;
         console.log(data);
         console.log(JSON.stringify(data, null, '    '));
-        $.each(data.list.item, function (key, data) {
+        $.each(data, function (index, data) {
             console.log('index', data)
-            /*
-             Function: Filtering off unnecessary labels
-             */
-            if(data[0]){
-                console.log('index', data[0]);
-                ndbno = data.ndbno.replace("/\"/", "");
-                console.log(ndbno);
+            $.each(data.item, function (key, data) {
+                console.log('index', data)
+                /*
+                 Function: Filtering off unnecessary labels
+                 */
+                if (data[0]) {
+                    console.log('index', data[0]);
+                    ndbno = data.ndbno.replace("/\"/", "");
+                    console.log(ndbno);
 
-                text = '<b>Is this </b> ' + JSON.stringify(data.description) + '? <br/>';
-                text += '<b>Confidence level for this prediction: </b>' + JSON.stringify(data.score) + '<br/>';
-                return false;
-            }
+                    text = '<b>Is this </b> ' + JSON.stringify(data.description) + '? <br/>';
+                    text += '<b>Confidence level for this prediction: </b>' + JSON.stringify(data.score) + '<br/>';
+                    return false;
+                }
 
+            })
         })
         $.ajax({
             url: 'http://api.nal.usda.gov/ndb/reports/?ndbno=' + ndbno + '&type=b&format=json&api_key=' + KEY1,
             type: 'GET',
             success: function (results) {
-             //   var food0 = results.report.food;
-            //    console.log(data.ndbno[0]);
-          //      console.log(food0);
+                //   var food0 = results.report.food;
+                //    console.log(data.ndbno[0]);
+                //      console.log(food0);
                 console.log(JSON.stringify(results, null, '    '));
-              /*  $("#jsGrid-nutrition").jsGrid("insertItem", {
-                    name: food0.name,
-                    kCal: food0.nutrients[1].measures[0].value,
-                    servingSize: food0.nutrients[1].measures[0].label,
-                    quantity: food0.nutrients[1].measures[0].qty,
-                    carbs: food0.nutrients[4].value + food0.nutrients[4].unit,
-                    fats: food0.nutrients[3].value + food0.nutrients[3].unit,
-                    saturatedFats: food0.nutrients[3].value + food0.nutrients[3].unit,
-                    protein: food0.nutrients[24].value + food0.nutrients[24].unit
-                }); */
+                /*  $("#jsGrid-nutrition").jsGrid("insertItem", {
+                 name: food0.name,
+                 kCal: food0.nutrients[1].measures[0].value,
+                 servingSize: food0.nutrients[1].measures[0].label,
+                 quantity: food0.nutrients[1].measures[0].qty,
+                 carbs: food0.nutrients[4].value + food0.nutrients[4].unit,
+                 fats: food0.nutrients[3].value + food0.nutrients[3].unit,
+                 saturatedFats: food0.nutrients[3].value + food0.nutrients[3].unit,
+                 protein: food0.nutrients[24].value + food0.nutrients[24].unit
+                 }); */
             }
 
         });
@@ -97,14 +100,14 @@ $.ajax({
 
 
 /*$.get(
-    FOOD_URL,
-    {
-        "api_key": KEY,
-        "ndbno": "01009"
-    },
-    function(data) {
-        console.log(data);
-        console.log( JSON.stringify(data, null, '    '))
-    }
-);
+ FOOD_URL,
+ {
+ "api_key": KEY,
+ "ndbno": "01009"
+ },
+ function(data) {
+ console.log(data);
+ console.log( JSON.stringify(data, null, '    '))
+ }
+ );
  */
