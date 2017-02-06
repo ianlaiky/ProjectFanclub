@@ -261,16 +261,16 @@
 
 
                         }
-session.setAttribute("queuebigssi",othersinq.size());
+                        session.setAttribute("queuebigssi", othersinq.size());
 
                     %>
                     <%=othersinq.size()%>
 
 
                     <%
-                        double ttime = (0.001 / 85) * (lessNo * 1 * 60);
+                        double ttime = (0.001 / 85) * (lessNo * 1 * 11);
 
-                        session.setAttribute("timeququecallsms", lessNo * 1 * 60 + "");
+                        session.setAttribute("timeququecallsms", lessNo * 1 * 11 + "");
                     %>
                     <script>var timer;
 
@@ -288,7 +288,7 @@ session.setAttribute("queuebigssi",othersinq.size());
 
 
                         if (difference <= 0) {
-                            alert("Your turn is Here");
+                            alert("Hi,your turn is here!");
                             // Timer done
                             clearInterval(timer);
 
