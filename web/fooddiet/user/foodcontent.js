@@ -85,8 +85,8 @@ $.ajax({
             console.log('index nyan', data)
             $.each(data.item, function (key, data) {
                 console.log('index mid', data)
-                $.each(data, function (key, data) {
-                    console.log('index cute', data)
+               // $.each(data, function (key, data) {
+               //     console.log('index cute', data)
                     if (data.offset = 0) {
                         ndbno = data.ndbno.replace("/\"/", "");
                         console.log(ndbno);
@@ -96,7 +96,7 @@ $.ajax({
                         return false;
                     }
 
-                })
+             //   })
             })
         })
         $.ajax({
