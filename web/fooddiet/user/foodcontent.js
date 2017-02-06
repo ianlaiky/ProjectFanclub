@@ -12,7 +12,7 @@ console.log(foodResult);
 
 
 $.get(
-    "https://api.nal.usda.gov/ndb/search",
+    "https://api.nal.usda.gov/ndb/search/",
     {
         "api_key": KEY1,
         "q": foodResult
