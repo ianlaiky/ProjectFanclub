@@ -49,15 +49,16 @@ $.ajax({
     contentType: 'application/json',
     success: function (data) {
         console.log(data);
-        console.log( JSON.stringify(data, null, '    '))
+        console.log(JSON.stringify(data, null, '    '));
         $.ajax({
             type: 'GET',
             async: false,
-            url: 'http://api.nal.usda.gov/ndb/reports/?ndbno=' + data.ndbno[0] + '&type=b&format=json&api_key=',
-            success: function(results) {
-                food0 = results.report.food;
+            url: 'http://api.nal.usda.gov/ndb/reports/?ndbno=' + data.ndbno[0] + '&type=b&format=json&api_key=' + KEY1,
+            success: function (results) {
+                var food0 = results.report.food;
+                console.log(data.ndbno[0]);
                 console.log(food0);
-                $("#jsGrid-nutrition").jsGrid("insertItem", {
+              /*  $("#jsGrid-nutrition").jsGrid("insertItem", {
                     name: food0.name,
                     kCal: food0.nutrients[1].measures[0].value,
                     servingSize: food0.nutrients[1].measures[0].label,
@@ -66,12 +67,16 @@ $.ajax({
                     fats: food0.nutrients[3].value + food0.nutrients[3].unit,
                     saturatedFats: food0.nutrients[3].value + food0.nutrients[3].unit,
                     protein: food0.nutrients[24].value + food0.nutrients[24].unit
-                });
+                }); */
+            }
+
+        });
     },
     error: function (error) {
 
     }
 });
+
 
 /*$.get(
     FOOD_URL,
