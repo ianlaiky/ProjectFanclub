@@ -8,7 +8,7 @@
 var CV_URL = 'https://vision.googleapis.com/v1/images:annotate?key=' + window.apiKey;
 var food;
 var FOOD_URL = 'https://api.nal.usda.gov/ndb/reports/V2'
-var FOOD_KEY = window.food;
+var FOOD_KEY = window.foodapi;
 
 $(function () {
     $('#fileform').on('submit', uploadFiles);
