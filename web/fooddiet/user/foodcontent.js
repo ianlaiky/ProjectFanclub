@@ -54,7 +54,7 @@ $.ajax({
         $.each(data, function (index, data) {
             $.each(data, function (index, data) {
                 console.log('index', data)
-                $.each(data.item, function (key, data) {
+                $.each(data, function (key, data) {
                     console.log('index nyan', data)
                     /*
                      Function: Filtering off unnecessary labels
