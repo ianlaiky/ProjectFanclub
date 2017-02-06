@@ -53,22 +53,22 @@ $.ajax({
         console.log(data);
         console.log(JSON.stringify(data, null, '    '));
         $.each(data, function (index, data) {
-            console.log('index', data)
-            $.each(data.item, function (key, data) {
-                console.log('index', data)
-                /*
-                 Function: Filtering off unnecessary labels
-                 */
-                if (data[0]) {
-                    console.log('index', data[0]);
-                    ndbno = data.ndbno.replace("/\"/", "");
-                    console.log(ndbno);
+            $.each(data, function (index, data) {
+                $.each(data.item, function (key, data) {
+                    console.log('index', data)
+                    /*
+                     Function: Filtering off unnecessary labels
+                     */
+                    if (data[0]) {
+                        console.log('index', data[0]);
+                        ndbno = data.ndbno.replace("/\"/", "");
+                        console.log(ndbno);
 
-                    text = '<b>Is this </b> ' + JSON.stringify(data.description) + '? <br/>';
-                    text += '<b>Confidence level for this prediction: </b>' + JSON.stringify(data.score) + '<br/>';
-                    return false;
-                }
-
+                        text = '<b>Is this </b> ' + JSON.stringify(data.description) + '? <br/>';
+                        text += '<b>Confidence level for this prediction: </b>' + JSON.stringify(data.score) + '<br/>';
+                        return false;
+                    }
+                })
             })
         })
         $.ajax({
