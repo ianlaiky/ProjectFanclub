@@ -82,21 +82,17 @@ $.ajax({
         var text;
         console.log(JSON.stringify(data, null, '    '));
         $.each(data, function (key, data) {
-            console.log('index nyan', data)
             $.each(data.item, function (key, data) {
-                console.log('index mid', data)
-               // $.each(data, function (key, data) {
-               //     console.log('index cute', data)
-                    if (data.offset = 0) {
-                        ndbno = data.ndbno.replace("/\"/", "");
-                        console.log(ndbno);
+                if (data.item.offset = 0) {
 
-                        //   text = '<b>Is this </b> ' + JSON.stringify(data.description) + '? <br/>';
-                        //    text += '<b>Confidence level for this prediction: </b>' + JSON.stringify(data.score) + '<br/>';
-                        return false;
-                    }
+                    ndbno = data.item.ndbno;
+                    console.log(ndbno);
 
-             //   })
+                    //   text = '<b>Is this </b> ' + JSON.stringify(data.description) + '? <br/>';
+                    //    text += '<b>Confidence level for this prediction: </b>' + JSON.stringify(data.score) + '<br/>';
+                    return false;
+                }
+
             })
         })
         $.ajax({
