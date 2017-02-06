@@ -160,7 +160,17 @@ $.post({
         var evt = new Event('results-displayed');
         evt.results = text;
         document.dispatchEvent(evt);
-        localStorage.setItem('my_key','food');
+        // Check browser support
+        if (typeof(Storage) !== "undefined") {
+            // Store
+            localStorage.setItem('my_key',food);
+            // Retrieve
+            var test = localStorage.getItem("my_key");
+            console.log(test);
+        } else {
+            console.log("Sorry, your browser does not support Web Storage...");
+        }
+
 
 
     });
@@ -170,7 +180,7 @@ $.post({
 $.get(
     FOOD_URL,
     {
-        "api_key": "KEY",
+        "api_key": KEY,
         "ndbno": "01009"
     },
     function(data) {
