@@ -75,21 +75,6 @@
 
     <script>
 
-
-
-//        jQuery(function () {
-//                    $("#viewDiet").click(function (e) {
-//                        e.preventDefault();
-//
-//                        var dateinput = $('#protein').val();
-//                        alert(dateinput);
-//
-//
-//
-//
-//
-//                    });
-//        });
     </script>
 
 
@@ -108,7 +93,7 @@
 -->
         <div class="logo">
             <a href="http://www.creative-tim.com" class="simple-text">
-                Diet Recommendation
+                Food Order List
             </a>
         </div>
         <div class="logo logo-mini">
@@ -129,14 +114,10 @@
                     </a>
                     <div class="collapse" id="collapseExample">
                         <ul class="nav">
-                            <li>
-                                <a href="../foodorder/index.jsp">Order</a>
-                            </li>
 
                             <li>
-                                <a href="#">Diet Recommendation</a>
+                                <a href="#">Food Order List</a>
                             </li>
-
                             <li>
                                 <a href="/logout">
                                     <i class="material-icons">exit_to_app</i>
@@ -321,111 +302,64 @@
             <div class="container-fluid">
                 <div class="col-sm-8 col-sm-offset-2">
                     <!-- Insert all the awesome body content here-->
-
-                    <form action="/dietservlet" action="get">
-                    <div class="row">
-                        <div class="col-md-9">
-
-                                <%
-                                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-
-                                ZonedDateTime localDate = ZonedDateTime.now(ZoneId.of("Asia/Singapore"));
-                                System.out.println(dtf.format(localDate));
-
-                                String currentdate = dtf.format(localDate);
-                                %>
-
-
-
-                            <div class="form-group label-floating">
-                                <label class="control-label">Enter Date of Meal ( DD/MM/YYYY )</label>
-                                <input type="text" class="form-control" id="dateInput" name="enterdate"
-                                       placeholder ="<%=currentdate%>"value="<%=currentdate%>">
-
-
-
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-group label-floating">
-                                <button type="submit" id= "viewDiet" class="btn btn-primary center-block">Get recommendation</button>
-
-                            </div>
-                        </div>
-
-                    </div>
-                    </form>
                     <div class="card">
                         <div class="card-header" data-background-color="purple">
-                            <h4 font color="white">Your Diet for TODAY</h4>
+                            <h4 font color="white">Order List</h4>
 
                         </div>
                         <div class="card-content table-responsive">
                             <table class="table table-hover" id="dietTable">
                                 <thead class="text-warning">
+                                <th>Finished</th>
                                 <th>Food</th>
                                 <th>Quantity</th>
-                                <th>Date</th>
 
                                 </thead>
                                 <tbody>
 
-                                    <%
-                                        foodOrderDAO fod = new foodOrderDAO();
+                                <%
+                                    foodOrderDAO fod = new foodOrderDAO();
+                                    List<FoodorderEntity> fodList;
+                                    fodList = fod.getAllfoodOrder();
 
+                                %>
 
-
-
-                                        List<FoodorderEntity> fodList;
-                                        fodList = fod.getAllfoodOrder();
-
-                                        //filter list for current user meals
-
-                                        ArrayList<FoodorderEntity> dietList = new ArrayList<>();
-                                        for (int i = 0 ; i<fodList.size() ; i++){
-
-                                            String a = fodList.get(i).getPatientId();
-                                            String b = (String) session.getAttribute("username");
-                                            String foodDate = fodList.get(i).getOrderdate();
-
-                                            if(a.equals(b) && foodDate.equals(currentdate)){
-                                                dietList.add(fodList.get(i));
-
+                                <%
+                                    ArrayList<String> foodNamesArr = new ArrayList<>();
+                                    for (int i = 0 ; i<fodList.size() ; i++){
+                                        foodNamesArr.add(fodList.get(i).getFoodName());
                                     }
-                                        }
+                                    Collections.sort(foodNamesArr);
+                                    Map<String, Integer> map = new HashMap<String, Integer>();
+                                    for (String temp : foodNamesArr) {
+                                        Integer count = map.get(temp);
+                                        map.put(temp, (count == null) ? 1 : count + 1);
+                                    }
+                                    System.out.println("\nSorted Map");
+                                    Map<String, Integer> treeMap = new TreeMap<String, Integer>(map);
 
-                                        //getting merged quantity
-                                        ArrayList<String> foodNamesArr = new ArrayList<>();
-                                        for (int i = 0 ; i<dietList.size() ; i++){
-                                            foodNamesArr.add(dietList.get(i).getFoodName());
-                                        }
-                                        Collections.sort(foodNamesArr);
+                                %>
+                                <% for (Map.Entry<String, Integer> entry : map.entrySet()) { %>
 
-                                        Map<String, Integer> map = new HashMap<String, Integer>();
-                                        for (String temp : foodNamesArr) {
-                                            Integer count = map.get(temp);
-                                            map.put(temp, (count == null) ? 1 : count + 1);
-                                        }
+                                <tr>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="optionsCheckboxes" >
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <%=entry.getKey()%>
+                                    </td>
+                                    <td>
+                                        <%=entry.getValue()%>
+                                    </td>
+                                </tr>
 
 
+                                <% } %>
 
-
-
-
-                                    %>
-                                    <%
-                                        for (Map.Entry<String, Integer> entry : map.entrySet()) {
-                                    %>
-                                    <tr>
-
-                                    <td><%=entry.getKey()%></td>
-
-                                    <td><%=entry.getValue()%></td>
-
-                                    <td><%=currentdate%></td>
-                                    </tr>
-                                    <% }
-                                        %>
 
 
                                 </tbody>
@@ -520,18 +454,7 @@
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="../../assets/js/demo2.js"></script>
 <script type="text/javascript">
-    $().ready(function () {
-        demo.initMaterialWizard();
 
-    });
-
-//        $("#viewDiet").click(function (e) {
-//            e.preventDefault();
-//            var dateValue = document.getelementById("dateInput");
-//            alert("testalert");
-//
-//
-//        });
 
 </script>
 
