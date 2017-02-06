@@ -2,7 +2,12 @@
 <%@ page import="foodOrder.FoodorderEntity" %>
 <%@ page import="java.text.DateFormat" %>
 <%@ page import="java.text.SimpleDateFormat" %>
-<%@ page import="java.util.*" %><%--
+<%@ page import="java.util.TimeZone"%>
+<%@ page import="java.util.*" %>
+<%@ page import="java.time.ZonedDateTime" %>
+<%@ page import="java.time.LocalDate" %>
+<%@ page import="java.time.format.DateTimeFormatter" %>
+<%@ page import="java.time.ZoneId" %><%--
   Created by IntelliJ IDEA.
   User: astaroh
   Date: 2/1/2017
@@ -385,9 +390,16 @@
                     <form action="/dietservlet" action="get">
                     <div class="row">
                         <div class="col-md-9">
-                            <% DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-                                Date date = new Date();
-                                String currentdate = dateFormat.format(date); %>
+
+                                <%
+                                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+                                ZonedDateTime localDate = ZonedDateTime.now(ZoneId.of("Asia/Singapore"));
+                                System.out.println(dtf.format(localDate));
+
+                                String currentdate = dtf.format(localDate);
+                                %>
+
 
 
                             <div class="form-group label-floating">
