@@ -122,7 +122,14 @@ $.post({
 
                 $.each(data.labelAnnotations, function (key, data) {
                     console.log('index', data)
-                    if(data.score >= 0.7 && new String(data.description).valueOf() != new String('\"food\"').valueOf()){
+                   // if(data.score >= 0.7 && new String(data.description).valueOf() != new String('\"food\"').valueOf()){
+
+                    /*
+                    Function: Filtering off unnecessary labels
+                     */
+                    if(data.score >= 0.7 && JSON.stringify(data.description) !== '\"food\"' && JSON.stringify(data.description) !== '\"dish\"' ){
+                        console.log(JSON.stringify(data.description) !== '\"food\"');
+                        console.log(JSON.stringify(data.description) !== '\"dish\"');
                         console.log('index', data)
 
 
