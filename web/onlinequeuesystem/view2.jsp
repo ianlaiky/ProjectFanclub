@@ -261,7 +261,7 @@
 
 
                         }
-
+session.setAttribute("queuebigssi",othersinq.size());
 
                     %>
                     <%=othersinq.size()%>
