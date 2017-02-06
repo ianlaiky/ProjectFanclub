@@ -5,7 +5,7 @@
 'use strict';
 
 var foodResult = localStorage.getItem("my_key");
-var KEY = FOOD_KEY;
+var KEY1 = FOOD_KEY;
 var FOOD_URL = 'https://api.nal.usda.gov/ndb/reports'
 console.log(foodResult);
 
@@ -14,7 +14,7 @@ console.log(foodResult);
 $.get(
     "https://api.nal.usda.gov/ndb/search",
     {
-        "api_key": KEY,
+        "api_key": KEY1,
         "q": foodResult
     },
     function(data) {
