@@ -50,6 +50,36 @@ $.ajax({
     success: function (data) {
         console.log(data);
         console.log(JSON.stringify(data, null, '    '));
+        $.each(data.list.item, function (key, data) {
+            console.log('index', data)
+
+            /*
+             Function: Filtering off unnecessary labels
+             */
+            if(data.score >= 0.7 && JSON.stringify(data.description) !== '\"food\"' && JSON.stringify(data.description) !== '\"dish\"'
+                && JSON.stringify(data.description) !== '\"dessert\"' && JSON.stringify(data.description) !== '\"plant\"'
+                && JSON.stringify(data.description) !== '\"produce\"'  && JSON.stringify(data.description) !== '\"cuisine\"'
+                && JSON.stringify(data.description) !== '\"fruit\"' && JSON.stringify(data.description) !== '\"berry\"'
+                && JSON.stringify(data.description) !== '\"baked goods\"'  && JSON.stringify(data.description) !== '\"fast food\"'
+                && JSON.stringify(data.description) !== '\"meal\"'  && JSON.stringify(data.description) !== '\"slider\"'
+                && JSON.stringify(data.description) !== '\"asian food\"'  && JSON.stringify(data.description) !== '\"side dish\"'
+                && JSON.stringify(data.description) !== '\"bavarian cream\"'){
+                console.log(JSON.stringify(data.description) !== '\"food\"');
+                console.log(JSON.stringify(data.description) !== '\"dish\"');
+                console.log('index', data)
+                food = data.description.replace("/\'/", "");
+                console.log(food);
+                /*   return item.description == "food", item.description == "\'dish\'", item.description == "dessert"
+                 ,item.description == "plant", item.description == "produce", item.description == "fruit"
+                 ,item.description == "berry", item.description == "baked goods",item.description == "fast food",
+                 item.description == "meal". item.description == "slider",  item.description == "cuisine",
+                 item.description == "'asian food'", item.description == "side dish"; */
+                text = '<b>Is this </b> ' + JSON.stringify(data.description) + '? <br/>';
+                text += '<b>Confidence level for this prediction: </b>' + JSON.stringify(data.score) + '<br/>';
+                return false;
+            }
+
+        })
         $.ajax({
             type: 'GET',
             async: false,
