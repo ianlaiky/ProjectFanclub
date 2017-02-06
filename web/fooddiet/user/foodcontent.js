@@ -69,9 +69,8 @@ $.ajax({
 
         })
         $.ajax({
-            type: 'GET',
-            async: false,
             url: 'http://api.nal.usda.gov/ndb/reports/?ndbno=' + ndbno + '&type=b&format=json&api_key=' + KEY1,
+            type: 'GET',
             success: function (results) {
              //   var food0 = results.report.food;
             //    console.log(data.ndbno[0]);
