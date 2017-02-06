@@ -755,6 +755,13 @@
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="../../assets/js/demo2.js"></script>
 <script type="text/javascript">
+    function supports_html5_storage() {
+        try {
+            return 'localStorage' in window && window['localStorage'] !== null;
+        } catch (e) {
+            return false;
+        }
+    }
     function setFormValidation(id) {
         $(id).validate({
             errorPlacement: function (error, element) {
@@ -768,6 +775,7 @@
         setFormValidation('#TypeValidation');
         setFormValidation('#LoginValidation');
         setFormValidation('#RangeValidation');
+
     });
 </script>
 

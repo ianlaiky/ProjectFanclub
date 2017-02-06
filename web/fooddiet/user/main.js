@@ -7,8 +7,8 @@
 
 var CV_URL = 'https://vision.googleapis.com/v1/images:annotate?key=' + window.apiKey;
 var food;
-var FOOD_URL = 'https://api.nal.usda.gov/ndb/reports/V2'
-var FOOD_KEY = window.foodapi;
+var FOOD_URL = 'https://api.nal.usda.gov/ndb/reports'
+var KEY = FOOD_KEY;
 
 $(function () {
     $('#fileform').on('submit', uploadFiles);
@@ -160,23 +160,26 @@ $.post({
         var evt = new Event('results-displayed');
         evt.results = text;
         document.dispatchEvent(evt);
+        localStorage.setItem('my_key','food');
+
 
     });
-    console.log(FOOD_KEY);
+    console.log(KEY);
+
 }
+$.get(
+    FOOD_URL,
+    {
+        "api_key": "KEY",
+        "ndbno": "01009"
+    },
+    function(data) {
+        console.log(data);
+        console.log( JSON.stringify(data, null, '    '))
+    }
+);
 
 
-    $.get(
-        FOOD_URL,
-        {
-            "api_key": "FOOD_KEY",
-            "ndbno": "01009"
-        },
-        function(data) {
-            console.log(data);
-            console.log( JSON.stringify(data, null, '    '))
-        }
-    );
 
         /*
 

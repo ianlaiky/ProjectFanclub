@@ -33,6 +33,7 @@ public class SMSServlet extends HttpServlet {
         String phone=null;
         String date=null;
         String time=null;
+        String fName=null;
 
         allVisitor = db.getAllVisitorData();
 
@@ -41,6 +42,7 @@ public class SMSServlet extends HttpServlet {
         for (int i = 0; i < allVisitor.size(); i++) {
 
             if (allVisitor.get(i).getUsername().equalsIgnoreCase(signedinuser)){
+                fName=allVisitor.get(i).getFirstName();
                 phone=allVisitor.get(i).getPhone();
                 date=allVisitor.get(i).getDate();
                 time=allVisitor.get(i).getTime();
@@ -57,7 +59,7 @@ public class SMSServlet extends HttpServlet {
         Message message = Message
                 .creator(new PhoneNumber(phone),  // to
                         new PhoneNumber("+16674014541"),  // from
-                        "Your visiting booking appointment is on "+date+" at "+time)
+                        "Hi "+fName+" ! Your visiting booking appointment is on "+date+" at "+time)
                 .create();
 
         response.sendRedirect("vistorbookingsystem/certification.jsp");

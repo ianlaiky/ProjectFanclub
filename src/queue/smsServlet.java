@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Aravin on 06-Feb-17.
+ * Created by aravin on 06-Feb-17.
  */
 @WebServlet(name = "smsServlet", urlPatterns = "/tqitest")
 public class smsServlet extends HttpServlet {
