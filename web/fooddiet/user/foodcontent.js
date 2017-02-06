@@ -43,6 +43,7 @@ var ndbno;
  );
  */
 
+/*
 $.ajax({
     url: 'https://api.nal.usda.gov/ndb/search/?q=' + foodResult + '&api_key=' + KEY1,
     type: 'GET',
@@ -56,9 +57,9 @@ $.ajax({
                 console.log('index', data)
                 $.each(data, function (key, data) {
                     console.log('index nyan', data)
-                    /*
-                     Function: Filtering off unnecessary labels
-                     */
+
+                 //    Function: Filtering off unnecessary labels
+
                     if (data.item[0]) {
                         console.log('index', data[0]);
                         ndbno = data.ndbno.replace("/\"/", "");
@@ -70,6 +71,31 @@ $.ajax({
                     }
                 })
             })
+        })
+  */
+$.ajax({
+    url: 'https://api.nal.usda.gov/ndb/search/?q=' + foodResult + '&api_key=' + KEY1,
+    type: 'GET',
+    dataType: 'json',
+    contentType: 'application/json',
+    success: function (data) {
+        var text;
+        console.log(JSON.stringify(data, null, '    '));
+
+        $.each(data.list.item, function (key, data) {
+            console.log('index nyan', data)
+
+            //    Function: Filtering off unnecessary labels
+
+            if (data[0]) {
+                console.log('index', data[0]);
+                ndbno = data.ndbno.replace("/\"/", "");
+                console.log(ndbno);
+
+             //   text = '<b>Is this </b> ' + JSON.stringify(data.description) + '? <br/>';
+            //    text += '<b>Confidence level for this prediction: </b>' + JSON.stringify(data.score) + '<br/>';
+                return false;
+            }
         })
         $.ajax({
             url: 'http://api.nal.usda.gov/ndb/reports/?ndbno=' + ndbno + '&type=b&format=json&api_key=' + KEY1,
