@@ -244,10 +244,7 @@ Array.prototype.removeIf = function(callback) {
     }
 };
 
-function filtering(data){
 
-
-}
 
     function readURL(input){
         if(input.files && input.files[0]){
