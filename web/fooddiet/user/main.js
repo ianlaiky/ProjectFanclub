@@ -135,7 +135,8 @@ $.post({
                         && JSON.stringify(data.description) !== '\"fruit\"' && JSON.stringify(data.description) !== '\"berry\"'
                         && JSON.stringify(data.description) !== '\"baked goods\"'  && JSON.stringify(data.description) !== '\"fast food\"'
                         && JSON.stringify(data.description) !== '\"meal\"'  && JSON.stringify(data.description) !== '\"slider\"'
-                        && JSON.stringify(data.description) !== '\"asian food\"'  && JSON.stringify(data.description) !== '\"side dish\"'){
+                        && JSON.stringify(data.description) !== '\"asian food\"'  && JSON.stringify(data.description) !== '\"side dish\"'
+                        && JSON.stringify(data.description) !== '\"bavarian cream\"'){
                         console.log(JSON.stringify(data.description) !== '\"food\"');
                         console.log(JSON.stringify(data.description) !== '\"dish\"');
                         console.log('index', data)
