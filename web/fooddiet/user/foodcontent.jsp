@@ -267,7 +267,7 @@
                                 <a href="#">Snap</a>
                             </li>
                             <li class="active">
-                                <a href="../pages/timeline.html">Food Content</a>
+                                <a href="#">Food Content</a>
                             </li>
 
                         </ul>

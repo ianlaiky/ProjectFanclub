@@ -133,7 +133,7 @@
                                 <a href="snap.jsp">Snap</a>
                             </li>
                             <li>
-                                <a href="../pages/timeline.html">Food Content</a>
+                                <a href="foodcontent.jsp">Food Content</a>
                             </li>
                         </ul>
                     </div>
