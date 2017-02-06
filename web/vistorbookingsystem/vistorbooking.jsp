@@ -75,7 +75,7 @@
     Tip 3: you can change the color of the sidebar with data-background-color="white | black"
 -->
         <div class="logo">
-            <a href="#" class="simple-text">
+            <a href="../patientFrontPage.jsp" class="simple-text">
                 Vistor Booking
             </a>
         </div>
@@ -93,177 +93,183 @@
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
                         <%= session.getAttribute("username") %>
-                        <b class="caret"></b>
+
                     </a>
-                    <div class="collapse" id="collapseExample">
-                        <ul class="nav">
-                            <li>
-                                <a href="#">My Profile</a>
-                            </li>
-                            <li>
-                                <a href="#">Edit Profile</a>
-                            </li>
-                            <li>
-                                <a href="#">Settings</a>
-                            </li>
-                        </ul>
-                    </div>
+                    <%--<div class="collapse" id="collapseExample">--%>
+                        <%--<ul class="nav">--%>
+                            <%--<li>--%>
+                                <%--<a href="#">My Profile</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="#">Edit Profile</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="#">Settings</a>--%>
+                            <%--</li>--%>
+                        <%--</ul>--%>
+                    <%--</div>--%>
                 </div>
             </div>
             <ul class="nav">
-                <li class="active">
-                    <a href="index.jsp">
-                        <i class="material-icons">dashboard</i>
-                        <p>Dashboard</p>
-                    </a>
-                </li>
                 <li>
-                    <a data-toggle="collapse" href="#pagesExamples">
-                        <i class="material-icons">image</i>
-                        <p>Pages
-                            <b class="caret"></b>
-                        </p>
-                    </a>
-                    <div class="collapse" id="pagesExamples">
-                        <ul class="nav">
-                            <li>
-                                <a href="../pages/pricing.html">Pricing</a>
-                            </li>
-                            <li>
-                                <a href="../pages/timeline.html">Timeline</a>
-                            </li>
-                            <li>
-                                <a href="../pages/login.html">Login Page</a>
-                            </li>
-                            <li>
-                                <a href="../pages/register.html">Register Page</a>
-                            </li>
-                            <li>
-                                <a href="../pages/lock.html">Lock Screen Page</a>
-                            </li>
-                            <li>
-                                <a href="../pages/user.html">User Profile</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a data-toggle="collapse" href="#componentsExamples">
-                        <i class="material-icons">apps</i>
-                        <p>Components
-                            <b class="caret"></b>
-                        </p>
-                    </a>
-                    <div class="collapse" id="componentsExamples">
-                        <ul class="nav">
-                            <li>
-                                <a href="../components/buttons.html">Buttons</a>
-                            </li>
-                            <li>
-                                <a href="../components/grid.html">Grid System</a>
-                            </li>
-                            <li>
-                                <a href="../components/panels.html">Panels</a>
-                            </li>
-                            <li>
-                                <a href="../components/sweet-alert.html">Sweet Alert</a>
-                            </li>
-                            <li>
-                                <a href="../components/notifications.html">Notifications</a>
-                            </li>
-                            <li>
-                                <a href="../components/icons.html">Icons</a>
-                            </li>
-                            <li>
-                                <a href="../components/typography.html">Typography</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a data-toggle="collapse" href="#formsExamples">
-                        <i class="material-icons">content_paste</i>
-                        <p>Forms
-                            <b class="caret"></b>
-                        </p>
-                    </a>
-                    <div class="collapse" id="formsExamples">
-                        <ul class="nav">
-                            <li>
-                                <a href="../forms/regular.html">Regular Forms</a>
-                            </li>
-                            <li>
-                                <a href="../forms/extended.html">Extended Forms</a>
-                            </li>
-                            <li>
-                                <a href="../forms/validation.html">Validation Forms</a>
-                            </li>
-                            <li>
-                                <a href="form/profile.jsp">Wizard</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a data-toggle="collapse" href="#tablesExamples">
-                        <i class="material-icons">grid_on</i>
-                        <p>Tables
-                            <b class="caret"></b>
-                        </p>
-                    </a>
-                    <div class="collapse" id="tablesExamples">
-                        <ul class="nav">
-                            <li>
-                                <a href="../tables/regular.html">Regular Tables</a>
-                            </li>
-                            <li>
-                                <a href="../tables/extended.html">Extended Tables</a>
-                            </li>
-                            <li>
-                                <a href="../tables/datatables.net.html">DataTables.net</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a data-toggle="collapse" href="#mapsExamples">
-                        <i class="material-icons">place</i>
-                        <p>Maps
-                            <b class="caret"></b>
-                        </p>
-                    </a>
-                    <div class="collapse" id="mapsExamples">
-                        <ul class="nav">
-                            <li>
-                                <a href="../maps/google.html">Google Maps</a>
-                            </li>
-                            <li>
-                                <a href="../maps/fullscreen.html">Full Screen Map</a>
-                            </li>
-                            <li>
-                                <a href="../maps/vector.html">Vector Map</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a href="../widgets.html">
-                        <i class="material-icons">widgets</i>
-                        <p>Widgets</p>
+                    <a href="/logout">
+                        <i class="material-icons">exit_to_app</i>
+                        <p>Logout</p>
                     </a>
                 </li>
-                <li>
-                    <a href="../charts.html">
-                        <i class="material-icons">timeline</i>
-                        <p>Charts</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="../calendar.html">
-                        <i class="material-icons">date_range</i>
-                        <p>Calendar</p>
-                    </a>
-                </li>
+                <%--<li class="active">--%>
+                    <%--<a href="index.jsp">--%>
+                        <%--<i class="material-icons">dashboard</i>--%>
+                        <%--<p>Dashboard</p>--%>
+                    <%--</a>--%>
+                <%--</li>--%>
+                <%--<li>--%>
+                    <%--<a data-toggle="collapse" href="#pagesExamples">--%>
+                        <%--<i class="material-icons">image</i>--%>
+                        <%--<p>Pages--%>
+                            <%--<b class="caret"></b>--%>
+                        <%--</p>--%>
+                    <%--</a>--%>
+                    <%--<div class="collapse" id="pagesExamples">--%>
+                        <%--<ul class="nav">--%>
+                            <%--<li>--%>
+                                <%--<a href="../pages/pricing.html">Pricing</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="../pages/timeline.html">Timeline</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="../pages/login.html">Login Page</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="../pages/register.html">Register Page</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="../pages/lock.html">Lock Screen Page</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="../pages/user.html">User Profile</a>--%>
+                            <%--</li>--%>
+                        <%--</ul>--%>
+                    <%--</div>--%>
+                <%--</li>--%>
+                <%--<li>--%>
+                    <%--<a data-toggle="collapse" href="#componentsExamples">--%>
+                        <%--<i class="material-icons">apps</i>--%>
+                        <%--<p>Components--%>
+                            <%--<b class="caret"></b>--%>
+                        <%--</p>--%>
+                    <%--</a>--%>
+                    <%--<div class="collapse" id="componentsExamples">--%>
+                        <%--<ul class="nav">--%>
+                            <%--<li>--%>
+                                <%--<a href="../components/buttons.html">Buttons</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="../components/grid.html">Grid System</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="../components/panels.html">Panels</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="../components/sweet-alert.html">Sweet Alert</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="../components/notifications.html">Notifications</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="../components/icons.html">Icons</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="../components/typography.html">Typography</a>--%>
+                            <%--</li>--%>
+                        <%--</ul>--%>
+                    <%--</div>--%>
+                <%--</li>--%>
+                <%--<li>--%>
+                    <%--<a data-toggle="collapse" href="#formsExamples">--%>
+                        <%--<i class="material-icons">content_paste</i>--%>
+                        <%--<p>Forms--%>
+                            <%--<b class="caret"></b>--%>
+                        <%--</p>--%>
+                    <%--</a>--%>
+                    <%--<div class="collapse" id="formsExamples">--%>
+                        <%--<ul class="nav">--%>
+                            <%--<li>--%>
+                                <%--<a href="../forms/regular.html">Regular Forms</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="../forms/extended.html">Extended Forms</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="../forms/validation.html">Validation Forms</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="form/profile.jsp">Wizard</a>--%>
+                            <%--</li>--%>
+                        <%--</ul>--%>
+                    <%--</div>--%>
+                <%--</li>--%>
+                <%--<li>--%>
+                    <%--<a data-toggle="collapse" href="#tablesExamples">--%>
+                        <%--<i class="material-icons">grid_on</i>--%>
+                        <%--<p>Tables--%>
+                            <%--<b class="caret"></b>--%>
+                        <%--</p>--%>
+                    <%--</a>--%>
+                    <%--<div class="collapse" id="tablesExamples">--%>
+                        <%--<ul class="nav">--%>
+                            <%--<li>--%>
+                                <%--<a href="../tables/regular.html">Regular Tables</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="../tables/extended.html">Extended Tables</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="../tables/datatables.net.html">DataTables.net</a>--%>
+                            <%--</li>--%>
+                        <%--</ul>--%>
+                    <%--</div>--%>
+                <%--</li>--%>
+                <%--<li>--%>
+                    <%--<a data-toggle="collapse" href="#mapsExamples">--%>
+                        <%--<i class="material-icons">place</i>--%>
+                        <%--<p>Maps--%>
+                            <%--<b class="caret"></b>--%>
+                        <%--</p>--%>
+                    <%--</a>--%>
+                    <%--<div class="collapse" id="mapsExamples">--%>
+                        <%--<ul class="nav">--%>
+                            <%--<li>--%>
+                                <%--<a href="../maps/google.html">Google Maps</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="../maps/fullscreen.html">Full Screen Map</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="../maps/vector.html">Vector Map</a>--%>
+                            <%--</li>--%>
+                        <%--</ul>--%>
+                    <%--</div>--%>
+                <%--</li>--%>
+                <%--<li>--%>
+                    <%--<a href="../widgets.html">--%>
+                        <%--<i class="material-icons">widgets</i>--%>
+                        <%--<p>Widgets</p>--%>
+                    <%--</a>--%>
+                <%--</li>--%>
+                <%--<li>--%>
+                    <%--<a href="../charts.html">--%>
+                        <%--<i class="material-icons">timeline</i>--%>
+                        <%--<p>Charts</p>--%>
+                    <%--</a>--%>
+                <%--</li>--%>
+                <%--<li>--%>
+                    <%--<a href="../calendar.html">--%>
+                        <%--<i class="material-icons">date_range</i>--%>
+                        <%--<p>Calendar</p>--%>
+                    <%--</a>--%>
+                <%--</li>--%>
             </ul>
         </div>
     </div>
@@ -285,60 +291,60 @@
                     </button>
                     <a class="navbar-brand" href="#"> Home </a>
                 </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
+                <%--<div class="collapse navbar-collapse">--%>
+                    <%--<ul class="nav navbar-nav navbar-right">--%>
+                        <%--&lt;%&ndash;<li>&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">&ndash;%&gt;--%>
+                                <%--&lt;%&ndash;<i class="material-icons">dashboard</i>&ndash;%&gt;--%>
+                                <%--&lt;%&ndash;<p class="hidden-lg hidden-md">Dashboard</p>&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;</a>&ndash;%&gt;--%>
+                        <%--&lt;%&ndash;</li>&ndash;%&gt;--%>
+                        <%--&lt;%&ndash;<li class="dropdown">&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<a href="#" class="dropdown-toggle" data-toggle="dropdown">&ndash;%&gt;--%>
+                                <%--&lt;%&ndash;<i class="material-icons">notifications</i>&ndash;%&gt;--%>
+                                <%--&lt;%&ndash;<span class="notification">5</span>&ndash;%&gt;--%>
+                                <%--&lt;%&ndash;<p class="hidden-lg hidden-md">&ndash;%&gt;--%>
+                                    <%--&lt;%&ndash;Notifications&ndash;%&gt;--%>
+                                    <%--&lt;%&ndash;<b class="caret"></b>&ndash;%&gt;--%>
+                                <%--&lt;%&ndash;</p>&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;</a>&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<ul class="dropdown-menu">&ndash;%&gt;--%>
+                                <%--&lt;%&ndash;<li>&ndash;%&gt;--%>
+                                    <%--&lt;%&ndash;<a href="#">Mike John responded to your email</a>&ndash;%&gt;--%>
+                                <%--&lt;%&ndash;</li>&ndash;%&gt;--%>
+                                <%--&lt;%&ndash;<li>&ndash;%&gt;--%>
+                                    <%--&lt;%&ndash;<a href="#">You have 5 new tasks</a>&ndash;%&gt;--%>
+                                <%--&lt;%&ndash;</li>&ndash;%&gt;--%>
+                                <%--&lt;%&ndash;<li>&ndash;%&gt;--%>
+                                    <%--&lt;%&ndash;<a href="#">You're now friend with Andrew</a>&ndash;%&gt;--%>
+                                <%--&lt;%&ndash;</li>&ndash;%&gt;--%>
+                                <%--&lt;%&ndash;<li>&ndash;%&gt;--%>
+                                    <%--&lt;%&ndash;<a href="#">Another Notification</a>&ndash;%&gt;--%>
+                                <%--&lt;%&ndash;</li>&ndash;%&gt;--%>
+                                <%--&lt;%&ndash;<li>&ndash;%&gt;--%>
+                                    <%--&lt;%&ndash;<a href="#">Another One</a>&ndash;%&gt;--%>
+                                <%--&lt;%&ndash;</li>&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;</ul>&ndash;%&gt;--%>
+                        <%--&lt;%&ndash;</li>&ndash;%&gt;--%>
                         <%--<li>--%>
                             <%--<a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">--%>
-                                <%--<i class="material-icons">dashboard</i>--%>
-                                <%--<p class="hidden-lg hidden-md">Dashboard</p>--%>
+                                <%--<i class="material-icons">person</i>--%>
+                                <%--<p class="hidden-lg hidden-md">Profile</p>--%>
                             <%--</a>--%>
                         <%--</li>--%>
-                        <%--<li class="dropdown">--%>
-                            <%--<a href="#" class="dropdown-toggle" data-toggle="dropdown">--%>
-                                <%--<i class="material-icons">notifications</i>--%>
-                                <%--<span class="notification">5</span>--%>
-                                <%--<p class="hidden-lg hidden-md">--%>
-                                    <%--Notifications--%>
-                                    <%--<b class="caret"></b>--%>
-                                <%--</p>--%>
-                            <%--</a>--%>
-                            <%--<ul class="dropdown-menu">--%>
-                                <%--<li>--%>
-                                    <%--<a href="#">Mike John responded to your email</a>--%>
-                                <%--</li>--%>
-                                <%--<li>--%>
-                                    <%--<a href="#">You have 5 new tasks</a>--%>
-                                <%--</li>--%>
-                                <%--<li>--%>
-                                    <%--<a href="#">You're now friend with Andrew</a>--%>
-                                <%--</li>--%>
-                                <%--<li>--%>
-                                    <%--<a href="#">Another Notification</a>--%>
-                                <%--</li>--%>
-                                <%--<li>--%>
-                                    <%--<a href="#">Another One</a>--%>
-                                <%--</li>--%>
-                            <%--</ul>--%>
-                        <%--</li>--%>
-                        <li>
-                            <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="material-icons">person</i>
-                                <p class="hidden-lg hidden-md">Profile</p>
-                            </a>
-                        </li>
-                        <li class="separator hidden-lg hidden-md"></li>
-                    </ul>
-                    <form class="navbar-form navbar-right" role="search">
-                        <div class="form-group form-search is-empty">
-                            <input type="text" class="form-control" placeholder="Search">
-                            <span class="material-input"></span>
-                        </div>
-                        <button type="submit" class="btn btn-white btn-round btn-just-icon">
-                            <i class="material-icons">search</i>
-                            <div class="ripple-container"></div>
-                        </button>
-                    </form>
-                </div>
+                        <%--<li class="separator hidden-lg hidden-md"></li>--%>
+                    <%--</ul>--%>
+                    <%--&lt;%&ndash;<form class="navbar-form navbar-right" role="search">&ndash;%&gt;--%>
+                        <%--&lt;%&ndash;<div class="form-group form-search is-empty">&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<input type="text" class="form-control" placeholder="Search">&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<span class="material-input"></span>&ndash;%&gt;--%>
+                        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+                        <%--&lt;%&ndash;<button type="submit" class="btn btn-white btn-round btn-just-icon">&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<i class="material-icons">search</i>&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<div class="ripple-container"></div>&ndash;%&gt;--%>
+                        <%--&lt;%&ndash;</button>&ndash;%&gt;--%>
+                    <%--&lt;%&ndash;</form>&ndash;%&gt;--%>
+                <%--</div>--%>
             </div>
         </nav>
         <div class="content">
@@ -465,101 +471,101 @@
             </div>
 
 
-<div class="fixed-plugin">
-    <div class="dropdown show-dropdown">
-        <a href="#" data-toggle="dropdown">
-            <i class="fa fa-cog fa-2x"> </i>
-        </a>
-        <ul class="dropdown-menu">
-            <li class="header-title"> Sidebar Filters</li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger active-color">
-                    <div class="badge-colors text-center">
-                        <span class="badge filter badge-purple" data-color="purple"></span>
-                        <span class="badge filter badge-blue" data-color="blue"></span>
-                        <span class="badge filter badge-green" data-color="green"></span>
-                        <span class="badge filter badge-orange" data-color="orange"></span>
-                        <span class="badge filter badge-red" data-color="red"></span>
-                        <span class="badge filter badge-rose active" data-color="green"></span>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="header-title">Sidebar Background</li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger background-color">
-                    <div class="text-center">
-                        <span class="badge filter badge-white" data-color="white"></span>
-                        <span class="badge filter badge-black active" data-color="black"></span>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger">
-                    <p>Sidebar Mini</p>
-                    <div class="togglebutton switch-sidebar-mini">
-                        <label>
-                            <input type="checkbox" unchecked="">
-                        </label>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger">
-                    <p>Sidebar Image</p>
-                    <div class="togglebutton switch-sidebar-image">
-                        <label>
-                            <input type="checkbox" checked="">
-                        </label>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="header-title">Images</li>
-            <li class="active">
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-1.jpg" alt=""/>
-                </a>
-            </li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-2.jpg" alt=""/>
-                </a>
-            </li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-3.jpg" alt=""/>
-                </a>
-            </li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-4.jpg" alt=""/>
-                </a>
-            </li>
-            <li class="button-container">
-                <div class="">
-                    <a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank"
-                       class="btn btn-rose btn-block">Buy Now</a>
-                </div>
-                <div class="">
-                    <a href="http://www.creative-tim.com/product/material-dashboard" target="_blank"
-                       class="btn btn-info btn-block">Get Free Demo</a>
-                </div>
-            </li>
-            <li class="header-title">Thank you for 95 shares!</li>
-            <li class="button-container">
-                <button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i> &middot;
-                    45
-                </button>
-                <button id="facebook" class="btn btn-social btn-facebook btn-round"><i
-                        class="fa fa-facebook-square"> &middot;</i>50
-                </button>
-            </li>
-        </ul>
-    </div>
-</div>
+<%--<div class="fixed-plugin">--%>
+    <%--<div class="dropdown show-dropdown">--%>
+        <%--<a href="#" data-toggle="dropdown">--%>
+            <%--<i class="fa fa-cog fa-2x"> </i>--%>
+        <%--</a>--%>
+        <%--<ul class="dropdown-menu">--%>
+            <%--<li class="header-title"> Sidebar Filters</li>--%>
+            <%--<li class="adjustments-line">--%>
+                <%--<a href="javascript:void(0)" class="switch-trigger active-color">--%>
+                    <%--<div class="badge-colors text-center">--%>
+                        <%--<span class="badge filter badge-purple" data-color="purple"></span>--%>
+                        <%--<span class="badge filter badge-blue" data-color="blue"></span>--%>
+                        <%--<span class="badge filter badge-green" data-color="green"></span>--%>
+                        <%--<span class="badge filter badge-orange" data-color="orange"></span>--%>
+                        <%--<span class="badge filter badge-red" data-color="red"></span>--%>
+                        <%--<span class="badge filter badge-rose active" data-color="green"></span>--%>
+                    <%--</div>--%>
+                    <%--<div class="clearfix"></div>--%>
+                <%--</a>--%>
+            <%--</li>--%>
+            <%--<li class="header-title">Sidebar Background</li>--%>
+            <%--<li class="adjustments-line">--%>
+                <%--<a href="javascript:void(0)" class="switch-trigger background-color">--%>
+                    <%--<div class="text-center">--%>
+                        <%--<span class="badge filter badge-white" data-color="white"></span>--%>
+                        <%--<span class="badge filter badge-black active" data-color="black"></span>--%>
+                    <%--</div>--%>
+                    <%--<div class="clearfix"></div>--%>
+                <%--</a>--%>
+            <%--</li>--%>
+            <%--<li class="adjustments-line">--%>
+                <%--<a href="javascript:void(0)" class="switch-trigger">--%>
+                    <%--<p>Sidebar Mini</p>--%>
+                    <%--<div class="togglebutton switch-sidebar-mini">--%>
+                        <%--<label>--%>
+                            <%--<input type="checkbox" unchecked="">--%>
+                        <%--</label>--%>
+                    <%--</div>--%>
+                    <%--<div class="clearfix"></div>--%>
+                <%--</a>--%>
+            <%--</li>--%>
+            <%--<li class="adjustments-line">--%>
+                <%--<a href="javascript:void(0)" class="switch-trigger">--%>
+                    <%--<p>Sidebar Image</p>--%>
+                    <%--<div class="togglebutton switch-sidebar-image">--%>
+                        <%--<label>--%>
+                            <%--<input type="checkbox" checked="">--%>
+                        <%--</label>--%>
+                    <%--</div>--%>
+                    <%--<div class="clearfix"></div>--%>
+                <%--</a>--%>
+            <%--</li>--%>
+            <%--<li class="header-title">Images</li>--%>
+            <%--<li class="active">--%>
+                <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
+                    <%--<img src="../../assets/img/sidebar-1.jpg" alt=""/>--%>
+                <%--</a>--%>
+            <%--</li>--%>
+            <%--<li>--%>
+                <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
+                    <%--<img src="../../assets/img/sidebar-2.jpg" alt=""/>--%>
+                <%--</a>--%>
+            <%--</li>--%>
+            <%--<li>--%>
+                <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
+                    <%--<img src="../../assets/img/sidebar-3.jpg" alt=""/>--%>
+                <%--</a>--%>
+            <%--</li>--%>
+            <%--<li>--%>
+                <%--<a class="img-holder switch-trigger" href="javascript:void(0)">--%>
+                    <%--<img src="../../assets/img/sidebar-4.jpg" alt=""/>--%>
+                <%--</a>--%>
+            <%--</li>--%>
+            <%--<li class="button-container">--%>
+                <%--<div class="">--%>
+                    <%--<a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank"--%>
+                       <%--class="btn btn-rose btn-block">Buy Now</a>--%>
+                <%--</div>--%>
+                <%--<div class="">--%>
+                    <%--<a href="http://www.creative-tim.com/product/material-dashboard" target="_blank"--%>
+                       <%--class="btn btn-info btn-block">Get Free Demo</a>--%>
+                <%--</div>--%>
+            <%--</li>--%>
+            <%--<li class="header-title">Thank you for 95 shares!</li>--%>
+            <%--<li class="button-container">--%>
+                <%--<button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i> &middot;--%>
+                    <%--45--%>
+                <%--</button>--%>
+                <%--<button id="facebook" class="btn btn-social btn-facebook btn-round"><i--%>
+                        <%--class="fa fa-facebook-square"> &middot;</i>50--%>
+                <%--</button>--%>
+            <%--</li>--%>
+        <%--</ul>--%>
+    <%--</div>--%>
+<%--</div>--%>
 </div></body>
 <!--   Core JS Files   -->
 <script src="../../assets/js/jquery-3.1.1.min.js" type="text/javascript"></script>
