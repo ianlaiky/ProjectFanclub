@@ -368,6 +368,7 @@
                             <i style="font-size:48px" class="material-icons">face</i>
                         </h1></center>
                         <center><h1 style="font-size:40px">Your Queue Number is: <%=session.getAttribute("newQueueNo")%>
+                            <i style="font-size: 48px" class="material-icons">verified_user</i>
                         </h1></center>
                     </div>
 
