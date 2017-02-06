@@ -385,6 +385,18 @@
                 <div class="col-sm-8 col-sm-offset-2">
                     <!-- Insert all the awesome body content here-->
 
+                    <%--reset table values bug--%>
+                    <%
+                    session.setAttribute("carboh",0.0);
+                    session.setAttribute("sugar",0.0);
+                    session.setAttribute("fibre",0.0);
+                    session.setAttribute("protein",0.0);
+                    session.setAttribute("fat",0.0);
+                    session.setAttribute("salt",0.0);
+                    session.setAttribute("nutrient","");
+                    session.setAttribute("recfood","");
+                    %>
+
                     <%--nutrients container--%>
                     <input type="hidden" id="protein" value="1.1">
                     <input type="hidden" id="fat" value="2.4">
@@ -456,11 +468,12 @@
 //                                            session.setAttribute("protein",protein);
                                             fat = fat + 3 * quantity;
                                             salt = salt + 1.6 * quantity;
+                                            carboh = carboh + 48 * quantity;
 
                                         }
 
                                         if(foodName.equals("Apple")){
-                                            carboh= carboh + 17 * quantity;
+                                            carboh= carboh + 28 * quantity;
                                             fibre = fibre + 3 * quantity;
                                             sugar = sugar+ 13 * quantity;
 
@@ -469,10 +482,60 @@
                                             protein = protein + 9 * quantity;
                                             fat = fat+ 4 * quantity;
                                             salt = salt + 1 *quantity;
-                                            carboh = carboh + 13 * quantity;
+                                            carboh = carboh + 48 * quantity;
                                             sugar = sugar + 1 *quantity;
                                             fibre = fibre + 1 * quantity;
                                         }
+                                        if(foodName.equals("Egg&Tomato Sandwich")){
+                                            fat = fat + 6*quantity;
+                                            sugar = sugar + 2*quantity;
+                                            carboh = carboh + 20*quantity;
+
+                                        }
+                                        if(foodName.equals("Cornflakes")){
+                                            fat = fat + 1*quantity;
+                                            protein = protein + 4* quantity;
+                                            sugar = sugar + 3* quantity;
+                                            fibre = fibre+ 2* quantity;
+                                            carboh = carboh + 24*quantity;
+                                        }
+                                        if(foodName.equals("Fried Egg&Sausages")){
+                                            fat = fat + 4*quantity;
+                                            salt = salt+ 0.3*quantity;
+                                            protein = protein + 10*quantity;
+                                            sugar = sugar + 2*quantity;
+                                            fibre = fibre + 2*quantity;
+                                            carboh = carboh + 20*quantity;
+                                        }
+                                        if(foodName.equals("Kaya Bread")){
+                                            fat = fat + 4*quantity;
+                                            fibre = fibre + 1 *quantity;
+                                            sugar = sugar+1 *quantity;
+                                            protein = protein+1*quantity;
+                                            carboh = carboh + 20*quantity;
+
+                                        }
+                                        if(foodName.equals("Oatmeal")){
+                                            fat = fat + 3.2 *quantity;
+                                            protein = protein + 8 *quantity;
+                                            fibre= fibre+4*quantity;
+                                            sugar = sugar+1*quantity;
+                                            salt = salt +4*quantity;
+                                            carboh = carboh + 25*quantity;
+                                        }
+                                        if(foodName.equals("Orange")){
+                                            fibre = fibre +3 *quantity;
+                                            sugar = sugar+6* quantity;
+                                            carboh= carboh + 17 * quantity;
+
+
+                                        }
+                                        if(foodName.equals("Pear")){
+                                            fibre = fibre +4 *quantity;
+                                            sugar = sugar+8* quantity;
+                                            carboh= carboh + 17 * quantity;
+                                        }
+
 
 
 
@@ -550,6 +613,27 @@
                                         if(entry.getKey().equals("Chicken Noodles")){
                                             updateNutrients(entry.getKey(),entry.getValue());
                                         }
+                                        if(entry.getKey().equals("Pear")){
+                                            updateNutrients(entry.getKey(),entry.getValue());
+                                        }
+                                        if(entry.getKey().equals("Orange")){
+                                            updateNutrients(entry.getKey(),entry.getValue());
+                                        }
+                                        if(entry.getKey().equals("Egg&Tomato Sandwich")){
+                                            updateNutrients(entry.getKey(),entry.getValue());
+                                        }
+                                        if(entry.getKey().equals("Cornflakes")){
+                                            updateNutrients(entry.getKey(),entry.getValue());
+                                        }
+                                        if(entry.getKey().equals("Fried Egg&Sausages")){
+                                            updateNutrients(entry.getKey(),entry.getValue());
+                                        }
+                                        if(entry.getKey().equals("Kaya Bread")){
+                                            updateNutrients(entry.getKey(),entry.getValue());
+                                        }
+                                        if(entry.getKey().equals("Oatmeal")){
+                                            updateNutrients(entry.getKey(),entry.getValue());
+                                        }
 
                                         session.setAttribute("carboh",carboh);
                                         session.setAttribute("sugar",sugar);
@@ -573,7 +657,73 @@
                         </div>
                     </div>
 
-                    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                    <div class="row">
+                        <div class="col-lg-8 col-md-12">
+
+                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-12">
+                        <div class="card">
+                            <div class="card-header" data-background-color="purple">
+                                <h4 font color="white">Recommended food</h4>
+
+                            </div>
+                            <div class="card-content table-responsive">
+                                <%
+                                    session.setAttribute("nutrient","");
+                                    session.setAttribute("recfood","");
+                                    if((Double)session.getAttribute("protein") < 56){
+                                        session.setAttribute("nutrient","protein");
+                                        session.setAttribute("recfood","fish porridge");
+
+
+                                }
+                                    else if((Double)session.getAttribute("fat")< 70){
+                                        session.setAttribute("nutrient","fat");
+                                        session.setAttribute("recfood","chicken noodles");
+
+                                }
+                                    else if((Double)session.getAttribute("carboh")<310){
+                                        session.setAttribute("nutrient","carbohydrates");
+                                        session.setAttribute("recfood","chicken noodles");
+
+                                    }
+                                    else if((Double)session.getAttribute("sugar")<90){
+                                        session.setAttribute("nutrient","sugar");
+                                        session.setAttribute("recfood","apple");
+
+                                    }
+                                    else if((Double)session.getAttribute("fibre")<30){
+                                        session.setAttribute("nutrient","dietary fibre");
+                                        session.setAttribute("recfood","cornflakes");
+                                    }
+
+
+
+                                %>
+                                <% if(!(session.getAttribute("nutrient").equals(""))){ %>
+
+                                You are low on <b><%=session.getAttribute("nutrient")%></b><br>
+                                Your Recommended food is <%=session.getAttribute("recfood")%>
+                                <% System.out.println("nutrient empty check"+session.getAttribute("nutrient"));%>
+
+
+                                <% } else { %>
+                                Your diet is great!
+                                <% } %>
+
+
+                            </div>
+                        </div>
+                        </div>
+
+
+
+
+
+                    </div>
+
 
                     <!--end of content-->
                 </div>

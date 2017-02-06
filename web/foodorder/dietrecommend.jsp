@@ -385,11 +385,15 @@
                     <form action="/dietservlet" action="get">
                     <div class="row">
                         <div class="col-md-9">
+                            <% DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+                                Date date = new Date();
+                                String currentdate = dateFormat.format(date); %>
 
 
                             <div class="form-group label-floating">
                                 <label class="control-label">Enter Date of Meal ( DD/MM/YYYY )</label>
-                                <input type="text" class="form-control" id="dateInput" name="enterdate" val="">
+                                <input type="text" class="form-control" id="dateInput" name="enterdate"
+                                       placeholder ="<%=currentdate%>"value="<%=currentdate%>">
 
 
 
@@ -397,7 +401,7 @@
                         </div>
                         <div class="col-md-3">
                             <div class="form-group label-floating">
-                                <button type="submit" id= "viewDiet" class="btn btn-primary center-block">View diet</button>
+                                <button type="submit" id= "viewDiet" class="btn btn-primary center-block">Get recommendation</button>
 
                             </div>
                         </div>
@@ -422,9 +426,7 @@
                                     <%
                                         foodOrderDAO fod = new foodOrderDAO();
 
-                                        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-                                        Date date = new Date();
-                                        String currentdate = dateFormat.format(date);
+
 
 
                                         List<FoodorderEntity> fodList;
