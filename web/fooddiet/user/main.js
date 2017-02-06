@@ -7,7 +7,7 @@
 
 var CV_URL = 'https://vision.googleapis.com/v1/images:annotate?key=' + window.apiKey;
 var food;
-var FOOD_URL = ' https://api.nal.usda.gov/ndb/reports/V2'
+var FOOD_URL = 'https://api.nal.usda.gov/ndb/reports/V2'
 
 $(function () {
     $('#fileform').on('submit', uploadFiles);
@@ -162,6 +162,20 @@ $.post({
 
     });
 }
+
+
+    $.get(
+        FOOD_URL,
+        {
+            "api_key": window.foodApiKey,
+            "ndbno": "01009"
+        },
+        function(data) {
+            console.log(data);
+            console.log( JSON.stringify(data, null, '    '))
+        }
+    );
+
         /*
 
  ====original important====
