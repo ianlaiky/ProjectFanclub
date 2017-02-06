@@ -235,14 +235,14 @@ function displayJSON2 (data) {
     document.dispatchEvent(evt);
 }
 
-Array.prototype.removeIf = function(callback) {
+/*Array.prototype.removeIf = function(callback) {
     var i = this.length;
     while (i--) {
         if (callback(this[i], i)) {
             this.splice(i, 1);
         }
     }
-};
+}; */
 
 
 
