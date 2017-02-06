@@ -706,16 +706,7 @@
                             <br>
                             <br>
                             <br>
-                            <br>
 
-                            <br>
-
-
-                            <br>
-                            <br>
-
-                            <br>
-                            <br>
                             <script>
                                $(function(){
 
@@ -781,9 +772,7 @@
                             <br>
                             <br>
                             <br>
-                            <br>
-                            <br>
-                            <br>
+
 
 
                         </div>
