@@ -348,7 +348,7 @@
 
 
                        -->
-                    <form action="/VistorbookingServlet" method="post">
+                    <form action="/vistorbookingsave" method="post">
 
                     <div class="col-sm-6">
                         <div class="input-group">
