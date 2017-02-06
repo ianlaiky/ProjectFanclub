@@ -6,6 +6,8 @@
 'use strict';
 
 var CV_URL = 'https://vision.googleapis.com/v1/images:annotate?key=' + window.apiKey;
+var food;
+var FOOD_URL = ' https://api.nal.usda.gov/ndb/reports/V2'
 
 $(function () {
     $('#fileform').on('submit', uploadFiles);
@@ -137,16 +139,11 @@ $.post({
                         console.log(JSON.stringify(data.description) !== '\"food\"');
                         console.log(JSON.stringify(data.description) !== '\"dish\"');
                         console.log('index', data)
-
-
                          /*   return item.description == "food", item.description == "\'dish\'", item.description == "dessert"
                                 ,item.description == "plant", item.description == "produce", item.description == "fruit"
                                 ,item.description == "berry", item.description == "baked goods",item.description == "fast food",
                             item.description == "meal". item.description == "slider",  item.description == "cuisine",
                             item.description == "'asian food'", item.description == "side dish"; */
-
-
-
                         text = '<b>Is this </b> ' + JSON.stringify(data.description) + '? <br/>';
                         text += '<b>Confidence level for this prediction: </b>' + JSON.stringify(data.score) + '<br/>';
                      return false;
