@@ -576,14 +576,19 @@
 
 
                                 </div>
+
                                 <div class="text-center">
 
-                                    <button type="submit" class="btn btn-rose btn-fill btn-wd"><i style="font-size:30px"
-                                                                                                  class="material-icons">delete_forever</i>
-                                        Delete Queue Number
-                                        <i style="font-size:30px"
-                                           class="material-icons">delete_forever</i>
-                                    </button>
+                                    <center>
+                                        <button type="submit" class="btn btn-rose btn-fill btn-wd"><i
+                                                style="font-size:30px"
+                                                class="material-icons">delete_forever</i>
+                                            Delete Queue Number
+                                            <i style="font-size:30px"
+                                               class="material-icons">delete_forever</i>
+
+                                        </button>
+                                    </center>
                                 </div>
 
 

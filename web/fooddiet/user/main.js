@@ -7,7 +7,6 @@
 
 var CV_URL = 'https://vision.googleapis.com/v1/images:annotate?key=' + window.apiKey;
 var food;
-var FOOD_URL = 'https://api.nal.usda.gov/ndb/reports'
 var KEY = FOOD_KEY;
 
 $(function () {
@@ -160,24 +159,24 @@ $.post({
         var evt = new Event('results-displayed');
         evt.results = text;
         document.dispatchEvent(evt);
-        localStorage.setItem('my_key','food');
+        // Check browser support
+        if (typeof(Storage) !== "undefined") {
+            // Store
+            localStorage.setItem('my_key',food);
+            // Retrieve
+            var test = localStorage.getItem("my_key");
+            console.log(test);
+        } else {
+            console.log("Sorry, your browser does not support Web Storage...");
+        }
+
 
 
     });
     console.log(KEY);
 
 }
-$.get(
-    FOOD_URL,
-    {
-        "api_key": "KEY",
-        "ndbno": "01009"
-    },
-    function(data) {
-        console.log(data);
-        console.log( JSON.stringify(data, null, '    '))
-    }
-);
+
 
 
 
