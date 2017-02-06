@@ -81,21 +81,23 @@ $.ajax({
     success: function (data) {
         var text;
         console.log(JSON.stringify(data, null, '    '));
-
-        $.each(data.list.item, function (key, data) {
+        $.each(data, function (key, data) {
             console.log('index nyan', data)
+            $.each(data.item, function (key, data) {
+                console.log('index moo', data)
 
-            //    Function: Filtering off unnecessary labels
+                //    Function: Filtering off unnecessary labels
 
-            if (data[0]) {
-                console.log('index', data[0]);
-                ndbno = data.ndbno.replace("/\"/", "");
-                console.log(ndbno);
+                if (data.offset = 0) {
+                    console.log('index', data);
+                    ndbno = data.ndbno.replace("/\"/", "");
+                    console.log(ndbno);
 
-             //   text = '<b>Is this </b> ' + JSON.stringify(data.description) + '? <br/>';
-            //    text += '<b>Confidence level for this prediction: </b>' + JSON.stringify(data.score) + '<br/>';
-                return false;
-            }
+                    //   text = '<b>Is this </b> ' + JSON.stringify(data.description) + '? <br/>';
+                    //    text += '<b>Confidence level for this prediction: </b>' + JSON.stringify(data.score) + '<br/>';
+                    return false;
+                }
+            })
         })
         $.ajax({
             url: 'http://api.nal.usda.gov/ndb/reports/?ndbno=' + ndbno + '&type=b&format=json&api_key=' + KEY1,
