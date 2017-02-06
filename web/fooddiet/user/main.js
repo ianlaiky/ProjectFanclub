@@ -177,17 +177,7 @@ $.post({
     console.log(KEY);
 
 }
-$.get(
-    FOOD_URL,
-    {
-        "api_key": KEY,
-        "ndbno": "01009"
-    },
-    function(data) {
-        console.log(data);
-        console.log( JSON.stringify(data, null, '    '))
-    }
-);
+
 
 
 
