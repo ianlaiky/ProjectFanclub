@@ -122,7 +122,7 @@ $.post({
 
                 $.each(data.labelAnnotations, function (key, data) {
                     console.log('index', data)
-                    if(data.score >= 0.7){
+                    if(data.score >= 0.7 && new String(data.description).valueOf() != new String('\"food\"').valueOf()){
                         console.log('index', data)
 
 
@@ -131,6 +131,7 @@ $.post({
                                 ,item.description == "berry", item.description == "baked goods",item.description == "fast food",
                             item.description == "meal". item.description == "slider",  item.description == "cuisine",
                             item.description == "'asian food'", item.description == "side dish"; */
+
 
 
                         text = '<b>Is this </b> ' + JSON.stringify(data.description) + '? <br/>';
