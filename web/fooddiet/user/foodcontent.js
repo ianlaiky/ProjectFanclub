@@ -50,16 +50,16 @@ $.ajax({
     contentType: 'application/json',
     success: function (data) {
         var text;
-        console.log(data);
         console.log(JSON.stringify(data, null, '    '));
         $.each(data, function (index, data) {
             $.each(data, function (index, data) {
+                console.log('index', data)
                 $.each(data.item, function (key, data) {
-                    console.log('index', data)
+                    console.log('index nyan', data)
                     /*
                      Function: Filtering off unnecessary labels
                      */
-                    if (data[0]) {
+                    if (data.item[0]) {
                         console.log('index', data[0]);
                         ndbno = data.ndbno.replace("/\"/", "");
                         console.log(ndbno);
