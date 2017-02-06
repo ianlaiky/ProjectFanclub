@@ -18,7 +18,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png"/>
     <link rel="icon" type="image/png" href="../assets/img/favicon.png"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>Vision API</title>
+    <title>Certification</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
     <meta name="viewport" content="width=device-width"/>
     <!-- Canonical SEO -->
@@ -349,7 +349,7 @@
                 <div class="col-sm-8 col-sm-offset-2">
                     <!-- Insert all the awesome body content here->
 
-
+ <div class="col-sm-6">
 
   -->       <%
 
@@ -365,7 +365,7 @@
 
                 %>
 
-                    <div class="col-sm-6">
+
                         <div class="input-group">
                                                         <span class="input-group-addon">
                                                             <i class="material-icons">face</i>
@@ -428,13 +428,6 @@
                             </div>
                         </div>
 
-                    </div>
-                    <button type="button" style="position: fixed;
-                    bottom: 110px;
-                    margin-right: 300px;
-                    margin-left: 800px;">download
-                    </button>
-
 
 
 
@@ -446,12 +439,18 @@
                         }
 
                     %>
+                    <div class="input-group">
+                    <form action="/sendingsms" method="post">
+                    <input class="btn btn-rose btn-fill" type="submit" value="Get Notification">
+                    </input>
+                    </form>
+                    </div>
+
+            </div>
 
 
 
-
-
-            <%--<div class="fixed-plugin">--%>
+        <%--<div class="fixed-plugin">--%>
                 <%--<div class="dropdown show-dropdown">--%>
                     <%--<a href="#" data-toggle="dropdown">--%>
                         <%--<i class="fa fa-cog fa-2x"> </i>--%>
