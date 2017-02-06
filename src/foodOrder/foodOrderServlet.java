@@ -10,6 +10,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 /**
@@ -34,9 +37,16 @@ public class foodOrderServlet extends HttpServlet {
         String foodNames = request.getParameter("orderlist");
         System.out.println("FOODNAMES ARRAYSTRING = " + foodNames);
         String[] foodNamesArr = foodNames.split(",");
-        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        Date date = new Date();
-        String currentdate = dateFormat.format(date);
+//        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+//        Date date = new Date();
+//        String currentdate = dateFormat.format(date);
+
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+        ZonedDateTime localDate = ZonedDateTime.now(ZoneId.of("Asia/Singapore"));
+        System.out.println(dtf.format(localDate));
+
+        String currentdate = dtf.format(localDate);
 
 
         for (int i = 0 ; i<foodNamesArr.length ; i++){
