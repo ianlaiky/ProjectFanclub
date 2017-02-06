@@ -98,8 +98,6 @@
 
         }
 
-
-
         img {
 
             width: 240px;
@@ -107,7 +105,6 @@
             background-color: grey;
 
         }
-
 
         .caption {
 
@@ -127,32 +124,33 @@
         }
 
 
-
     </style>
     <script>
 
 
-//        $( document ).ready(function() {
-//            $("table#orderlisttable tr").each(function() {
-//                var arrayOfThisRow = [];
-//                var tableData = $(this).find('td');
-//                if (tableData.length > 0) {
-//                    tableData.each(function() { arrayOfThisRow.push($(this).text()); });
-//                    myTableArray.push(arrayOfThisRow);
-//                }
-//            });
-//        });
+        //        $( document ).ready(function() {
+        //            $("table#orderlisttable tr").each(function() {
+        //                var arrayOfThisRow = [];
+        //                var tableData = $(this).find('td');
+        //                if (tableData.length > 0) {
+        //                    tableData.each(function() { arrayOfThisRow.push($(this).text()); });
+        //                    myTableArray.push(arrayOfThisRow);
+        //                }
+        //            });
+        //        });
 
         jQuery(function () {
             $("#btnSubmitFood").click(function (e) {
 
                 var myTableArray = [];
 
-                $("table#orderlisttable tr").each(function() {
+                $("table#orderlisttable tr").each(function () {
                     var arrayOfThisRow = [];
                     var tableData = $(this).find('td');
                     if (tableData.length > 0) {
-                        tableData.each(function() { arrayOfThisRow.push($(this).text()); });
+                        tableData.each(function () {
+                            arrayOfThisRow.push($(this).text());
+                        });
                         myTableArray.push(arrayOfThisRow);
                     }
 
@@ -164,14 +162,11 @@
         });
 
 
-
-
         jQuery(function () {
             $("#btnFPorridge").click(function (e) {
                 e.preventDefault();
                 $("#foodFP").val("Fish Porridge");
                 $("#orderlisttable").append("<tr><td>Fish Porridge</td></tr>");
-
 
 
             });
@@ -222,8 +217,6 @@
         });
 
 
-
-
         jQuery(function () {
             $("#btnCNoodles").click(function (e) {
                 e.preventDefault();
@@ -234,20 +227,20 @@
         });
         jQuery(function () {
             $("#btnApple").click(function (e) {
-              e.preventDefault();
-              $("#foodApple").val("Apple");
-              $("#orderlisttable").append("<tr><td>Apple</td></tr>");
+                e.preventDefault();
+                $("#foodApple").val("Apple");
+                $("#orderlisttable").append("<tr><td>Apple</td></tr>");
 
-         });
+            });
         });
 
         jQuery(function () {
             $("#btnPear").click(function (e) {
                 e.preventDefault();
                 $("#foodPear").val("Pear");
-               $("#orderlisttable").append("<tr><td>Pear</td></tr>");
+                $("#orderlisttable").append("<tr><td>Pear</td></tr>");
 
-           });
+            });
         });
 
         jQuery(function () {
@@ -296,19 +289,19 @@
 <body>
 
 <%
-if(session.getAttribute("signInPatient")==null){
-response.sendRedirect("../errorPage.jsp");
-}else{
-if(session.getAttribute("signInPatient").equals("false")){
-response.sendRedirect("../errorPage.jsp");
-}
+    if (session.getAttribute("signInPatient") == null) {
+        response.sendRedirect("../errorPage.jsp");
+    } else {
+        if (session.getAttribute("signInPatient").equals("false")) {
+            response.sendRedirect("../errorPage.jsp");
+        }
 
-}
+    }
 
 %>
 
 <div class="wrapper">
-    <div class="sidebar" data-active-color="green" data-background-color="white"
+    <div class="sidebar" data-active-color="green" data-background-color="black"
          data-image="../../assets/img/sidebar-1.jpg">
         <!--
     Tip 1: You can change the color of active element of the sidebar using: data-active-color="purple | blue | green | orange | red | rose"
@@ -540,237 +533,231 @@ response.sendRedirect("../errorPage.jsp");
                     <%--Insert all the awesome body content here--%>
 
 
-                        <div class="card card-nav-tabs">
-                            <div class="card-header" data-background-color="purple">
-                                <div class="nav-tabs-navigation">
-                                    <div class="nav-tabs-wrapper">
-                                        <span class="nav-tabs-title">Menu:</span>
-                                        <ul class="nav nav-tabs nav-justified" data-tabs="tabs">
-                                            <li class="active">
-                                                <a href="#foodtab" data-toggle="tab">
-                                                    <i class="material-icons">restaurant_menu</i>
-                                                    Bugs
-                                                    <div class="ripple-container"></div>
-                                                </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="#drinkstab" data-toggle="tab">
-                                                    <i class="material-icons">local_bar</i>
-                                                    Drinks
-                                                    <div class="ripple-container"></div>
-                                                </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="#fruitstab" data-toggle="tab">
-                                                    <i class="material-icons">restaurant_menu</i>
-                                                    Fruits
-                                                    <div class="ripple-container"></div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                    <div class="card card-nav-tabs">
+                        <div class="card-header" data-background-color="purple">
+                            <div class="nav-tabs-navigation">
+                                <div class="nav-tabs-wrapper">
+                                    <span class="nav-tabs-title">Menu:</span>
+                                    <ul class="nav nav-tabs nav-justified" data-tabs="tabs">
+                                        <li class="active">
+                                            <a href="#foodtab" data-toggle="tab">
+                                                <i class="material-icons">restaurant_menu</i>
+                                                Bugs
+                                                <div class="ripple-container"></div>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#drinkstab" data-toggle="tab">
+                                                <i class="material-icons">local_bar</i>
+                                                Drinks
+                                                <div class="ripple-container"></div>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#fruitstab" data-toggle="tab">
+                                                <i class="material-icons">restaurant_menu</i>
+                                                Fruits
+                                                <div class="ripple-container"></div>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="card-content">
-                                <div class="tab-content">
-                                    <div class="tab-pane active" id="foodtab">
-                                        <h3>Food</h3>
-                                        <form action="/foodservlet" action="get">
-                                            <%--food values container --%>
-                                            <div class="foodOrderContainer">
-                                                <input type="text" id="foodFP" name="food"/>
-                                                <input type="text" id="foodCN" name="food"/>
-                                                <input type="text" id="foodEggTomatoSw" name="food"/>
-                                                <input type="text" id="foodCornflake" name="food"/>
-                                                <input type="text" id="foodEggSausage" name="food"/>
-                                                <input type="text" id="foodKayaBread" name="food"/>
-                                                <input type="text" id="foodOatmeal" name="food"/>
-                                            </div>
-                                            <%-- end of food values container--%>
+                        <div class="card-content">
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="foodtab">
+                                    <h3>Food</h3>
+                                    <form action="/foodservlet" action="get">
+                                        <%--food values container --%>
+                                        <div class="foodOrderContainer">
+                                            <input type="text" id="foodFP" name="food"/>
+                                            <input type="text" id="foodCN" name="food"/>
+                                            <input type="text" id="foodEggTomatoSw" name="food"/>
+                                            <input type="text" id="foodCornflake" name="food"/>
+                                            <input type="text" id="foodEggSausage" name="food"/>
+                                            <input type="text" id="foodKayaBread" name="food"/>
+                                            <input type="text" id="foodOatmeal" name="food"/>
+                                        </div>
+                                        <%-- end of food values container--%>
 
 
-                                                <div class="item">
-                                                    <img src="images/fishporridge.jpg" class="img-circle" style="width: 240px;height:140px;">
-                                                    <span class="caption">
+                                        <div class="item">
+                                            <img src="images/fishporridge.jpg" class="img-circle"
+                                                 style="width: 240px;height:140px;">
+                                            <span class="caption">
                                                      Fish porridge
                                                     </span>
-                                                    <button type="button" id="btnFPorridge"
-                                                            class="btn btn-primary btn-circle hoverable"
-                                                            value="defaultvalue"><i
-                                                            class="glyphicon glyphicon-plus"></i></button>
+                                            <button type="button" id="btnFPorridge"
+                                                    class="btn btn-primary btn-circle hoverable"
+                                                    value="defaultvalue"><i
+                                                    class="glyphicon glyphicon-plus"></i></button>
 
-                                                </div>
-                                                <div class="item">
-                                                    <img src="images/chickennoodle.jpg" class="img-circle"
-                                                         alt="Cinque Terre" style="width: 240px;height:140px;" >
-                                                    <span class="caption">
+                                        </div>
+                                        <div class="item">
+                                            <img src="images/chickennoodle.jpg" class="img-circle"
+                                                 alt="Cinque Terre" style="width: 240px;height:140px;">
+                                            <span class="caption">
                                                         Chicken Noodles
                                                     </span>
-                                                    <button type="button" id="btnCNoodles"
-                                                            class="btn btn-primary btn-circle"><i
-                                                            class="glyphicon glyphicon-plus"></i></button>
-                                                </div>
-
-                                                <div class="item">
-                                                    <img src="images/eggtomatosandwich.JPG" class="img-circle"
-                                                         alt="Cinque Terre" style="width: 240px;height:140px;">
-                                                    <span class="caption">
-                                                        Egg&Tomato Sandwich
-                                                    </span>
-                                                    <button type="button" id="btnETSandwich"
-                                                            class="btn btn-primary btn-circle"><i
-                                                            class="glyphicon glyphicon-plus"></i></button>
-                                                </div>
-
-                                                <div class="item">
-                                                    <img src="images/cornflake.jpg" class="img-circle"
-                                                         alt="Cinque Terre" style="width: 240px;height:140px;">
-                                                    <span class="caption">
-                                                        Cornflakes
-                                                    </span>
-                                                    <button type="button" id="btnCornflakes"
-                                                            class="btn btn-primary btn-circle"><i
-                                                            class="glyphicon glyphicon-plus"></i></button>
-                                                </div>
-                                                <div class="item">
-                                                    <img src="images/friedeggsausage.jpg" class="img-circle"
-                                                         alt="friedeggsausage" style="width: 240px;height:140px;">
-                                                    <span class="caption">Sausages&Egg
-                                                    </span>
-                                                    <button type="button" id="btnSausagesEgg"
-                                                            class="btn btn-primary btn-circle"><i
-                                                            class="glyphicon glyphicon-plus"></i></button>
-                                                </div>
-                                                <div class="item">
-                                                    <img src="images/kayabread.jpg" class="img-circle"
-                                                         alt="kaya bread" style="width: 240px;height:140px;">
-                                                    <span class="caption">Kaya Bread
-                                                    </span>
-                                                    <button type="button" id="btnKayaBread"
-                                                            class="btn btn-primary btn-circle"><i
-                                                            class="glyphicon glyphicon-plus"></i></button>
-                                                </div>
-                                                <div class="item">
-                                                    <img src="images/oatmeal.jpg" class="img-circle" alt="Cinque Terre"
-                                                         style="width: 240px;height:140px;">
-                                                    <span class="caption">Oatmeal
-                                                    </span>
-                                                    <button type="button" id="btnOatmeal"
-                                                            class="btn btn-primary btn-circle"><i
-                                                            class="glyphicon glyphicon-plus"></i></button>
-                                                </div>
-
-
-
-
-                                    </div>
-                                    <div class="tab-pane" id="drinkstab">
-                                        <%--start of drinks tab--%>
-                                        <div class="foodOrderContainer">
-                                            <input type="text" id="foodMilk" name="food"/>
-                                            <input type="text" id="foodOJ" name="food"/>
-                                            <input type="text" id="foodWater" name="food"/>
+                                            <button type="button" id="btnCNoodles"
+                                                    class="btn btn-primary btn-circle"><i
+                                                    class="glyphicon glyphicon-plus"></i></button>
                                         </div>
 
-                                            <div class="item">
-                                                <img src="images/milk.jpg" class="img-circle" alt="milk"
-                                                     style="width: 240px;height:140px;">
-                                                <span class="caption">Milk
+                                        <div class="item">
+                                            <img src="images/eggtomatosandwich.JPG" class="img-circle"
+                                                 alt="Cinque Terre" style="width: 240px;height:140px;">
+                                            <span class="caption">
+                                                        Egg&Tomato Sandwich
                                                     </span>
-                                                <button type="button" id="btnMilk"
-                                                        class="btn btn-primary btn-circle"><i
-                                                        class="glyphicon glyphicon-plus"></i></button>
-                                            </div>
+                                            <button type="button" id="btnETSandwich"
+                                                    class="btn btn-primary btn-circle"><i
+                                                    class="glyphicon glyphicon-plus"></i></button>
+                                        </div>
 
-                                            <div class="item">
-                                                <img src="images/orangejuice.jpg" class="img-circle" alt="orange juice"
-                                                     style="width: 240px;height:140px;">
-                                                <span class="caption">Orange Juice
+                                        <div class="item">
+                                            <img src="images/cornflake.jpg" class="img-circle"
+                                                 alt="Cinque Terre" style="width: 240px;height:140px;">
+                                            <span class="caption">
+                                                        Cornflakes
                                                     </span>
-                                                <button type="button" id="btnOJ"
-                                                        class="btn btn-primary btn-circle"><i
-                                                        class="glyphicon glyphicon-plus"></i></button>
-                                            </div>
-
-                                            <div class="item">
-                                                <img src="images/water.jpg" class="img-circle" alt="plainwater"
-                                                     style="width: 240px;height:140px;">
-                                                <span class="caption">Water
+                                            <button type="button" id="btnCornflakes"
+                                                    class="btn btn-primary btn-circle"><i
+                                                    class="glyphicon glyphicon-plus"></i></button>
+                                        </div>
+                                        <div class="item">
+                                            <img src="images/friedeggsausage.jpg" class="img-circle"
+                                                 alt="friedeggsausage" style="width: 240px;height:140px;">
+                                            <span class="caption">Sausages&Egg
                                                     </span>
-                                                <button type="button" id="btnWater"
-                                                        class="btn btn-primary btn-circle"><i
-                                                        class="glyphicon glyphicon-plus"></i></button>
-                                            </div>
+                                            <button type="button" id="btnSausagesEgg"
+                                                    class="btn btn-primary btn-circle"><i
+                                                    class="glyphicon glyphicon-plus"></i></button>
+                                        </div>
+                                        <div class="item">
+                                            <img src="images/kayabread.jpg" class="img-circle"
+                                                 alt="kaya bread" style="width: 240px;height:140px;">
+                                            <span class="caption">Kaya Bread
+                                                    </span>
+                                            <button type="button" id="btnKayaBread"
+                                                    class="btn btn-primary btn-circle"><i
+                                                    class="glyphicon glyphicon-plus"></i></button>
+                                        </div>
+                                        <div class="item">
+                                            <img src="images/oatmeal.jpg" class="img-circle" alt="Cinque Terre"
+                                                 style="width: 240px;height:140px;">
+                                            <span class="caption">Oatmeal
+                                                    </span>
+                                            <button type="button" id="btnOatmeal"
+                                                    class="btn btn-primary btn-circle"><i
+                                                    class="glyphicon glyphicon-plus"></i></button>
+                                        </div>
 
 
+                                </div>
+                                <div class="tab-pane" id="drinkstab">
+                                    <%--start of drinks tab--%>
+                                    <div class="foodOrderContainer">
+                                        <input type="text" id="foodMilk" name="food"/>
+                                        <input type="text" id="foodOJ" name="food"/>
+                                        <input type="text" id="foodWater" name="food"/>
+                                    </div>
 
-                                        <%--end drinkstab--%>
+                                    <div class="item">
+                                        <img src="images/milk.jpg" class="img-circle" alt="milk"
+                                             style="width: 240px;height:140px;">
+                                        <span class="caption">Milk
+                                                    </span>
+                                        <button type="button" id="btnMilk"
+                                                class="btn btn-primary btn-circle"><i
+                                                class="glyphicon glyphicon-plus"></i></button>
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="images/orangejuice.jpg" class="img-circle" alt="orange juice"
+                                             style="width: 240px;height:140px;">
+                                        <span class="caption">Orange Juice
+                                                    </span>
+                                        <button type="button" id="btnOJ"
+                                                class="btn btn-primary btn-circle"><i
+                                                class="glyphicon glyphicon-plus"></i></button>
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="images/water.jpg" class="img-circle" alt="plainwater"
+                                             style="width: 240px;height:140px;">
+                                        <span class="caption">Water
+                                                    </span>
+                                        <button type="button" id="btnWater"
+                                                class="btn btn-primary btn-circle"><i
+                                                class="glyphicon glyphicon-plus"></i></button>
                                     </div>
 
 
-                                    <div class="tab-pane" id="fruitstab">
-                                        <%--startFruitsTab--%>
-
-                                            <div class="foodOrderContainer">
-                                                <input type="text" id="foodOrange" name="food"/>
-                                                <input type="text" id="foodApple" name="food"/>
-                                                <input type="text" id="foodPear" name="food"/>
-                                            </div>
-
-                                            <div class="item">
-                                                <img src="images/orange.jpg" class="img-circle" alt="orange"
-                                                     style="width: 240px;height:140px;">
-                                                <span class="caption">Orange
-                                                    </span>
-                                                <button type="button" id="btnOrange"
-                                                        class="btn btn-primary btn-circle"><i
-                                                        class="glyphicon glyphicon-plus"></i></button>
-                                            </div>
-
-                                            <div class="item">
-                                                <img src="images/apple.jpg" class="img-circle" alt="apple"
-                                                     style="width: 240px;height:140px;">
-                                                <span class="caption">Apple
-                                                    </span>
-                                                <button type="button" id="btnApple"
-                                                        class="btn btn-primary btn-circle"><i
-                                                        class="glyphicon glyphicon-plus"></i></button>
-                                            </div>
-
-                                            <div class="item">
-                                                <img src="images/pear.jpg" class="img-circle" alt="pear"
-                                                     style="width: 240px;height:140px;">
-                                                <span class="caption">Pear
-                                                    </span>
-                                                <button type="button" id="btnPear"
-                                                        class="btn btn-primary btn-circle"><i
-                                                        class="glyphicon glyphicon-plus"></i></button>
-                                            </div>
+                                    <%--end drinkstab--%>
+                                </div>
 
 
+                                <div class="tab-pane" id="fruitstab">
+                                    <%--startFruitsTab--%>
 
-                                        <%--EndFruitsTab--%>
-
+                                    <div class="foodOrderContainer">
+                                        <input type="text" id="foodOrange" name="food"/>
+                                        <input type="text" id="foodApple" name="food"/>
+                                        <input type="text" id="foodPear" name="food"/>
                                     </div>
+
+                                    <div class="item">
+                                        <img src="images/orange.jpg" class="img-circle" alt="orange"
+                                             style="width: 240px;height:140px;">
+                                        <span class="caption">Orange
+                                                    </span>
+                                        <button type="button" id="btnOrange"
+                                                class="btn btn-primary btn-circle"><i
+                                                class="glyphicon glyphicon-plus"></i></button>
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="images/apple.jpg" class="img-circle" alt="apple"
+                                             style="width: 240px;height:140px;">
+                                        <span class="caption">Apple
+                                                    </span>
+                                        <button type="button" id="btnApple"
+                                                class="btn btn-primary btn-circle"><i
+                                                class="glyphicon glyphicon-plus"></i></button>
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="images/pear.jpg" class="img-circle" alt="pear"
+                                             style="width: 240px;height:140px;">
+                                        <span class="caption">Pear
+                                                    </span>
+                                        <button type="button" id="btnPear"
+                                                class="btn btn-primary btn-circle"><i
+                                                class="glyphicon glyphicon-plus"></i></button>
+                                    </div>
+
+
+                                    <%--EndFruitsTab--%>
+
                                 </div>
                             </div>
-
-
-
-
-                            <%--<div class="form-group">--%>
-                                <%--<textarea class="form-control" placeholder="FoodOrder"></textarea>--%>
-                            <%--</div>--%>
-
                         </div>
 
 
+                        <%--<div class="form-group">--%>
+                        <%--<textarea class="form-control" placeholder="FoodOrder"></textarea>--%>
+                        <%--</div>--%>
 
-                        <div class="card">
-                            <div class="card-header" data-background-color="purple">
+                    </div>
 
-                                <table class="table">
+
+                    <div class="card">
+                        <div class="card-header" data-background-color="purple">
+
+                            <table class="table">
                                 <tr>
                                     <td>
                                         <h4>Order List</h4>
@@ -778,101 +765,102 @@ response.sendRedirect("../errorPage.jsp");
 
                                     <td class="td-actions text-right">
 
-                                    <button type="button" rel="tooltip" title="Cancel Orders" class="btn btn-danger btn-simple btn-md"
-                                            id="btndeletelist">
-                                        <i class="material-icons">close</i>
-                                    </button>
+                                        <button type="button" rel="tooltip" title="Cancel Orders"
+                                                class="btn btn-danger btn-simple btn-md"
+                                                id="btndeletelist">
+                                            <i class="material-icons">close</i>
+                                        </button>
                                     </td>
                                 </tr>
-                                </table>
+                            </table>
 
 
-                            </div>
-                            <div class="card-content table-responsive">
+                        </div>
+                        <div class="card-content table-responsive">
 
 
-                                    <table class="table" id="orderlisttable">
-                                        <tbody>
+                            <table class="table" id="orderlisttable">
+                                <tbody>
 
-                                        <%--<tr>--%>
-                                            <%--<td>Food1</td>--%>
-                                        <%--</tr>--%>
+                                <%--<tr>--%>
+                                <%--<td>Food1</td>--%>
+                                <%--</tr>--%>
 
-                                        <%--<tr>--%>
-                                            <%--<td>Food2</td>--%>
+                                <%--<tr>--%>
+                                <%--<td>Food2</td>--%>
 
-                                        <%--</tr>--%>
+                                <%--</tr>--%>
 
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                            </div>
+                                </tbody>
+                            </table>
                         </div>
 
-
-                        <div class="submitContainer">
-
-                            <div class="ArrayContainer">
-
-                                    <input type="hidden" id="orders" name="orderlist"/>
-
-                            </div>
-
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="text-center">
-                                        <input type="submit" onclick="return confirm('Are you sure?')"
-                                               id="btnSubmitFood" class="btn btn-success" value="Order"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-
-
-                        <%-- end of content--%>
                     </div>
                 </div>
-            </div>
-            <footer class="footer">
-                <div class="container-fluid">
-                    <nav class="pull-left">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    Home
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Company
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Portfolio
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Blog
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <p class="copyright pull-right">
-                        &copy;
-                        <script>
-                            document.write(new Date().getFullYear())
-                        </script>
-                        <a href="http://www.creative-tim.com">Woodlands Integrated Health Campus</a>, made with love by
-                        Fanclub
-                    </p>
+
+
+                <div class="submitContainer">
+
+                    <div class="ArrayContainer">
+
+                        <input type="hidden" id="orders" name="orderlist"/>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="text-center">
+                                <input type="submit" onclick="return confirm('Are you sure?')"
+                                       id="btnSubmitFood" class="btn btn-success" value="Order"/>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </footer>
+                </form>
+
+
+                <%-- end of content--%>
+            </div>
         </div>
     </div>
+    <footer class="footer">
+        <div class="container-fluid">
+            <nav class="pull-left">
+                <ul>
+                    <li>
+                        <a href="#">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Company
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Portfolio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Blog
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <p class="copyright pull-right">
+                &copy;
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>
+                <a href="http://www.creative-tim.com">Woodlands Integrated Health Campus</a>, made with love by
+                Fanclub
+            </p>
+        </div>
+    </footer>
+</div>
+</div>
 
 </body>
 <!--   Core JS Files   -->

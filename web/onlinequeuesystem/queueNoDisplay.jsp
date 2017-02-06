@@ -103,7 +103,7 @@
     Tip 3: you can change the color of the sidebar with data-background-color="white | black"
 -->
         <div class="logo">
-            <a href="../docFrontPage.jsp" class="simple-text">
+            <a href="../patientFrontPage.jsp" class="simple-text">
                 <i class="material-icons">perm_identity</i> Online Queue System
             </a>
         </div>
@@ -364,6 +364,7 @@
                     <br>
                     <br>
                     <div style="background-color: lightgrey">
+
                         <center><h1 style="font-weight: bold">Hello,<%=session.getAttribute("firstName")%>
                             <i style="font-size:48px" class="material-icons">face</i>
                         </h1></center>
