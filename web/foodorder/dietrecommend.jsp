@@ -2,7 +2,12 @@
 <%@ page import="foodOrder.FoodorderEntity" %>
 <%@ page import="java.text.DateFormat" %>
 <%@ page import="java.text.SimpleDateFormat" %>
-<%@ page import="java.util.*" %><%--
+<%@ page import="java.util.TimeZone"%>
+<%@ page import="java.util.*" %>
+<%@ page import="java.time.ZonedDateTime" %>
+<%@ page import="java.time.LocalDate" %>
+<%@ page import="java.time.format.DateTimeFormatter" %>
+<%@ page import="java.time.ZoneId" %><%--
   Created by IntelliJ IDEA.
   User: astaroh
   Date: 2/1/2017
@@ -386,10 +391,21 @@
                     <div class="row">
                         <div class="col-md-9">
 
+                                <%
+                                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+                                ZonedDateTime localDate = ZonedDateTime.now(ZoneId.of("Asia/Singapore"));
+                                System.out.println(dtf.format(localDate));
+
+                                String currentdate = dtf.format(localDate);
+                                %>
+
+
 
                             <div class="form-group label-floating">
                                 <label class="control-label">Enter Date of Meal ( DD/MM/YYYY )</label>
-                                <input type="text" class="form-control" id="dateInput" name="enterdate" val="">
+                                <input type="text" class="form-control" id="dateInput" name="enterdate"
+                                       placeholder ="<%=currentdate%>"value="<%=currentdate%>">
 
 
 
@@ -397,7 +413,7 @@
                         </div>
                         <div class="col-md-3">
                             <div class="form-group label-floating">
-                                <button type="submit" id= "viewDiet" class="btn btn-primary center-block">View diet</button>
+                                <button type="submit" id= "viewDiet" class="btn btn-primary center-block">Get recommendation</button>
 
                             </div>
                         </div>
@@ -422,9 +438,7 @@
                                     <%
                                         foodOrderDAO fod = new foodOrderDAO();
 
-                                        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-                                        Date date = new Date();
-                                        String currentdate = dateFormat.format(date);
+
 
 
                                         List<FoodorderEntity> fodList;
