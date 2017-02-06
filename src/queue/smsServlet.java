@@ -27,6 +27,8 @@ public class smsServlet extends HttpServlet {
 
         HttpSession session = request.getSession();
         String cUs = (String) session.getAttribute("username");
+        String sa  =(String) session.getAttribute("newQueueNo");
+//        String people = (String) session.getAttribute()
 
         PatientDAO d = new PatientDAO();
         List<PatientrecordEntity> dLis = new ArrayList<>();
@@ -55,7 +57,7 @@ public class smsServlet extends HttpServlet {
         Message message = Message
                 .creator(new PhoneNumber(phone),  // to
                         new PhoneNumber("+13172043324"),  // from
-                        "Your turn is in " + e + "minutes")
+                        "Your queue number is +turn is in " + e + "minutes")
                 .create();
 
         response.sendRedirect("onlinequeuesystem/view2.jsp");
