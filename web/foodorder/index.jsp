@@ -851,14 +851,14 @@ response.sendRedirect("../errorPage.jsp");
                                     <table class="table" id="orderlisttable">
                                         <tbody>
 
-                                        <tr>
-                                            <td>Food1</td>
-                                        </tr>
+                                        <%--<tr>--%>
+                                            <%--<td>Food1</td>--%>
+                                        <%--</tr>--%>
 
-                                        <tr>
-                                            <td>Food2</td>
+                                        <%--<tr>--%>
+                                            <%--<td>Food2</td>--%>
 
-                                        </tr>
+                                        <%--</tr>--%>
 
                                         </tbody>
                                     </table>

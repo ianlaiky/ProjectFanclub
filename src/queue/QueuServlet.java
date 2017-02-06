@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Aravin on 26/1/2017.
+ * Created by aravin on 26/1/2017.
  */
 @WebServlet(name = "QueuServlet", urlPatterns = "/onlinequeuesystem")
 public class QueuServlet extends HttpServlet {

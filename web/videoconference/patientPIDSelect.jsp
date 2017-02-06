@@ -91,22 +91,22 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        test
-                        <b class="caret"></b>
+                        <%=session.getAttribute("firstName")%>
+                        <%--<b class="caret"></b>--%>
                     </a>
-                    <div class="collapse" id="collapseExample">
-                        <ul class="nav">
-                            <li>
-                                <a href="../../fooddiet/user/myprofile.jsp">My Profile</a>
-                            </li>
-                            <li>
-                                <a href="#">Edit Profile</a>
-                            </li>
-                            <li>
-                                <a href="#">Settings</a>
-                            </li>
-                        </ul>
-                    </div>
+                    <%--<div class="collapse" id="collapseExample">--%>
+                        <%--<ul class="nav">--%>
+                            <%--<li>--%>
+                                <%--<a href="../../fooddiet/user/myprofile.jsp">My Profile</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="#">Edit Profile</a>--%>
+                            <%--</li>--%>
+                            <%--<li>--%>
+                                <%--<a href="#">Settings</a>--%>
+                            <%--</li>--%>
+                        <%--</ul>--%>
+                    <%--</div>--%>
                 </div>
             </div>
             <ul class="nav">

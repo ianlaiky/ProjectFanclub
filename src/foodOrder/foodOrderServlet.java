@@ -40,8 +40,10 @@ public class foodOrderServlet extends HttpServlet {
 
 
         for (int i = 0 ; i<foodNamesArr.length ; i++){
-            fod.createFoodOrder(foodNamesArr[i], "1", (String) session.getAttribute("username"),
-                    (String) session.getAttribute("firstName"), null,currentdate);
+            if(!(foodNamesArr[i].equals(""))) {
+                fod.createFoodOrder(foodNamesArr[i], "1", (String) session.getAttribute("username"),
+                        (String) session.getAttribute("firstName"), null, currentdate);
+            }
         }
 
 

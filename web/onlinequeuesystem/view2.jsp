@@ -269,6 +269,8 @@
 
                     <%
                         double ttime = (0.001 / 85) * (lessNo * 1 * 60);
+
+                        session.setAttribute("timeququecallsms", lessNo * 1 * 60 + "");
                     %>
                     <script>var timer;
 
@@ -323,7 +325,18 @@
                 </div>
 
             </center>
+            <br>
+            <form action="/tqitest" method="post">
+                <div class="text-center">
+                    <button type="submit" class="btn btn-rose btn-fill btn-wd"><i style="font-size:30px"
+                                                                                  class="material-icons">add_alert</i><i
+                            style="font-weight: bold">
+                    </i>
+                        Notify me! <i style="font-size:30px" class="material-icons">add_alert</i>
+                    </button>
+                </div>
 
+            </form>
 
         </div>
         <%--<div class="content">--%>
