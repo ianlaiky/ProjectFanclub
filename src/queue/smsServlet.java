@@ -22,8 +22,8 @@ import java.util.List;
 @WebServlet(name = "smsServlet", urlPatterns = "/tqitest")
 public class smsServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String ACCOUNT_SID = "ACd7f6132afcea056e92bae959002f78ac";
-        String AUTH_TOKEN = "3a050068c4cbe30d7274e911e381206c";
+        String ACCOUNT_SID = "ACa1126441199f69f7fe3d08c38004da41";
+        String AUTH_TOKEN = "e3fdbb9a5b96a5f170be0b455cd4ef8a";
 
         HttpSession session = request.getSession();
         String cUs = (String) session.getAttribute("username");
@@ -41,7 +41,6 @@ public class smsServlet extends HttpServlet {
 
         String text = (String) session.getAttribute("timeququecallsms");
         Integer r = Integer.parseInt(text);
-        r = r / 60;
         String e = r + "";
 
 
@@ -58,8 +57,8 @@ public class smsServlet extends HttpServlet {
 
         Message message = Message
                 .creator(new PhoneNumber(phone),  // to
-                        new PhoneNumber("+13172043324"),  // from
-                        "Your queue number is " + sa + " the total number of people in the queue is " + tt + " turn is in " + e + " minutes ")
+                        new PhoneNumber("+12626313645"),  // from
+                        "Your queue number is " + sa + "." + " The total number of people in the queue is " + tt + "." + " Your turn is in " + e + " seconds ")
                 .create();
 
         response.sendRedirect("onlinequeuesystem/view2.jsp");
