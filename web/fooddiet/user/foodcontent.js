@@ -126,7 +126,7 @@ $.ajax({
 
                         $.each(data.nutrients, function (index, data) {
                             console.log('index2a', data)
-                            if (JSON.stringify(data.name) === '\"Energy\"' ){
+                            if (JSON.stringify(data.name) === '\"Energy\"'){
                                 $.each(data.measures, function (key, data) {
                                     console.log('index3', data)
                                     // if(data.score >= 0.7 && new String(data.description).valueOf() != new String('\"food\"').valueOf()){
@@ -147,8 +147,197 @@ $.ajax({
                                          item.description == "meal". item.description == "slider",  item.description == "cuisine",
                                          item.description == "'asian food'", item.description == "side dish"; */
                                         text = '<h1>' +foodResult + '</h1>';
-                                        text += '<b>Energy value : </b> <br/>';
+                                        text += '<hr><br><b>Energy value : </b> <br/>';
                                         text += values +'<b>/</b>' + units + '<br/>';
+                                        return false;
+                                    }
+
+                                })
+                            }
+                            if(JSON.stringify(data.name) === '\"Protein\"' ){
+                                $.each(data.measures, function (key, data) {
+                                    console.log('index3', data)
+                                    // if(data.score >= 0.7 && new String(data.description).valueOf() != new String('\"food\"').valueOf()){
+
+                                    /*
+                                     Function: Filtering off unnecessary labels
+                                     */
+                                    if (data.value >=0) {
+
+                                    console.log('index', data)
+                                    // food = data.description.replace("/\'/", "");
+                                    var values = data.value.replace("/\'/", "");
+                                    var units = data.eunit.replace("/\'/", "");
+                                    console.log(values);
+                                    /*   return item.description == "food", item.description == "\'dish\'", item.description == "dessert"
+                                     ,item.description == "plant", item.description == "produce", item.description == "fruit"
+                                     ,item.description == "berry", item.description == "baked goods",item.description == "fast food",
+                                     item.description == "meal". item.description == "slider",  item.description == "cuisine",
+                                     item.description == "'asian food'", item.description == "side dish"; */
+                                    text += '<b>Protein : </b> <br/>';
+                                    text += values + '<b>/</b>' + units + '<br/>';
+                                    return false;
+                                }
+
+                                })
+                            }
+                            if(JSON.stringify(data.name) === '\"Total lipid (fat)\"' ){
+                                $.each(data.measures, function (key, data) {
+                                    console.log('index3', data)
+                                    // if(data.score >= 0.7 && new String(data.description).valueOf() != new String('\"food\"').valueOf()){
+
+                                    /*
+                                     Function: Filtering off unnecessary labels
+                                     */
+                                    if (data.value >=0) {
+
+                                        console.log('index', data)
+                                        // food = data.description.replace("/\'/", "");
+                                        var values = data.value.replace("/\'/", "");
+                                        var units = data.eunit.replace("/\'/", "");
+                                        console.log(values);
+                                        /*   return item.description == "food", item.description == "\'dish\'", item.description == "dessert"
+                                         ,item.description == "plant", item.description == "produce", item.description == "fruit"
+                                         ,item.description == "berry", item.description == "baked goods",item.description == "fast food",
+                                         item.description == "meal". item.description == "slider",  item.description == "cuisine",
+                                         item.description == "'asian food'", item.description == "side dish"; */
+                                        text += '<b>Total Fats : </b> <br/>';
+                                        text += values + '<b>/</b>' + units + '<br/>';
+                                        return false;
+                                    }
+
+                                })
+                            }
+                            if(JSON.stringify(data.name) === '\"Carbohydrate, by difference\"' ){
+                                $.each(data.measures, function (key, data) {
+                                    console.log('index3', data)
+                                    // if(data.score >= 0.7 && new String(data.description).valueOf() != new String('\"food\"').valueOf()){
+
+                                    /*
+                                     Function: Filtering off unnecessary labels
+                                     */
+                                    if (data.value >=0) {
+
+                                        console.log('index', data)
+                                        // food = data.description.replace("/\'/", "");
+                                        var values = data.value.replace("/\'/", "");
+                                        var units = data.eunit.replace("/\'/", "");
+                                        console.log(values);
+                                        /*   return item.description == "food", item.description == "\'dish\'", item.description == "dessert"
+                                         ,item.description == "plant", item.description == "produce", item.description == "fruit"
+                                         ,item.description == "berry", item.description == "baked goods",item.description == "fast food",
+                                         item.description == "meal". item.description == "slider",  item.description == "cuisine",
+                                         item.description == "'asian food'", item.description == "side dish"; */
+                                        text += '<b>Carbohydrates : </b> <br/>';
+                                        text += values + '<b>/</b>' + units + '<br/>';
+                                        return false;
+                                    }
+
+                                })
+                            }
+                            if(JSON.stringify(data.name) === '\"Fiber, total dietary\"' ){
+                                $.each(data.measures, function (key, data) {
+                                    console.log('index3', data)
+                                    // if(data.score >= 0.7 && new String(data.description).valueOf() != new String('\"food\"').valueOf()){
+
+                                    /*
+                                     Function: Filtering off unnecessary labels
+                                     */
+                                    if (data.value >=0) {
+
+                                        console.log('index', data)
+                                        // food = data.description.replace("/\'/", "");
+                                        var values = data.value.replace("/\'/", "");
+                                        var units = data.eunit.replace("/\'/", "");
+                                        console.log(values);
+                                        /*   return item.description == "food", item.description == "\'dish\'", item.description == "dessert"
+                                         ,item.description == "plant", item.description == "produce", item.description == "fruit"
+                                         ,item.description == "berry", item.description == "baked goods",item.description == "fast food",
+                                         item.description == "meal". item.description == "slider",  item.description == "cuisine",
+                                         item.description == "'asian food'", item.description == "side dish"; */
+                                        text += '<b>Fiber : </b> <br/>';
+                                        text += values + '<b>/</b>' + units + '<br/>';
+                                        return false;
+                                    }
+
+                                })
+                            }
+                            if(JSON.stringify(data.name) === '\"Sugars, total\"' ){
+                                $.each(data.measures, function (key, data) {
+                                    console.log('index3', data)
+                                    // if(data.score >= 0.7 && new String(data.description).valueOf() != new String('\"food\"').valueOf()){
+
+                                    /*
+                                     Function: Filtering off unnecessary labels
+                                     */
+                                    if (data.value >=0) {
+
+                                        console.log('index', data)
+                                        // food = data.description.replace("/\'/", "");
+                                        var values = data.value.replace("/\'/", "");
+                                        var units = data.eunit.replace("/\'/", "");
+                                        console.log(values);
+                                        /*   return item.description == "food", item.description == "\'dish\'", item.description == "dessert"
+                                         ,item.description == "plant", item.description == "produce", item.description == "fruit"
+                                         ,item.description == "berry", item.description == "baked goods",item.description == "fast food",
+                                         item.description == "meal". item.description == "slider",  item.description == "cuisine",
+                                         item.description == "'asian food'", item.description == "side dish"; */
+                                        text += '<b>Total Sugar : </b> <br/>';
+                                        text += values + '<b>/</b>' + units + '<br/>';
+                                        return false;
+                                    }
+
+                                })
+                            }
+                            if(JSON.stringify(data.name) === '\"Sodium, Na\"' ){
+                                $.each(data.measures, function (key, data) {
+                                    console.log('index3', data)
+                                    // if(data.score >= 0.7 && new String(data.description).valueOf() != new String('\"food\"').valueOf()){
+
+                                    /*
+                                     Function: Filtering off unnecessary labels
+                                     */
+                                    if (data.value >=0) {
+
+                                        console.log('index', data)
+                                        // food = data.description.replace("/\'/", "");
+                                        var values = data.value.replace("/\'/", "");
+                                        var units = data.eunit.replace("/\'/", "");
+                                        console.log(values);
+                                        /*   return item.description == "food", item.description == "\'dish\'", item.description == "dessert"
+                                         ,item.description == "plant", item.description == "produce", item.description == "fruit"
+                                         ,item.description == "berry", item.description == "baked goods",item.description == "fast food",
+                                         item.description == "meal". item.description == "slider",  item.description == "cuisine",
+                                         item.description == "'asian food'", item.description == "side dish"; */
+                                        text += '<b>Sodium : </b> <br/>';
+                                        text += values + '<b>/</b>' + units + '<br/>';
+                                        return false;
+                                    }
+
+                                })
+                            }
+                            if(JSON.stringify(data.name) === '\"Cholesterol\"' ){
+                                $.each(data.measures, function (key, data) {
+                                    console.log('index3', data)
+                                    // if(data.score >= 0.7 && new String(data.description).valueOf() != new String('\"food\"').valueOf()){
+
+                                    /*
+                                     Function: Filtering off unnecessary labels
+                                     */
+                                    if (data.value >=0) {
+
+                                        console.log('index', data)
+                                        // food = data.description.replace("/\'/", "");
+                                        var values = data.value.replace("/\'/", "");
+                                        var units = data.eunit.replace("/\'/", "");
+                                        console.log(values);
+                                        /*   return item.description == "food", item.description == "\'dish\'", item.description == "dessert"
+                                         ,item.description == "plant", item.description == "produce", item.description == "fruit"
+                                         ,item.description == "berry", item.description == "baked goods",item.description == "fast food",
+                                         item.description == "meal". item.description == "slider",  item.description == "cuisine",
+                                         item.description == "'asian food'", item.description == "side dish"; */
+                                        text += '<b>Cholesterol : </b> <br/>';
+                                        text += values + '<b>/</b>' + units + '<br/>';
                                         return false;
                                     }
 

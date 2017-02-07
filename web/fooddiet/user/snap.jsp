@@ -480,6 +480,7 @@
                             <form id="fileform" action="">
 
                                 <input type="file" accept="image/*" id="capture" name="fileField" onchange="readURL(this)" capture><br /><br />
+                             <!--   <input name="enterFood" type="text"> -->
                                 <input type="submit" name="submit" value="Submit">
                             </form>
 
