@@ -154,7 +154,7 @@ public class UserDAO {
         // step 2 - declare the SQL statement
         dbQuery = "SELECT * FROM user ";
 
-        // step 3 - using DBController readRequest method
+        // step 3 - using DBControlle readRequest method
         rs = db.readRequest(dbQuery);
         try {
             while (rs.next()) {
@@ -173,7 +173,7 @@ public class UserDAO {
 
     public User retrieveUserByUsername(String uname) {
         // declare local variables
-       User user = null;
+        User user = null;
         ResultSet rs = null;
         DBController db = new DBController();
         String dbQuery;
@@ -193,9 +193,9 @@ public class UserDAO {
         try {
             pstmt.setString(1, uname);
             rs = pstmt.executeQuery();
-           if (rs.next()) {
-                 user = convertToUserParticular(rs);
-             //   list.add(user);
+            if (rs.next()) {
+                user = convertToUserParticular(rs);
+                //   list.add(user);
             }
         } catch (Exception e) {
             e.printStackTrace();
