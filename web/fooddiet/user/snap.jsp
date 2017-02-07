@@ -333,9 +333,8 @@
                                                                  alt=""></a>
                                             </div>
                                             <div class="caption">
-                                                <h4>Praesent commodo</h4>
-                                                <p>Nullam Condimentum Nibh Etiam Sem</p>
-                                                <a class="btn btn-mini" href="#">» Read More</a>
+                                                <h4>Chicken Rice</h4>
+
                                             </div>
                                         </div>
                                     </li>
@@ -346,9 +345,7 @@
                                                                  alt=""></a>
                                             </div>
                                             <div class="caption">
-                                                <h4>Chicken Rice</h4>
-                                                <p>Nullam Condimentum Nibh Etiam Sem</p>
-                                                <a class="btn btn-mini" href="#">» Read More</a>
+                                                <h4>Apple</h4>
                                             </div>
                                         </div>
                                     </li>
@@ -359,9 +356,7 @@
                                                                  alt=""></a>
                                             </div>
                                             <div class="caption">
-                                                <h4>Praesent commodo</h4>
-                                                <p>Nullam Condimentum Nibh Etiam Sem</p>
-                                                <a class="btn btn-mini" href="#">» Read More</a>
+                                                <h4>Pasta</h4>
                                             </div>
                                         </div>
                                     </li>
@@ -372,9 +367,7 @@
                                                                  alt=""></a>
                                             </div>
                                             <div class="caption">
-                                                <h4>Praesent commodo</h4>
-                                                <p>Nullam Condimentum Nibh Etiam Sem</p>
-                                                <a class="btn btn-mini" href="#">» Read More</a>
+                                                <h4>Cheesecake</h4>
                                             </div>
                                         </div>
                                     </li>
