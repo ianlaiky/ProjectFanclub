@@ -75,12 +75,12 @@
     Tip 3: you can change the color of the sidebar with data-background-color="white | black"
 -->
         <div class="logo">
-            <a href="../patientFrontPage.jsp" class="simple-text">
+            <a href="../../patientFrontPage.jsp" class="simple-text">
                 Food Diet
             </a>
         </div>
         <div class="logo logo-mini">
-            <a href="http://www.creative-tim.com" class="simple-text">
+            <a href="../../patientFrontPage.jsp" class="simple-text">
                 FD
             </a>
         </div>
