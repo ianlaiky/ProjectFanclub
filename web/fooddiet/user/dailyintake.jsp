@@ -129,7 +129,7 @@
                                 <a href="snap.jsp">Snap</a>
                             </li>
                             <li>
-                                <a href="../pages/timeline.html">Food Content</a>
+                                <a href="foodcontent.jsp">Food Content</a>
                             </li>
                         </ul>
                     </div>
@@ -280,7 +280,10 @@
                                         </div>
                                         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                             <div class="panel-body">
-                                                Under Construction
+                                                -Margarine <br>
+                                                -French Fries<br>
+                                                -Potato Chips <br>
+                                                -Carbonated Drinks
                                             </div>
                                         </div>
                                     </div>

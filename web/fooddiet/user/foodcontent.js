@@ -9,6 +9,7 @@ var KEY1 = FOOD_KEY;
 var FOOD_URL = 'https://api.nal.usda.gov/ndb/reports'
 console.log(foodResult);
 var ndbno;
+var text;
 
 
 /*
@@ -116,6 +117,50 @@ $.ajax({
                  saturatedFats: food0.nutrients[3].value + food0.nutrients[3].unit,
                  protein: food0.nutrients[24].value + food0.nutrients[24].unit
                  }); */
+                console.log(results);
+                $.each(results, function (key, data) {
+                    console.log(key)
+                    console.log('index1', data)
+                    $.each(data, function (index, data) {
+                        console.log('index2', data)
+
+                        $.each(data.nutrients, function (index, data) {
+                            console.log('index2a', data)
+                            if (JSON.stringify(data.name) === '\"Energy\"' ){
+                                $.each(data.measures, function (key, data) {
+                                    console.log('index3', data)
+                                    // if(data.score >= 0.7 && new String(data.description).valueOf() != new String('\"food\"').valueOf()){
+
+                                    /*
+                                     Function: Filtering off unnecessary labels
+                                     */
+                                    if (data.value >=100) {
+
+                                        console.log('index', data)
+                                       // food = data.description.replace("/\'/", "");
+                                        var values = data.value.replace("/\'/", "");
+                                        var units = data.eunit.replace("/\'/", "");
+                                        console.log(values);
+                                        /*   return item.description == "food", item.description == "\'dish\'", item.description == "dessert"
+                                         ,item.description == "plant", item.description == "produce", item.description == "fruit"
+                                         ,item.description == "berry", item.description == "baked goods",item.description == "fast food",
+                                         item.description == "meal". item.description == "slider",  item.description == "cuisine",
+                                         item.description == "'asian food'", item.description == "side dish"; */
+                                        text = '<h1>' +foodResult + '</h1>';
+                                        text += '<b>Energy value : </b> <br/>';
+                                        text += values +'<b>/</b>' + units + '<br/>';
+                                        return false;
+                                    }
+
+                                })
+                            }
+
+
+                        })
+                    })
+                })
+
+                document.getElementById('foodContent').innerHTML = text;
             }
 
         });
