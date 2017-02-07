@@ -248,12 +248,7 @@
                 </div>
             </div>
             <ul class="nav">
-                <li>
-                    <a href="../dashboard.jsp">
-                        <i class="material-icons">dashboard</i>
-                        <p>Dashboard</p>
-                    </a>
-                </li>
+
                 <li class="active">
                     <a data-toggle="collapse" href="#pagesExamples" aria-expanded="true">
                         <i class="material-icons">content_paste</i>
@@ -272,13 +267,6 @@
 
                         </ul>
                     </div>
-                </li>
-                <li>
-                    <a href="../../logout.jsp">
-                        <i class="material-icons">apps</i>
-                        <p>About</p>
-                    </a>
-
                 </li>
                 <li>
                     <a href="/logout">
