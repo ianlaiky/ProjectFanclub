@@ -378,11 +378,11 @@
                                     <li class="col-sm-3">
                                         <div class="fff">
                                             <div class="thumbnail">
-                                                <a href="#"><img src="http://placehold.it/360x240"
+                                                <a href="#"><img src="../../assets/img/noodle.jpg"
                                                                  alt=""></a>
                                             </div>
                                             <div class="caption">
-                                                <h4>Praesent commodo</h4>
+                                                <h4>Noodle</h4>
                                                 <p>Nullam Condimentum Nibh Etiam Sem</p>
                                                 <a class="btn btn-mini" href="#">» Read More</a>
                                             </div>
