@@ -383,53 +383,44 @@
                                             </div>
                                             <div class="caption">
                                                 <h4>Noodle</h4>
-                                                <p>Nullam Condimentum Nibh Etiam Sem</p>
-                                                <a class="btn btn-mini" href="#">» Read More</a>
                                             </div>
                                         </div>
                                     </li>
                                     <li class="col-sm-3">
                                         <div class="fff">
                                             <div class="thumbnail">
-                                                <a href="#"><img src="http://placehold.it/360x240"
+                                                <a href="#"><img src="../../assets/img/tart.jpg"
                                                                  alt=""></a>
                                             </div>
                                             <div class="caption">
-                                                <h4>Praesent commodo</h4>
-                                                <p>Nullam Condimentum Nibh Etiam Sem</p>
-                                                <a class="btn btn-mini" href="#">» Read More</a>
+                                                <h4>Egg Tarts</h4>
                                             </div>
                                         </div>
                                     </li>
                                     <li class="col-sm-3">
                                         <div class="fff">
                                             <div class="thumbnail">
-                                                <a href="#"><img src="http://placehold.it/360x240"
+                                                <a href="#"><img src="../../assets/img/waffle.jpg"
                                                                  alt=""></a>
                                             </div>
                                             <div class="caption">
-                                                <h4>Praesent commodo</h4>
-                                                <p>Nullam Condimentum Nibh Etiam Sem</p>
-                                                <a class="btn btn-mini" href="#">» Read More</a>
+                                                <h4>Waffle</h4>
                                             </div>
                                         </div>
                                     </li>
                                     <li class="col-sm-3">
                                         <div class="fff">
                                             <div class="thumbnail">
-                                                <a href="#"><img src="http://placehold.it/360x240"
+                                                <a href="#"><img src="../../assets/img/icecream.jpg"
                                                                  alt=""></a>
                                             </div>
                                             <div class="caption">
-                                                <h4>Praesent commodo</h4>
-                                                <p>Nullam Condimentum Nibh Etiam Sem</p>
-                                                <a class="btn btn-mini" href="#">» Read More</a>
                                             </div>
                                         </div>
                                     </li>
                                 </ul>
                             </div><!-- /Slide2 -->
-                            <div class="item">
+                       <!--     <div class="item">
                                 <ul class="thumbnails">
                                     <li class="col-sm-3">
                                         <div class="fff">
