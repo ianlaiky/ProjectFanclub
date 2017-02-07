@@ -110,12 +110,7 @@
                 </div>
             </div>
             <ul class="nav">
-                <li>
-                    <a href="../dashboard.jsp">
-                        <i class="material-icons">dashboard</i>
-                        <p>Dashboard</p>
-                    </a>
-                </li>
+
                 <li>
                     <a data-toggle="collapse" href="#pagesExamples">
                         <i class="material-icons">content_paste</i>
@@ -134,13 +129,7 @@
                         </ul>
                     </div>
                 </li>
-                <li>
-                    <a href="../../logout.jsp">
-                        <i class="material-icons">apps</i>
-                        <p>About</p>
-                    </a>
 
-                </li>
                 <li>
                     <a href="/logout">
                         <i class="material-icons">exit_to_app</i>
