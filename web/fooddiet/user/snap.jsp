@@ -381,7 +381,7 @@
                                                                  alt=""></a>
                                             </div>
                                             <div class="caption">
-                                                <h4>Egg Tarts</h4>
+                                                <h4>Tarts</h4>
                                             </div>
                                         </div>
                                     </li>
@@ -403,11 +403,19 @@
                                                                  alt=""></a>
                                             </div>
                                             <div class="caption">
+                                                <h4>Ice Cream</h4>
                                             </div>
                                         </div>
                                     </li>
                                 </ul>
-                            </div><!-- /Slide2 -->
+
+                            </div>
+                            <nav>
+                                <ul class="control-box pager">
+                                    <li><a data-slide="prev" href="#myCarousel" class=""><i class="material-icons">chevron_left</i></a></li>
+                                    <li><a data-slide="next" href="#myCarousel" class=""><i class="material-icons">chevron_right</i></a></li>
+                                </ul>
+                            </nav><!-- /Slide2 -->
                        <!--     <div class="item">
                                 <ul class="thumbnails">
                                     <li class="col-sm-3">
@@ -474,10 +482,7 @@
                                 <input type="file" accept="image/*" id="capture" name="fileField" onchange="readURL(this)" capture><br /><br />
                                 <input type="submit" name="submit" value="Submit">
                             </form>
-                            <ul class="control-box pager">
-                                <li><a data-slide="prev" href="#myCarousel" class=""><i class="material-icons">chevron_left</i></a></li>
-                                <li><a data-slide="next" href="#myCarousel" class=""><i class="material-icons">chevron_right</i></a></li>
-                            </ul>
+
                         </nav>
                         </div>
                         <div id="results2"></div>
