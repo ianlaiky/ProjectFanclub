@@ -147,6 +147,14 @@
                                 <%--<h4> or be classical </h4>--%>
                                 <%--</div>--%>
                                 <form class="form" method="post" action="/patientSignUp">
+
+
+
+
+
+
+
+
                                     <div class="card-content">
                                         <div class="input-group">
                                                 <span class="input-group-addon">
@@ -180,6 +188,16 @@
                                     <div class="footer text-center">
                                         <button class="btn btn-primary btn-round">Sign Up</button>
                                     </div>
+
+
+
+
+
+
+
+
+
+
                                 </form>
                             </div>
                         </div>

@@ -31,7 +31,7 @@ public class DBController {
         String url = "";
         try {
             url = "jdbc:mysql://localhost/jedp";
-            con = DriverManager.getConnection(url, "root", "IT1639");
+            con = DriverManager.getConnection(url, "root", "password");
             System.out.println("Successfully connected to " + url + ".");
         } catch (java.sql.SQLException e) {
             System.out.println("Connection failed ->" + url);
