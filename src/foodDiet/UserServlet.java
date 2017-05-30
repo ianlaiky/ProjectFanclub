@@ -47,9 +47,9 @@ public class UserServlet extends HttpServlet {
         db.createUser(UserDAO.getNextUserId(),name,age,gender,intensity,height,weight,
                 Utility.calCalories(weight,height,age,gender,intensity),Utility.calProtein(weight,height,age
                         ,gender,intensity),Utility.calCarbo(weight,height,age,gender,intensity
-                       ),Utility.calFat(weight,height,age,gender,intensity),0,0,0, 0);
+                ),Utility.calFat(weight,height,age,gender,intensity),0,0,0, 0);
 
-       // getServletContext().getRequestDispatcher("/fooddiet/user/editprofile.jsp").forward(request, response);
+        // getServletContext().getRequestDispatcher("/fooddiet/user/editprofile.jsp").forward(request, response);
         response.sendRedirect("fooddiet/user/editprofile.jsp");
     }
 }

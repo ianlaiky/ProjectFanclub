@@ -21,7 +21,7 @@ public class UpdateUserServlet extends HttpServlet {
 
         HttpSession session = request.getSession();
         UserDAO db = new UserDAO();
-        String name = session.getAttribute("username").toString();
+        String name = session.getAttribute("firstName").toString();
         int height = Integer.parseInt(request.getParameter("height"));
         double weight= Double.parseDouble(request.getParameter("weight"));
         int age = Integer.parseInt(request.getParameter("age"));

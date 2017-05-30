@@ -62,14 +62,11 @@
         if(session.getAttribute("signInPatient").equals("false")){
             response.sendRedirect("../../errorPage.jsp");
         }
-
     }
-
 %>
 <%
     UserDAO db = new UserDAO();
-    User user = db.retrieveUserByUsername(session.getAttribute("username").toString());
-
+    User user = db.retrieveUserByUsername(session.getAttribute("firstName").toString());
 %>
 <div class="wrapper">
     <div class="sidebar" data-active-color="green" data-background-color="black" data-image="../../assets/img/sidebar-1.jpg">
@@ -79,12 +76,12 @@
     Tip 3: you can change the color of the sidebar with data-background-color="white | black"
 -->
         <div class="logo">
-            <a href="http://www.creative-tim.com" class="simple-text">
+            <a href="../../patientFrontPage.jsp" class="simple-text">
                 Food Diet
             </a>
         </div>
         <div class="logo logo-mini">
-            <a href="http://www.creative-tim.com" class="simple-text">
+            <a href="../../patientFrontPage.jsp" class="simple-text">
                 FD
             </a>
         </div>
@@ -115,12 +112,6 @@
             </div>
             <ul class="nav">
                 <li>
-                    <a href="../dashboard.jsp">
-                        <i class="material-icons">dashboard</i>
-                        <p>Dashboard</p>
-                    </a>
-                </li>
-                <li>
                     <a data-toggle="collapse" href="#pagesExamples">
                         <i class="material-icons">content_paste</i>
                         <p>Diet Planner
@@ -138,13 +129,7 @@
                         </ul>
                     </div>
                 </li>
-                <li>
-                    <a href="../../logout.jsp">
-                        <i class="material-icons">apps</i>
-                        <p>About</p>
-                    </a>
 
-                </li>
                 <li>
                     <a href="/logout">
                         <i class="material-icons">exit_to_app</i>
@@ -171,60 +156,6 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="#"> Edit Profile </a>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="material-icons">dashboard</i>
-                                <p class="hidden-lg hidden-md">Dashboard</p>
-                            </a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="material-icons">notifications</i>
-                                <span class="notification">5</span>
-                                <p class="hidden-lg hidden-md">
-                                    Notifications
-                                    <b class="caret"></b>
-                                </p>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#">Mike John responded to your email</a>
-                                </li>
-                                <li>
-                                    <a href="#">You have 5 new tasks</a>
-                                </li>
-                                <li>
-                                    <a href="#">You're now friend with Andrew</a>
-                                </li>
-                                <li>
-                                    <a href="#">Another Notification</a>
-                                </li>
-                                <li>
-                                    <a href="#">Another One</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="material-icons">person</i>
-                                <p class="hidden-lg hidden-md">Profile</p>
-                            </a>
-                        </li>
-                        <li class="separator hidden-lg hidden-md"></li>
-                    </ul>
-                    <form class="navbar-form navbar-right" role="search">
-                        <div class="form-group form-search is-empty">
-                            <input type="text" class="form-control" placeholder="Search">
-                            <span class="material-input"></span>
-                        </div>
-                        <button type="submit" class="btn btn-white btn-round btn-just-icon">
-                            <i class="material-icons">search</i>
-                            <div class="ripple-container"></div>
-                        </button>
-                    </form>
                 </div>
             </div>
         </nav>
@@ -268,9 +199,9 @@
                                                 <option value="moderate">Moderately Active</option>
                                                 <option value="active">Active</option>
                                             </select>
-                                               <%
-                                                   System.out.println(user.getIntensity());
-                                               %>
+                                            <%
+                                                System.out.println(user.getIntensity());
+                                            %>
 
                                         </div>
                                     </div>
@@ -324,207 +255,97 @@
 
                         </div>
                     </div>
-                  <!--  <div class="col-md-12">
-                        <div class="card">
-                            <form id="RangeValidation" class="form-horizontal" action="" method="">
-                                <div class="card-header card-header-text" data-background-color="rose">
-                                    <h4 class="card-title">Range Validation</h4>
-                                </div>
-                                <div class="card-content">
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Min Length</label>
-                                        <div class="col-sm-7">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="min_length" minLength="5" />
-                                            </div>
-                                        </div>
-                                        <label class="col-sm-3 label-on-right">
-                                            <code>minLength="5"</code>
-                                        </label>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Max Length</label>
-                                        <div class="col-sm-7">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="max_length" maxLength="5" />
-                                            </div>
-                                        </div>
-                                        <label class="col-sm-3 label-on-right">
-                                            <code>maxLength="5"</code>
-                                        </label>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Range</label>
-                                        <div class="col-sm-7">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="range" range="[6,10]" />
-                                            </div>
-                                        </div>
-                                        <label class="col-sm-3 label-on-right">
-                                            <code>range="[6,10]"</code>
-                                        </label>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Min Value</label>
-                                        <div class="col-sm-7">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="min" min="6" />
-                                            </div>
-                                        </div>
-                                        <label class="col-sm-3 label-on-right">
-                                            <code>min="6"</code>
-                                        </label>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-2 label-on-left">Max Value</label>
-                                        <div class="col-sm-7">
-                                            <div class="form-group label-floating">
-                                                <label class="control-label"></label>
-                                                <input class="form-control" type="text" name="max" max="6" />
-                                            </div>
-                                        </div>
-                                        <label class="col-sm-3 label-on-right">
-                                            <code>max="6"</code>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="card-footer text-center">
-                                    <button type="submit" class="btn btn-rose btn-fill">Validate Inputs</button>
-                                </div>
-                            </form>
-                        </div> -->
-                    </div>
+                    <!--  <div class="col-md-12">
+                          <div class="card">
+                              <form id="RangeValidation" class="form-horizontal" action="" method="">
+                                  <div class="card-header card-header-text" data-background-color="rose">
+                                      <h4 class="card-title">Range Validation</h4>
+                                  </div>
+                                  <div class="card-content">
+                                      <div class="row">
+                                          <label class="col-sm-2 label-on-left">Min Length</label>
+                                          <div class="col-sm-7">
+                                              <div class="form-group label-floating">
+                                                  <label class="control-label"></label>
+                                                  <input class="form-control" type="text" name="min_length" minLength="5" />
+                                              </div>
+                                          </div>
+                                          <label class="col-sm-3 label-on-right">
+                                              <code>minLength="5"</code>
+                                          </label>
+                                      </div>
+                                      <div class="row">
+                                          <label class="col-sm-2 label-on-left">Max Length</label>
+                                          <div class="col-sm-7">
+                                              <div class="form-group label-floating">
+                                                  <label class="control-label"></label>
+                                                  <input class="form-control" type="text" name="max_length" maxLength="5" />
+                                              </div>
+                                          </div>
+                                          <label class="col-sm-3 label-on-right">
+                                              <code>maxLength="5"</code>
+                                          </label>
+                                      </div>
+                                      <div class="row">
+                                          <label class="col-sm-2 label-on-left">Range</label>
+                                          <div class="col-sm-7">
+                                              <div class="form-group label-floating">
+                                                  <label class="control-label"></label>
+                                                  <input class="form-control" type="text" name="range" range="[6,10]" />
+                                              </div>
+                                          </div>
+                                          <label class="col-sm-3 label-on-right">
+                                              <code>range="[6,10]"</code>
+                                          </label>
+                                      </div>
+                                      <div class="row">
+                                          <label class="col-sm-2 label-on-left">Min Value</label>
+                                          <div class="col-sm-7">
+                                              <div class="form-group label-floating">
+                                                  <label class="control-label"></label>
+                                                  <input class="form-control" type="text" name="min" min="6" />
+                                              </div>
+                                          </div>
+                                          <label class="col-sm-3 label-on-right">
+                                              <code>min="6"</code>
+                                          </label>
+                                      </div>
+                                      <div class="row">
+                                          <label class="col-sm-2 label-on-left">Max Value</label>
+                                          <div class="col-sm-7">
+                                              <div class="form-group label-floating">
+                                                  <label class="control-label"></label>
+                                                  <input class="form-control" type="text" name="max" max="6" />
+                                              </div>
+                                          </div>
+                                          <label class="col-sm-3 label-on-right">
+                                              <code>max="6"</code>
+                                          </label>
+                                      </div>
+                                  </div>
+                                  <div class="card-footer text-center">
+                                      <button type="submit" class="btn btn-rose btn-fill">Validate Inputs</button>
+                                  </div>
+                              </form>
+                          </div> -->
                 </div>
             </div>
-    <footer class="footer">
-        <div class="container-fluid">
-            <nav class="pull-left">
-                <ul>
-                    <li>
-                        <a href="#">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Company
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Portfolio
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Blog
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <p class="copyright pull-right">
-                &copy;
-                <script>
-                    document.write(new Date().getFullYear())
-                </script>
-                <a href="http://www.creative-tim.com">Woodlands Integrated Health Campus</a>, made with love by Fanclub
-            </p>
         </div>
-    </footer>
-</div>
-</div>
-<div class="fixed-plugin">
-    <div class="dropdown show-dropdown">
-        <a href="#" data-toggle="dropdown">
-            <i class="fa fa-cog fa-2x"> </i>
-        </a>
-        <ul class="dropdown-menu">
-            <li class="header-title"> Sidebar Filters</li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger active-color">
-                    <div class="badge-colors text-center">
-                        <span class="badge filter badge-purple" data-color="purple"></span>
-                        <span class="badge filter badge-blue" data-color="blue"></span>
-                        <span class="badge filter badge-green" data-color="green"></span>
-                        <span class="badge filter badge-orange" data-color="orange"></span>
-                        <span class="badge filter badge-red" data-color="red"></span>
-                        <span class="badge filter badge-rose active" data-color="rose"></span>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="header-title">Sidebar Background</li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger background-color">
-                    <div class="text-center">
-                        <span class="badge filter badge-white" data-color="white"></span>
-                        <span class="badge filter badge-black active" data-color="black"></span>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger">
-                    <p>Sidebar Mini</p>
-                    <div class="togglebutton switch-sidebar-mini">
-                        <label>
-                            <input type="checkbox" unchecked="">
-                        </label>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger">
-                    <p>Sidebar Image</p>
-                    <div class="togglebutton switch-sidebar-image">
-                        <label>
-                            <input type="checkbox" checked="">
-                        </label>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="header-title">Images</li>
-            <li class="active">
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-1.jpg" alt="" />
-                </a>
-            </li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-2.jpg" alt="" />
-                </a>
-            </li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-3.jpg" alt="" />
-                </a>
-            </li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../../assets/img/sidebar-4.jpg" alt="" />
-                </a>
-            </li>
-            <li class="button-container">
-                <div class="">
-                    <a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-rose btn-block">Buy Now</a>
-                </div>
-                <div class="">
-                    <a href="http://www.creative-tim.com/product/material-dashboard" target="_blank" class="btn btn-info btn-block">Get Free Demo</a>
-                </div>
-            </li>
-            <li class="header-title">Thank you for 95 shares!</li>
-            <li class="button-container">
-                <button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i> &middot; 45</button>
-                <button id="facebook" class="btn btn-social btn-facebook btn-round"><i class="fa fa-facebook-square"> &middot;</i>50</button>
-            </li>
-        </ul>
+        <footer class="footer">
+            <div class="container-fluid">
+
+                <p class="copyright pull-right">
+                    &copy;
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script>
+                    <a href="http://www.creative-tim.com">Woodlands Integrated Health Campus</a>, made with love by Fanclub
+                </p>
+            </div>
+        </footer>
     </div>
+</div>
+
 </div>
 </body>
 <!--   Core JS Files   -->
@@ -574,35 +395,21 @@
         $(id).validate({
             errorPlacement: function(error, element) {
                 $(element).parent('div').addClass('has-error');
+            }
+        });
     }
-    });
-    }
-
-
-
-
-
-
     $(document).ready(function() {
-
-       /*   foo();
-          function foo(){
-
-              var value =
-              alert(value);
-          } */
+        /*   foo();
+         function foo(){
+         var value =
+         alert(value);
+         } */
         $("#intense").val("<%=user.getIntensity()%>").change();
         //alert($("#intense").val());
-
-
-
-
         setFormValidation('#RegisterValidation');
         setFormValidation('#TypeValidation');
         setFormValidation('#LoginValidation');
         setFormValidation('#RangeValidation');
-
-
     });
 </script>
 
